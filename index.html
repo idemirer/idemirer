@@ -10,92 +10,93 @@
   </head>
   <body>
     <div>
-      <h1 class="text-2xl font-bold">New Home Page</h1>
-      <p>This will be my new homepage.</p>
-      <div id="test"></div>
-      <div style="display: block; box-sizing: border-box; height: 384px; width: 768px">
-        <canvas
-          id="myChart"
-          width="768"
-          height="384"
-          style="display: block; box-sizing: border-box; height: 384px; width: 768px"
-        ></canvas>
-        <script>
-          let pass2019 = [];
-          let pass2021 = [];
-          async function fetchData() {
-            const data = await fetch('data.json').then((response) => response.json());
-            let date = Object.keys(data[2019]);
-            for (let i = 0; i < Object.keys(data[2021]).length; i++) {
-              pass2021.push(data[2021][date[i]]);
-            }
-            for (let i = 0; i < Object.keys(data[2019]).length; i++) {
-              pass2019.push(data[2019][date[i]]);
-            }
+      <div class="container mx-auto">
+        <h1 class="text-2xl font-bold">I will publish travel & hospitality related data.</h1>
+        <div style="display: block; box-sizing: border-box; height: 384px; width: 768px">
+          <h3 class="text-xl font-bold">TSA Passenger Data:</h3>
+          <canvas
+            id="myChart"
+            width="768"
+            height="384"
+            style="display: block; box-sizing: border-box; height: 384px; width: 768px"
+          ></canvas>
+          <script>
+            let pass2019 = [];
+            let pass2021 = [];
+            async function fetchData() {
+              const data = await fetch('data.json').then((response) => response.json());
+              let date = Object.keys(data[2019]);
+              for (let i = 0; i < Object.keys(data[2021]).length; i++) {
+                pass2021.push(data[2021][date[i]]);
+              }
+              for (let i = 0; i < Object.keys(data[2019]).length; i++) {
+                pass2019.push(data[2019][date[i]]);
+              }
 
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myChart = new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: date,
-                datasets: [
-                  {
-                    label: '2021',
-                    data: pass2021,
-                    borderColor: '#ff0000',
-                    backgroundColor: '#ff0000',
-                  },
-                  {
-                    label: '2019',
-                    data: pass2019,
-                    borderColor: '#0000FF',
-                    backgroundColor: '#0000FF',
-                  },
-                ],
-              },
-              options: {
-                scales: {
-                  y: {
-                    grid: {
-                      drawTicks: false,
+              var ctx = document.getElementById('myChart').getContext('2d');
+              var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: date,
+                  datasets: [
+                    {
+                      label: '2021',
+                      data: pass2021,
+                      borderColor: '#ff0000',
+                      backgroundColor: '#ff0000',
                     },
-                    ticks: {
-                      major: {
-                        enabled: false,
+                    {
+                      label: '2019',
+                      data: pass2019,
+                      borderColor: '#0000FF',
+                      backgroundColor: '#0000FF',
+                    },
+                  ],
+                },
+                options: {
+                  scales: {
+                    y: {
+                      grid: {
+                        drawTicks: false,
+                      },
+                      ticks: {
+                        major: {
+                          enabled: false,
+                        },
+                      },
+                    },
+                    x: {
+                      grid: {
+                        drawTicks: false,
+                      },
+                      reverse: true,
+                      ticks: {
+                        major: {
+                          enabled: true,
+                        },
+                        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+                        callback: function (val, index) {
+                          // Hide the label of every 2nd dataset
+                          return index % 2 === 0 ? this.getLabelForValue(val) : '';
+                        },
+                        color: 'red',
                       },
                     },
                   },
-                  x: {
-                    grid: {
-                      drawTicks: false,
-                    },
-                    reverse: true,
-                    ticks: {
-                      major: {
-                        enabled: true,
+                  plugins: {
+                    legend: {
+                      position: 'right',
+                      labels: {
+                        usePointStyle: true,
                       },
-                      // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-                      callback: function (val, index) {
-                        // Hide the label of every 2nd dataset
-                        return index % 2 === 0 ? this.getLabelForValue(val) : '';
-                      },
-                      color: 'red',
                     },
                   },
                 },
-                plugins: {
-                  legend: {
-                    position: 'right',
-                    labels: {
-                      usePointStyle: true,
-                    },
-                  },
-                },
-              },
-            });
-          }
-          fetchData();
-        </script>
+              });
+            }
+            fetchData();
+          </script>
+        </div>
       </div>
     </div>
   </body>
