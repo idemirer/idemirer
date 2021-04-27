@@ -8,6 +8,7 @@ async function fetchData() {
     pass2021.unshift(passdata[2021][i].passengers);
     pass2019.unshift(passdata[2019][i].passengers);
   }
+
   const strdata = await fetch('./data/str.json').then((response) => response.json());
 
   let occData2019 = [];
@@ -45,7 +46,18 @@ async function fetchData() {
         data: occData2021,
       },
     ],
+    theme: {
+      mode: 'light',
+      palette: 'palette6',
+      monochrome: {
+        enabled: false,
+        color: '#255aee',
+        shadeTo: 'light',
+        shadeIntensity: 0.65,
+      },
+    },
     chart: {
+      fontFamily: 'Roboto, Arial, sans-serif',
       height: 350,
       width: 650,
       type: 'line',
@@ -67,7 +79,7 @@ async function fetchData() {
     },
     grid: {
       row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+        // colors: ['', 'transparent'], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
     },
@@ -80,9 +92,7 @@ async function fetchData() {
         text: 'Source: STR, str.com',
         offsetX: 250,
         style: {
-          color: '#9C9C9C',
           fontSize: '10px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
           fontWeight: 400,
         },
       },
@@ -111,7 +121,18 @@ async function fetchData() {
         data: adrData2021,
       },
     ],
+    theme: {
+      mode: 'light',
+      palette: 'palette6',
+      monochrome: {
+        enabled: false,
+        color: '#255aee',
+        shadeTo: 'light',
+        shadeIntensity: 0.65,
+      },
+    },
     chart: {
+      fontFamily: 'Roboto, Arial, sans-serif',
       height: 350,
       width: 650,
       type: 'line',
@@ -146,9 +167,7 @@ async function fetchData() {
         text: 'Source: STR, str.com',
         offsetX: 250,
         style: {
-          color: '#9C9C9C',
           fontSize: '10px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
           fontWeight: 400,
         },
       },
@@ -172,7 +191,18 @@ async function fetchData() {
         data: pass2021,
       },
     ],
+    theme: {
+      mode: 'light',
+      palette: 'palette6',
+      monochrome: {
+        enabled: false,
+        color: '#255aee',
+        shadeTo: 'light',
+        shadeIntensity: 0.65,
+      },
+    },
     chart: {
+      fontFamily: 'Roboto, Arial, sans-serif',
       height: 350,
       width: 650,
       type: 'line',
@@ -209,7 +239,7 @@ async function fetchData() {
         style: {
           color: '#9C9C9C',
           fontSize: '10px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
+          fontFamily: 'Roboto, sans-serif',
           fontWeight: 400,
         },
       },
