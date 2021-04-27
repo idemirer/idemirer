@@ -11,30 +11,57 @@
   <body>
     <div>
       <div class="container mx-auto">
-        <h1 class="text-2xl font-bold">I will publish travel & hospitality related data.</h1>
-        <div style="display: block; box-sizing: border-box; height: 384px; width: 768px">
-          <h3 class="text-xl font-bold">TSA Passenger Data:</h3>
-          <canvas
-            id="myChart"
-            width="768"
-            height="384"
-            style="display: block; box-sizing: border-box; height: 384px; width: 768px"
-          ></canvas>
+        <h1 class="text-2xl font-bold my-3">I will publish travel & hospitality related data.</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          <div class="">
+            <canvas
+              id="OCCChart"
+              width="768"
+              height="384"
+              style="display: block; box-sizing: border-box; height: 384px; width: 700px"
+            >
+            </canvas>
+          </div>
+          <div class=""> </div>
+          <div class="">
+            <canvas
+              id="TSAChart"
+              width="768"
+              height="384"
+              style="display: block; box-sizing: border-box; height: 384px; width: 700px"
+            ></canvas>
+          </div>
+          <br />
+
           <script>
-            let pass2019 = [];
-            let pass2021 = [];
             async function fetchData() {
-              const data = await fetch('data.json').then((response) => response.json());
-              let date = Object.keys(data[2019]);
-              for (let i = 0; i < Object.keys(data[2021]).length; i++) {
-                pass2021.push(data[2021][date[i]]);
-              }
-              for (let i = 0; i < Object.keys(data[2019]).length; i++) {
-                pass2019.push(data[2019][date[i]]);
+              let pass2019 = [];
+              let pass2021 = [];
+              const passdata = await fetch('passengerData.json').then((response) => response.json());
+              let date = Object.keys(passdata[2019]);
+              for (let i = 0; i < Object.keys(passdata[2021]).length; i++) {
+                pass2021.push(passdata[2021][date[i]]);
+                pass2019.push(passdata[2019][date[i]]);
               }
 
-              var ctx = document.getElementById('myChart').getContext('2d');
-              var myChart = new Chart(ctx, {
+              const strdata = await fetch('str.json').then((response) => response.json());
+
+              // let weeks = [];
+              let occData2019 = [];
+              let occData2020 = [];
+              let occData2021 = [];
+              let weeks = [...Object.keys(strdata[2019])];
+
+              for (let i = 1; i <= 52; i++) {
+                occData2019.push(strdata[2019][i][0]);
+                occData2020.push(strdata[2020][i][0]);
+              }
+              for (let i = 1; i <= Object.keys(strdata[2021]).length; i++) {
+                occData2021.push(strdata[2021][i][0]);
+              }
+
+              let pass = document.getElementById('TSAChart').getContext('2d');
+              let passChart = new Chart(pass, {
                 type: 'line',
                 data: {
                   labels: date,
@@ -71,23 +98,100 @@
                       },
                       reverse: true,
                       ticks: {
+                        align: 'end',
+                        maxRotation: 0,
                         major: {
                           enabled: true,
                         },
-                        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-                        callback: function (val, index) {
-                          // Hide the label of every 2nd dataset
-                          return index % 2 === 0 ? this.getLabelForValue(val) : '';
-                        },
-                        color: 'red',
+                        autoSkip: true,
+                        // callback: function (val, index) {
+                        //   return index % 2 === 0 ? this.getLabelForValue(val) : '';
+                        // },
+                        color: 'black',
                       },
                     },
                   },
                   plugins: {
+                    title: {
+                      display: true,
+                      text: 'TSA Passenger Data',
+                    },
                     legend: {
-                      position: 'right',
+                      position: 'bottom',
                       labels: {
-                        usePointStyle: true,
+                        usePointStyle: false,
+                      },
+                    },
+                  },
+                },
+              });
+
+              let occ = document.getElementById('OCCChart').getContext('2d');
+              let occChart = new Chart(occ, {
+                type: 'line',
+                data: {
+                  labels: weeks,
+                  datasets: [
+                    {
+                      label: '2021',
+                      data: occData2021,
+                      borderColor: '#FF0000',
+                      backgroundColor: '#FF0000',
+                    },
+                    {
+                      label: '2020',
+                      data: occData2020,
+                      borderColor: '#00FF00',
+                      backgroundColor: '#00FF00',
+                    },
+                    {
+                      label: '2019',
+                      data: occData2019,
+                      borderColor: '#0000FF',
+                      backgroundColor: '#0000FF',
+                    },
+                  ],
+                },
+                options: {
+                  scales: {
+                    y: {
+                      grid: {
+                        drawTicks: false,
+                      },
+                      ticks: {
+                        major: {
+                          enabled: false,
+                        },
+                      },
+                    },
+                    x: {
+                      grid: {
+                        drawTicks: false,
+                      },
+
+                      reverse: false,
+                      ticks: {
+                        maxRotation: 0,
+                        major: {
+                          enabled: true,
+                        },
+                        autoSkip: true,
+                        // callback: function (val, index) {
+                        //   return index % 2 === 0 ? this.getLabelForValue(val) : '';
+                        // },
+                        color: 'black',
+                      },
+                    },
+                  },
+                  plugins: {
+                    title: {
+                      display: true,
+                      text: 'U.S. Hotel Occupancy (source: STR, str.com)',
+                    },
+                    legend: {
+                      position: 'bottom',
+                      labels: {
+                        usePointStyle: false,
                       },
                     },
                   },
