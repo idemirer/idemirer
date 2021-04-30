@@ -3,13 +3,14 @@ async function fetchData() {
   let pass2021 = [];
   let date = [];
   const passdata = await fetch('./data/passengerData.json').then((response) => response.json());
+  const strdata = await fetch('./data/str.json').then((response) => response.json());
+  const HVSData = await fetch('./data/hvsData.json').then((response) => response.json());
+
   for (let i = 0; i < Object.keys(passdata[2021]).length; i++) {
     date.unshift(passdata[2021][i].date);
     pass2021.unshift(passdata[2021][i].passengers);
     pass2019.unshift(passdata[2019][i].passengers);
   }
-
-  const strdata = await fetch('./data/str.json').then((response) => response.json());
 
   let occData2019 = [];
   let occData2020 = [];
@@ -28,6 +29,18 @@ async function fetchData() {
   for (let i = 1; i <= Object.keys(strdata[2021]).length; i++) {
     occData2021.push(strdata[2021][i][0]);
     adrData2021.push(strdata[2021][i][1]);
+  }
+
+  let HVSOccData = [];
+  let HVSRoomAvData = [];
+  let HVSNewSuppData = [];
+  let HVSTimeData = [];
+
+  for (let i = 0; i < HVSData.length; i++) {
+    HVSOccData.push(HVSData[i].occ);
+    HVSRoomAvData.push(HVSData[i].roomsAvailable);
+    HVSNewSuppData.push(HVSData[i].newSupply);
+    HVSTimeData.push(HVSData[i].date);
   }
 
   let OCCoptions = {
@@ -100,6 +113,11 @@ async function fetchData() {
     },
     yaxis: {
       decimalsInFloat: 0,
+      labels: {
+        formatter: function (val, index) {
+          return val + '%';
+        },
+      },
     },
   };
   let occChart = new ApexCharts(document.querySelector('#OCCChart'), OCCoptions);
@@ -175,10 +193,123 @@ async function fetchData() {
     },
     yaxis: {
       decimalsInFloat: 0,
+      labels: {
+        formatter: function (val, index) {
+          return '$' + val;
+        },
+      },
     },
   };
   let adrChart = new ApexCharts(document.querySelector('#ADRChart'), ADRoptions);
   adrChart.render();
+
+  let HVSoptions = {
+    series: [
+      {
+        name: 'Annual Occupied Rooms',
+        data: HVSOccData,
+      },
+      {
+        name: 'New Supply',
+        data: HVSNewSuppData,
+      },
+      {
+        name: 'Annual Available Rooms',
+        data: HVSRoomAvData,
+      },
+    ],
+    theme: {
+      mode: 'light',
+      palette: 'palette6',
+      monochrome: {
+        enabled: false,
+        color: '#255aee',
+        shadeTo: 'light',
+        shadeIntensity: 0.65,
+      },
+    },
+    chart: {
+      fontFamily: 'Roboto, Arial, sans-serif',
+      height: 350,
+      width: 650,
+      type: 'line',
+      zoom: {
+        enabled: false,
+      },
+    },
+    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      curve: 'straight',
+      width: 4,
+    },
+    title: {
+      text: 'U.S. Hotel Demand & Supply',
+      align: 'center',
+    },
+    grid: {
+      column: {
+        colors: [
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          'transparent',
+          '#bbbbbb',
+          '#bbbbbb',
+          '#bbbbbb',
+        ],
+        opacity: 0.5,
+      },
+    },
+    xaxis: {
+      categories: HVSTimeData,
+      labels: {
+        rotate: -45,
+      },
+      title: {
+        text: 'Source: HVS, hvs.com',
+        offsetX: 250,
+        style: {
+          fontSize: '10px',
+          fontWeight: 400,
+        },
+      },
+    },
+    yaxis: [
+      {
+        decimalsInFloat: 0,
+        labels: {
+          formatter: function (val, index) {
+            return Math.floor(val / 1000000) + 'M';
+          },
+        },
+      },
+      {
+        opposite: true,
+        title: {
+          text: 'New Supply',
+        },
+        labels: {
+          formatter: function (val, index) {
+            return Math.floor(val / 1000) + 'K';
+          },
+        },
+      },
+    ],
+  };
+  let HVSChart = new ApexCharts(document.querySelector('#HVSChart'), HVSoptions);
+  HVSChart.render();
 
   let TSAoptions = {
     series: [
@@ -246,7 +377,14 @@ async function fetchData() {
       tickAmount: 16,
     },
     yaxis: {
+      show: true,
+      floating: false,
       decimalsInFloat: 0,
+      labels: {
+        formatter: function (val, index) {
+          return (val / 1000000).toFixed(1) + 'M';
+        },
+      },
     },
   };
 
