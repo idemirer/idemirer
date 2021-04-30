@@ -1,15 +1,18 @@
 async function fetchData() {
-  let pass2019 = [];
-  let pass2021 = [];
-  let date = [];
   const passdata = await fetch('./data/passengerData.json').then((response) => response.json());
   const strdata = await fetch('./data/str.json').then((response) => response.json());
   const HVSData = await fetch('./data/hvsData.json').then((response) => response.json());
+
+  let pass2019 = [];
+  let pass2021 = [];
+  let passDiff = [];
+  let date = [];
 
   for (let i = 0; i < Object.keys(passdata[2021]).length; i++) {
     date.unshift(passdata[2021][i].date);
     pass2021.unshift(passdata[2021][i].passengers);
     pass2019.unshift(passdata[2019][i].passengers);
+    passDiff.unshift(100 - Math.floor((passdata[2021][i].passengers / passdata[2019][i].passengers) * 100));
   }
 
   let occData2019 = [];
@@ -78,7 +81,11 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#8CFCBA', '#FF0000'],
+    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    fill: {
+      type: 'solid',
+      opacity: [1, 0.5, 1],
+    },
     dataLabels: {
       enabled: false,
     },
@@ -102,10 +109,12 @@ async function fetchData() {
         rotate: 0,
       },
       title: {
-        text: 'Source: STR, str.com',
-        offsetX: 250,
+        text: 'Updated Weekly. Source: STR, str.com',
+        offsetX: 215,
         style: {
+          color: '#9C9C9C',
           fontSize: '10px',
+          fontFamily: 'Roboto, sans-serif',
           fontWeight: 400,
         },
       },
@@ -158,7 +167,11 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#8CFCBA', '#FF0000'],
+    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    fill: {
+      type: 'solid',
+      opacity: [1, 0.5, 1],
+    },
     dataLabels: {
       enabled: false,
     },
@@ -182,10 +195,12 @@ async function fetchData() {
         rotate: 0,
       },
       title: {
-        text: 'Source: STR, str.com',
-        offsetX: 250,
+        text: 'Updated Weekly. Source: STR, str.com',
+        offsetX: 215,
         style: {
+          color: '#9C9C9C',
           fontSize: '10px',
+          fontFamily: 'Roboto, sans-serif',
           fontWeight: 400,
         },
       },
@@ -278,10 +293,13 @@ async function fetchData() {
         rotate: -45,
       },
       title: {
-        text: 'Source: HVS, hvs.com',
-        offsetX: 250,
+        text: 'Updated Annually. Source: HVS, hvs.com',
+        offsetX: 230,
+        offsetY: -10,
         style: {
+          color: '#9C9C9C',
           fontSize: '10px',
+          fontFamily: 'Roboto, sans-serif',
           fontWeight: 400,
         },
       },
@@ -296,6 +314,7 @@ async function fetchData() {
         },
       },
       {
+        seriesName: 'New Supply',
         opposite: true,
         title: {
           text: 'New Supply',
@@ -321,6 +340,11 @@ async function fetchData() {
         name: '2021',
         data: pass2021,
       },
+      {
+        name: 'Difference',
+        type: 'column',
+        data: passDiff,
+      },
     ],
     theme: {
       mode: 'light',
@@ -341,7 +365,11 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#FF0000'],
+    colors: ['#0000FF', '#FF0000', '#bbbbbb'],
+    fill: {
+      type: 'solid',
+      opacity: [1, 1, 0.5],
+    },
     dataLabels: {
       enabled: false,
     },
@@ -365,8 +393,8 @@ async function fetchData() {
         rotate: 0,
       },
       title: {
-        text: 'Source: TSA, tsa.gov',
-        offsetX: 235,
+        text: 'Updated Weekly. Source: TSA, tsa.gov',
+        offsetX: 225,
         style: {
           color: '#9C9C9C',
           fontSize: '10px',
@@ -376,16 +404,38 @@ async function fetchData() {
       },
       tickAmount: 16,
     },
-    yaxis: {
-      show: true,
-      floating: false,
-      decimalsInFloat: 0,
-      labels: {
-        formatter: function (val, index) {
-          return (val / 1000000).toFixed(1) + 'M';
+    yaxis: [
+      {
+        seriesName: '2019',
+        show: false,
+        decimalsInFloat: 0,
+        labels: {
+          formatter: function (val, index) {
+            return (val / 1000000).toFixed(1) + 'M';
+          },
         },
       },
-    },
+      {
+        seriesName: '2020',
+        show: true,
+        max: 4000000,
+        decimalsInFloat: 0,
+        labels: {
+          formatter: function (val, index) {
+            return (val / 1000000).toFixed(1) + 'M';
+          },
+        },
+      },
+      {
+        opposite: true,
+        seriesName: 'Difference',
+        labels: {
+          formatter: function (val, index) {
+            return val + '%';
+          },
+        },
+      },
+    ],
   };
 
   let TSAchart = new ApexCharts(document.querySelector('#TSAChart'), TSAoptions);
