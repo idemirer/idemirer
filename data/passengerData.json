@@ -1,5 +1,7 @@
 {
   "2021": [
+    { "date": "4/30", "passengers": 1558553 },
+    { "date": "4/29", "passengers": 1526681 },
     { "date": "4/28", "passengers": 1184326 },
     { "date": "4/27", "passengers": 1077199 },
     { "date": "4/26", "passengers": 1369410 },
@@ -89,6 +91,8 @@
     { "date": "2/1", "passengers": 628989 }
   ],
   "2019": [
+    { "date": "4/30", "passengers": 2546029 },
+    { "date": "4/29", "passengers": 2499461 },
     { "date": "4/28", "passengers": 2256442 },
     { "date": "4/27", "passengers": 2102068 },
     { "date": "4/26", "passengers": 2412770 },
