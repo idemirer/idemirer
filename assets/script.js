@@ -390,7 +390,7 @@ async function fetchData() {
     xaxis: {
       categories: date,
       labels: {
-        rotate: 0,
+        rotate: -45,
       },
       title: {
         text: 'Updated Weekly. Source: TSA, tsa.gov',
@@ -402,12 +402,14 @@ async function fetchData() {
           fontWeight: 400,
         },
       },
-      tickAmount: 16,
+      tickAmount: 18,
     },
     yaxis: [
       {
         seriesName: '2019',
         show: false,
+        max: 3000000,
+        min: 0,
         decimalsInFloat: 0,
         labels: {
           formatter: function (val, index) {
@@ -418,7 +420,8 @@ async function fetchData() {
       {
         seriesName: '2020',
         show: true,
-        max: 4000000,
+        max: 3000000,
+        min: 0,
         decimalsInFloat: 0,
         labels: {
           formatter: function (val, index) {
