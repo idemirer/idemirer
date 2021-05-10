@@ -81,7 +81,7 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    colors: ['#2b2d42', '#8d99ae', '#d90429'],
     fill: {
       type: 'solid',
       opacity: [1, 0.5, 1],
@@ -91,7 +91,7 @@ async function fetchData() {
     },
     stroke: {
       curve: 'straight',
-      width: 4,
+      width: 3,
     },
     title: {
       text: 'U.S. Hotel Occupancy (weeks)',
@@ -167,7 +167,7 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    colors: ['#2b2d42', '#8d99ae', '#d90429'],
     fill: {
       type: 'solid',
       opacity: [1, 0.5, 1],
@@ -177,7 +177,7 @@ async function fetchData() {
     },
     stroke: {
       curve: 'straight',
-      width: 4,
+      width: 3,
     },
     title: {
       text: 'U.S. Hotel ADR (weeks)',
@@ -252,13 +252,13 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#00FF00', '#FF0000'],
+    colors: ['#2b2d42', '#d90429', '#8d99ae'],
     dataLabels: {
       enabled: false,
     },
     stroke: {
       curve: 'straight',
-      width: 4,
+      width: 3,
     },
     title: {
       text: 'U.S. Hotel Demand & Supply',
@@ -365,7 +365,7 @@ async function fetchData() {
         enabled: false,
       },
     },
-    colors: ['#0000FF', '#FF0000', '#bbbbbb'],
+    colors: ['#2b2d42', '#d90429', '#8d99ae'],
     fill: {
       type: 'solid',
       opacity: [1, 1, 0.5],
@@ -375,7 +375,7 @@ async function fetchData() {
     },
     stroke: {
       curve: 'straight',
-      width: 4,
+      width: 3,
     },
     title: {
       text: 'TSA Passenger Data',
