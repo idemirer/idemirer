@@ -94,7 +94,7 @@ async function fetchData() {
       width: 3,
     },
     title: {
-      text: 'U.S. Hotel Occupancy (weeks)',
+      text: 'U.S. Hotel Occupancy (weekly)',
       align: 'center',
     },
     grid: {
@@ -180,7 +180,7 @@ async function fetchData() {
       width: 3,
     },
     title: {
-      text: 'U.S. Hotel ADR (weeks)',
+      text: 'U.S. Hotel ADR (weekly)',
       align: 'center',
     },
     grid: {
