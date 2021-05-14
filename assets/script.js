@@ -434,6 +434,9 @@ async function fetchData() {
         seriesName: 'Difference',
         max: 100,
         min: 0,
+        title: {
+          text: 'Difference %',
+        },
         labels: {
           formatter: function (val, index) {
             return val + '%';
