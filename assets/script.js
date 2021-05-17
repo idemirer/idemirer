@@ -435,7 +435,7 @@ async function fetchData() {
         max: 100,
         min: 0,
         title: {
-          text: 'Gap %',
+          text: 'Gap',
         },
         labels: {
           formatter: function (val, index) {
