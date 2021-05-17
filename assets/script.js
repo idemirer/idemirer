@@ -341,7 +341,7 @@ async function fetchData() {
         data: pass2021,
       },
       {
-        name: 'Difference',
+        name: 'Gap',
         type: 'column',
         data: passDiff,
       },
@@ -431,11 +431,11 @@ async function fetchData() {
       },
       {
         opposite: true,
-        seriesName: 'Difference',
+        seriesName: 'Gap',
         max: 100,
         min: 0,
         title: {
-          text: 'Difference %',
+          text: 'Gap %',
         },
         labels: {
           formatter: function (val, index) {
