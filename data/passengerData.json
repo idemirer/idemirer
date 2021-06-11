@@ -1,5 +1,15 @@
 {
   "2021": [
+    { "date": "6/10", "passengers": 1975189 },
+    { "date": "6/9", "passengers": 1669537 },
+    { "date": "6/8", "passengers": 1560561 },
+    { "date": "6/7", "passengers": 1828396 },
+    { "date": "6/6", "passengers": 1984658 },
+    { "date": "6/5", "passengers": 1681192 },
+    { "date": "6/4", "passengers": 1879885 },
+    { "date": "6/3", "passengers": 1815931 },
+    { "date": "6/2", "passengers": 1587910 },
+    { "date": "6/1", "passengers": 1682752 },
     { "date": "5/31", "passengers": 1900170 },
     { "date": "5/30", "passengers": 1650454 },
     { "date": "5/29", "passengers": 1605810 },
@@ -122,6 +132,16 @@
     { "date": "2/1", "passengers": 628989 }
   ],
   "2019": [
+    { "date": "6/10", "passengers": 2675686 },
+    { "date": "6/9", "passengers": 2509058 },
+    { "date": "6/8", "passengers": 2433189 },
+    { "date": "6/7", "passengers": 2644981 },
+    { "date": "6/6", "passengers": 2669860 },
+    { "date": "6/5", "passengers": 2225952 },
+    { "date": "6/4", "passengers": 2649808 },
+    { "date": "6/3", "passengers": 2623947 },
+    { "date": "6/2", "passengers": 2370152 },
+    { "date": "6/1", "passengers": 2247421 },
     { "date": "5/31", "passengers": 2499002 },
     { "date": "5/30", "passengers": 2555578 },
     { "date": "5/29", "passengers": 2117180 },
