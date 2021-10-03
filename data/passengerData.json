@@ -93,7 +93,9 @@
     { "date": "7/4", "passengers": 1681896 },
     { "date": "7/3", "passengers": 1915017 },
     { "date": "7/2", "passengers": 2196411 },
-    { "date": "7/1", "passengers": 2147090 },
+    { "date": "7/1", "passengers": 2147090 }
+  ],
+  "2021-Archieve": [
     { "date": "6/30", "passengers": 1920663 },
     { "date": "6/29", "passengers": 1808306 },
     { "date": "6/28", "passengers": 2066964 },
@@ -339,7 +341,9 @@
     { "date": "7/4", "passengers": 2795369 },
     { "date": "7/3", "passengers": 2345846 },
     { "date": "7/2", "passengers": 2184253 },
-    { "date": "7/1", "passengers": 2088760 },
+    { "date": "7/1", "passengers": 2088760 }
+  ],
+  "2019-Archieve": [
     { "date": "6/30", "passengers": 2547889 },
     { "date": "6/29", "passengers": 2347767 },
     { "date": "6/28", "passengers": 2455536 },
