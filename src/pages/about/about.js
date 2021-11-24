@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -10,13 +11,22 @@ export default function About() {
       </Head>
       <h2 className={utilStyles.headingLg}>Ilhan Demirer, PhD</h2>
       <div>
-        Associate Professor <br />
-        Department of Management, Information Systems and Analytics
-        <br />
-        School of Business and Economics
-        <br />
-        State University of New York College at Plattsburgh
-        <br />
+        <p>
+          Associate Professor <br />
+          Department of Management, Information Systems and Analytics
+          <br />
+          School of Business and Economics
+          <br />
+          State University of New York College at Plattsburgh
+          <br />
+        </p>
+        <p>
+          <Link href='../resume/Ilhan-Demirer-CV.pdf'>
+            <a>
+              <i class='far fa-file-pdf'></i>&nbsp;Full Resume
+            </a>
+          </Link>
+        </p>
       </div>
     </Layout>
   );

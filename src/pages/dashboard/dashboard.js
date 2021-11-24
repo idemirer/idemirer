@@ -281,9 +281,6 @@ const revPARChartOptions = {
 
 const tsaChartOptions = {
   theme: {
-    toolbar: {
-      show: false,
-    },
     mode: 'light',
     palette: 'palette6',
     monochrome: {
@@ -294,6 +291,9 @@ const tsaChartOptions = {
     },
   },
   chart: {
+    toolbar: {
+      show: false,
+    },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
     height: 350,
     width: 650,

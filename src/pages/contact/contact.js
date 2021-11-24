@@ -11,26 +11,38 @@ export default function Contact() {
       </Head>
       <h2 className={utilStyles.headingLg}>Contact Information:</h2>
       <div className={utilStyles.contact}>
-        <Link href='mailto:idemirer@gmail.com'>
-          <a target='_blank'>
-            <i class='far fa-envelope'></i>
-          </a>
-        </Link>
-        <Link href='https://www.linkedin.com/in/ilhan-demirer-3230642a/'>
-          <a target='_blank'>
-            <i class='fab fa-linkedin-in'></i>
-          </a>
-        </Link>
-        <Link href='https://twitter.com/idemirer'>
-          <a target='_blank'>
-            <i class='fab fa-twitter'></i>
-          </a>
-        </Link>
-        <Link href='https://github.com/idemirer'>
-          <a target='_blank'>
-            <i class='fab fa-github'></i>
-          </a>
-        </Link>
+        <div className={`${utilStyles.row} ${utilStyles.icon}`}>
+          <i class='far fa-envelope'></i>
+        </div>
+        <div className={utilStyles.rowname}>
+          <Link href='mailto:idemirer@gmail.com'>
+            <a target='_blank'>idemirer@gmail.com</a>
+          </Link>
+        </div>
+        <div className={`${utilStyles.row} ${utilStyles.icon}`}>
+          <i class='fab fa-linkedin-in'></i>
+        </div>
+        <div className={utilStyles.rowname}>
+          <Link href='https://www.linkedin.com/in/ilhan-demirer-3230642a/'>
+            <a target='_blank'>Ilhan Demirer</a>
+          </Link>
+        </div>
+        <div className={`${utilStyles.row} ${utilStyles.icon}`}>
+          <i class='fab fa-twitter'></i>
+        </div>
+        <div className={utilStyles.rowname}>
+          <Link href='https://twitter.com/idemirer'>
+            <a target='_blank'>@idemirer</a>
+          </Link>
+        </div>
+        <div className={`${utilStyles.row} ${utilStyles.icon}`}>
+          <i class='fab fa-github'></i>
+        </div>
+        <div className={utilStyles.rowname}>
+          <Link href='https://github.com/idemirer'>
+            <a target='_blank'>Ilhan Demirer</a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
