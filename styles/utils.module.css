@@ -1,0 +1,80 @@
+.heading2Xl,
+.headingXl,
+.headingLg {
+  font-family: 'Merriweather', serif;
+}
+
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.padding1px {
+  padding-top: 1px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.lightText {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.textRight {
+  text-align: right;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 700;
+  margin: 10px 0px;
+}
+.navbar a {
+  color: #000;
+}
+.navbar a:hover {
+  color: #900;
+  text-decoration: none;
+  text-shadow: 1px 1px #ccc;
+}
