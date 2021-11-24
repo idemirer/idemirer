@@ -1,9 +1,7 @@
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
-import Layout from './layout';
 
-export default function Navbar({ home }) {
+export default function Navbar() {
   return (
     <div className={utilStyles.navbar}>
       <div>
@@ -27,7 +25,7 @@ export default function Navbar({ home }) {
         </Link>
       </div>
       <div>
-        <Link href='/about/contact'>
+        <Link href='/contact/contact'>
           <a>Contact</a>
         </Link>
       </div>

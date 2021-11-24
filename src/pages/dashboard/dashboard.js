@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import Link from 'next/link';
-import Date from '../../components/date';
 import CreateChart from '../../components/apexchartlayout';
-import strdata from '../../public/data/str.json';
-import tsaData from '../../public/data/passengerData.json';
+import strdata from '../../assets/data/str.json';
+import tsaData from '../../assets/data/passengerData.json';
 
 const updateDate = 'Nov 23, 2021';
 
@@ -109,6 +107,9 @@ const tsaChartData = [
 
 const occChartOptions = {
   chart: {
+    toolbar: {
+      show: false,
+    },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
     height: 350,
     width: 650,
@@ -164,6 +165,9 @@ const occChartOptions = {
 
 const ADRChartOptions = {
   chart: {
+    toolbar: {
+      show: false,
+    },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
     height: 350,
     width: 650,
@@ -219,6 +223,9 @@ const ADRChartOptions = {
 
 const revPARChartOptions = {
   chart: {
+    toolbar: {
+      show: false,
+    },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
     height: 350,
     width: 650,
@@ -274,6 +281,9 @@ const revPARChartOptions = {
 
 const tsaChartOptions = {
   theme: {
+    toolbar: {
+      show: false,
+    },
     mode: 'light',
     palette: 'palette6',
     monochrome: {

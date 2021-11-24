@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.css';
+import styles from '../styles/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Navbar from './navbar';
+import Footer from './footer';
 
 const name = 'Ilhan Demirer';
 export const siteTitle = 'Ilhan Demirer Personal Website';
@@ -16,6 +17,12 @@ export default function Layout({ children, home }) {
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
+        <link
+          rel='stylesheet'
+          href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+          integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
+          crossorigin='anonymous'
+        />
         <meta name='description' content='Learn how to build a personal website using Next.js' />
         <meta
           property='og:image'
@@ -52,6 +59,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

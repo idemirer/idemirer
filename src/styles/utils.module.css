@@ -70,5 +70,19 @@
 .navbar a:hover {
   color: #900;
   text-decoration: none;
-  text-shadow: 1px 1px #ccc;
+  text-shadow: 1px 1px #bbb;
+}
+.contact a {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #000;
+}
+.contact a:hover {
+  color: #900;
+  text-shadow: 1px 1px #bbb;
+}
+.footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.75rem;
 }
