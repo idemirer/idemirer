@@ -12,7 +12,7 @@ export default function Contact() {
       <h2 className={utilStyles.headingLg}>Contact Information:</h2>
       <div className={utilStyles.contact}>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i class='far fa-envelope'></i>
+          <i className='far fa-envelope'></i>
         </div>
         <div className={utilStyles.rowname}>
           <Link href='mailto:idemirer@gmail.com'>
@@ -20,7 +20,7 @@ export default function Contact() {
           </Link>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i class='fab fa-linkedin-in'></i>
+          <i className='fab fa-linkedin-in'></i>
         </div>
         <div className={utilStyles.rowname}>
           <Link href='https://www.linkedin.com/in/ilhan-demirer-3230642a/'>
@@ -28,7 +28,7 @@ export default function Contact() {
           </Link>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i class='fab fa-twitter'></i>
+          <i className='fab fa-twitter'></i>
         </div>
         <div className={utilStyles.rowname}>
           <Link href='https://twitter.com/idemirer'>
@@ -36,7 +36,7 @@ export default function Contact() {
           </Link>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i class='fab fa-github'></i>
+          <i className='fab fa-github'></i>
         </div>
         <div className={utilStyles.rowname}>
           <Link href='https://github.com/idemirer'>

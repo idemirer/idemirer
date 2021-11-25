@@ -21,7 +21,7 @@ export default function Layout({ children, home }) {
           rel='stylesheet'
           href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
           integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
-          crossorigin='anonymous'
+          crossOrigin='anonymous'
         />
         <meta name='description' content='Learn how to build a personal website using Next.js' />
         <meta
@@ -37,14 +37,16 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src='/images/IlhanDemirerProfilePicture.jpg'
-              className={utilStyles.borderCircle}
-              height={120}
-              width={120}
-              alt={name}
-            />
+            <div className={utilStyles.profileImg}>
+              <Image
+                priority
+                src='/images/IlhanDemirer.jpg'
+                className={utilStyles.borderCircle}
+                height={170}
+                width={170}
+                alt={name}
+              />
+            </div>
             <h1 className={utilStyles.headingXl}>{name}</h1>
           </>
         ) : (
