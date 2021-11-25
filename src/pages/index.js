@@ -11,16 +11,22 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
+        <p className={utilStyles.headingMd}>
+          Hello, I’m <strong>Ilhan</strong>.
+        </p>
+        <p>I’m a Management faculty at State University of New York at Plattsburgh.</p>
+        <p>My research interest are in Hopsitality Finance and Information Technology.</p>
         <p>
-          Hello, I’m <strong>Ilhan</strong>. <br />
-          <br />
-          I’m a management faculty at State University of New York. You can contact me on{' '}
-          <a href='https://twitter.com/idemirer'>Twitter</a>.
+          On this page I plan to post weekly updates on news, research, and{' '}
+          <Link href='dashboard/dashboard'>
+            <a>hospitality data</a>
+          </Link>
+          .
         </p>
       </section>
       <section className={`${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingMd}>Blog</h2>
+        <h2 className={utilStyles.headingMd}>Latest blog posts:</h2>
         <ul className={utilStyles.list}>
           {allPostsData.slice(0, 2).map(({ id, date, title, tags }) => (
             <li className={utilStyles.listItem} key={id}>

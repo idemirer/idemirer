@@ -45,6 +45,7 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  font-weight: 700;
 }
 
 .lightText {
@@ -61,8 +62,9 @@
   gap: 15px;
   align-items: center;
   flex-direction: row;
-  font-weight: 700;
-  margin: 10px 0px;
+  font-weight: 900;
+  margin: 30px 0px;
+  font-size: 1.2rem;
 }
 .navbar a {
   color: #000;
@@ -84,7 +86,9 @@
   width: 50px;
 }
 .contact .rowname {
-  width: 600px;
+  flex-grow: 8;
+  flex-basis: 90%;
+  /* width: 700px; */
 }
 .contact a {
   margin-right: 10px;
