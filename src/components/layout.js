@@ -26,16 +26,16 @@ export default function Layout({ children, home }) {
         <meta name='description' content='Ilhan Demirer personal website.' />
         <meta itemProp='name' content='Ilhan Demirer Personal Website' />
         <meta itemProp='description' content='Ilhan Demirer personal website.' />
-        <meta itemProp='image' content='./images/android-chrome-512x512.png' />
+        <meta itemProp='image' content='./images/wide-card.png' />
         <meta property='og:url' content='https://idemirer.vercel.app' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Ilhan Demirer Personal Website' />
         <meta property='og:description' content='Ilhan Demirer personal website.' />
-        <meta property='og:image' content='./images/android-chrome-512x512.png' />
+        <meta property='og:image' content='./images/wide-card.png' />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
         <meta name='twitter:description' content='Ilhan Demirer personal website.' />
-        <meta name='twitter:image' content='./images/android-chrome-512x512.png' />
+        <meta name='twitter:image' content='./images/wide-card.png' />
       </Head>
       <Navbar />
       <header className={styles.header}>
