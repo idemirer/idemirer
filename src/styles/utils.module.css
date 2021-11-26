@@ -86,15 +86,21 @@
   font-size: 1.5rem;
   color: #000;
   font-weight: 700;
+  width: 100%;
 }
 .contact .icon {
   width: 50px;
 }
 .contact .rowname {
-  flex-grow: 8;
   flex-basis: 90%;
-  /* width: 700px; */
 }
+
+@media all and (max-width: 600px) {
+  .contact .rowname {
+    flex-basis: 85%;
+  }
+}
+
 .contact a {
   margin-right: 10px;
   color: #000;
