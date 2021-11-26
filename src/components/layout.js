@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/layout.module.css';
+import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Navbar from './navbar';
@@ -23,15 +23,19 @@ export default function Layout({ children, home }) {
           integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
           crossOrigin='anonymous'
         />
-        <meta name='description' content='Learn how to build a personal website using Next.js' />
-        <meta
-          property='og:image'
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name='og:title' content={siteTitle} />
+        <meta name='description' content='Ilhan Demirer personal website.' />
+        <meta itemProp='name' content='Ilhan Demirer Personal Website' />
+        <meta itemProp='description' content='Ilhan Demirer personal website.' />
+        <meta itemProp='image' content='./images/android-chrome-512x512.png' />
+        <meta property='og:url' content='https://idemirer.vercel.app' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Ilhan Demirer Personal Website' />
+        <meta property='og:description' content='Ilhan Demirer personal website.' />
+        <meta property='og:image' content='./images/android-chrome-512x512.png' />
         <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
+        <meta name='twitter:description' content='Ilhan Demirer personal website.' />
+        <meta name='twitter:image' content='./images/android-chrome-512x512.png' />
       </Head>
       <Navbar />
       <header className={styles.header}>
