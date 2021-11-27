@@ -1,9 +1,9 @@
-import utilStyles from '../styles/utils.module.css';
+import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className={utilStyles.navbar}>
+    <div className={navbarStyle.navbar}>
       <div>
         <Link href='/'>
           <a>Home</a>
