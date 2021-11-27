@@ -2,7 +2,7 @@ import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 
 export default function Navbar() {
-  function clickHamburger {
+  function clickHamburger() {
     document.querySelectorAll('div').classList.toggle(navbarStyle.show);
   }
   return (
