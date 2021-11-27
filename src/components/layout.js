@@ -5,7 +5,6 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Navbar from './navbar';
 import Footer from './footer';
-import Hamburger from './hamburger';
 
 const name = 'Ilhan Demirer';
 export const siteTitle = 'Ilhan Demirer Personal Website';
@@ -40,7 +39,6 @@ export default function Layout({ children, home }) {
         <meta name='twitter:image' content='./images/wide-card.png' />
       </Head>
       <Navbar />
-      <Hamburger />
       <header className={styles.header}>
         {home ? (
           <>

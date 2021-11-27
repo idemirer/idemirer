@@ -16,9 +16,21 @@
   text-decoration: none;
   text-shadow: 1px 1px #bbb;
 }
+.hamburgerMenu {
+  display: none;
+  text-align: right;
+}
+.showNavBar {
+  display: block;
+}
 
 @media all and (max-width: 800px) {
   .navbar {
     display: none;
+    text-align: right;
+    margin: 30px 10px;
+  }
+  .hamburgerMenu {
+    display: block;
   }
 }
