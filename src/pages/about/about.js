@@ -21,9 +21,9 @@ export default function About() {
           <br />
         </p>
         <p>
-          <Link href='../resume/Ilhan-Demirer-CV.pdf'>
+          <Link href='/resume/Ilhan-Demirer-CV.pdf'>
             <a>
-              <i class='far fa-file-pdf'></i>&nbsp;Full Resume
+              <i className={`${utilStyles.redText} far fa-file-pdf`}></i>&nbsp;Full Resume
             </a>
           </Link>
         </p>

@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
         <p>My research interest are in Hopsitality Finance and Information Technology.</p>
         <p>
           On this page I plan to post weekly updates on news, research, and{' '}
-          <Link href='dashboard/dashboard'>
+          <Link href='/dashboard/dashboard'>
             <a>hospitality data</a>
           </Link>
           .

@@ -25,7 +25,7 @@ export default function ChangeTheme() {
     setTheme(!theme);
   };
   return (
-    <Link href=''>
+    <Link href='#'>
       <a onClick={onClick}>
         <i className='fas fa-moon'></i>
         {/* {theme ? (

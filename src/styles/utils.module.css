@@ -53,7 +53,9 @@
   color: var(--lightText);
   font-size: 0.75rem;
 }
-
+.redText {
+  color: var(--hover);
+}
 .textRight {
   text-align: right;
 }

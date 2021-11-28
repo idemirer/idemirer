@@ -1,11 +1,11 @@
 import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 
-export default function Post({ postData }) {
+export default function Post({ postData, allPostsData }) {
   return (
     <Layout post>
       <Head>
@@ -17,11 +17,9 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div className={`${utilStyles.lightText} ${utilStyles.categories}`}>
-          {Object.keys(postData.tags).map((item, index) => (
-            <Link href='#'>
-              <a className={utilStyles.tags} key={index}>
-                {'#' + postData.tags[item] + ' '}
-              </a>
+          {Object.keys(postData.tags).map((key) => (
+            <Link href='#' key={key}>
+              <a className={utilStyles.tags}>{'#' + postData.tags[key] + ' '}</a>
             </Link>
           ))}
         </div>
@@ -40,10 +38,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const allPostsData = getSortedPostsData();
   const postData = await getPostData(params.id);
   return {
     props: {
       postData,
+      allPostsData,
     },
   };
 }
