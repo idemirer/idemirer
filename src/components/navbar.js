@@ -13,7 +13,7 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-      <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : navbarStyle.dontShow}`}>
+      <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : navbarStyle.testing}`}>
         <div>
           <Link href='/'>
             <a>Home</a>

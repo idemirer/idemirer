@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 
@@ -17,7 +18,9 @@ export default function Post({ postData }) {
         </div>
         <div className={utilStyles.lightText}>
           {Object.keys(postData.tags).map((item, index) => (
-            <span key={index}>{postData.tags[item] + ' '}</span>
+            <Link href='#'>
+              <a key={index}>{'#' + postData.tags[item] + ' '}</a>
+            </Link>
           ))}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
