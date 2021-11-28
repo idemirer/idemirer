@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700&display=swap');
+:root {
+  --lightTextColor: #000;
+  --lightBackgroundColor: #fff;
+  --lightLinkColor: #000;
+  --lightHoverColor: #900;
+  --lightShadow: #333;
+  --lightLText: #666;
+  /* Dark Theme */
+  --darkTextColor: #fff;
+  --darkBackgroundColor: #444;
+  --darkLinkColor: #fff;
+  --darkHoverColor: rgb(139, 139, 139);
+  --darkShadow: #000;
+  --lightDText: #ccc;
+
+  --text: var(--lightTextColor);
+  --background: var(--lightBackgroundColor);
+  --hover: var(--lightHoverColor);
+  --link: var(--lightLinkColor);
+  --shadow: var(--lightShadow);
+  --lightText: var(--lightLText);
+}
 
 html,
 body {
@@ -8,19 +30,21 @@ body {
     Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: var(--background);
+  color: var(--text);
 }
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: #000;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #900;
+  color: var(--hover);
 }
 
 img {

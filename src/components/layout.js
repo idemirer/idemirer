@@ -62,14 +62,14 @@ export default function Layout({ children, home, post }) {
       {post && (
         <div className={styles.backToHome}>
           <Link href='/posts'>
-            <a>🡸 Back to Posts</a>
+            <a>&#8592; Back to Posts</a>
           </Link>
         </div>
       )}
       {!home && !post && (
         <div className={styles.backToHome}>
           <Link href='/'>
-            <a>🡸 Back to Home</a>
+            <a>&#8592; Back to Home</a>
           </Link>
         </div>
       )}

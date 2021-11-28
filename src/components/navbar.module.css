@@ -8,13 +8,9 @@
   margin: 30px 0px;
   font-size: 1.2rem;
 }
-.navbar a {
-  color: #000;
-}
 .navbar a:hover {
-  color: #900;
+  /* text-shadow: 1px 1px 1px var(--shadow); */
   text-decoration: none;
-  text-shadow: 1px 1px #bbb;
 }
 .hamburgerMenu {
   font-size: 26px;
@@ -25,7 +21,10 @@
 .showNavBar {
   display: block !important;
 }
-
+.themeSwitch {
+  align-self: flex-end;
+  text-align: right;
+}
 @media all and (max-width: 800px) {
   .navbar {
     display: none;

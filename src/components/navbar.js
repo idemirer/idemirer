@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
+import ChangeTheme from './changeTheme';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+
   return (
     <div>
       <div className={navbarStyle.hamburgerMenu}>
@@ -38,6 +40,9 @@ export default function Navbar() {
           <Link href='/contact/contact'>
             <a>Contact</a>
           </Link>
+        </div>
+        <div className={navbarStyle.themeSwitch}>
+          <ChangeTheme />
         </div>
       </div>
     </div>

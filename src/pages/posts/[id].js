@@ -16,10 +16,12 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div className={utilStyles.lightText}>
+        <div className={`${utilStyles.lightText} ${utilStyles.categories}`}>
           {Object.keys(postData.tags).map((item, index) => (
             <Link href='#'>
-              <a key={index}>{'#' + postData.tags[item] + ' '}</a>
+              <a className={utilStyles.tags} key={index}>
+                {'#' + postData.tags[item] + ' '}
+              </a>
             </Link>
           ))}
         </div>
