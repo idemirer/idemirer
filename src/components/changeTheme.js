@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function ChangeTheme() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState();
 
   useEffect(() => {
     const root = document.documentElement;
