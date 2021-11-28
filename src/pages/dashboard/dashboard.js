@@ -139,7 +139,7 @@ const occChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#2b2d42', '#8d99ae', '#d90429'],
+  colors: ['#ffb300', '#8d99ae', '#d90429'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -152,7 +152,7 @@ const occChartOptions = {
     width: 3,
   },
   theme: {
-    mode: 'light',
+    mode: 'dark',
     palette: 'palette6',
     monochrome: {
       enabled: false,
@@ -197,7 +197,7 @@ const ADRChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#2b2d42', '#8d99ae', '#d90429'],
+  colors: ['#ffb300', '#8d99ae', '#d90429'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -210,7 +210,7 @@ const ADRChartOptions = {
     width: 3,
   },
   theme: {
-    mode: 'light',
+    mode: 'dark',
     palette: 'palette6',
     monochrome: {
       enabled: false,
@@ -255,7 +255,7 @@ const revPARChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#2b2d42', '#8d99ae', '#d90429'],
+  colors: ['#ffb300', '#8d99ae', '#d90429'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -268,7 +268,7 @@ const revPARChartOptions = {
     width: 3,
   },
   theme: {
-    mode: 'light',
+    mode: 'dark',
     palette: 'palette6',
     monochrome: {
       enabled: false,
@@ -281,7 +281,7 @@ const revPARChartOptions = {
 
 const tsaChartOptions = {
   theme: {
-    mode: 'light',
+    mode: 'dark',
     palette: 'palette6',
     monochrome: {
       enabled: false,
@@ -302,7 +302,7 @@ const tsaChartOptions = {
       enabled: false,
     },
   },
-  colors: ['#2b2d42', '#d90429', '#8d99ae'],
+  colors: ['#ffb300', '#d90429', '#8d99ae'],
   fill: {
     type: 'solid',
     opacity: [1, 1, 0.5],
@@ -317,12 +317,6 @@ const tsaChartOptions = {
   title: {
     text: 'TSA Passenger Data',
     align: 'center',
-  },
-  grid: {
-    row: {
-      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-      opacity: 0.5,
-    },
   },
   xaxis: {
     categories: date,
