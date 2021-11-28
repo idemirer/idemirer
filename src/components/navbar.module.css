@@ -17,6 +17,7 @@
   text-shadow: 1px 1px #bbb;
 }
 .hamburgerMenu {
+  font-size: 26px;
   display: none;
   text-align: right;
   margin-bottom: 20px;
