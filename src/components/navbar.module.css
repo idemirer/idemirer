@@ -21,16 +21,18 @@
   text-align: right;
 }
 .showNavBar {
-  display: block;
+  display: block !important;
 }
 
 @media all and (max-width: 800px) {
   .navbar {
     display: none;
     text-align: right;
-    margin: 30px 10px;
+    margin: 10px 10px;
+    z-index: 1;
   }
   .hamburgerMenu {
+    margin: 30px 10px 0px 0px;
     display: block;
   }
 }

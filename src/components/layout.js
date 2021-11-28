@@ -9,7 +9,7 @@ import Footer from './footer';
 const name = 'Ilhan Demirer';
 export const siteTitle = 'Ilhan Demirer Personal Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, post }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -59,10 +59,17 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {post && (
+        <div className={styles.backToHome}>
+          <Link href='/posts'>
+            <a>🡸 Back to Posts</a>
+          </Link>
+        </div>
+      )}
+      {!home && !post && (
         <div className={styles.backToHome}>
           <Link href='/'>
-            <a>← Back to home</a>
+            <a>🡸 Back to Home</a>
           </Link>
         </div>
       )}

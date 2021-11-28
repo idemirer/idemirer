@@ -1,20 +1,19 @@
+import React, { useState } from 'react';
 import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 
 export default function Navbar() {
-  function clickHamburger() {
-    document.querySelectorAll('div').classList.toggle(navbarStyle.show);
-  }
+  const [active, setActive] = useState(false);
   return (
     <div>
       <div className={navbarStyle.hamburgerMenu}>
         <Link href='#'>
-          <a oncClick={clickHamburger}>
+          <a onClick={() => setActive(!active)}>
             <i className='fas fa-bars'></i>
           </a>
         </Link>
       </div>
-      <div className={navbarStyle.navbar}>
+      <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : navbarStyle.dontShow}`}>
         <div>
           <Link href='/'>
             <a>Home</a>

@@ -9,11 +9,12 @@
   align-items: center;
 }
 .backToHome {
-  margin: 3rem 0 10px 0;
+  margin: 50px 0px;
+}
+
+.backToHome a:hover {
+  text-decoration: none;
 }
 .container ul {
   padding-inline-start: 20px;
-}
-.container ul:first-child {
-  margin: 10px 0px;
 }
