@@ -11,6 +11,9 @@
 .backToHome {
   margin: 3rem 0 10px 0;
 }
-.container li {
+.container ul {
+  padding-inline-start: 20px;
+}
+.container ul:first-child {
   margin: 10px 0px;
 }
