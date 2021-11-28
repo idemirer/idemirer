@@ -19,6 +19,7 @@
 .hamburgerMenu {
   display: none;
   text-align: right;
+  margin-bottom: 20px;
 }
 .showNavBar {
   display: block !important;
