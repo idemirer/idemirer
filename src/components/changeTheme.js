@@ -26,7 +26,17 @@ export default function ChangeTheme() {
   };
   return (
     <Link href=''>
-      <a onClick={onClick}>{theme ? <span>&#127767;</span> : <span>&#127765;</span>}</a>
+      <a onClick={onClick}>
+        {theme ? (
+          <span>
+            <i class='fas fa-moon'></i>
+          </span>
+        ) : (
+          <span>
+            <i class='far fa-moon'></i>
+          </span>
+        )}
+      </a>
     </Link>
   );
 }
