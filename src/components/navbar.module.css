@@ -22,7 +22,7 @@
   display: block !important;
 }
 .themeSwitch {
-  align-self: flex-end;
+  min-width: 240px;
   text-align: right;
 }
 @media all and (max-width: 800px) {
