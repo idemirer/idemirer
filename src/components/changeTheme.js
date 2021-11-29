@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import useDarkMode from 'use-dark-mode';
 
 export default function ChangeTheme() {
-  const [theme, setTheme] = useState(false);
+  const { value: theme, toggle: toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const root = document.documentElement;
@@ -21,21 +22,10 @@ export default function ChangeTheme() {
         root.style.setProperty('--lightText', 'var(--lightDText)');
   });
 
-  const onClick = () => {
-    setTheme(!theme);
-  };
   return (
     <Link href='#'>
-      <a onClick={onClick}>
+      <a onClick={toggleDarkMode}>
         <i className='fas fa-moon'></i>
-        {/* {theme ? (
-          <span><i className='fas fa-moon'></i>
-          </span>
-        ) : (
-          <span>
-            <i className='fas fa-moon'></i>
-          </span>
-        )} */}
       </a>
     </Link>
   );
