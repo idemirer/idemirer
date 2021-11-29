@@ -128,8 +128,8 @@ const occChartOptions = {
       rotate: 0,
     },
     title: {
-      text: 'Source: STR, str.com. Last update: ' + updateDate,
-      offsetX: 190,
+      text: 'Source: STR, str.com. Updated: ' + updateDate,
+      offsetX: 245,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -186,8 +186,8 @@ const ADRChartOptions = {
       rotate: 0,
     },
     title: {
-      text: 'Source: STR, str.com. Last update: ' + updateDate,
-      offsetX: 190,
+      text: 'Source: STR, str.com. Updated: ' + updateDate,
+      offsetX: 240,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -244,8 +244,8 @@ const revPARChartOptions = {
       rotate: 0,
     },
     title: {
-      text: 'Source: STR, str.com. Last update: ' + updateDate,
-      offsetX: 190,
+      text: 'Source: STR, str.com. Updated: ' + updateDate,
+      offsetX: 240,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -322,10 +322,11 @@ const tsaChartOptions = {
     categories: date,
     labels: {
       rotate: -45,
+      maxHeight: 60,
     },
     title: {
-      text: 'Source: TSA, tsa.gov. Last update: ' + updateDate,
-      offsetX: 190,
+      text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
+      offsetX: 270,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -387,19 +388,19 @@ export default function Dashboard() {
       <section>
         <div>
           <h3>Occupancy Data:</h3>
-          <CreateChart data={occChartData} options={occChartOptions} type={'line'} width={760} />
+          <CreateChart data={occChartData} options={occChartOptions} type={'line'} />
         </div>
         <div>
           <h3>ADR Data:</h3>
-          <CreateChart data={ADRChartData} options={ADRChartOptions} type={'line'} width={760} />
+          <CreateChart data={ADRChartData} options={ADRChartOptions} type={'line'} />
         </div>
         <div>
           <h3>RevPAR Data:</h3>
-          <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} width={760} />
+          <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} />
         </div>
         <div>
           <h3>TSA Passenger Data:</h3>
-          <CreateChart data={tsaChartData} options={tsaChartOptions} type={'line'} width={760} />
+          <CreateChart data={tsaChartData} options={tsaChartOptions} type={'line'} />
         </div>
       </section>
     </Layout>
