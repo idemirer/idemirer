@@ -22,7 +22,7 @@ export default function About() {
         </p>
         <p>
           <Link href='/resume/Ilhan-Demirer-CV.pdf'>
-            <a>
+            <a className={utilStyles.textBold}>
               <i className={`${utilStyles.redText} far fa-file-pdf`}></i>&nbsp;Full Resume
             </a>
           </Link>

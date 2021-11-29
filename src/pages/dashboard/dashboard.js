@@ -107,29 +107,46 @@ const tsaChartData = [
 
 const occChartOptions = {
   chart: {
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1, 2],
+      top: 3,
+      left: 0,
+      blur: 1,
+      color: '#000',
+      opacity: 1,
+    },
+    grid: {
+      padding: {
+        bottom: 0,
+      },
+    },
     toolbar: {
       show: false,
     },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    height: 350,
-    width: 650,
     type: 'line',
     zoom: {
       enabled: false,
     },
   },
   title: {
-    text: 'U.S. Hotel Occupancy (weekly)',
+    text: 'U.S. Hotel Occupancy (Weekly)',
     align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
   xaxis: {
     categories: weeks,
     labels: {
       rotate: 0,
+      maxHeight: 120,
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
-      offsetX: 245,
+      align: 'right',
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -165,12 +182,19 @@ const occChartOptions = {
 
 const ADRChartOptions = {
   chart: {
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1, 2],
+      top: 3,
+      left: 0,
+      blur: 1,
+      color: '#000',
+      opacity: 1,
+    },
     toolbar: {
       show: false,
     },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    height: 350,
-    width: 650,
     type: 'line',
     zoom: {
       enabled: false,
@@ -179,6 +203,10 @@ const ADRChartOptions = {
   title: {
     text: 'U.S. Hotel ADR (weekly)',
     align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
   xaxis: {
     categories: weeks,
@@ -187,7 +215,6 @@ const ADRChartOptions = {
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
-      offsetX: 240,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -223,12 +250,19 @@ const ADRChartOptions = {
 
 const revPARChartOptions = {
   chart: {
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1, 2],
+      top: 3,
+      left: 0,
+      blur: 1,
+      color: '#000',
+      opacity: 1,
+    },
     toolbar: {
       show: false,
     },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    height: 350,
-    width: 650,
     type: 'line',
     zoom: {
       enabled: false,
@@ -237,15 +271,19 @@ const revPARChartOptions = {
   title: {
     text: 'U.S. Hotel RevPAR (weekly)',
     align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
   xaxis: {
     categories: weeks,
     labels: {
       rotate: 0,
+      maxHeight: 60,
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
-      offsetX: 240,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -280,6 +318,25 @@ const revPARChartOptions = {
 };
 
 const tsaChartOptions = {
+  chart: {
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1, 2],
+      top: 3,
+      left: 0,
+      blur: 1,
+      color: '#000',
+      opacity: 1,
+    },
+    toolbar: {
+      show: false,
+    },
+    fontFamily: 'Inter, Roboto, Arial, sans-serif',
+    type: 'line',
+    zoom: {
+      enabled: false,
+    },
+  },
   theme: {
     mode: 'dark',
     palette: 'palette6',
@@ -288,18 +345,6 @@ const tsaChartOptions = {
       color: '#255aee',
       shadeTo: 'light',
       shadeIntensity: 0.65,
-    },
-  },
-  chart: {
-    toolbar: {
-      show: false,
-    },
-    fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    height: 350,
-    width: 650,
-    type: 'line',
-    zoom: {
-      enabled: false,
     },
   },
   colors: ['#ffb300', '#d90429', '#8d99ae'],
@@ -317,6 +362,10 @@ const tsaChartOptions = {
   title: {
     text: 'TSA Passenger Data',
     align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
   xaxis: {
     categories: date,
@@ -326,7 +375,6 @@ const tsaChartOptions = {
     },
     title: {
       text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
-      offsetX: 270,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -335,6 +383,9 @@ const tsaChartOptions = {
       },
     },
     tickAmount: 18,
+  },
+  legend: {
+    height: 35,
   },
   yaxis: [
     {
@@ -368,6 +419,9 @@ const tsaChartOptions = {
       min: 0,
       title: {
         text: 'Gap',
+        style: {
+          fontWeight: 600,
+        },
       },
       labels: {
         formatter: function (val, index) {

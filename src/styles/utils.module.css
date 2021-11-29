@@ -12,12 +12,14 @@
   font-weight: 700;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  text-shadow: 1px 1px 1px var(--shadow);
 }
 
 .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
+  text-shadow: 1px 1px 1px var(--shadow);
 }
 
 .headingMd {
@@ -85,7 +87,7 @@
   text-decoration: none;
 }
 .categories {
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 .tags {
   box-sizing: content-box;
@@ -109,4 +111,7 @@
   text-align: center;
   color: var(--lightText);
   font-size: 0.75rem;
+}
+.textBold {
+  font-weight: 600;
 }

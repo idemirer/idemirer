@@ -3,8 +3,8 @@
   --lightTextColor: #000;
   --lightBackgroundColor: #fff;
   --lightLinkColor: #000;
-  --lightHoverColor: #900;
-  --lightShadow: #333;
+  --lightHoverColor: #04c;
+  --lightShadow: #999;
   --lightLText: #666;
   /* Dark Theme */
   --darkTextColor: #fff;
@@ -45,9 +45,14 @@ a {
 a:hover {
   text-decoration: underline;
   color: var(--hover);
+  text-shadow: 1px 1px 2px var(--shadow);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+::selection {
+  background-color: var(--shadow);
 }
