@@ -14,9 +14,9 @@ export default function Blog({ allPostsData }) {
       <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, slug, date, title }) => (
+          {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${slug}`}>
+              <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
