@@ -91,17 +91,16 @@
 }
 .tags {
   box-sizing: content-box;
-  background-color: #aaa;
+  background-color: #444;
   border-radius: 8px;
   padding: 3px;
   margin-right: 5px;
-  color: #444;
 }
-.tags:hover {
-  text-decoration: none;
-  background-color: #444;
+.tags a {
   color: #fff;
+  text-shadow: 1px 1px 1px #000;
 }
+
 .chartArea {
   box-sizing: content-box;
   box-shadow: 0px 0px 15px var(--shadow);

@@ -30,7 +30,8 @@ export default function Post({ postData, allPostsData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const allPostsData = getSortedPostsData();
+  const paths = getAllPostIds(allPostsData);
   return {
     paths,
     fallback: false,
@@ -39,7 +40,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
-  const postData = await getPostData(params.id);
+  let id = '';
+  for (let i = 0; i < allPostsData.length; i++) {
+    if (params.slug == allPostsData[i].slug) {
+      id = allPostsData[i].id;
+    }
+  }
+  const postData = await getPostData(id);
   return {
     props: {
       postData,

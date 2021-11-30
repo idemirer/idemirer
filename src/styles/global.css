@@ -3,12 +3,13 @@
   --lightTextColor: #000;
   --lightBackgroundColor: #fff;
   --lightLinkColor: #000;
-  --lightHoverColor: #04c;
-  --lightShadow: #999;
+  --lightHoverColor: #888;
+  --lightShadow: #000;
   --lightLText: #666;
+
   /* Dark Theme */
   --darkTextColor: #fff;
-  --darkBackgroundColor: #444;
+  --darkBackgroundColor: #151515;
   --darkLinkColor: #fff;
   --darkHoverColor: rgb(139, 139, 139);
   --darkShadow: #000;
@@ -43,9 +44,9 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--hover);
-  text-shadow: 1px 1px 2px var(--shadow);
+  text-shadow: 1px 1px 1px var(--shadow);
 }
 
 img {
@@ -55,4 +56,5 @@ img {
 
 ::selection {
   background-color: var(--shadow);
+  color: var(--lightDText);
 }
