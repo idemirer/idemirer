@@ -1,9 +1,10 @@
 import Layout from '../../components/layout';
-import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
+import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
+import Image from 'next/image';
 
 export default function Post({ postData, allPostsData }) {
   return (
