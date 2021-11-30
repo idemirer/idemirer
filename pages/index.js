@@ -35,9 +35,9 @@ export default function Home({ allPostsData }) {
               </Link>
               <br />
               {tags.map((item, key) => (
-                <small className={`${utilStyles.tags} ${utilStyles.lightText}`} key={key}>
+                <small key={key}>
                   <Link href='#'>
-                    <a>{`#${item}`}</a>
+                    <a className={`${utilStyles.tags} ${utilStyles.lightText}`}>{`#${item}`}</a>
                   </Link>
                 </small>
               ))}
