@@ -14,9 +14,9 @@ export default function Post({ postData, allPostsData }) {
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={`${utilStyles.lightText} ${utilStyles.categories}`}>
-          {Object.keys(postData.tags).map((key) => (
+          {postData.tags.map((item, key) => (
             <Link href='#' key={key}>
-              <a className={utilStyles.tags}>{'#' + postData.tags[key] + ' '}</a>
+              <a className={utilStyles.tags}>{'#' + item + ' '}</a>
             </Link>
           ))}
         </div>
