@@ -25,7 +25,6 @@ export default function About({ readHTML }) {
 }
 export async function getStaticProps() {
   const readHTML = await readMD('/pages/about/content', 'about');
-  console.log(readHTML);
   return {
     props: {
       readHTML,
