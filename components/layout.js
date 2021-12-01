@@ -2,11 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Navbar from './navbar';
 import Footer from './footer';
 
-const name = 'Ilhan Demirer';
 export const siteTitle = 'Ilhan Demirer Personal Website';
 
 export default function Layout({ children, home, post }) {
@@ -38,41 +36,12 @@ export default function Layout({ children, home, post }) {
         <meta name='twitter:description' content='Management faculty, share news and data on this site.' />
         <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
       </Head>
-      <Navbar />
       <header className={styles.header}>
-        {home ? (
-          <>
-            <div className={utilStyles.profileImg}>
-              <Image
-                priority
-                src='/images/IlhanDemirer.jpg'
-                className={utilStyles.borderCircle}
-                height={170}
-                width={170}
-                alt={name}
-              />
-            </div>
-            <h1 className={utilStyles.headingXl}>{name}</h1>
-          </>
-        ) : (
-          <></>
-        )}
+        <Navbar />
       </header>
-      <main>{children}</main>
-      {post && (
-        <div className={styles.backToHome}>
-          <Link href='/posts'>
-            <a>&#8592; Back to Posts</a>
-          </Link>
-        </div>
-      )}
-      {!home && !post && (
-        <div className={styles.backToHome}>
-          <Link href='/'>
-            <a>&#8592; Back to Home</a>
-          </Link>
-        </div>
-      )}
+      <main>
+        <section>{children}</section>
+      </main>
       <Footer />
     </div>
   );

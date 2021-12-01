@@ -1,33 +1,34 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
+import { readMD } from '../../lib/readmd';
 
-export default function About() {
+export default function About({ readHTML }) {
   return (
     <Layout>
       <Head>
         <title>About Me</title>
       </Head>
-      <h2 className={utilStyles.headingLg}>Ilhan Demirer, PhD</h2>
-      <div>
-        <p>
-          Associate Professor <br />
-          Department of Management, Information Systems and Analytics
-          <br />
-          School of Business and Economics
-          <br />
-          State University of New York College at Plattsburgh
-          <br />
-        </p>
+      <div className={utilStyles.about}>
+        <div dangerouslySetInnerHTML={{ __html: readHTML.contentHtml }} />
         <p>
           <Link href='/resume/Ilhan-Demirer-CV.pdf'>
             <a className={utilStyles.textBold}>
-              <i className={`${utilStyles.redText} far fa-file-pdf`}></i>&nbsp;Full Resume
+              <i className={`${utilStyles.redText} far fa-file-pdf`}></i>&nbsp;&nbsp;Full Resume
             </a>
           </Link>
         </p>
       </div>
     </Layout>
   );
+}
+export async function getStaticProps() {
+  const readHTML = await readMD('/pages/about/content', 'about');
+  console.log(readHTML);
+  return {
+    props: {
+      readHTML,
+    },
+  };
 }

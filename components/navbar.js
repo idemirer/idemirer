@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 import ChangeTheme from './changeTheme';
+import { navbarData } from './navbarData';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
 
   return (
-    <div>
+    <>
       <div className={navbarStyle.hamburgerMenu}>
         <Link href='#'>
           <a onClick={() => setActive(!active)}>
@@ -16,35 +17,17 @@ export default function Navbar() {
         </Link>
       </div>
       <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : navbarStyle.testing}`}>
-        <div>
-          <Link href='/'>
-            <a>Home</a>
-          </Link>
-        </div>
-        <div>
-          <Link href='/posts'>
-            <a>Blog</a>
-          </Link>
-        </div>
-        <div>
-          <Link href='/dashboard/dashboard'>
-            <a>Hospitality Data</a>
-          </Link>
-        </div>
-        <div>
-          <Link href='/about/about'>
-            <a>About</a>
-          </Link>
-        </div>
-        <div>
-          <Link href='/contact/contact'>
-            <a>Contact</a>
-          </Link>
-        </div>
+        {navbarData.map((item, key) => (
+          <div key={key}>
+            <Link href={item.link}>
+              <a>{item.name}</a>
+            </Link>
+          </div>
+        ))}
         <div className={navbarStyle.themeSwitch}>
           <ChangeTheme />
         </div>
       </div>
-    </div>
+    </>
   );
 }
