@@ -107,13 +107,14 @@ const tsaChartData = [
 
 const occChartOptions = {
   chart: {
+    background: '#000',
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
       top: 3,
       left: 0,
       blur: 1,
-      color: '#000',
+      color: '#ccc',
       opacity: 1,
     },
     grid: {
