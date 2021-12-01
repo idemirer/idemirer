@@ -114,7 +114,7 @@ const occChartOptions = {
       top: 3,
       left: 0,
       blur: 1,
-      color: '#ccc',
+      color: '#333',
       opacity: 1,
     },
     grid: {
@@ -183,13 +183,14 @@ const occChartOptions = {
 
 const ADRChartOptions = {
   chart: {
+    background: '#000',
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
       top: 3,
       left: 0,
       blur: 1,
-      color: '#000',
+      color: '#333',
       opacity: 1,
     },
     toolbar: {
@@ -251,13 +252,14 @@ const ADRChartOptions = {
 
 const revPARChartOptions = {
   chart: {
+    background: '#000',
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
       top: 3,
       left: 0,
       blur: 1,
-      color: '#000',
+      color: '#333',
       opacity: 1,
     },
     toolbar: {
@@ -320,13 +322,14 @@ const revPARChartOptions = {
 
 const tsaChartOptions = {
   chart: {
+    background: '#000',
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
       top: 3,
       left: 0,
       blur: 1,
-      color: '#000',
+      color: '#333',
       opacity: 1,
     },
     toolbar: {
