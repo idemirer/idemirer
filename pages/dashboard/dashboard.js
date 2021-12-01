@@ -111,16 +111,11 @@ const occChartOptions = {
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
-      top: 3,
-      left: 0,
-      blur: 1,
-      color: '#333',
+      top: 1,
+      left: 1,
+      blur: 0,
+      color: '#000',
       opacity: 1,
-    },
-    grid: {
-      padding: {
-        bottom: 0,
-      },
     },
     toolbar: {
       show: false,
@@ -137,6 +132,15 @@ const occChartOptions = {
     style: {
       fontWeight: 600,
       fontSize: '16px',
+    },
+  },
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: true,
+      },
     },
   },
   xaxis: {
@@ -157,7 +161,7 @@ const occChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#ffb300', '#8d99ae', '#d90429'],
+  colors: ['#d90429', '#dddddd', '#ffb300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -187,10 +191,10 @@ const ADRChartOptions = {
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
-      top: 3,
-      left: 0,
-      blur: 1,
-      color: '#333',
+      top: 1,
+      left: 1,
+      blur: 0,
+      color: '#000',
       opacity: 1,
     },
     toolbar: {
@@ -210,6 +214,15 @@ const ADRChartOptions = {
       fontSize: '16px',
     },
   },
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+  },
   xaxis: {
     categories: weeks,
     labels: {
@@ -226,7 +239,7 @@ const ADRChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#ffb300', '#8d99ae', '#d90429'],
+  colors: ['#d90429', '#dddddd', '#ffb300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -256,10 +269,10 @@ const revPARChartOptions = {
     dropShadow: {
       enabled: true,
       enabledOnSeries: [0, 1, 2],
-      top: 3,
-      left: 0,
-      blur: 1,
-      color: '#333',
+      top: 1,
+      left: 1,
+      blur: 0,
+      color: '#000',
       opacity: 1,
     },
     toolbar: {
@@ -279,6 +292,15 @@ const revPARChartOptions = {
       fontSize: '16px',
     },
   },
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+  },
   xaxis: {
     categories: weeks,
     labels: {
@@ -296,7 +318,7 @@ const revPARChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#ffb300', '#8d99ae', '#d90429'],
+  colors: ['#d90429', '#dddddd', '#ffb300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -351,10 +373,19 @@ const tsaChartOptions = {
       shadeIntensity: 0.65,
     },
   },
-  colors: ['#ffb300', '#d90429', '#8d99ae'],
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+  },
+  colors: ['#d90429', '#ffb300', '#dddddd'],
   fill: {
     type: 'solid',
-    opacity: [1, 1, 0.5],
+    opacity: [1, 1, 0.2],
   },
   dataLabels: {
     enabled: false,
@@ -420,7 +451,8 @@ const tsaChartOptions = {
       opposite: true,
       seriesName: 'Gap',
       max: 100,
-      min: 0,
+      min: -25,
+      tickAmount: 10,
       title: {
         text: 'Gap',
         style: {
@@ -434,6 +466,22 @@ const tsaChartOptions = {
       },
     },
   ],
+  annotations: {
+    position: 'back',
+    yaxis: [
+      {
+        y: 0,
+        y2: -50,
+        yAxisIndex: 2,
+        strokeDashArray: 0,
+        borderColor: '#333',
+        fillColor: '#ccc',
+        opacity: 0.2,
+        offsetX: 0,
+        offsetY: 0,
+      },
+    ],
+  },
 };
 
 export default function Dashboard() {
@@ -442,7 +490,7 @@ export default function Dashboard() {
       <Head>
         <title>Hospitality Data Dashboard</title>
       </Head>
-      <h2 className={utilStyles.headingLg}>Hospitality Data Dashboard</h2>
+      <h2 className={utilStyles.headingLg}>U.S. Hospitality Data Dashboard</h2>
       <section>
         <div>
           <h3>Occupancy Data:</h3>
