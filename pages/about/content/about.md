@@ -34,25 +34,18 @@ State University of New York College at Plattsburgh
 
 ## ACADEMIC EXPERIENCE
 
-- **Associate Professor Fall 2020 – Present**
-
-  - Department of Management, Information Systems and Analytics
-
-  - State University of New York College at Plattsburgh, NY, USA
-
-- **Assistant Professor Fall 2016 – Spring 2020**
-
-  - Department of Hospitality Management
-
-  - State University of New York College at Plattsburgh, NY, USA
-
-- **Assistant Professor April 2014 – July 2016**
-
-  - The Emirates Academy of Hospitality Management, Dubai, UAE
-
-- **Senior Lecturer Jan 2013 – Mar 2014**
-
-  - The Emirates Academy of Hospitality Management, Dubai, UAE
+|                                                              |                           |
+| ------------------------------------------------------------ | ------------------------- |
+| **Associate Professor**                                      | Fall 2020 – Present       |
+| Department of Management, Information Systems and Analytics  |                           |
+| State University of New York College at Plattsburgh, NY, USA |                           |
+| **Assistant Professor**                                      | Fall 2016 – Spring 2020   |
+| Department of Hospitality Management                         |                           |
+| State University of New York College at Plattsburgh, NY, USA |                           |
+| **Assistant Professor**                                      | April 2014 – July 2016    |
+| The Emirates Academy of Hospitality Management, Dubai, UAE   |                           |
+| **Senior Lecturer**                                          | January 2013 – March 2014 |
+| The Emirates Academy of Hospitality Management, Dubai, UAE   |                           |
 
 ## PUBLICATIONS
 
