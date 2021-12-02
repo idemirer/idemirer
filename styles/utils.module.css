@@ -46,7 +46,7 @@
   padding-top: 1px;
 }
 .list {
-  list-style: none;
+  list-style: square;
   padding: 0;
   margin: 0;
 }
@@ -138,5 +138,9 @@
   font-size: 22px;
 }
 .about ul {
+  list-style: square;
   margin: 5px 0 15px 0;
+}
+.about .cv {
+  margin-left: 20px;
 }
