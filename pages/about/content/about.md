@@ -10,19 +10,17 @@ State University of New York College at Plattsburgh
 
 ## EDUCATION
 
-- **Ph.D. Hospitality Administration August 2013**
-
-  Texas Tech University, Lubbock, TX
-
-  Minor: Education in Instructional Technology–_Distance Education_
-
-- **M.S. Restaurant, Hotel, and Institutional Management May 2008**
-
-  Texas Tech University, Lubbock, TX
-
-- **B.S. Tourism and Hotel Management May 2005**
-
-  Bilkent University, Ankara, Turkey
+|                                                                   |                 |
+| ----------------------------------------------------------------- | --------------: |
+| **Ph.D. Hospitality Administration**                              | **August 2013** |
+| Texas Tech University, Lubbock, TX                                |                 |
+| Minor: Education in Instructional Technology–_Distance Education_ |                 |
+|                                                                   |                 |
+| **M.S. Restaurant, Hotel, and Institutional Management**          |    **May 2008** |
+| Texas Tech University, Lubbock, TX                                |                 |
+|                                                                   |                 |
+| **B.S. Tourism and Hotel Management**                             |    **May 2005** |
+| Bilkent University, Ankara, Turkey                                |                 |
 
 ## RESEARCH INTERESTS
 
@@ -39,14 +37,16 @@ State University of New York College at Plattsburgh
 | **Associate Professor**                                      |       Fall 2020 – Present |
 | Department of Management, Information Systems and Analytics  |                           |
 | State University of New York College at Plattsburgh, NY, USA |                           |
+|                                                              |                           |
 | **Assistant Professor**                                      |   Fall 2016 – Spring 2020 |
 | Department of Hospitality Management                         |                           |
 | State University of New York College at Plattsburgh, NY, USA |                           |
+|                                                              |                           |
 | **Assistant Professor**                                      |    April 2014 – July 2016 |
 | The Emirates Academy of Hospitality Management, Dubai, UAE   |                           |
+|                                                              |                           |
 | **Senior Lecturer**                                          | January 2013 – March 2014 |
 | The Emirates Academy of Hospitality Management, Dubai, UAE   |                           |
-|                                                              |                           |
 
 ## PUBLICATIONS
 
