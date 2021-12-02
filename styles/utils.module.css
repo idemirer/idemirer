@@ -147,6 +147,9 @@
 .about table {
   font-size: 16px;
 }
+.about table td {
+  height: 16px;
+}
 .about table td:first-child {
   width: 500px;
 }
