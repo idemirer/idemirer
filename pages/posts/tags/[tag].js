@@ -4,13 +4,13 @@ import utilStyles from '../../../styles/utils.module.css';
 import { getAllPostTags, getSortedPostsData, searchTags } from '../../../lib/posts';
 import PostListing from '../../../components/listposts';
 
-export default function Blog({ foundPostsData, params }) {
+export default function Blog({ foundPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>Blog Posts with Tag: {params.tag}</title>
+        <title>Blog Posts</title>
       </Head>
-      <h2 className={utilStyles.headingLg}>Blog Posts with Tag: {params.tag}</h2>
+      <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
           <PostListing postData={foundPostsData.posts} />
