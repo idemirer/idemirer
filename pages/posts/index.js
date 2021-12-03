@@ -14,9 +14,9 @@ export default function Blog({ allPostsData }) {
       </Head>
       <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <ul className={utilStyles.list}>
+        <div className={utilStyles.posts}>
           <PostListing postData={allPostsData} />
-        </ul>
+        </div>
       </section>
     </Layout>
   );

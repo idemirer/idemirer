@@ -51,10 +51,10 @@
   margin: 0;
 }
 .listItem {
-  margin: 0 0 1.25rem;
+  width: 400px;
+  height: auto;
   font-weight: 700;
 }
-
 .lightText {
   color: var(--lightText);
   font-size: 0.75rem;
@@ -94,17 +94,17 @@
   margin: 10px 0px;
 }
 .tags {
-  box-sizing: content-box;
-  background-color: #444;
+  box-sizing: border-box;
+  background-color: #333;
   border-radius: 8px;
-  padding: 3px;
-  margin-right: 5px;
+  padding: 5px;
+  margin-right: 3px;
   color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
   font-weight: 400;
 }
 .tags:hover {
-  background-color: #999;
+  background-color: #666;
 }
 .chartArea {
   box-sizing: content-box;
@@ -112,6 +112,7 @@
   line-height: normal;
 }
 .footer {
+  margin-top: 30px;
   text-align: center;
   color: var(--lightText);
   font-size: 0.75rem;
@@ -119,7 +120,23 @@
 .textBold {
   font-weight: 600;
 }
+.listItem:hover img {
+  opacity: 0.3;
+}
+.posts {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.posts img {
+  box-shadow: 1px 1px 3px var(--shadow);
+  border-radius: 10px;
+}
 .post img {
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px var(--shadow);
   margin: auto;
 }
 .about p,

@@ -1,14 +1,25 @@
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Date from './date';
+import Image from 'next/image';
 
 const PostListing = ({ postData }) => {
   return (
     <>
       {postData.map(({ id, date, title, tags }) => (
-        <li className={utilStyles.listItem} key={id}>
+        <div className={utilStyles.listItem} key={id}>
           <Link href={`/posts/${id}`}>
-            <a>{title}</a>
+            <a>
+              <Image
+                className={utilStyles.banner}
+                src='/images/blogimages/news-post-banner.png'
+                alt='banner'
+                height={110}
+                width={380}
+              />{' '}
+              <br />
+              {title}
+            </a>
           </Link>
           <br />
           {tags.map((item, key) => (
@@ -22,7 +33,7 @@ const PostListing = ({ postData }) => {
           <small className={utilStyles.lightText}>
             <Date dateString={date} />
           </small>
-        </li>
+        </div>
       ))}
     </>
   );
