@@ -23,7 +23,7 @@
   display: block !important;
 }
 .themeSwitch {
-  min-width: 280px;
+  margin-left: auto;
   text-align: right;
 }
 @media all and (max-width: 800px) {

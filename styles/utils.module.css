@@ -79,11 +79,6 @@
 .contact .rowname {
   flex-basis: 90%;
 }
-@media all and (max-width: 600px) {
-  .contact .rowname {
-    flex-basis: 85%;
-  }
-}
 .contact a {
   margin-right: 10px;
 }
@@ -172,4 +167,14 @@
 }
 .about table td:nth-child(2n) {
   width: 300px;
+}
+@media all and (max-width: 700px) {
+  .contact .rowname {
+    flex-basis: 85%;
+  }
+}
+@media all and (max-width: 800px) {
+  .posts {
+    flex-direction: column;
+  }
 }
