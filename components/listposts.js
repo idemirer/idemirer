@@ -13,11 +13,12 @@ const PostListing = ({ postData }) => {
           <br />
           {tags.map((item, key) => (
             <small key={key}>
-              <Link href={`/tags/${item}`}>
+              <Link href={`/posts/tags/${item}`}>
                 <a className={`${utilStyles.tags} ${utilStyles.lightText}`}>{`#${item}`}</a>
               </Link>
             </small>
           ))}
+          <br />
           <small className={utilStyles.lightText}>
             <Date dateString={date} />
           </small>

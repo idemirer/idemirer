@@ -1,18 +1,16 @@
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import { getAllPostTags, getSortedPostsData, searchTags } from '../../lib/posts';
-import Link from 'next/link';
-import Date from '../../components/date';
-import PostListing from '../../components/listposts';
+import { getAllPostTags, getSortedPostsData, searchTags } from '../../../lib/posts';
+import PostListing from '../../../components/listposts';
 
-export default function Blog({ foundPostsData }) {
+export default function Blog({ foundPostsData, params }) {
   return (
     <Layout>
       <Head>
-        <title>Blog Posts with Tag: </title>
+        <title>Blog Posts with Tag: {params.tag}</title>
       </Head>
-      <h2 className={utilStyles.headingLg}>Blog Posts with Tag: </h2>
+      <h2 className={utilStyles.headingLg}>Blog Posts with Tag: {params.tag}</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
           <PostListing postData={foundPostsData.posts} />
