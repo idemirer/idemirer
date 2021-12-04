@@ -33,11 +33,15 @@ export default function Layout({ children, home, post }) {
         <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
         <meta name='twitter:description' content='Management faculty, share news and data on this site.' />
         <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
-        <script async src='https://www.googletagmanager.com/gtag/js?id=G-JP5LKKYL7V'></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date());
-          gtag('config', {process.env.GOOGLE_TRACKING_ID});
-        </script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_TRACKING_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; 
+          function gtag(){dataLayer.push(arguments);} 
+          gtag('js', new Date());
+          gtag('config', '${process.env.GOOGLE_TRACKING_ID}', {page_path: window.location.pathname,});`,
+          }}
+        />
       </Head>
       <div className={styles.container}>
         <header className={styles.header}>
