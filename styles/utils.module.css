@@ -88,6 +88,9 @@
 .categories {
   margin: 10px 0px;
 }
+.tagsWrapper {
+  display: inline-block;
+}
 .tags {
   box-sizing: border-box;
   background-color: #333;
@@ -167,9 +170,6 @@
 }
 .about table td:nth-child(2n) {
   width: 300px;
-}
-small {
-  display: inline-block;
 }
 @media all and (max-width: 700px) {
   .contact .rowname {

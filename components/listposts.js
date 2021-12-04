@@ -23,7 +23,7 @@ const PostListing = ({ postData }) => {
           </Link>
           <br />
           {tags.map((item, key) => (
-            <small key={key}>
+            <small className={utilStyles.tagsWrapper} key={key}>
               <Link href={`/posts/tags/${item}`}>
                 <a className={`${utilStyles.tags} ${utilStyles.lightText}`}>{`#${item}`}</a>
               </Link>
