@@ -168,6 +168,9 @@
 .about table td:nth-child(2n) {
   width: 300px;
 }
+small {
+  display: inline-block;
+}
 @media all and (max-width: 700px) {
   .contact .rowname {
     flex-basis: 85%;
