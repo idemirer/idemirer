@@ -5,6 +5,13 @@ import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import Image from 'next/image';
+import PostBody from '../../components/postBody';
+
+const components = {
+  img: (image) => {
+    return <Image src={image.src} alt='Testing This' {...image} />;
+  },
+};
 
 export default function Post({ postData, allPostsData }) {
   return (
@@ -24,7 +31,7 @@ export default function Post({ postData, allPostsData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <PostBody content={postData.contentHtml} />
       </article>
     </Layout>
   );
