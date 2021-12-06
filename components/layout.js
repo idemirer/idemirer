@@ -3,6 +3,8 @@ import Navbar from './navbar';
 import Footer from './footer';
 import Head from 'next/head';
 
+export const siteTitle = 'Ilhan Demirer Personal Website';
+
 export default function Layout({ children, home, post }) {
   return (
     <>
@@ -40,7 +42,6 @@ export default function Layout({ children, home, post }) {
           gtag('config', '${process.env.GOOGLE_TRACKING_ID}', {page_path: window.location.pathname,});`,
           }}
         />
-        <title>Ilhan Demirer Personal Website</title>
       </Head>
       <div className={styles.container}>
         <header className={styles.header}>
