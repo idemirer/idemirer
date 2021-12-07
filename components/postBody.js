@@ -9,7 +9,7 @@ const components = {
     if (image.src.startsWith('http')) {
       return <img {...image} />;
     }
-    return <Image src={image.src} alt='Testing This' {...image} />;
+    return <Image src={image.src} alt={image.alt} {...image} placeholder='blur' />;
   },
 };
 

@@ -4,16 +4,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
-import Image from 'next/image';
 import PostBody from '../../components/postBody';
 
-const components = {
-  img: (image) => {
-    return <Image src={image.src} alt='Testing This' {...image} />;
-  },
-};
-
-export default function Post({ postData, allPostsData }) {
+export default function Post({ postData }) {
   return (
     <Layout post>
       <Head>
