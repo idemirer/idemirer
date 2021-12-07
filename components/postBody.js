@@ -9,7 +9,16 @@ const components = {
     if (image.src.startsWith('http')) {
       return <img {...image} />;
     }
-    return <Image src={image.src} alt={image.alt} {...image} placeholder='blur' />;
+    return (
+      <Image
+        src={image.src}
+        placeholder='blur'
+        blurDataURL={'data:image/svg+xml;base64,R0lGODlhAQABAPAAyH5BAAAAAAALAAAAAABAAEAAAICRAEAO'}
+        alt={image.alt}
+        heigth={image.heigth}
+        width={image.width}
+      />
+    );
   },
 };
 
