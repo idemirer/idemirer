@@ -146,11 +146,12 @@
   box-shadow: 1px 1px 3px var(--shadow);
   border-radius: 10px;
 }
-.post img {
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px var(--shadow);
+.postImage {
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px var(--shadow) !important;
   margin: auto;
 }
+
 .about p,
 .about blockquote {
   font-size: 16px;
