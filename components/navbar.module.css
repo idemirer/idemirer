@@ -26,6 +26,9 @@
   margin-left: auto;
   text-align: right;
 }
+.streaming {
+  color: red;
+}
 @media all and (max-width: 800px) {
   .navbar {
     display: none;

@@ -3,6 +3,7 @@ import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 import ChangeTheme from './changeTheme';
 import { navbarData } from './navbarData';
+import TwitchStatus from './twitchComponent';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
@@ -24,7 +25,9 @@ export default function Navbar() {
             </Link>
           </div>
         ))}
+
         <div className={navbarStyle.themeSwitch}>
+          {/* <TwitchStatus /> */}
           <ChangeTheme />
         </div>
       </div>
