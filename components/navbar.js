@@ -20,7 +20,7 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-      <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : navbarStyle.testing}`}>
+      <div className={`${navbarStyle.navbar} ${active && navbarStyle.showNavBar}`}>
         {navbarData.map((item, key) => (
           <div key={key}>
             <Link href={item.link}>
