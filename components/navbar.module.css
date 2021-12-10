@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 15px;
-  align-items: left;
+  align-items: center;
   flex-direction: row;
   font-weight: 900;
   margin: 30px 0px;
