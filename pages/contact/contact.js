@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
-import { getTwitchStatus } from '../../lib/twitch';
+// import { getTwitchStatus } from '../../lib/twitch';
 
 export default function Contact(twitchStatus) {
   return (
@@ -44,28 +44,16 @@ export default function Contact(twitchStatus) {
             <a target='_blank'>Ilhan Demirer</a>
           </Link>
         </div>
-        <div
-          className={`${utilStyles.row} ${utilStyles.icon} ${twitchStatus.twitchStatus ? utilStyles.streaming : ''}`}
-        >
-          <a href='https://twitch.tv/impostorengineer'>
-            <i className='fas fa-video'></i>
-          </a>
-        </div>
-        <div className={`${utilStyles.rowname}`}>
-          <Link href='https://twitch.tv/impostorengineer'>
-            <a target='_blank'>Ilhan Demirer</a>
-          </Link>
-        </div>
       </div>
     </Layout>
   );
 }
 
-export async function getServerSideProps() {
-  const twitchStatus = await getTwitchStatus();
-  return {
-    props: {
-      twitchStatus,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   const twitchStatus = await getTwitchStatus();
+//   return {
+//     props: {
+//       twitchStatus,
+//     },
+//   };
+// }

@@ -4,9 +4,12 @@ import Link from 'next/link';
 import ChangeTheme from './changeTheme';
 import { navbarData } from './navbarData';
 import TwitchStatus from './twitchComponent';
+import { useLive } from '../lib/useLive';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+
+  const isLive = useLive();
 
   return (
     <>
@@ -27,7 +30,7 @@ export default function Navbar() {
         ))}
 
         <div className={navbarStyle.themeSwitch}>
-          {/* <TwitchStatus /> */}
+          {isLive.amILive && <TwitchStatus />}
           <ChangeTheme />
         </div>
       </div>

@@ -26,7 +26,23 @@
   margin-left: auto;
   text-align: right;
 }
-
+.streaming {
+  margin-right: 25px !important;
+  color: #c00 !important;
+  animation: blink 1s linear infinite;
+  text-shadow: 1px 1px 3px var(--shadow);
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media all and (max-width: 800px) {
   .navbar {
     display: none;

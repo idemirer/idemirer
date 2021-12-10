@@ -21,3 +21,8 @@ export async function getTwitchStatus() {
   const channelStatus = channelFound[0].is_live;
   return channelStatus;
 }
+
+export default async (req, res) => {
+  const amILive = await getTwitchStatus();
+  res.status(200).json({ amILive });
+};
