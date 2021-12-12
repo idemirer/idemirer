@@ -4,6 +4,7 @@ import { unified } from 'unified';
 import reactRehyped from 'rehype-react';
 import rehypeParse from 'rehype-parse';
 import utilStyles from '../styles/utils.module.css';
+import Zoom from 'react-medium-image-zoom';
 
 const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
@@ -24,7 +25,9 @@ const components = {
       return <img {...image} className={utilStyles.postImage} />;
     }
     return (
-      <Image className={utilStyles.postImage} placeholder='blur' blurDataURL={rgbDataURL(102, 102, 102)} {...image} />
+      <Zoom>
+        <Image className={utilStyles.postImage} placeholder='blur' blurDataURL={rgbDataURL(102, 102, 102)} {...image} />
+      </Zoom>
     );
   },
 };
