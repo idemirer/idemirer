@@ -19,17 +19,15 @@ const rgbDataURL = (r, g, b) =>
     triplet(0, r, g) + triplet(b, 255, 255)
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
-const ZoomComp = shouldZoom ? Zoom : ({ children }) => <>{children}</>;
-
 const components = {
   img: (image) => {
     if (image.src.startsWith('http')) {
       return <img {...image} className={utilStyles.postImage} />;
     }
     return (
-      <ZoomComp>
+      <Zoom>
         <Image className={utilStyles.postImage} placeholder='blur' blurDataURL={rgbDataURL(102, 102, 102)} {...image} />
-      </ZoomComp>
+      </Zoom>
     );
   },
 };
