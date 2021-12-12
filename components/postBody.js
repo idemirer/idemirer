@@ -20,13 +20,20 @@ const rgbDataURL = (r, g, b) =>
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
 const components = {
-  img: (image) => {
-    if (image.src.startsWith('http')) {
-      return <img {...image} className={utilStyles.postImage} />;
+  img: (imgProps) => {
+    const { src, ...restOfImgProps } = imgProps;
+    if (src.startsWith('http')) {
+      return <img src={src} {...restOfImgProps} className={utilStyles.postImage} />;
     }
     return (
       <Zoom>
-        <Image className={utilStyles.postImage} placeholder='blur' blurDataURL={rgbDataURL(102, 102, 102)} {...image} />
+        <Image
+          className={utilStyles.postImage}
+          placeholder='blur'
+          blurDataURL={rgbDataURL(102, 102, 102)}
+          src={src}
+          {...restOfImgProps}
+        />
       </Zoom>
     );
   },
