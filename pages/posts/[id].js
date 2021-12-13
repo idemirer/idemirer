@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import PostBody from '../../components/postBody';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export default function Post({ postData }) {
   return (
