@@ -6,7 +6,7 @@ const LatestPosts = ({ data }) => {
     <section className={`${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingMd}>Latest blog posts:</h2>
       <div className={utilStyles.posts}>
-        <PostListing postData={data.slice(0, 2)} />
+        <PostListing postData={data.slice(0, 3)} />
       </div>
     </section>
   );

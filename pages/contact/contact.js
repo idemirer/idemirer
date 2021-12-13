@@ -16,33 +16,33 @@ export default function Contact(twitchStatus) {
           <i className='far fa-envelope'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <Link href='mailto:idemirer@gmail.com'>
-            <a target='_blank'>idemirer@gmail.com</a>
-          </Link>
+          <a href='mailto:idemirer@gmail.com' target='_blank'>
+            idemirer@gmail.com
+          </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
           <i className='fab fa-linkedin-in'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <Link href='https://www.linkedin.com/in/ilhan-demirer-3230642a/'>
-            <a target='_blank'>Ilhan Demirer</a>
-          </Link>
+          <a href='https://www.linkedin.com/in/ilhan-demirer-3230642a/' target='_blank'>
+            Ilhan Demirer
+          </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
           <i className='fab fa-twitter'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <Link href='https://twitter.com/idemirer'>
-            <a target='_blank'>@idemirer</a>
-          </Link>
+          <a href='https://twitter.com/idemirer' target='_blank'>
+            @idemirer
+          </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
           <i className='fab fa-github'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <Link href='https://github.com/idemirer'>
-            <a target='_blank'>Ilhan Demirer</a>
-          </Link>
+          <a href='https://github.com/idemirer' target='_blank'>
+            Ilhan Demirer
+          </a>
         </div>
       </div>
     </Layout>

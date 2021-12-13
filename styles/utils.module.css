@@ -141,10 +141,27 @@
   line-height: normal;
 }
 .footer {
-  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin-top: 50px;
   text-align: center;
   color: var(--lightText);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
+}
+.email {
+  color: #bb001b;
+}
+.github {
+  color: #4078c0;
+}
+.linkedin {
+  color: #0e76a8;
+}
+.twitter {
+  color: #1da1f2;
 }
 .textBold {
   font-weight: 600;
