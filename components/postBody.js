@@ -20,6 +20,9 @@ const rgbDataURL = (r, g, b) =>
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
 const components = {
+  html: ({ children }) => <>{children}</>,
+  body: ({ children }) => <>{children}</>,
+  head: ({ children }) => <>{children}</>,
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
     if (src.startsWith('http')) {
@@ -44,5 +47,5 @@ export default function PostBody({ content }) {
     .use(rehypeParse)
     .use(reactRehyped, { createElement: React.createElement, components: components })
     .processSync(content).result;
-  return <div>{contentMD}</div>;
+  return <>{contentMD}</>;
 }

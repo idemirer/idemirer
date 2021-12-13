@@ -179,10 +179,13 @@
   box-shadow: 1px 1px 3px var(--shadow);
   border-radius: 10px;
 }
-.postImage {
-  border-radius: 15px;
-  box-shadow: 3px 3px 10px var(--shadow) !important;
-  margin: auto;
+.post img {
+  /* border-radius: 15px; */
+  /* margin: auto; */
+  /* box-shadow: 3px 3px 10px var(--shadow) !important; */
+  /* padding: 5px !important; */
+  /* margin-top: 10px !important; */
+  /* padding-bottom: 20px !important; */
 }
 
 .about p,
