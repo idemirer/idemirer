@@ -26,7 +26,11 @@ const components = {
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
     if (src.startsWith('http')) {
-      return <img src={src} {...restOfImgProps} className={utilStyles.postImage} />;
+      return (
+        <Zoom>
+          <img src={src} {...restOfImgProps} className={utilStyles.postImage} />
+        </Zoom>
+      );
     }
     return (
       <Zoom>

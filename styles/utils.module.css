@@ -180,8 +180,8 @@
   border-radius: 10px;
 }
 .post img {
-  /* border-radius: 15px; */
-  /* margin: auto; */
+  margin: auto;
+  border-radius: 15px;
   /* box-shadow: 3px 3px 10px var(--shadow) !important; */
   /* padding: 5px !important; */
   /* margin-top: 10px !important; */
