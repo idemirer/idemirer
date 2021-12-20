@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const GetLaborStats = () => {
+async function GetLaborStats() {
   const url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/';
   const laborStats = await axios.post(
     url,
@@ -13,7 +13,7 @@ const GetLaborStats = () => {
     { headers: { 'content-type': 'application/json' } }
   );
   return laborStats.data;
-};
+}
 
 export default async (req, res) => {
   const laborStats = await GetLaborStats();
