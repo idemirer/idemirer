@@ -15,4 +15,7 @@ const GetLaborStats = () => {
   return laborStats.data;
 };
 
-export default GetLaborStats;
+export default async (req, res) => {
+  const laborStats = await GetLaborStats();
+  res.status(200).json(laborStats);
+};
