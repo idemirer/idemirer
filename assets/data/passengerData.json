@@ -1,5 +1,13 @@
 {
   "2021": [
+    { "date": "12/29", "passengers": 2017937 },
+    { "date": "12/28", "passengers": 1995747 },
+    { "date": "12/27", "passengers": 2089186 },
+    { "date": "12/26", "passengers": 2070554 },
+    { "date": "12/25", "passengers": 1533398 },
+    { "date": "12/24", "passengers": 1709601 },
+    { "date": "12/23", "passengers": 2187792 },
+    { "date": "12/22", "passengers": 2081297 },
     { "date": "12/21", "passengers": 1979089 },
     { "date": "12/20", "passengers": 2098540 },
     { "date": "12/19", "passengers": 2118528 },
@@ -144,7 +152,7 @@
     { "date": "8/2", "passengers": 2031758 },
     { "date": "8/1", "passengers": 2238462 }
   ],
-  "2021-Archieve": [
+  "2021-Archive": [
     { "date": "7/31", "passengers": 2007412 },
     { "date": "7/30", "passengers": 2198585 },
     { "date": "7/29", "passengers": 2127634 },
@@ -328,6 +336,14 @@
     { "date": "2/1", "passengers": 628989 }
   ],
   "2019": [
+    { "date": "12/29", "passengers": 2133253 },
+    { "date": "12/28", "passengers": 2009880 },
+    { "date": "12/27", "passengers": 2500396 },
+    { "date": "12/26", "passengers": 2575985 },
+    { "date": "12/25", "passengers": 2470786 },
+    { "date": "12/24", "passengers": 2582580 },
+    { "date": "12/23", "passengers": 2552194 },
+    { "date": "12/22", "passengers": 1937235 },
     { "date": "12/21", "passengers": 1981433 },
     { "date": "12/20", "passengers": 2490503 },
     { "date": "12/19", "passengers": 2519399 },
@@ -473,7 +489,7 @@
     { "date": "8/2", "passengers": 2619406 },
     { "date": "8/1", "passengers": 2688640 }
   ],
-  "2019-Archieve": [
+  "2019-Archive": [
     { "date": "7/31", "passengers": 2367967 },
     { "date": "7/30", "passengers": 2730936 },
     { "date": "7/29", "passengers": 2742882 },
