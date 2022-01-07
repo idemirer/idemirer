@@ -5,43 +5,53 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/str.json';
 import tsaData from '../../assets/data/passengerData.json';
 
-const updateDate = 'Dec 29, 2021';
+const updateDate = 'Jan 7, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
 let occData2021 = [];
+let occData2022 = [];
+
 let adrData2019 = [];
 let adrData2020 = [];
 let adrData2021 = [];
+let adrData2022 = [];
+
 let revParData2019 = [];
 let revParData2020 = [];
 let revParData2021 = [];
+let revParData2022 = [];
+
 let weeks = [...Object.keys(strdata[2019])];
 
 for (let i = 1; i <= 52; i++) {
   occData2019.push(strdata[2019][i][0]);
   occData2020.push(strdata[2020][i][0]);
+  occData2021.push(strdata[2021][i][0]);
   adrData2019.push(strdata[2019][i][1]);
   adrData2020.push(strdata[2020][i][1]);
+  adrData2021.push(strdata[2021][i][1]);
   revParData2019.push(strdata[2019][i][2]);
   revParData2020.push(strdata[2020][i][2]);
-}
-for (let i = 1; i <= Object.keys(strdata[2021]).length; i++) {
-  occData2021.push(strdata[2021][i][0]);
-  adrData2021.push(strdata[2021][i][1]);
   revParData2021.push(strdata[2021][i][2]);
+}
+for (let i = 1; i <= Object.keys(strdata[2022]).length; i++) {
+  occData2022.push(strdata[2022][i][0]);
+  adrData2022.push(strdata[2022][i][1]);
+  revParData2022.push(strdata[2022][i][2]);
 }
 
 let pass2019 = [];
 let pass2021 = [];
+let pass2022 = [];
 let passDiff = [];
 let date = [];
 
-for (let i = 0; i < Object.keys(tsaData[2021]).length; i++) {
-  date.unshift(tsaData[2021][i].date);
-  pass2021.unshift(tsaData[2021][i].passengers);
+for (let i = 0; i < Object.keys(tsaData[2022]).length; i++) {
+  date.unshift(tsaData[2022][i].date);
+  pass2022.unshift(tsaData[2022][i].passengers);
   pass2019.unshift(tsaData[2019][i].passengers);
-  passDiff.unshift(100 - Math.floor((tsaData[2021][i].passengers / tsaData[2019][i].passengers) * 100));
+  passDiff.unshift(100 - Math.floor((tsaData[2022][i].passengers / tsaData[2019][i].passengers) * 100));
 }
 
 const occChartData = [
@@ -56,6 +66,10 @@ const occChartData = [
   {
     name: '2021',
     data: occData2021,
+  },
+  {
+    name: '2022',
+    data: occData2022,
   },
 ];
 
@@ -72,6 +86,10 @@ const ADRChartData = [
     name: '2021',
     data: adrData2021,
   },
+  {
+    name: '2022',
+    data: adrData2022,
+  },
 ];
 
 const revPARChartData = [
@@ -86,6 +104,10 @@ const revPARChartData = [
   {
     name: '2021',
     data: revParData2021,
+  },
+  {
+    name: '2022',
+    data: revParData2022,
   },
 ];
 
