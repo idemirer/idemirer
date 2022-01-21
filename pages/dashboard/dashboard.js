@@ -183,7 +183,7 @@ const occChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#d90429', '#dddddd', '#ffb300'],
+  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -261,7 +261,7 @@ const ADRChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#d90429', '#dddddd', '#ffb300'],
+  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
@@ -340,7 +340,7 @@ const revPARChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#d90429', '#dddddd', '#ffb300'],
+  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1],
