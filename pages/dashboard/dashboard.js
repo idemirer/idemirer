@@ -186,7 +186,7 @@ const occChartOptions = {
   colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
-    opacity: [1, 0.5, 1],
+    opacity: [1, 0.5, 1, 1],
   },
   dataLabels: {
     enabled: false,
@@ -264,7 +264,7 @@ const ADRChartOptions = {
   colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
-    opacity: [1, 0.5, 1],
+    opacity: [1, 0.5, 1, 1],
   },
   dataLabels: {
     enabled: false,
@@ -343,7 +343,7 @@ const revPARChartOptions = {
   colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
   fill: {
     type: 'solid',
-    opacity: [1, 0.5, 1],
+    opacity: [1, 0.5, 1, 1],
   },
   dataLabels: {
     enabled: false,
