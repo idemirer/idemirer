@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/str.json';
 import tsaData from '../../assets/data/passengerData.json';
 
-const updateDate = 'Jan 14, 2022';
+const updateDate = 'Jan 20, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
@@ -117,8 +117,8 @@ const tsaChartData = [
     data: pass2019,
   },
   {
-    name: '2021',
-    data: pass2021,
+    name: '2022',
+    data: pass2022,
   },
   {
     name: 'Gap',
@@ -458,7 +458,7 @@ const tsaChartOptions = {
       },
     },
     {
-      seriesName: '2020',
+      seriesName: '2022',
       show: true,
       max: 3000000,
       min: 0,
