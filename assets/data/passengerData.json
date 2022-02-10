@@ -1,5 +1,12 @@
 {
   "2022": [
+    { "date": "2/9", "passengers": 1386325 },
+    { "date": "2/8", "passengers": 1232591 },
+    { "date": "2/7", "passengers": 1591438 },
+    { "date": "2/6", "passengers": 1785846 },
+    { "date": "2/5", "passengers": 1399444 },
+    { "date": "2/4", "passengers": 1577790 },
+    { "date": "2/3", "passengers": 1339533 },
     { "date": "2/2", "passengers": 1192973 },
     { "date": "2/1", "passengers": 1200580 },
     { "date": "1/31", "passengers": 1537573 },
