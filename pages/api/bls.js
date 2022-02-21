@@ -6,8 +6,8 @@ async function GetLaborStats() {
     url,
     {
       seriesid: ['CES0000000001', 'CES7000000001'],
-      startyear: '2013',
-      endyear: '2021',
+      startyear: '2015',
+      endyear: '2022',
       registrationkey: process.env.BLS_KEY,
     },
     { headers: { 'content-type': 'application/json' } }
