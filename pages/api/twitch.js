@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 async function getTwitchOAuth() {
-  const url = `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_CLIENT_ID}&client_secret=${TWITCH_CLIENT_SECRET}&grant_type=client_credentials`;
+  const url = `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_CLIENT_ID}&client_secret=${process.env.TWITCH_CLIENT_SECRET}&grant_type=client_credentials`;
   const twitchOAuth = await axios.post(url);
   return twitchOAuth.data.access_token;
 }
