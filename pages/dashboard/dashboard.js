@@ -41,11 +41,17 @@ for (let i = 1; i <= Object.keys(strdata[2022]).length; i++) {
   revParData2022.push(strdata[2022][i][2]);
 }
 
-let pass2019 = [];
-let pass2021 = [];
-let pass2022 = [];
-let passDiff = [];
-let date = [];
+const tsaDataKeys = Object.keys(tsaData['data'][0]);
+let chartData = {};
+
+for (let i = 0; i < tsaDataKeys.length; i++) {
+  chartData[tsaDataKeys[i]] = [];
+  chartData['gap'] = [];
+  for (let y = 0; y < tsaData['data'].length; y++) {
+    chartData[tsaDataKeys[i]].push(tsaData['data'][y][tsaDataKeys[i]]);
+    chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
+  }
+}
 
 for (let i = 0; i < Object.keys(tsaData[2022]).length; i++) {
   date.unshift(tsaData[2022][i].date);
@@ -114,16 +120,15 @@ const revPARChartData = [
 const tsaChartData = [
   {
     name: '2019',
-    data: pass2019,
+    data: chartData['2019'],
   },
   {
     name: '2022',
-    data: pass2022,
+    data: chartData['2022'],
   },
   {
     name: 'Gap',
-    type: 'column',
-    data: passDiff,
+    data: chartData['gap'],
   },
 ];
 
