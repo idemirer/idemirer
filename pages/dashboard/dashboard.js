@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/str.json';
 import tsaData from '../../assets/data/passengerData.json';
 
-const updateDate = 'Mar 3, 2022';
+const updateDate = 'Mar 8, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
@@ -51,13 +51,6 @@ for (let i = 0; i < tsaDataKeys.length; i++) {
     chartData[tsaDataKeys[i]].push(tsaData['data'][y][tsaDataKeys[i]]);
     chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
-}
-
-for (let i = 0; i < Object.keys(tsaData[2022]).length; i++) {
-  date.unshift(tsaData[2022][i].date);
-  pass2022.unshift(tsaData[2022][i].passengers);
-  pass2019.unshift(tsaData[2019][i].passengers);
-  passDiff.unshift(100 - Math.floor((tsaData[2022][i].passengers / tsaData[2019][i].passengers) * 100));
 }
 
 const occChartData = [
@@ -430,7 +423,7 @@ const tsaChartOptions = {
     },
   },
   xaxis: {
-    categories: date,
+    categories: chartData['date'],
     labels: {
       rotate: -45,
       maxHeight: 60,
