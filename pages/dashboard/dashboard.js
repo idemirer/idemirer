@@ -48,7 +48,7 @@ for (let i = 0; i < tsaDataKeys.length; i++) {
   chartData[tsaDataKeys[i]] = [];
   chartData['gap'] = [];
   for (let y = 0; y < tsaData['data'].length; y++) {
-    chartData[tsaDataKeys[i]].push(tsaData['data'][y][tsaDataKeys[i]]);
+    chartData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
     chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
 }
