@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
           __html: `window.dataLayer = window.dataLayer || []; 
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
-          gtag('config', '${process.env.GOOGLE_TRACKING_ID}', {page_path: window.location.pathname,});`,
+          gtag('config', 'G-JP5LKKYL7V', {page_path: window.location.pathname,});`,
         }}
       />
       <Component {...pageProps} />
