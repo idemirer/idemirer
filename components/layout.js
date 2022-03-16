@@ -14,12 +14,6 @@ export default function Layout({ children, home, post }) {
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
-        <link
-          rel='stylesheet'
-          href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
-          integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
-          crossOrigin='anonymous'
-        />
         <meta name='description' content='Management faculty, share news and data on this site.' />
         <meta itemProp='name' content='Ilhan Demirer Personal Website' />
         <meta itemProp='description' content='Management faculty, share news and data on this site.' />
@@ -33,15 +27,6 @@ export default function Layout({ children, home, post }) {
         <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
         <meta name='twitter:description' content='Management faculty, share news and data on this site.' />
         <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_TRACKING_ID}`} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; 
-          function gtag(){dataLayer.push(arguments);} 
-          gtag('js', new Date());
-          gtag('config', '${process.env.GOOGLE_TRACKING_ID}', {page_path: window.location.pathname,});`,
-          }}
-        />
       </Head>
       <div className={styles.container}>
         <header className={styles.header}>

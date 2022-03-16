@@ -2,7 +2,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import PostDate from './date';
 import Image from 'next/image';
-import { parseISO, format } from 'date-fns';
+import { parseISO } from 'date-fns';
 
 const todaysDate = new Date();
 const PostListing = ({ postData }) => {
