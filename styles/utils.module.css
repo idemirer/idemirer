@@ -57,7 +57,7 @@
   font-weight: 700;
   background-color: #000;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px var(--shadow), 3px 3px 10px var(--shadow);
+  box-shadow: 3px 3px 10px var(--shadow);
 }
 .listItem > a,
 .listItem > .lightText {
