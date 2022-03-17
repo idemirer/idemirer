@@ -25,7 +25,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <PostBody content={postData.contentHtml} />
+        <PostBody content={postData.contentHtml} className={utilStyles.postBody} />
       </article>
     </Layout>
   );

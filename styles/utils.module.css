@@ -170,6 +170,9 @@
 .post > div > div > span {
   filter: drop-shadow(2px 4px 6px var(--shadow));
 }
+.postBody > strong {
+  font-size: 1.25rem;
+}
 .posts {
   display: flex;
   gap: 30px;
