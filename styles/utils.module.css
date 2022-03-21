@@ -170,7 +170,7 @@
 .postBody > div > div > span {
   filter: drop-shadow(2px 4px 6px var(--shadow));
 }
-.postBody > strong > a {
+.postBody strong > a {
   font-size: 1.25rem;
 }
 .posts {
