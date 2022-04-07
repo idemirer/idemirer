@@ -167,7 +167,7 @@
 .textBold {
   font-weight: 600;
 }
-.postBody > div > div > span {
+.postBody > div > div > span, .postBody > div > ul > li > div > img {
   filter: drop-shadow(2px 4px 6px var(--shadow));
 }
 .postBody strong > a {
@@ -188,7 +188,6 @@
 .postImage {
   margin: auto;
   border-radius: 15px;
-  filter: drop-shadow(2px 4px 6px var(--shadow));
 }
 .about p,
 .about blockquote {
