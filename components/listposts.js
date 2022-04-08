@@ -20,7 +20,8 @@ const PostListing = ({ postData }) => {
                   alt='banner'
                   height={110}
                   width={380}
-                  style='object-fit: scale-down'
+                  layout='fill'
+                  objectFit='cover'
                 />{' '}
                 <br />
                 {title}
