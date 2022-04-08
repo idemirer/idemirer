@@ -18,10 +18,10 @@ const PostListing = ({ postData }) => {
                   className={utilStyles.banner}
                   src={`/images/blogimages/${banner}`}
                   alt='banner'
-                  height={110}
+                  height={150}
                   width={380}
-                  // layout='fill'
-                  // objectFit='cover'
+                  objectFit='cover'
+                  objectPosition='left top'
                 />{' '}
                 <br />
                 {title}
