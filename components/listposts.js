@@ -9,17 +9,18 @@ const PostListing = ({ postData }) => {
   return (
     <>
       {postData
-        .filter(({ id, date, title, tags }) => todaysDate >= parseISO(date))
-        .map(({ id, date, title, tags }) => (
+        .filter(({ id, date, title, tags, banner }) => todaysDate >= parseISO(date))
+        .map(({ id, date, title, tags, banner }) => (
           <div className={utilStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>
               <a>
                 <Image
                   className={utilStyles.banner}
-                  src='/images/blogimages/news-post-banner.png'
+                  src={`/images/blogimages/${banner}`}
                   alt='banner'
                   height={110}
                   width={380}
+                  style='object-fit: scale-down'
                 />{' '}
                 <br />
                 {title}
