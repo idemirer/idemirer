@@ -183,7 +183,7 @@
   gap: 30px;
   /* flex-direction: row; */
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .posts img {
