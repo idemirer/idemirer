@@ -55,7 +55,6 @@
   height: auto;
   font-weight: 700;
   background-color: #000;
-  border-radius: 10px;
   box-shadow: 3px 3px 10px var(--shadow);
 }
 .listItem > a,
@@ -73,7 +72,7 @@
   opacity: 0.3;
 }
 .listItemText {
-  padding: 0px 10px;
+  padding: 5px 10px;
 }
 .lightText {
   color: var(--lightText);
@@ -126,7 +125,6 @@
 }
 .tagsWrapper {
   display: inline-block;
-  padding: 0px 10px;
 }
 .tags {
   box-sizing: border-box;
