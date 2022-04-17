@@ -54,6 +54,7 @@
   width: 360px;
   height: auto;
   font-weight: 700;
+  border-radius: 10px;
   background-color: #000;
   box-shadow: 3px 3px 10px var(--shadow);
 }
@@ -63,7 +64,7 @@
   text-shadow: 1px 1px 1px #000 !important;
 }
 .listItem > a > span {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 .listItem:hover {
   box-shadow: 3px 3px 5px var(--hover);
