@@ -52,7 +52,6 @@
 }
 .listItem {
   width: 360px;
-  padding: 10px;
   height: auto;
   font-weight: 700;
   background-color: #000;
@@ -64,11 +63,17 @@
   color: #fff;
   text-shadow: 1px 1px 1px #000 !important;
 }
+.listItem > a > span {
+  border-radius: 10px;
+}
 .listItem:hover {
   box-shadow: 3px 3px 5px var(--hover);
 }
 .listItem:hover img {
   opacity: 0.3;
+}
+.listItemText {
+  padding: 0px 10px;
 }
 .lightText {
   color: var(--lightText);
@@ -121,6 +126,7 @@
 }
 .tagsWrapper {
   display: inline-block;
+  padding: 0px 10px;
 }
 .tags {
   box-sizing: border-box;
@@ -182,8 +188,7 @@
   justify-content: flex-start;
 }
 .posts img {
-  box-shadow: 1px 1px 3px var(--shadow);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 .postImage {
   margin: auto;

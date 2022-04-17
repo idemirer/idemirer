@@ -24,21 +24,22 @@ const PostListing = ({ postData }) => {
                   objectPosition='left top'
                 />{' '}
                 <br />
-                {title}
+                <div className={utilStyles.listItemText}>{title}</div>
               </a>
             </Link>
-            <br />
-            {tags.map((item, key) => (
-              <small className={utilStyles.tagsWrapper} key={key}>
-                <Link href={`/posts/tags/${item}`}>
-                  <a className={`${utilStyles.tags} ${utilStyles.lightText}`}>{`#${item}`}</a>
-                </Link>
+            <div className={utilStyles.listItemText}>
+              {tags.map((item, key) => (
+                <small className={utilStyles.tagsWrapper} key={key}>
+                  <Link href={`/posts/tags/${item}`}>
+                    <a className={`${utilStyles.tags} ${utilStyles.lightText}`}>{`#${item}`}</a>
+                  </Link>
+                </small>
+              ))}
+              <br />
+              <small className={utilStyles.lightText}>
+                <PostDate dateString={date} />
               </small>
-            ))}
-            <br />
-            <small className={utilStyles.lightText}>
-              <PostDate dateString={date} />
-            </small>
+            </div>
           </div>
         ))}
     </>
