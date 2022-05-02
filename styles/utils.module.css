@@ -181,10 +181,9 @@
 .posts {
   display: flex;
   gap: 30px;
-  /* flex-direction: row; */
   flex-flow: row wrap;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .posts img {
   border-radius: 10px 10px 0 0;
