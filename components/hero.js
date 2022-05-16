@@ -22,8 +22,8 @@ const Hero = () => {
         <p className={utilStyles.headingMd}>
           Hello, I’m <strong>Ilhan</strong>.
         </p>
-        <p>I’m a Management faculty at State University of New York at Plattsburgh.</p>
-        <p>My research interest are in Hopsitality Finance and Information Technology.</p>
+        <p>I’m a Management faculty at State University of New York College at Plattsburgh.</p>
+        <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p>
           On this page I plan to post weekly updates on news, research, and{' '}
           <Link href='/dashboard/dashboard'>
