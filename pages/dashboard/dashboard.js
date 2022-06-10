@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/str.json';
 import tsaData from '../../assets/data/passengerData.json';
 
-const updateDate = 'June 2, 2022';
+const updateDate = 'June 9, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
