@@ -3,7 +3,13 @@ import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/str.json';
-import tsaData from '../../assets/data/passengerData.json';
+import tsaRawData from '../../assets/data/passengerData.json';
+
+let tsaData = {};
+tsaData['data'] = [];
+for (let i = 0; i < 120; i++) {
+  tsaData['data'].push(tsaRawData['data'][i]);
+}
 
 const updateDate = 'July 29, 2022';
 
