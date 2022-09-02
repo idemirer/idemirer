@@ -199,6 +199,8 @@
   padding: 0;
 }
 .about h1 {
+  color: var(--hover);
+  text-shadow: 1px 1px 0px var(--shadow), 1px 1px 0px var(--shadow);
   margin: 0 0 10px 0;
 }
 .about h2 {

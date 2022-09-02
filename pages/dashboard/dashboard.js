@@ -11,7 +11,7 @@ for (let i = 0; i < 120; i++) {
   tsaData['data'].push(tsaRawData['data'][i]);
 }
 
-const updateDate = 'Aug 26, 2022';
+const updateDate = 'Sep 2, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
