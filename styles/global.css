@@ -3,7 +3,7 @@
   --lightTextColor: #000;
   --lightBackgroundColor: #ddd;
   --lightLinkColor: #000;
-  --lightHoverColor: #888;
+  --lightHoverColor: #E67E22;
   --lightShadow: #000;
   --lightLText: #666;
 
@@ -11,7 +11,7 @@
   --darkTextColor: #fff;
   --darkBackgroundColor: #151515;
   --darkLinkColor: #fff;
-  --darkHoverColor: rgb(139, 139, 139);
+  --darkHoverColor: #E67E22;
   --darkShadow: #333;
   --lightDText: #ccc;
 
