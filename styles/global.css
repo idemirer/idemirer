@@ -12,7 +12,7 @@
   --darkBackgroundColor: #151515;
   --darkLinkColor: #fff;
   --darkHoverColor: #E67E22;
-  --darkShadow: #333;
+  --darkShadow: #000;
   --lightDText: #ccc;
 
   --text: var(--lightTextColor);
