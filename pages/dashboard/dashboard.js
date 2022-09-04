@@ -177,7 +177,7 @@ const occChartOptions = {
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
-      align: 'right',
+      align: 'center',
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -256,6 +256,7 @@ const ADRChartOptions = {
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
+      align: 'center',
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -335,6 +336,7 @@ const revPARChartOptions = {
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
+      align: 'center',
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -436,6 +438,7 @@ const tsaChartOptions = {
     },
     title: {
       text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
+      align: 'center',
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
