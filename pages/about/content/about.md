@@ -47,14 +47,14 @@ State University of New York College at Plattsburgh
 
 ## PUBLICATIONS
 
-- Ozdemir, O., Kizildag, M., Dogru, T., &amp; **Demirer, I.** (2021). Corporate social responsibility and financial performance: Does board diversity matter?. _Journal of Global Business Insights_, _6_(2), 98-116. https:// doi.org/10.5038/2640-6489.6.2.1169
+- Ozdemir, O., Kizildag, M., Dogru, T., &amp; **Demirer, I.** (2021). Corporate social responsibility and financial performance: Does board diversity matter?. _Journal of Global Business Insights_, _6_(2), 98-116. [https://doi.org/10.5038/2640-6489.6.2.1169](https://doi.org/10.5038/2640-6489.6.2.1169)
 
-- Dogru, T., Hanks, L., Ozdemir, O., Kizildag, M., Ampountolas, A., &amp; **Demirer, I.** (2020). Does Airbnb have a homogenous impact? Examining Airbnb&#39;s effect on hotels with different organizational structures. _International Journal of Hospitality Management_, _86_, 102451.
+- Dogru, T., Hanks, L., Ozdemir, O., Kizildag, M., Ampountolas, A., &amp; **Demirer, I.** (2020). Does Airbnb have a homogenous impact? Examining Airbnb&#39;s effect on hotels with different organizational structures. _International Journal of Hospitality Management_, _86_, 102451. [https://doi.org/10.1016/j.ijhm.2020.102451](https://doi.org/10.1016/j.ijhm.2020.102451)
 
 - Gultek, M. M., Tiglioglu, T., &amp; **Demirer, I.** (2018). Effects of moderating factors on foodservice employees&#39; perception of emotional labor and propensity to leave the workplace, _Journal of Human Resources Management and Labor Studies_, _6_(2), 1-8.
 
-- **Demirer, I.** , Madanoglu, M., &amp; Kizildag, M. (2018). Corporate real estate holdings and restaurant firms&#39; financial performance. _Journal of Hospitality Financial Management, 26_(1), 4-14.
+- **Demirer, I.** , Madanoglu, M., &amp; Kizildag, M. (2018). Corporate real estate holdings and restaurant firms&#39; financial performance. _Journal of Hospitality Financial Management, 26_(1), 4-14. [https://doi.org/10.7275/R50V8B1S](https://doi.org/10.7275/R50V8B1S)
 
-- Kizildag, M., Altin, M., Ozdemir, O., &amp; **Demirer, I.** (2017). What do we know about social media and firms&#39; financial outcomes so far? _Journal of Hospitality and Tourism Technology, 8_(1), 39-54.
+- Kizildag, M., Altin, M., Ozdemir, O., &amp; **Demirer, I.** (2017). What do we know about social media and firms&#39; financial outcomes so far? _Journal of Hospitality and Tourism Technology, 8_(1), 39-54. [https://doi.org/10.1108/JHTT-10-2016-0074](https://doi.org/10.1108/JHTT-10-2016-0074)
 
 - Gregoriou, G. N., Gultek, M. M., &amp; **Demirer, I.** (2017). Efficiency of cruise ships: A data envelopment analysis approach. _International Journal of Global Business, 10_(1), 8-25.
