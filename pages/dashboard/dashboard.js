@@ -11,7 +11,7 @@ for (let i = 0; i < 120; i++) {
   tsaData['data'].push(tsaRawData['data'][i]);
 }
 
-const updateDate = 'Sep 2, 2022';
+const updateDate = 'Sep 9, 2022';
 
 let occData2019 = [];
 let occData2020 = [];
@@ -169,6 +169,9 @@ const occChartOptions = {
       },
     },
   },
+  yaxis: {
+    decimalsInFloat: 0,
+  },
   xaxis: {
     categories: weeks,
     labels: {
@@ -178,6 +181,7 @@ const occChartOptions = {
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
+      offsetX: -18,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -249,6 +253,9 @@ const ADRChartOptions = {
       },
     },
   },
+  yaxis: {
+    decimalsInFloat: 0,
+  },
   xaxis: {
     categories: weeks,
     labels: {
@@ -257,6 +264,7 @@ const ADRChartOptions = {
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
+      offsetX: -18,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -328,6 +336,9 @@ const revPARChartOptions = {
       },
     },
   },
+  yaxis: {
+    decimalsInFloat: 0,
+  },
   xaxis: {
     categories: weeks,
     labels: {
@@ -337,6 +348,7 @@ const revPARChartOptions = {
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
+      offsetX: -18,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
