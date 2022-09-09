@@ -173,7 +173,7 @@
   font-weight: 600;
 }
 .postBody > div > div > span, .postBody > div > ul > li > div > img {
-  filter: drop-shadow(2px 4px 6px var(--shadow));
+  filter: drop-shadow(2px 6px 4px var(--shadow));
 }
 .postBody strong > a {
   font-size: 1.25rem;
