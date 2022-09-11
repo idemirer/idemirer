@@ -13,7 +13,7 @@ export default function Contact(twitchStatus) {
       <h2 className={utilStyles.headingLg}>Contact Information:</h2>
       <div className={utilStyles.contact}>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i className='far fa-envelope'></i>
+          <i className='fa-solid fa-envelope'></i>
         </div>
         <div className={utilStyles.rowname}>
           <a href='mailto:idemirer@gmail.com' target='_blank'>
@@ -21,7 +21,7 @@ export default function Contact(twitchStatus) {
           </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i className='fab fa-linkedin-in'></i>
+          <i className='fa-brands fa-linkedin'></i>
         </div>
         <div className={utilStyles.rowname}>
           <a href='https://www.linkedin.com/in/ilhan-demirer-3230642a/' target='_blank'>
@@ -29,7 +29,7 @@ export default function Contact(twitchStatus) {
           </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i className='fab fa-twitter'></i>
+          <i className='fa-brands fa-twitter'></i>
         </div>
         <div className={utilStyles.rowname}>
           <a href='https://twitter.com/idemirer' target='_blank'>
@@ -37,7 +37,7 @@ export default function Contact(twitchStatus) {
           </a>
         </div>
         <div className={`${utilStyles.row} ${utilStyles.icon}`}>
-          <i className='fab fa-github'></i>
+          <i className='fa-brands fa-github'></i>
         </div>
         <div className={utilStyles.rowname}>
           <a href='https://github.com/idemirer' target='_blank'>
