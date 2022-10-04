@@ -3,8 +3,6 @@ import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import { getSortedPostsData } from '../../lib/posts';
 import PostListing from '../../components/listposts';
-import Link from 'next/link';
-import Date from '../../components/date';
 
 export default function Blog({ allPostsData }) {
   return (
