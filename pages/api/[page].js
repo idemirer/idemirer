@@ -5,7 +5,7 @@ export default function (req, res) {
   const allPostsData = getSortedPostsData();
   const perPage = 6;
   const totalPosts = allPostsData.length;
-  const totalPages = totalPosts / perPage;
+  const totalPages = Math.round(totalPosts / perPage, 0);
   const start = (page - 1) * perPage;
   let end = start + perPage;
   if (end > totalPosts) {
