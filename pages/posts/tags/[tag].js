@@ -31,7 +31,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
-  const foundPostsData = await searchTags(params.tag, allPostsData);
+  const tag = params.tag;
+  let foundPostsData = await searchTags(tag, allPostsData);
   return {
     props: {
       allPostsData,
