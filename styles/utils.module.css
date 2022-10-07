@@ -161,7 +161,7 @@
   color: #bb001b;
 }
 .googleScholar {
-  color: #4C8BF5;
+  color: #4c8bf5;
 }
 .researchGate {
   color: #0cb;
@@ -178,7 +178,8 @@
 .textBold {
   font-weight: 600;
 }
-.postBody > div > div > span, .postBody > div > ul > li > div > img {
+.postBody > div > div > span,
+.postBody > div > ul > li > div > img {
   filter: drop-shadow(2px 6px 4px var(--shadow));
 }
 .postBody strong > a {
@@ -243,4 +244,13 @@
   .posts {
     flex-direction: column;
   }
+}
+.pagination {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.previousPage,
+.nextPage {
+  font-weight: 700;
 }

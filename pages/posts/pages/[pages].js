@@ -18,7 +18,7 @@ export default function Blog({ allPostsData, previousPage, nextPage }) {
           <PostListing postData={allPostsData} />
         </div>
       </section>
-      <section>
+      <section className={utilStyles.pagination}>
         <Link href={`/posts/pages/${previousPage}`}>
           <a className={utilStyles.previousPage}>Previous Page</a>
         </Link>
@@ -31,7 +31,8 @@ export default function Blog({ allPostsData, previousPage, nextPage }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllPages();
+  const postData = getSortedPostsData();
+  const paths = await getAllPages(postData);
   return {
     paths,
     fallback: false,
@@ -43,17 +44,20 @@ export async function getStaticProps({ params }) {
   const postData = getSortedPostsData();
   const response = await getPageNumbers(pages);
   const start = response.start;
-  const currentPage = response.currentPage;
+  const currentPage = pages;
   let previousPage = +currentPage - 1;
   if (previousPage == 0) {
     previousPage = 1;
   }
   let nextPage = +currentPage + 1;
   const lastPage = response.pageCount;
-  if (nextPage == lastPage) {
+  if (nextPage > lastPage) {
     nextPage = lastPage;
   }
+  console.log(lastPage, nextPage);
+
   const end = response.end;
+
   const allPostsData = postData.slice(start, end);
   return {
     props: {
