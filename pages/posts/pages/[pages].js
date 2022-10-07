@@ -54,7 +54,6 @@ export async function getStaticProps({ params }) {
   if (nextPage > lastPage) {
     nextPage = lastPage;
   }
-  console.log(lastPage, nextPage);
 
   const end = response.end;
 
