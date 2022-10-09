@@ -3,15 +3,15 @@
   --lightTextColor: #000;
   --lightBackgroundColor: #ddd;
   --lightLinkColor: #000;
-  --lightHoverColor: #E67E22;
-  --lightShadow: #000;
+  --lightHoverColor: #e67e22;
+  --lightShadow: #333;
   --lightLText: #666;
 
   /* Dark Theme */
   --darkTextColor: #fff;
   --darkBackgroundColor: #222222;
   --darkLinkColor: #fff;
-  --darkHoverColor: #E67E22;
+  --darkHoverColor: #e67e22;
   --darkShadow: #000;
   --lightDText: #ccc;
 

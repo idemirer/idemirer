@@ -246,11 +246,28 @@
   }
 }
 .pagination {
-  margin: 20px 0px;
+  margin: 20px 25px;
   display: flex;
   justify-content: space-between;
 }
 .previousPage,
 .nextPage {
   font-weight: 700;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--background);
+  box-shadow: 1px 1px 3px var(--shadow), 1px 1px 3px var(--shadow);
+}
+
+.previousPage:hover,
+.nextPage:hover {
+  background-color: var(--hover);
+  color: var(--link);
+  text-shadow: 1px 1px 1px var(--shadow);
+}
+
+.deactive {
+  opacity: 0.5;
 }

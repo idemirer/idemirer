@@ -6,7 +6,7 @@ import { getAllPages, getSortedPostsData } from '../../../lib/posts';
 import { getPageNumbers } from '../../../lib/getPageNumbers';
 import PostListing from '../../../components/listposts';
 
-export default function Blog({ allPostsData, previousPage, nextPage }) {
+export default function Blog({ allPostsData, previousPage, nextPage, currentPage }) {
   return (
     <Layout>
       <Head>
@@ -20,10 +20,14 @@ export default function Blog({ allPostsData, previousPage, nextPage }) {
       </section>
       <section className={utilStyles.pagination}>
         <Link href={`/posts/pages/${previousPage}`}>
-          <a className={utilStyles.previousPage}>Previous Page</a>
+          <a className={`${utilStyles.previousPage} ${previousPage == currentPage ? utilStyles.deactive : ''}`}>
+            &#xab; NEWER POSTS
+          </a>
         </Link>
         <Link href={`/posts/pages/${nextPage}`}>
-          <a className={utilStyles.nextPage}>Next Page</a>
+          <a className={`${utilStyles.nextPage} ${nextPage == currentPage ? utilStyles.deactive : ''}`}>
+            OLDER POSTS &#xbb;
+          </a>
         </Link>
       </section>
     </Layout>
