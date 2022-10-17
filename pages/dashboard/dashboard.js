@@ -535,19 +535,19 @@ export default function Dashboard() {
       <section>
         <div>
           <h3>Occupancy Data:</h3>
-          <CreateChart data={occChartData} options={occChartOptions} type={'line'} />
+          <CreateChart data={occChartData} options={occChartOptions} type={'line'} height={500} />
         </div>
         <div>
           <h3>ADR Data:</h3>
-          <CreateChart data={ADRChartData} options={ADRChartOptions} type={'line'} />
+          <CreateChart data={ADRChartData} options={ADRChartOptions} type={'line'} height={500} />
         </div>
         <div>
           <h3>RevPAR Data:</h3>
-          <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} />
+          <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
         </div>
         <div>
           <h3>TSA Passenger Data:</h3>
-          <CreateChart data={tsaChartData} options={tsaChartOptions} type={'line'} />
+          <CreateChart data={tsaChartData} options={tsaChartOptions} type={'line'} height={500} />
         </div>
       </section>
     </Layout>

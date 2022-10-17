@@ -141,6 +141,7 @@
   background-color: #666;
 }
 .chartArea {
+  height: 500px;
   box-sizing: content-box;
   box-shadow: 0px 0px 15px var(--shadow);
   line-height: normal;
