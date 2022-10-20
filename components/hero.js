@@ -30,7 +30,7 @@ const Hero = () => {
         </p>
         <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p>
-          On this page I plan to post weekly updates on news, research, and{' '}
+          On this page I post weekly updates on news, research, and{' '}
           <Link href='/dashboard/dashboard'>
             <a>hospitality data</a>
           </Link>
