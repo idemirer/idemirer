@@ -63,7 +63,7 @@ export async function getStaticProps({ params }) {
   const currentPost = filteredPosts.map((p) => p.id).indexOf(currentPostID);
   const maxPost = filteredPosts.length - 1;
   let newerPost = currentPost - 1;
-  if (currentPost == 0) {
+  if (currentPost == 0 || currentPost == -1) {
     newerPost = 0;
   }
   let olderPost = currentPost + 1;
