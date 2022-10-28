@@ -272,3 +272,19 @@
 .deactive {
   opacity: 0.5;
 }
+
+.forOFour {
+  padding: 15vh 0;
+  text-align: center;
+}
+.forOFourHeading {
+  font-weight: 200;
+  font-size: 150px;
+  line-height: 1;
+}
+.forOFourText {
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 300px;
+  margin: 0px auto;
+}
