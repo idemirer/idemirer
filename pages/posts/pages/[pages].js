@@ -5,6 +5,7 @@ import utilStyles from '../../../styles/utils.module.css';
 import { getAllPages, getSortedPostsData } from '../../../lib/posts';
 import { getPageNumbers } from '../../../lib/getPageNumbers';
 import PostListing from '../../../components/listposts';
+import { parseISO } from 'date-fns';
 
 export default function Blog({ allPostsData, previousPage, nextPage, currentPage }) {
   return (
@@ -36,7 +37,9 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
 
 export async function getStaticPaths() {
   const postData = getSortedPostsData();
-  const paths = await getAllPages(postData);
+  const todaysDate = new Date();
+  const filteredPosts = postData.filter(({ id, date, title, tags, banner }) => todaysDate >= parseISO(date));
+  const paths = await getAllPages(filteredPosts);
   return {
     paths,
     fallback: false,
@@ -46,6 +49,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const pages = params.pages || 1;
   const postData = getSortedPostsData();
+  const todaysDate = new Date();
+  const filteredPosts = postData.filter(({ id, date, title, tags, banner }) => todaysDate >= parseISO(date));
   const response = await getPageNumbers(pages);
   const start = response.start;
   const currentPage = pages;
@@ -55,13 +60,14 @@ export async function getStaticProps({ params }) {
   }
   let nextPage = +currentPage + 1;
   const lastPage = response.pageCount;
+  console.log(lastPage);
   if (nextPage > lastPage) {
     nextPage = lastPage;
   }
 
   const end = response.end;
 
-  const allPostsData = postData.slice(start, end);
+  const allPostsData = filteredPosts.slice(start, end);
   return {
     props: {
       allPostsData,

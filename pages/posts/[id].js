@@ -1,13 +1,14 @@
 import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Head from 'next/head';
 import Link from 'next/link';
-import Date from '../../components/date';
+import FormattedDate from '../../components/formattedDate';
 import utilStyles from '../../styles/utils.module.css';
 import PostBody from '../../components/postBody';
 import 'react-medium-image-zoom/dist/styles.css';
+import { parseISO } from 'date-fns';
 
-export default function Post({ postData }) {
+export default function Post({ postData, currentPostID, newerPostID, olderPostID, maxPostID }) {
   return (
     <Layout post>
       <Head>
@@ -23,12 +24,24 @@ export default function Post({ postData }) {
           ))}
         </div>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <FormattedDate dateString={postData.date} />
         </div>
         <div className={utilStyles.postBody}>
           <PostBody content={postData.contentHtml} />
         </div>
       </article>
+      <div className={utilStyles.pagination}>
+        <Link href={`/posts/${newerPostID}`}>
+          <a className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}>
+            &#xab; NEWER POST
+          </a>
+        </Link>
+        <Link href={`/posts/${olderPostID}`}>
+          <a className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}>
+            OLDER POST &#xbb;
+          </a>
+        </Link>
+      </div>
     </Layout>
   );
 }
@@ -42,9 +55,30 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const currentPostID = params.id;
+  const todaysDate = new Date();
+  const allPosts = getSortedPostsData();
+  const filteredPosts = allPosts.filter(({ id, date, title, tags, banner }) => todaysDate >= parseISO(date));
+  const postData = await getPostData(currentPostID);
+  const currentPost = filteredPosts.map((p) => p.id).indexOf(currentPostID);
+  const maxPost = filteredPosts.length - 1;
+  let newerPost = currentPost - 1;
+  if (currentPost == 0) {
+    newerPost = 0;
+  }
+  let olderPost = currentPost + 1;
+  if (currentPost == maxPost) {
+    olderPost = currentPost;
+  }
+  const newerPostID = filteredPosts[newerPost].id;
+  const olderPostID = filteredPosts[olderPost].id;
+  const maxPostID = filteredPosts[maxPost].id;
   return {
     props: {
+      currentPostID,
+      maxPostID,
+      newerPostID,
+      olderPostID,
       postData,
     },
   };

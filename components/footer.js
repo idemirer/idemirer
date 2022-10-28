@@ -5,7 +5,7 @@ export default function Footer() {
     <div className={utilStyles.footer}>
       <div>
         <a className={utilStyles.email} href='mailto:idemirer@gmail.com' alt='email' target='_blank'>
-          <i className='fa-solid fa-envelope'></i>
+          <i aria-hidden className='fa-solid fa-envelope'></i>
         </a>
       </div>
       <div>
@@ -15,7 +15,7 @@ export default function Footer() {
           alt='Google Scholar'
           target='_blank'
         >
-          <i className='fa-solid fa-graduation-cap'></i>
+          <i aria-hidden className='fa-solid fa-graduation-cap'></i>
         </a>
       </div>
       <div>
@@ -25,7 +25,7 @@ export default function Footer() {
           alt='ResearchGate'
           target='_blank'
         >
-          <i className='fa-brands fa-researchgate'></i>
+          <i aria-hidden className='fa-brands fa-researchgate'></i>
         </a>
       </div>
       <div>
@@ -35,17 +35,17 @@ export default function Footer() {
           alt='LinkedIn'
           target='_blank'
         >
-          <i className='fab fa-linkedin'></i>
+          <i aria-hidden className='fab fa-linkedin'></i>
         </a>
       </div>
       <div>
         <a className={utilStyles.twitter} href='https://twitter.com/idemirer' alt='twitter' target='_blank'>
-          <i className='fab fa-twitter'></i>
+          <i aria-hidden className='fab fa-twitter'></i>
         </a>
       </div>
       <div>
         <a className={utilStyles.github} href='https://github.com/idemirer' alt='github' target='_blank'>
-          <i className='fab fa-github'></i>
+          <i aria-hidden className='fab fa-github'></i>
         </a>
       </div>
       <div className={utilStyles.lightText}>Copyright &copy; Ilhan Demirer 2021</div>

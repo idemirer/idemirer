@@ -1,6 +1,6 @@
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import PostDate from './date';
+import PostDate from './formattedDate';
 import Image from 'next/image';
 import { parseISO } from 'date-fns';
 
