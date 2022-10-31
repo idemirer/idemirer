@@ -1,12 +1,14 @@
 {
   "name": "ilhandemirer",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Ilhan Demirer, personal blog website",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true next build",
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
     "@vercel/fetch": "^6.1.0",
@@ -33,6 +35,15 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.0.1",
+    "@svgr/webpack": "^6.1.2",
+    "cross-env": "^7.0.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint": "^7.29.0",
+    "lint-staged": "^11.0.0",
+    "next-remote-watch": "^1.0.0",
+    "prettier": "^2.5.1",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-config-next": "12.0.4"
   }
 }
