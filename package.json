@@ -31,12 +31,10 @@
     "remark-html": "^15.0.0",
     "remark-rehype": "^10.1.0",
     "remark-unwrap-images": "^3.0.1",
-    "unified": "^10.1.1",
-    "use-dark-mode": "^2.3.1"
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.0.1",
-    "@svgr/webpack": "^6.1.2",
     "eslint-config-prettier": "^8.3.0"
   }
 }

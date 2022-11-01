@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700&display=swap');
-:root {
+/* :root {
   --lightTextColor: #000;
   --lightBackgroundColor: #ddd;
   --lightLinkColor: #000;
@@ -7,7 +7,7 @@
   --lightShadow: #333;
   --lightLText: #666;
 
-  /* Dark Theme */
+  /* Dark Theme */ /*
   --darkTextColor: #fff;
   --darkBackgroundColor: #222222;
   --darkLinkColor: #fff;
@@ -21,13 +21,32 @@
   --link: var(--lightLinkColor);
   --shadow: var(--lightShadow);
   --lightText: var(--lightLText);
+} */
+body,
+body[data-theme='light'] {
+  --text: #000;
+  --background: #ddd;
+  --link: #000;
+  --hover: #e67e22;
+  --shadow: #333;
+  --lightText: #666;
 }
+body[data-theme='dark'] {
+  /* Dark Theme */
+  --text: #fff;
+  --background: #222222;
+  --link: #fff;
+  --hover: #e67e22;
+  --shadow: #000;
+  --lightText: #ccc;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 1rem;
   background-color: var(--background);
