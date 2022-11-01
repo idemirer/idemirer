@@ -71,5 +71,5 @@ img {
 }
 ::selection {
   background-color: var(--shadow);
-  color: var(--lightDText);
+  color: var(--lightText);
 }
