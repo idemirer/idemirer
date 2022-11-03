@@ -179,9 +179,11 @@
 .textBold {
   font-weight: 600;
 }
-.postBody > div > div > span,
-.postBody > div > ul > li > div > img {
+.postBody > div > ul > li > div > span,
+.postBody > div > ul > li > div > img,
+[data-rmiz-modal-content] {
   filter: drop-shadow(2px 6px 4px var(--shadow));
+  margin: 15px 0px;
 }
 .postBody strong > a {
   font-size: 1.25rem;
