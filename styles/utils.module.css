@@ -182,7 +182,7 @@
 .postBody > div > ul > li > div > span,
 .postBody > div > ul > li > div > img {
   filter: drop-shadow(2px 6px 4px var(--shadow));
-  margin: 15px 0px;
+  margin: 15px 0px !important;
 }
 .customZoom [data-rmiz-modal-content] {
   filter: drop-shadow(2px 6px 4px var(--shadow));
