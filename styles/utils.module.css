@@ -209,6 +209,43 @@
 .postBody strong > a {
   font-size: 1.25rem;
 }
+.postBody > div > ul,
+.postBody > div > ul > li > ul {
+  list-style: none;
+}
+
+.postBody > div > ul > li {
+  padding-bottom: 5px;
+  display: block;
+}
+.postBody > div > ul > li > p:nth-child(1) {
+  display: inline-flex;
+  margin-left: 5px;
+}
+.postBody > div > ul > li > ul > li {
+  display: block;
+  margin: 0 0 5px 5px;
+}
+
+.postBody > div > ul > li::before {
+  text-shadow: 1px 1px 0px var(--shadow), 1px 1px 0px var(--shadow);
+  content: '\25A0';
+  margin-left: -25px;
+  color: var(--hover);
+  justify-content: flex-start;
+}
+
+.postBody > div > ul > li > ul > li::before {
+  content: '\25CF';
+  text-shadow: 1px 1px 0px var(--shadow), 1px 1px 0px var(--shadow);
+  margin-left: -20px;
+  color: var(--hover);
+  padding-right: 10px;
+  font-size: 18px;
+}
+.postBody p {
+  margin: 10px 10px 10px 0px;
+}
 .posts {
   display: flex;
   gap: 30px;
@@ -243,6 +280,9 @@
 .about ul {
   list-style: square;
   margin: 5px 0 15px 0;
+}
+.about li {
+  margin: 5px 0;
 }
 .about .cv {
   margin-left: 20px;

@@ -73,7 +73,7 @@ export default function Footer() {
           <i aria-hidden className="fab fa-github"></i>
         </a>
       </div>
-      <div className={utilStyles.lightText}>Copyright &copy; Ilhan Demirer 2021</div>
+      <div className={utilStyles.lightText}>Copyright &copy; Ilhan Demirer 2022</div>
     </div>
   )
 }

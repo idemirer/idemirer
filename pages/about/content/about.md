@@ -1,6 +1,6 @@
-# ILHAN DEMIRER, PhD
+# ILHAN DEMIRER, Ph.D.
 
-**Associate Professor**  
+**ASSOCIATE PROFESSOR**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  
 School of Business and Economics  
 State University of New York College at Plattsburgh
@@ -31,18 +31,18 @@ State University of New York College at Plattsburgh
 
 |                                                              |                               |
 | ------------------------------------------------------------ | ----------------------------: |
-| **Associate Professor**                                      |       **Fall 2020 – Present** |
+| **ASSOCIATE PROFESSOR**                                      |       **Fall 2020 – Present** |
 | Department of Management, Information Systems and Analytics  |                               |
 | State University of New York College at Plattsburgh, NY, USA |                               |
 |                                                              |                               |
-| **Assistant Professor**                                      |   **Fall 2016 – Spring 2020** |
+| **ASSISTANT PROFESSOR**                                      |   **Fall 2016 – Spring 2020** |
 | Department of Hospitality Management                         |                               |
 | State University of New York College at Plattsburgh, NY, USA |                               |
 |                                                              |                               |
-| **Assistant Professor**                                      |    **April 2014 – July 2016** |
+| **ASSISTANT PROFESSOR**                                      |    **April 2014 – July 2016** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
 |                                                              |                               |
-| **Senior Lecturer**                                          | **January 2013 – March 2014** |
+| **SENIOR LECTURER**                                          | **January 2013 – March 2014** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
 
 ## PUBLICATIONS
