@@ -33,7 +33,7 @@ const components = {
       )
     }
     return (
-      <Zoom classDialog="custom-zoom">
+      <Zoom classDialog={utilStyles.customZoom}>
         <Image
           className={utilStyles.postImage}
           placeholder="blur"
