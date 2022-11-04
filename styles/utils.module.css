@@ -217,10 +217,11 @@
 .postBody > div > ul > li {
   padding-bottom: 5px;
   display: block;
+  margin: 10px 0px;
 }
 .postBody > div > ul > li > p:nth-child(1) {
   display: inline-flex;
-  margin-left: 5px;
+  margin: 5px 0px 0px 5px !important;
 }
 .postBody > div > ul > li > ul > li {
   display: block;
