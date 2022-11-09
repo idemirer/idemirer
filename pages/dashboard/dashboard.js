@@ -1,63 +1,61 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../../components/layout'
-import utilStyles from '../../styles/utils.module.css'
-import CreateChart from '../../components/apexchartlayout'
-import strdata from '../../assets/data/str.json'
-import tsaRawData from '../../assets/data/passengerData.json'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../../components/layout';
+import utilStyles from '../../styles/utils.module.css';
+import CreateChart from '../../components/apexchartlayout';
+import strdata from '../../assets/data/str.json';
+import tsaRawData from '../../assets/data/passengerData.json';
 
-let tsaData = {}
-tsaData['data'] = []
+let tsaData = {};
+tsaData['data'] = [];
 for (let i = 0; i < 120; i++) {
-  tsaData['data'].push(tsaRawData['data'][i])
+  tsaData['data'].push(tsaRawData['data'][i]);
 }
 
-const updateDate = 'November 4, 2022'
+const updateDate = 'November 4, 2022';
 
-let occData2019 = []
-let occData2020 = []
-let occData2021 = []
-let occData2022 = []
+let occData2019 = [];
+let occData2020 = [];
+let occData2021 = [];
+let occData2022 = [];
 
-let adrData2019 = []
-let adrData2020 = []
-let adrData2021 = []
-let adrData2022 = []
+let adrData2019 = [];
+let adrData2020 = [];
+let adrData2021 = [];
+let adrData2022 = [];
 
-let revParData2019 = []
-let revParData2020 = []
-let revParData2021 = []
-let revParData2022 = []
+let revParData2019 = [];
+let revParData2020 = [];
+let revParData2021 = [];
+let revParData2022 = [];
 
-let weeks = [...Object.keys(strdata[2019])]
+let weeks = [...Object.keys(strdata[2019])];
 
 for (let i = 1; i <= 52; i++) {
-  occData2019.push(strdata[2019][i][0])
-  occData2020.push(strdata[2020][i][0])
-  occData2021.push(strdata[2021][i][0])
-  adrData2019.push(strdata[2019][i][1])
-  adrData2020.push(strdata[2020][i][1])
-  adrData2021.push(strdata[2021][i][1])
-  revParData2019.push(strdata[2019][i][2])
-  revParData2020.push(strdata[2020][i][2])
-  revParData2021.push(strdata[2021][i][2])
+  occData2019.push(strdata[2019][i][0]);
+  occData2020.push(strdata[2020][i][0]);
+  occData2021.push(strdata[2021][i][0]);
+  adrData2019.push(strdata[2019][i][1]);
+  adrData2020.push(strdata[2020][i][1]);
+  adrData2021.push(strdata[2021][i][1]);
+  revParData2019.push(strdata[2019][i][2]);
+  revParData2020.push(strdata[2020][i][2]);
+  revParData2021.push(strdata[2021][i][2]);
 }
 for (let i = 1; i <= Object.keys(strdata[2022]).length; i++) {
-  occData2022.push(strdata[2022][i][0])
-  adrData2022.push(strdata[2022][i][1])
-  revParData2022.push(strdata[2022][i][2])
+  occData2022.push(strdata[2022][i][0]);
+  adrData2022.push(strdata[2022][i][1]);
+  revParData2022.push(strdata[2022][i][2]);
 }
 
-const tsaDataKeys = Object.keys(tsaData['data'][0])
-let chartData = {}
+const tsaDataKeys = Object.keys(tsaData['data'][0]);
+let chartData = {};
 
 for (let i = 0; i < tsaDataKeys.length; i++) {
-  chartData[tsaDataKeys[i]] = []
-  chartData['gap'] = []
+  chartData[tsaDataKeys[i]] = [];
+  chartData['gap'] = [];
   for (let y = 0; y < tsaData['data'].length; y++) {
-    chartData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]])
-    chartData['gap'].unshift(
-      100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100)
-    )
+    chartData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
+    chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
 }
 
@@ -78,7 +76,7 @@ const occChartData = [
     name: '2022',
     data: occData2022,
   },
-]
+];
 
 const ADRChartData = [
   {
@@ -97,7 +95,7 @@ const ADRChartData = [
     name: '2022',
     data: adrData2022,
   },
-]
+];
 
 const revPARChartData = [
   {
@@ -116,7 +114,7 @@ const revPARChartData = [
     name: '2022',
     data: revParData2022,
   },
-]
+];
 
 const tsaChartData = [
   {
@@ -131,7 +129,7 @@ const tsaChartData = [
     name: 'Gap',
     data: chartData['gap'],
   },
-]
+];
 
 const occChartOptions = {
   chart: {
@@ -215,7 +213,7 @@ const occChartOptions = {
       shadeIntensity: 0.65,
     },
   },
-}
+};
 
 const ADRChartOptions = {
   chart: {
@@ -298,7 +296,7 @@ const ADRChartOptions = {
       shadeIntensity: 0.65,
     },
   },
-}
+};
 
 const revPARChartOptions = {
   chart: {
@@ -382,7 +380,7 @@ const revPARChartOptions = {
       shadeIntensity: 0.65,
     },
   },
-}
+};
 
 const tsaChartOptions = {
   chart: {
@@ -474,7 +472,7 @@ const tsaChartOptions = {
       decimalsInFloat: 0,
       labels: {
         formatter: function (val, index) {
-          return (val / 1000000).toFixed(1) + 'M'
+          return (val / 1000000).toFixed(1) + 'M';
         },
       },
     },
@@ -486,7 +484,7 @@ const tsaChartOptions = {
       decimalsInFloat: 0,
       labels: {
         formatter: function (val, index) {
-          return (val / 1000000).toFixed(1) + 'M'
+          return (val / 1000000).toFixed(1) + 'M';
         },
       },
     },
@@ -504,7 +502,7 @@ const tsaChartOptions = {
       },
       labels: {
         formatter: function (val, index) {
-          return val + '%'
+          return val + '%';
         },
       },
     },
@@ -525,7 +523,7 @@ const tsaChartOptions = {
       },
     ],
   },
-}
+};
 
 export default function Dashboard() {
   return (
@@ -545,12 +543,7 @@ export default function Dashboard() {
         </div>
         <div>
           <h3>RevPAR Data:</h3>
-          <CreateChart
-            data={revPARChartData}
-            options={revPARChartOptions}
-            type={'line'}
-            height={500}
-          />
+          <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
         </div>
         <div>
           <h3>TSA Passenger Data:</h3>
@@ -558,5 +551,5 @@ export default function Dashboard() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

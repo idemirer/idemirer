@@ -2,9 +2,8 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
-// import { getTwitchStatus } from '../../lib/twitch';
 
-export default function Contact(twitchStatus) {
+export default function Contact() {
   return (
     <Layout>
       <Head>
@@ -48,12 +47,3 @@ export default function Contact(twitchStatus) {
     </Layout>
   );
 }
-
-// export async function getServerSideProps() {
-//   const twitchStatus = await getTwitchStatus();
-//   return {
-//     props: {
-//       twitchStatus,
-//     },
-//   };
-// }

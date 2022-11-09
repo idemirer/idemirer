@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Layout from '../../components/layout'
-import utilStyles from '../../styles/utils.module.css'
-import Link from 'next/link'
-import { readMD } from '../../lib/readmd'
+import Head from 'next/head';
+import Layout from '../../components/layout';
+import utilStyles from '../../styles/utils.module.css';
+import Link from 'next/link';
+import { readMD } from '../../lib/readmd';
 
 export default function About({ readHTML }) {
   return (
@@ -13,7 +13,7 @@ export default function About({ readHTML }) {
       <div className={utilStyles.about}>
         <div dangerouslySetInnerHTML={{ __html: readHTML.contentHtml }} />
         <p className={utilStyles.cv}>
-          <Link href="/resume/Ilhan-Demirer-CV.pdf">
+          <Link href='/resume/Ilhan-Demirer-CV.pdf'>
             <a className={utilStyles.textBold}>
               <i className={`${utilStyles.redText} fa fa-file-pdf`}></i>&nbsp;&nbsp;Full Resume
             </a>
@@ -21,13 +21,13 @@ export default function About({ readHTML }) {
         </p>
       </div>
     </Layout>
-  )
+  );
 }
 export async function getStaticProps() {
-  const readHTML = await readMD('/pages/about/content', 'about')
+  const readHTML = await readMD('/pages/about/content', 'about');
   return {
     props: {
       readHTML,
     },
-  }
+  };
 }
