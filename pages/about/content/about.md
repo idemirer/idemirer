@@ -47,6 +47,8 @@ State University of New York College at Plattsburgh
 
 ## PUBLICATIONS
 
+- Kizildag, M., Weinland, J.T. &amp; **Demirer, I.** (2022). Financial sensitivity analysis of small lodging establishments during COVID-19. _Journal of Hospitality and Tourism Insights_. https://doi.org/10.1108/JHTI-05-2022-0176
+
 - Ozdemir, O., Kizildag, M., Dogru, T., &amp; **Demirer, I.** (2021). Corporate social responsibility and financial performance: Does board diversity matter?. _Journal of Global Business Insights_, _6_(2), 98-116. [https://doi.org/10.5038/2640-6489.6.2.1169](https://doi.org/10.5038/2640-6489.6.2.1169)
 
 - Dogru, T., Hanks, L., Ozdemir, O., Kizildag, M., Ampountolas, A., &amp; **Demirer, I.** (2020). Does Airbnb have a homogenous impact? Examining Airbnb&#39;s effect on hotels with different organizational structures. _International Journal of Hospitality Management_, _86_, 102451. [https://doi.org/10.1016/j.ijhm.2020.102451](https://doi.org/10.1016/j.ijhm.2020.102451)
