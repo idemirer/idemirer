@@ -5,13 +5,13 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
+const updateDate = 'Dec 2, 2022';
+
 let tsaData = {};
 tsaData['data'] = [];
 for (let i = 0; i < 120; i++) {
   tsaData['data'].push(tsaRawData['data'][i]);
 }
-
-const updateDate = 'Dec 2, 2022';
 
 const tsaDataKeys = Object.keys(tsaData['data'][0]);
 let tsaChartRawData = {};

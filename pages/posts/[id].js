@@ -30,15 +30,17 @@ export default function Post({ postData, currentPostID, newerPostID, olderPostID
         </div>
       </article>
       <div className={utilStyles.pagination}>
-        <Link href={`/posts/${newerPostID}`}>
-          <span className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}>
-            &#xab; NEWER POST
-          </span>
+        <Link
+          href={`/posts/${newerPostID}`}
+          className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}
+        >
+          <span>&#xab; NEWER POST</span>
         </Link>
-        <Link href={`/posts/${olderPostID}`}>
-          <span className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}>
-            OLDER POST &#xbb;
-          </span>
+        <Link
+          href={`/posts/${olderPostID}`}
+          className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}
+        >
+          <span>OLDER POST &#xbb;</span>
         </Link>
       </div>
     </Layout>

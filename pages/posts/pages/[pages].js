@@ -19,15 +19,17 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
         </div>
       </section>
       <section className={utilStyles.pagination}>
-        <Link href={`/posts/pages/${previousPage}`}>
-          <span className={`${utilStyles.previousPage} ${previousPage == currentPage ? utilStyles.deactive : ''}`}>
-            &#xab; NEWER POSTS
-          </span>
+        <Link
+          href={`/posts/pages/${previousPage}`}
+          className={`${utilStyles.previousPage} ${previousPage == currentPage ? utilStyles.deactive : ''}`}
+        >
+          <span>&#xab; NEWER POSTS</span>
         </Link>
-        <Link href={`/posts/pages/${nextPage}`}>
-          <span className={`${utilStyles.nextPage} ${nextPage == currentPage ? utilStyles.deactive : ''}`}>
-            OLDER POSTS &#xbb;
-          </span>
+        <Link
+          href={`/posts/pages/${nextPage}`}
+          className={`${utilStyles.nextPage} ${nextPage == currentPage ? utilStyles.deactive : ''}`}
+        >
+          <span>OLDER POSTS &#xbb;</span>
         </Link>
       </section>
     </Layout>
