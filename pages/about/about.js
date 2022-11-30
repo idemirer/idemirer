@@ -14,9 +14,9 @@ export default function About({ readHTML }) {
         <div dangerouslySetInnerHTML={{ __html: readHTML.contentHtml }} />
         <p className={utilStyles.cv}>
           <Link href='/resume/Ilhan-Demirer-CV.pdf'>
-            <a className={utilStyles.textBold}>
+            <span className={utilStyles.textBold}>
               <i className={`${utilStyles.redText} fa fa-file-pdf`}></i>&nbsp;&nbsp;Full Resume
-            </a>
+            </span>
           </Link>
         </p>
       </div>

@@ -19,7 +19,7 @@ export default function Post({ postData, currentPostID, newerPostID, olderPostID
         <div className={`${utilStyles.lightText} ${utilStyles.categories}`}>
           {postData.tags.map((item, key) => (
             <Link href={`/posts/tags/${item}`} key={key}>
-              <a className={utilStyles.tags}>{'#' + item + ' '}</a>
+              <span className={utilStyles.tags}>{'#' + item + ' '}</span>
             </Link>
           ))}
         </div>
@@ -32,14 +32,14 @@ export default function Post({ postData, currentPostID, newerPostID, olderPostID
       </article>
       <div className={utilStyles.pagination}>
         <Link href={`/posts/${newerPostID}`}>
-          <a className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}>
+          <span className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}>
             &#xab; NEWER POST
-          </a>
+          </span>
         </Link>
         <Link href={`/posts/${olderPostID}`}>
-          <a className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}>
+          <span className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}>
             OLDER POST &#xbb;
-          </a>
+          </span>
         </Link>
       </div>
     </Layout>

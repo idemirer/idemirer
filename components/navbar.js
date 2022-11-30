@@ -15,17 +15,15 @@ export default function Navbar() {
     <>
       <div className={navbarStyle.hamburgerMenu}>
         <Link href='#'>
-          <a onClick={() => setActive(!active)}>
+          <span onClick={() => setActive(!active)}>
             <i aria-hidden className='fas fa-bars'></i>
-          </a>
+          </span>
         </Link>
       </div>
       <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : ''}`}>
         {navbarData.map((item, key) => (
           <div key={key}>
-            <Link href={item.link}>
-              <a>{item.name}</a>
-            </Link>
+            <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
 

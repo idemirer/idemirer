@@ -24,17 +24,12 @@ const Hero = () => {
         </p>
         <p>
           I’m a Management faculty at{' '}
-          <Link href='https://www.plattsburgh.edu/'>
-            <a>State University of New York College at Plattsburgh.</a>
-          </Link>
+          <Link href='https://www.plattsburgh.edu/'>State University of New York College at Plattsburgh.</Link>
         </p>
         <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p>
           On this page I post weekly updates on news, research, and{' '}
-          <Link href='/dashboard/dashboard'>
-            <a>hospitality data</a>
-          </Link>
-          .
+          <Link href='/dashboard/dashboard'>hospitality data</Link>.
         </p>
       </section>
     </>

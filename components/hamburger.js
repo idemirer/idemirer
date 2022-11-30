@@ -6,17 +6,13 @@ export default function Hamburger() {
     <div>
       <div className={hamburgerStyle.hamburgerMenu}>
         <Link href='#'>
-          <a>
-            <i className='fas fa-bars'></i>
-          </a>
+          <i className='fas fa-bars'></i>
         </Link>
       </div>
       <div className={hamburgerStyle.hamburger}>
         {navbarData.map((item, key) => (
           <div key={key}>
-            <Link href={item.link}>
-              <a>{item.name}</a>
-            </Link>
+            <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
       </div>

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import CreateChart from '../../components/apexchartlayout';
-import strdata from '../../assets/data/str.json';
+import strdata from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
 let tsaData = {};
@@ -12,40 +12,6 @@ for (let i = 0; i < 120; i++) {
 }
 
 const updateDate = 'November 24, 2022';
-
-let occData2019 = [];
-let occData2020 = [];
-let occData2021 = [];
-let occData2022 = [];
-
-let adrData2019 = [];
-let adrData2020 = [];
-let adrData2021 = [];
-let adrData2022 = [];
-
-let revParData2019 = [];
-let revParData2020 = [];
-let revParData2021 = [];
-let revParData2022 = [];
-
-let weeks = [...Object.keys(strdata[2019])];
-
-for (let i = 1; i <= 52; i++) {
-  occData2019.push(strdata[2019][i][0]);
-  occData2020.push(strdata[2020][i][0]);
-  occData2021.push(strdata[2021][i][0]);
-  adrData2019.push(strdata[2019][i][1]);
-  adrData2020.push(strdata[2020][i][1]);
-  adrData2021.push(strdata[2021][i][1]);
-  revParData2019.push(strdata[2019][i][2]);
-  revParData2020.push(strdata[2020][i][2]);
-  revParData2021.push(strdata[2021][i][2]);
-}
-for (let i = 1; i <= Object.keys(strdata[2022]).length; i++) {
-  occData2022.push(strdata[2022][i][0]);
-  adrData2022.push(strdata[2022][i][1]);
-  revParData2022.push(strdata[2022][i][2]);
-}
 
 const tsaDataKeys = Object.keys(tsaData['data'][0]);
 let chartData = {};
@@ -58,61 +24,62 @@ for (let i = 0; i < tsaDataKeys.length; i++) {
     chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
 }
+console.log(chartData);
 
 const occChartData = [
   {
     name: '2019',
-    data: occData2019,
+    data: strdata['2019']['occupancy'],
   },
   {
     name: '2020',
-    data: occData2020,
+    data: strdata['2020']['occupancy'],
   },
   {
     name: '2021',
-    data: occData2021,
+    data: strdata['2021']['occupancy'],
   },
   {
     name: '2022',
-    data: occData2022,
+    data: strdata['2022']['occupancy'],
   },
 ];
 
 const ADRChartData = [
   {
     name: '2019',
-    data: adrData2019,
+    data: strdata['2019']['ADR'],
   },
   {
     name: '2020',
-    data: adrData2020,
+    data: strdata['2020']['ADR'],
   },
   {
     name: '2021',
-    data: adrData2021,
+    data: strdata['2021']['ADR'],
   },
   {
     name: '2022',
-    data: adrData2022,
+    data: strdata['2022']['ADR'],
   },
 ];
 
 const revPARChartData = [
   {
     name: '2019',
-    data: revParData2019,
+    data: strdata['2019']['RevPAR'],
   },
   {
     name: '2020',
-    data: revParData2020,
+    data: strdata['2020']['RevPAR'],
   },
   {
     name: '2021',
-    data: revParData2021,
+    data: strdata['2021']['RevPAR'],
   },
   {
     name: '2022',
-    data: revParData2022,
+    data: strdata['2022']['RevPAR'],
   },
 ];
 
@@ -172,16 +139,20 @@ const occChartOptions = {
   yaxis: {
     decimalsInFloat: 0,
   },
+  legend: {
+    height: 35,
+  },
   xaxis: {
-    categories: weeks,
+    categories: strdata['2022']['date'],
     labels: {
-      rotate: 0,
-      maxHeight: 120,
+      rotate: -45,
+      maxHeight: 70,
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
       offsetX: -18,
+      offsetY: 120,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -256,15 +227,20 @@ const ADRChartOptions = {
   yaxis: {
     decimalsInFloat: 0,
   },
+  legend: {
+    height: 35,
+  },
   xaxis: {
-    categories: weeks,
+    categories: strdata['2022']['date'],
     labels: {
-      rotate: 0,
+      rotate: -45,
+      maxHeight: 70,
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
       offsetX: -18,
+      offsetY: 120,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -339,16 +315,20 @@ const revPARChartOptions = {
   yaxis: {
     decimalsInFloat: 0,
   },
+  legend: {
+    height: 35,
+  },
   xaxis: {
-    categories: weeks,
+    categories: strdata['2022']['date'],
     labels: {
-      rotate: 0,
-      maxHeight: 60,
+      rotate: -45,
+      maxHeight: 70,
     },
     title: {
       text: 'Source: STR, str.com. Updated: ' + updateDate,
       align: 'center',
       offsetX: -18,
+      offsetY: 120,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
@@ -451,6 +431,7 @@ const tsaChartOptions = {
     title: {
       text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
       align: 'center',
+      offsetY: 100,
       style: {
         color: '#9C9C9C',
         fontSize: '10px',
