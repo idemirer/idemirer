@@ -11,20 +11,19 @@ for (let i = 0; i < 120; i++) {
   tsaData['data'].push(tsaRawData['data'][i]);
 }
 
-const updateDate = 'November 24, 2022';
+const updateDate = 'Dec 2, 2022';
 
 const tsaDataKeys = Object.keys(tsaData['data'][0]);
-let chartData = {};
+let tsaChartRawData = {};
 
 for (let i = 0; i < tsaDataKeys.length; i++) {
-  chartData[tsaDataKeys[i]] = [];
-  chartData['gap'] = [];
+  tsaChartRawData[tsaDataKeys[i]] = [];
+  tsaChartRawData['gap'] = [];
   for (let y = 0; y < tsaData['data'].length; y++) {
-    chartData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
-    chartData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
+    tsaChartRawData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
+    tsaChartRawData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
 }
-console.log(chartData);
 
 const occChartData = [
   {
@@ -86,15 +85,15 @@ const revPARChartData = [
 const tsaChartData = [
   {
     name: '2019',
-    data: chartData['2019'],
+    data: tsaChartRawData['2019'],
   },
   {
     name: '2022',
-    data: chartData['2022'],
+    data: tsaChartRawData['2022'],
   },
   {
     name: 'Gap',
-    data: chartData['gap'],
+    data: tsaChartRawData['gap'],
   },
 ];
 

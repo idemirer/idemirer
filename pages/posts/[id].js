@@ -6,7 +6,6 @@ import FormattedDate from '../../components/formattedDate';
 import utilStyles from '../../styles/utils.module.css';
 import PostBody from '../../components/postBody';
 import 'react-medium-image-zoom/dist/styles.css';
-import { parseISO } from 'date-fns';
 
 export default function Post({ postData, currentPostID, newerPostID, olderPostID, maxPostID }) {
   return (
