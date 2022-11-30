@@ -422,7 +422,7 @@ const tsaChartOptions = {
     },
   },
   xaxis: {
-    categories: chartData['date'],
+    categories: tsaChartRawData['date'],
     labels: {
       rotate: -45,
       maxHeight: 60,
