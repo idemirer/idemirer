@@ -23,7 +23,7 @@ export default function ChangeTheme() {
           width='30'
           height='30'
           fill='currentColor'
-          class='bi bi-sun'
+          className='bi bi-sun'
           viewBox='0 0 20 20'
         >
           {inactiveTheme == 'dark' ? (

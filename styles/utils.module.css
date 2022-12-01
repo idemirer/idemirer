@@ -152,6 +152,12 @@
   box-shadow: 0px 0px 15px var(--shadow);
   line-height: normal;
 }
+.maincontent {
+  display: flex;
+}
+.post {
+  width: 800px;
+}
 .footer {
   display: flex;
   gap: 15px;
@@ -185,7 +191,10 @@
 .textBold {
   font-weight: 600;
 }
-.postBody > div > ul > li > div > div > img {
+.postBody {
+  padding-left: 20px;
+}
+.postBody img {
   filter: drop-shadow(2px 6px 4px var(--shadow));
   margin: 15px 0px !important;
   height: 100%;
@@ -213,10 +222,27 @@
   outline-offset: 0.4rem;
   outline: 0.2rem solid #ddd;
 }
+.toc {
+  font-family: Merriweather, serif;
+  font-size: 1.25rem;
+  width: 300px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  margin-top: 140px;
+  padding: 10px;
+}
+
+.toc li {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
 .postBody strong > a {
   font-size: 1.25rem;
 }
 .postBody > div > ul,
+.toc li,
 .postBody > div > ul > li > ul {
   list-style: none;
 }
@@ -315,6 +341,9 @@
 @media all and (max-width: 800px) {
   .posts {
     flex-direction: column;
+  }
+  .toc {
+    display: none;
   }
 }
 .pagination {

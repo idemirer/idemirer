@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
       <div>
         <a className={utilStyles.email} href='https://www.youtube.com/@IlhanDemirer' alt='YouTube' target='_blank'>
-          <i aria-hidden class='fa-solid fa-video'></i>
+          <i aria-hidden className='fa-solid fa-video'></i>
         </a>
       </div>
       <div>
