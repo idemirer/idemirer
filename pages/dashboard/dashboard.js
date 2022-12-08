@@ -21,7 +21,7 @@ for (let i = 0; i < tsaDataKeys.length; i++) {
   tsaChartRawData['gap'] = [];
   for (let y = 0; y < tsaData['data'].length; y++) {
     tsaChartRawData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
-    tsaChartRawData['gap'].unshift(100 - Math.floor((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
+    tsaChartRawData['gap'].unshift(100 - Math.round((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
   }
 }
 
@@ -136,7 +136,7 @@ const occChartOptions = {
     },
   },
   yaxis: {
-    decimalsInFloat: 0,
+    decimalsInFloat: 2,
   },
   legend: {
     height: 35,
@@ -224,7 +224,7 @@ const ADRChartOptions = {
     },
   },
   yaxis: {
-    decimalsInFloat: 0,
+    decimalsInFloat: 2,
   },
   legend: {
     height: 35,
@@ -312,7 +312,7 @@ const revPARChartOptions = {
     },
   },
   yaxis: {
-    decimalsInFloat: 0,
+    decimalsInFloat: 2,
   },
   legend: {
     height: 35,
@@ -449,7 +449,7 @@ const tsaChartOptions = {
       show: false,
       max: 3000000,
       min: 0,
-      decimalsInFloat: 0,
+      decimalsInFloat: 2,
       labels: {
         formatter: function (val, index) {
           return (val / 1000000).toFixed(1) + 'M';
