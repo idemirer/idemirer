@@ -191,9 +191,6 @@
 .textBold {
   font-weight: 600;
 }
-.postBody {
-  padding-left: 20px;
-}
 .postBody img {
   filter: drop-shadow(2px 6px 4px var(--shadow));
   margin: 15px 0px !important;
@@ -232,7 +229,6 @@
   margin-top: 140px;
   padding: 10px;
 }
-
 .toc li {
   display: block;
   margin-bottom: 10px;
@@ -241,16 +237,14 @@
 .postBody strong > a {
   font-size: 1.25rem;
 }
-.postBody > div > ul,
-.toc li,
-.postBody > div > ul > li > ul {
+.postBody ul,
+.toc li {
   list-style: none;
 }
-
-.postBody > div > ul > li {
+.postBody li {
   padding-bottom: 5px;
   display: block;
-  margin: 10px 0px;
+  margin: 0px 10px 10px 10px;
 }
 .postBody > div > ul > li > p:nth-child(1) {
   display: inline-flex;
