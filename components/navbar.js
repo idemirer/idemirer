@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import navbarStyle from './navbar.module.css';
 import Link from 'next/link';
 import ChangeTheme from './changeTheme';
