@@ -17,14 +17,28 @@
   font-size: 1.5rem;
   display: none;
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .showNavBar {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
 }
 .themeSwitch {
   margin-left: auto;
   text-align: right;
+  height: 32px;
+  margin-top: 5px;
+}
+.twitchWrapper {
+  flex: 2;
+  justify-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 32px;
 }
 .streaming {
   margin-right: 25px !important;
@@ -51,7 +65,7 @@
     z-index: 1;
   }
   .hamburgerMenu {
-    margin: 30px 10px 0px 0px;
+    margin: 10px 10px 0px 0px;
     display: block;
   }
 }

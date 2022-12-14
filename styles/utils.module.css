@@ -335,6 +335,7 @@
 @media all and (max-width: 800px) {
   .posts {
     flex-direction: column;
+    align-items: center;
   }
   .post {
     width: 100%;
