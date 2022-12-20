@@ -28,8 +28,8 @@ const Hero = () => {
         </p>
         <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p>
-          On this page I post weekly updates on news, research, and{' '}
-          <Link href='/dashboard/dashboard'>hospitality data</Link>.
+          On this page I post weekly updates on <Link href='/posts/pages/1'>news</Link>, research, and{' '}
+          <Link href='/dashboard'>hospitality data</Link>.
         </p>
       </section>
     </>
