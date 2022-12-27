@@ -11,12 +11,12 @@
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir posts"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.14",
     "apexcharts": "^3.36.3",
     "axios": "^1.2.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "gray-matter": "^4.0.3",
+    "inter-ui": "^3.19.3",
     "next": "^13.0.5",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
