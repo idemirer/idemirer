@@ -25,7 +25,7 @@ State University of New York College at Plattsburgh
 
 ## TEACHING INTERESTS
 
-- Hospitality Financial Management; Hospitality Managerial Accounting; Lodging Operations Management; Hotel Asset Management; Information Technology.
+- Hospitality Financial Management; Hospitality Managerial Accounting; Lodging Operations Management; Hotel Asset Management; Revenue Management; Business Analytics; Information Technology.
 
 ## ACADEMIC EXPERIENCE
 
