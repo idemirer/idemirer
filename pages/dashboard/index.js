@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
-const updateDate = 'Dec 27, 2022';
+const updateDate = 'Jan 5, 2023';
 
 let tsaData = {};
 tsaData['data'] = [];
@@ -42,6 +42,10 @@ const occChartData = [
     name: '2022',
     data: strdata['2022']['occupancy'],
   },
+  {
+    name: '2023',
+    data: strdata['2023']['occupancy'],
+  },
 ];
 
 const ADRChartData = [
@@ -60,6 +64,10 @@ const ADRChartData = [
   {
     name: '2022',
     data: strdata['2022']['ADR'],
+  },
+  {
+    name: '2023',
+    data: strdata['2023']['ADR'],
   },
 ];
 
@@ -80,6 +88,10 @@ const revPARChartData = [
     name: '2022',
     data: strdata['2022']['RevPAR'],
   },
+  {
+    name: '2023',
+    data: strdata['2023']['RevPAR'],
+  },
 ];
 
 const tsaChartData = [
@@ -97,7 +109,7 @@ const tsaChartData = [
   },
 ];
 
-const occChartOptions = {
+const mainChartOptions = {
   chart: {
     background: '#000',
     dropShadow: {
@@ -119,7 +131,6 @@ const occChartOptions = {
     },
   },
   title: {
-    text: 'U.S. Hotel Occupancy (Weekly)',
     align: 'center',
     style: {
       fontWeight: 600,
@@ -142,7 +153,7 @@ const occChartOptions = {
     height: 35,
   },
   xaxis: {
-    categories: strdata['2022']['date'],
+    categories: strdata['2023']['date'],
     labels: {
       rotate: -45,
       maxHeight: 70,
@@ -161,7 +172,7 @@ const occChartOptions = {
     },
     tickAmount: 18,
   },
-  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
+  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300', '#404AE0'],
   fill: {
     type: 'solid',
     opacity: [1, 0.5, 1, 1],
@@ -182,182 +193,27 @@ const occChartOptions = {
       shadeTo: 'light',
       shadeIntensity: 0.65,
     },
+  },
+};
+
+const occChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel Occupancy (Weekly)',
   },
 };
 
 const ADRChartOptions = {
-  chart: {
-    background: '#000',
-    dropShadow: {
-      enabled: true,
-      enabledOnSeries: [0, 1, 2],
-      top: 1,
-      left: 1,
-      blur: 0,
-      color: '#000',
-      opacity: 1,
-    },
-    toolbar: {
-      show: false,
-    },
-    fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    type: 'line',
-    zoom: {
-      enabled: false,
-    },
-  },
+  ...mainChartOptions,
   title: {
     text: 'U.S. Hotel ADR (weekly)',
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-  grid: {
-    borderColor: '#333',
-    opacity: 0.1,
-    yaxis: {
-      lines: {
-        show: true,
-      },
-    },
-  },
-  yaxis: {
-    decimalsInFloat: 2,
-  },
-  legend: {
-    height: 35,
-  },
-  xaxis: {
-    categories: strdata['2022']['date'],
-    labels: {
-      rotate: -45,
-      maxHeight: 70,
-    },
-    title: {
-      text: 'Source: STR, str.com. Updated: ' + updateDate,
-      align: 'center',
-      offsetX: -18,
-      offsetY: 120,
-      style: {
-        color: '#9C9C9C',
-        fontSize: '10px',
-        fontFamily: 'Inter, Roboto, sans-serif',
-        fontWeight: 400,
-      },
-    },
-    tickAmount: 18,
-  },
-  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
-  fill: {
-    type: 'solid',
-    opacity: [1, 0.5, 1, 1],
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: 'straight',
-    width: 3,
-  },
-  theme: {
-    mode: 'dark',
-    palette: 'palette6',
-    monochrome: {
-      enabled: false,
-      color: '#255aee',
-      shadeTo: 'light',
-      shadeIntensity: 0.65,
-    },
   },
 };
 
 const revPARChartOptions = {
-  chart: {
-    background: '#000',
-    dropShadow: {
-      enabled: true,
-      enabledOnSeries: [0, 1, 2],
-      top: 1,
-      left: 1,
-      blur: 0,
-      color: '#000',
-      opacity: 1,
-    },
-    toolbar: {
-      show: false,
-    },
-    fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    type: 'line',
-    zoom: {
-      enabled: false,
-    },
-  },
+  ...mainChartOptions,
   title: {
     text: 'U.S. Hotel RevPAR (weekly)',
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-  grid: {
-    borderColor: '#333',
-    opacity: 0.1,
-    yaxis: {
-      lines: {
-        show: true,
-      },
-    },
-  },
-  yaxis: {
-    decimalsInFloat: 2,
-  },
-  legend: {
-    height: 35,
-  },
-  xaxis: {
-    categories: strdata['2022']['date'],
-    labels: {
-      rotate: -45,
-      maxHeight: 70,
-    },
-    title: {
-      text: 'Source: STR, str.com. Updated: ' + updateDate,
-      align: 'center',
-      offsetX: -18,
-      offsetY: 120,
-      style: {
-        color: '#9C9C9C',
-        fontSize: '10px',
-        fontFamily: 'Inter, Roboto, sans-serif',
-        fontWeight: 400,
-      },
-    },
-    tickAmount: 18,
-  },
-  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300'],
-  fill: {
-    type: 'solid',
-    opacity: [1, 0.5, 1, 1],
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: 'straight',
-    width: 3,
-  },
-  theme: {
-    mode: 'dark',
-    palette: 'palette6',
-    monochrome: {
-      enabled: false,
-      color: '#255aee',
-      shadeTo: 'light',
-      shadeIntensity: 0.65,
-    },
   },
 };
 
