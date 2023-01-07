@@ -88,10 +88,10 @@ const revPARChartData = [
     name: '2022',
     data: strdata['2022']['RevPAR'],
   },
-  {
-    name: '2023',
-    data: strdata['2023']['RevPAR'],
-  },
+  // {
+  //   name: '2023',
+  //   data: strdata['2023']['RevPAR'],
+  // },
 ];
 
 const tsaChartData = [
@@ -109,12 +109,12 @@ const tsaChartData = [
   },
 ];
 
-const mainChartOptions = {
+let mainChartOptions = {
   chart: {
     background: '#000',
     dropShadow: {
       enabled: true,
-      enabledOnSeries: [0, 1, 2],
+      enabledOnSeries: [0, 1, 2, 3],
       top: 1,
       left: 1,
       blur: 0,
@@ -128,13 +128,6 @@ const mainChartOptions = {
     type: 'line',
     zoom: {
       enabled: false,
-    },
-  },
-  title: {
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
     },
   },
   grid: {
@@ -175,7 +168,7 @@ const mainChartOptions = {
   colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300', '#404AE0'],
   fill: {
     type: 'solid',
-    opacity: [1, 0.5, 1, 1],
+    opacity: [1, 0.5, 1, 1, 1],
   },
   dataLabels: {
     enabled: false,
@@ -200,6 +193,11 @@ const occChartOptions = {
   ...mainChartOptions,
   title: {
     text: 'U.S. Hotel Occupancy (Weekly)',
+    align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
 };
 
@@ -207,13 +205,23 @@ const ADRChartOptions = {
   ...mainChartOptions,
   title: {
     text: 'U.S. Hotel ADR (weekly)',
+    align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
 };
 
-const revPARChartOptions = {
+let revPARChartOptions = {
   ...mainChartOptions,
   title: {
     text: 'U.S. Hotel RevPAR (weekly)',
+    align: 'center',
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
   },
 };
 
