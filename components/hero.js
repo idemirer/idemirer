@@ -16,7 +16,7 @@ const Hero = () => {
             alt='Ilhan Demirer'
           />
         </div>
-        <h1 className={utilStyles.headingXl}>Ilhan Demirer, PhD</h1>
+        <h1 className={utilStyles.headingXl}>Ilhan Demirer, Ph.D.</h1>
       </div>
       <section>
         <p className={utilStyles.headingMd}>
