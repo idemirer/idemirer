@@ -58,9 +58,9 @@
       "23-Dec",
       "30-Dec"
     ],
-    "occupancy": [],
-    "ADR": [],
-    "RevPAR": []
+    "occupancy": [47.2],
+    "ADR": [142.82],
+    "RevPAR": [67.4]
   },
   "2022": {
     "weeks": [

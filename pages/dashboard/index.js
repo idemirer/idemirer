@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strdata from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
-const updateDate = 'Jan 5, 2023';
+const updateDate = 'Jan 13, 2023';
 
 let tsaData = {};
 tsaData['data'] = [];
@@ -88,10 +88,10 @@ const revPARChartData = [
     name: '2022',
     data: strdata['2022']['RevPAR'],
   },
-  // {
-  //   name: '2023',
-  //   data: strdata['2023']['RevPAR'],
-  // },
+  {
+    name: '2023',
+    data: strdata['2023']['RevPAR'],
+  },
 ];
 
 const tsaChartData = [
