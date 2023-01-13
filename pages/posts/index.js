@@ -23,10 +23,10 @@ export default function Blog({ filteredPosts }) {
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   const today = +new Date();
-  const filteredPosts = allPostsData.filter(({ date }) => {
+  const filteredPosts = allPostsData.filter(({ draft, date }) => {
     const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
     const postDate = Date.parse(date) + timeZoneOffset;
-    return today >= postDate;
+    return (draft != true) & (today >= postDate);
   }); // Dates are 2022-12-01 format. They are considered UTC time.
   return {
     props: {

@@ -7,23 +7,268 @@ import tsaRawData from '../../assets/data/passengerData.json';
 
 const updateDate = 'Jan 13, 2023';
 
-let tsaData = {};
-tsaData['data'] = [];
-for (let i = 0; i < 120; i++) {
-  tsaData['data'].push(tsaRawData['data'][i]);
-}
+let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
+  const years = ['2019', '2020', '2021', '2022', '2023', 'date'];
+  for (let year = 0; year < years.length; year++) {
+    if (!obj[years[year]]) {
+      obj[years[year]] = [days[years[year]]];
+    } else {
+      if (!days[years[year]]) {
+        obj[years[year]].unshift(0);
+      } else {
+        obj[years[year]].unshift(days[years[year]]);
+      }
+    }
+  }
+  return obj;
+}, {});
 
-const tsaDataKeys = Object.keys(tsaData['data'][0]);
-let tsaChartRawData = {};
+tsaChartSourceData['gap'] = [];
 
-for (let i = 0; i < tsaDataKeys.length; i++) {
-  tsaChartRawData[tsaDataKeys[i]] = [];
-  tsaChartRawData['gap'] = [];
-  for (let y = 0; y < tsaData['data'].length; y++) {
-    tsaChartRawData[tsaDataKeys[i]].unshift(tsaData['data'][y][tsaDataKeys[i]]);
-    tsaChartRawData['gap'].unshift(100 - Math.round((tsaData['data'][y][2022] / tsaData['data'][y][2019]) * 100));
+for (let i = 0; i < tsaChartSourceData['2023'].length; i++) {
+  let gap = '';
+  if (tsaChartSourceData['2023'][i] == 0) {
+    gap = Math.round((1 - tsaChartSourceData['2022'][i] / tsaChartSourceData['2019'][i]) * 10000) / 100;
+    tsaChartSourceData['gap'].push(gap);
+  } else {
+    gap = Math.round((1 - tsaChartSourceData['2023'][i] / tsaChartSourceData['2019'][i]) * 10000) / 100;
+    tsaChartSourceData['gap'].push(gap);
   }
 }
+
+let strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
+
+const indexedYears = ['2022', '2023'];
+
+for (let y = 0; y < indexedYears.length; y++) {
+  for (let i = 0; i < 52; i++) {
+    if (strdata[indexedYears[y]]['occupancy'][i] != 0) {
+      const occIndex =
+        Math.round((strdata[indexedYears[y]]['occupancy'][i] / strdata['2019']['occupancy'][i]) * 10000) / 100;
+      strDataIndex['occIndex'].push(occIndex);
+      const ADRIndex = Math.round((strdata[indexedYears[y]]['ADR'][i] / strdata['2019']['ADR'][i]) * 10000) / 100;
+      strDataIndex['ADRIndex'].push(ADRIndex);
+      strDataIndex['date'].push(strdata[indexedYears[y]]['date'][i]);
+    }
+  }
+}
+
+const strIndexChartData = [
+  {
+    name: 'ADR Index',
+    data: strDataIndex['ADRIndex'],
+  },
+  {
+    name: 'Occ Index',
+    data: strDataIndex['occIndex'],
+  },
+];
+
+const indexChartOptions = {
+  title: {
+    text: 'U.S. Hotel Occupancy and ADR Recovery Levels',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+  stroke: {
+    curve: 'smooth',
+    width: 3,
+  },
+  subtitle: {
+    text: 'Indexed to 2019',
+    align: 'left',
+    offsetX: 10,
+    offsetY: 30,
+  },
+  chart: {
+    background: '#000',
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1],
+      top: 1,
+      left: 1,
+      blur: 0,
+      color: '#000',
+      opacity: 1,
+    },
+    toolbar: {
+      show: true,
+    },
+    fontFamily: 'Inter, Roboto, Arial, sans-serif',
+    type: 'line',
+    zoom: {
+      enabled: true,
+    },
+  },
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  yaxis: {
+    decimalsInFloat: 2,
+  },
+  legend: {
+    height: 35,
+  },
+  xaxis: {
+    categories: strDataIndex['date'],
+    labels: {
+      rotate: -45,
+      maxHeight: 50,
+    },
+    tickAmount: 21,
+    tickPlacement: 'on',
+  },
+  colors: ['#0EB300', '#404AE0'],
+  fill: {
+    type: 'solid',
+    opacity: [1, 1],
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  theme: {
+    mode: 'dark',
+    palette: 'palette6',
+    monochrome: {
+      enabled: false,
+      color: '#255aee',
+      shadeTo: 'light',
+      shadeIntensity: 0.65,
+    },
+  },
+  annotations: {
+    position: 'back',
+    yaxis: [
+      {
+        y: 100,
+        y2: 0,
+        yAxisIndex: 0,
+        strokeDashArray: 0,
+        borderColor: '#333',
+        fillColor: '#ccc',
+        opacity: 0.1,
+        offsetX: 0,
+        offsetY: 0,
+      },
+    ],
+    xaxis: [
+      {
+        x: '7-Jan',
+        x2: 800,
+        strokeDashArray: 0,
+        borderColor: '#333',
+        fillColor: '#ccc',
+        opacity: 0.1,
+        offsetX: 0,
+        offsetY: 0,
+        label: {
+          text: '2023',
+          textAnchor: 'middle',
+          orientation: 'vertical',
+          style: {
+            background: '#fff',
+            color: '#777',
+            fontSize: '11px',
+            fontWeight: 400,
+            fontFamily: undefined,
+            cssClass: 'apexcharts-xaxis-annotation-label',
+          },
+        },
+      },
+    ],
+  },
+};
+
+const mainChartOptions = {
+  chart: {
+    background: '#000',
+    dropShadow: {
+      enabled: true,
+      enabledOnSeries: [0, 1, 2, 3],
+      top: 1,
+      left: 1,
+      blur: 0,
+      color: '#000',
+      opacity: 1,
+    },
+    toolbar: {
+      show: true,
+    },
+    fontFamily: 'Inter, Roboto, Arial, sans-serif',
+    type: 'line',
+    zoom: {
+      enabled: true,
+    },
+  },
+  subtitle: {
+    text: 'Source: STR, str.com. Updated: ' + updateDate,
+    align: 'left',
+    offsetX: 10,
+    style: {
+      color: '#9C9C9C',
+      fontSize: '11px',
+      fontFamily: 'Inter, Roboto, sans-serif',
+      fontWeight: 400,
+    },
+  },
+  grid: {
+    borderColor: '#333',
+    opacity: 0.1,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+  },
+  yaxis: {
+    decimalsInFloat: 2,
+  },
+  legend: {
+    height: 35,
+  },
+  xaxis: {
+    categories: strdata['2023']['date'],
+    labels: {
+      rotate: -45,
+      maxHeight: 50,
+    },
+    tickAmount: 18,
+    tickPlacement: 'on',
+  },
+  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22'],
+  fill: {
+    type: 'solid',
+    opacity: [0.3, 0.3, 0.3, 0.5, 1],
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth',
+    width: 3,
+  },
+  theme: {
+    mode: 'dark',
+    palette: 'palette6',
+    monochrome: {
+      enabled: false,
+      color: '#255aee',
+      shadeTo: 'light',
+      shadeIntensity: 0.65,
+    },
+  },
+};
 
 const occChartData = [
   {
@@ -94,22 +339,68 @@ const revPARChartData = [
   },
 ];
 
+const occChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel Occupancy',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
+const ADRChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel ADR (weekly)',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
+const revPARChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel RevPAR (weekly)',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
 const tsaChartData = [
   {
     name: '2019',
-    data: tsaChartRawData['2019'],
+    data: tsaChartSourceData['2019'],
   },
   {
     name: '2022',
-    data: tsaChartRawData['2022'],
+    data: tsaChartSourceData['2022'],
+  },
+  {
+    name: '2023',
+    data: tsaChartSourceData['2023'],
   },
   {
     name: 'Gap',
-    data: tsaChartRawData['gap'],
+    data: tsaChartSourceData['gap'],
   },
 ];
 
-let mainChartOptions = {
+const tsaChartOptions = {
   chart: {
     background: '#000',
     dropShadow: {
@@ -122,128 +413,12 @@ let mainChartOptions = {
       opacity: 1,
     },
     toolbar: {
-      show: false,
+      show: true,
     },
     fontFamily: 'Inter, Roboto, Arial, sans-serif',
     type: 'line',
     zoom: {
-      enabled: false,
-    },
-  },
-  grid: {
-    borderColor: '#333',
-    opacity: 0.1,
-    yaxis: {
-      lines: {
-        show: true,
-      },
-    },
-  },
-  yaxis: {
-    decimalsInFloat: 2,
-  },
-  legend: {
-    height: 35,
-  },
-  xaxis: {
-    categories: strdata['2023']['date'],
-    labels: {
-      rotate: -45,
-      maxHeight: 70,
-    },
-    title: {
-      text: 'Source: STR, str.com. Updated: ' + updateDate,
-      align: 'center',
-      offsetX: -18,
-      offsetY: 120,
-      style: {
-        color: '#9C9C9C',
-        fontSize: '10px',
-        fontFamily: 'Inter, Roboto, sans-serif',
-        fontWeight: 400,
-      },
-    },
-    tickAmount: 18,
-  },
-  colors: ['#d90429', '#dddddd', '#ffb300', '#0EB300', '#404AE0'],
-  fill: {
-    type: 'solid',
-    opacity: [1, 0.5, 1, 1, 1],
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: 'straight',
-    width: 3,
-  },
-  theme: {
-    mode: 'dark',
-    palette: 'palette6',
-    monochrome: {
-      enabled: false,
-      color: '#255aee',
-      shadeTo: 'light',
-      shadeIntensity: 0.65,
-    },
-  },
-};
-
-const occChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel Occupancy (Weekly)',
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-const ADRChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel ADR (weekly)',
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-let revPARChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel RevPAR (weekly)',
-    align: 'center',
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-const tsaChartOptions = {
-  chart: {
-    background: '#000',
-    dropShadow: {
       enabled: true,
-      enabledOnSeries: [0, 1, 2],
-      top: 3,
-      left: 0,
-      blur: 1,
-      color: '#333',
-      opacity: 1,
-    },
-    toolbar: {
-      show: false,
-    },
-    fontFamily: 'Inter, Roboto, Arial, sans-serif',
-    type: 'line',
-    zoom: {
-      enabled: false,
     },
   },
   theme: {
@@ -265,44 +440,47 @@ const tsaChartOptions = {
       },
     },
   },
-  colors: ['#d90429', '#ffb300', '#dddddd'],
+  colors: ['#d90429', '#404AE0', '#e67e22', '#dddddd'],
   fill: {
     type: 'solid',
-    opacity: [1, 1, 0.2],
+    opacity: [0.3, 0.5, 1, 0.2],
   },
   dataLabels: {
     enabled: false,
   },
   stroke: {
-    curve: 'straight',
+    curve: 'smooth',
     width: 3,
   },
   title: {
     text: 'TSA Passenger Data',
-    align: 'center',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
     style: {
       fontWeight: 600,
       fontSize: '16px',
     },
   },
+  subtitle: {
+    text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
+    align: 'left',
+    offsetX: 10,
+    style: {
+      color: '#9C9C9C',
+      fontSize: '11px',
+      fontFamily: 'Inter, Roboto, sans-serif',
+      fontWeight: 400,
+    },
+  },
   xaxis: {
-    categories: tsaChartRawData['date'],
+    categories: tsaChartSourceData['date'],
     labels: {
       rotate: -45,
-      maxHeight: 60,
+      maxHeight: 45,
     },
-    title: {
-      text: 'Source: TSA, tsa.gov. Updated: ' + updateDate,
-      align: 'center',
-      offsetY: 100,
-      style: {
-        color: '#9C9C9C',
-        fontSize: '10px',
-        fontFamily: 'Inter, Roboto, sans-serif',
-        fontWeight: 400,
-      },
-    },
-    tickAmount: 18,
+    tickAmount: 21,
+    tickPlacement: 'on',
   },
   legend: {
     height: 35,
@@ -310,7 +488,7 @@ const tsaChartOptions = {
   yaxis: [
     {
       seriesName: '2019',
-      show: false,
+      show: true,
       max: 3000000,
       min: 0,
       decimalsInFloat: 2,
@@ -322,7 +500,19 @@ const tsaChartOptions = {
     },
     {
       seriesName: '2022',
-      show: true,
+      show: false,
+      max: 3000000,
+      min: 0,
+      decimalsInFloat: 0,
+      labels: {
+        formatter: function (val, index) {
+          return (val / 1000000).toFixed(1) + 'M';
+        },
+      },
+    },
+    {
+      seriesName: '2023',
+      show: false,
       max: 3000000,
       min: 0,
       decimalsInFloat: 0,
@@ -336,8 +526,8 @@ const tsaChartOptions = {
       opposite: true,
       seriesName: 'Gap',
       max: 100,
-      min: -25,
-      tickAmount: 10,
+      min: -35,
+      tickAmount: 9,
       title: {
         text: 'Gap',
         style: {
@@ -357,7 +547,7 @@ const tsaChartOptions = {
       {
         y: 0,
         y2: -50,
-        yAxisIndex: 2,
+        yAxisIndex: 3,
         strokeDashArray: 0,
         borderColor: '#333',
         fillColor: '#ccc',
@@ -378,19 +568,23 @@ export default function Dashboard() {
       <h2 className={utilStyles.headingLg}>U.S. Hospitality Data Dashboard</h2>
       <section>
         <div>
-          <h3>Occupancy Data:</h3>
+          <h3>Recovery Index:</h3>
+          <CreateChart data={strIndexChartData} options={indexChartOptions} type={'line'} height={500} />
+        </div>
+        <div>
+          <h3>U.S. Hotel Occupancy (Weeks Ending)</h3>
           <CreateChart data={occChartData} options={occChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>ADR Data:</h3>
+          <h3>U.S. Hotel ADR (Weeks Ending)</h3>
           <CreateChart data={ADRChartData} options={ADRChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>RevPAR Data:</h3>
+          <h3>U.S. Hotel RevPAR (Weeks Ending)</h3>
           <CreateChart data={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>TSA Passenger Data:</h3>
+          <h3>TSA Checkpoint Travel Numbers (Same Weekday)</h3>
           <CreateChart data={tsaChartData} options={tsaChartOptions} type={'line'} height={500} />
         </div>
       </section>

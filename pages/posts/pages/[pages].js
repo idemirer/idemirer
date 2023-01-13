@@ -38,7 +38,13 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
 
 export async function getStaticPaths() {
   const postData = getSortedPostsData();
-  const paths = await getAllPages(postData);
+  const today = +new Date();
+  const filteredPosts = postData.filter(({ draft, date }) => {
+    const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
+    const postDate = Date.parse(date) + timeZoneOffset;
+    return (draft != true) & (today >= postDate);
+  });
+  const paths = await getAllPages(filteredPosts);
   return {
     paths,
     fallback: false,
@@ -48,6 +54,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const pages = params.pages || 1;
   const postData = getSortedPostsData();
+  const today = +new Date();
+  const filteredPosts = postData.filter(({ draft, date }) => {
+    const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
+    const postDate = Date.parse(date) + timeZoneOffset;
+    return (draft != true) & (today >= postDate);
+  });
+
   const response = await getPageNumbers(pages);
   const start = response.start;
   const currentPage = pages;
@@ -63,7 +76,7 @@ export async function getStaticProps({ params }) {
 
   const end = response.end;
 
-  const allPostsData = postData.slice(start, end);
+  const allPostsData = filteredPosts.slice(start, end);
   return {
     props: {
       allPostsData,
