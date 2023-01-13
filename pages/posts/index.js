@@ -4,7 +4,7 @@ import utilStyles from '../../styles/utils.module.css';
 import { getSortedPostsData } from '../../lib/posts';
 import PostListing from '../../components/listposts';
 
-export default function Blog({ allPostsData }) {
+export default function Blog({ filteredPosts }) {
   return (
     <Layout>
       <Head>
@@ -13,7 +13,7 @@ export default function Blog({ allPostsData }) {
       <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <div className={utilStyles.posts}>
-          <PostListing postData={allPostsData} />
+          <PostListing postData={filteredPosts} />
         </div>
       </section>
     </Layout>
@@ -22,9 +22,15 @@ export default function Blog({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const today = +new Date();
+  const filteredPosts = allPostsData.filter(({ date }) => {
+    const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
+    const postDate = Date.parse(date) + timeZoneOffset;
+    return today >= postDate;
+  }); // Dates are 2022-12-01 format. They are considered UTC time.
   return {
     props: {
-      allPostsData,
+      filteredPosts,
     },
   };
 }
