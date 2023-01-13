@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import CreateChart from '../../components/apexchartlayout';
-import strdata from '../../assets/data/strdata.json';
+import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
 const updateDate = 'Jan 13, 2023';
@@ -42,13 +42,13 @@ const indexedYears = ['2022', '2023'];
 
 for (let y = 0; y < indexedYears.length; y++) {
   for (let i = 0; i < 52; i++) {
-    if (strdata[indexedYears[y]]['occupancy'][i] != 0) {
+    if (strData[indexedYears[y]]['occupancy'][i] != 0) {
       const occIndex =
-        Math.round((strdata[indexedYears[y]]['occupancy'][i] / strdata['2019']['occupancy'][i]) * 10000) / 100;
+        Math.round((strData[indexedYears[y]]['occupancy'][i] / strData['2019']['occupancy'][i]) * 10000) / 100;
       strDataIndex['occIndex'].push(occIndex);
-      const ADRIndex = Math.round((strdata[indexedYears[y]]['ADR'][i] / strdata['2019']['ADR'][i]) * 10000) / 100;
+      const ADRIndex = Math.round((strData[indexedYears[y]]['ADR'][i] / strData['2019']['ADR'][i]) * 10000) / 100;
       strDataIndex['ADRIndex'].push(ADRIndex);
-      strDataIndex['date'].push(strdata[indexedYears[y]]['date'][i]);
+      strDataIndex['date'].push(strData[indexedYears[y]]['date'][i]);
     }
   }
 }
@@ -238,7 +238,7 @@ const mainChartOptions = {
     height: 35,
   },
   xaxis: {
-    categories: strdata['2023']['date'],
+    categories: strData['2023']['date'],
     labels: {
       rotate: -45,
       maxHeight: 50,
@@ -273,69 +273,69 @@ const mainChartOptions = {
 const occChartData = [
   {
     name: '2019',
-    data: strdata['2019']['occupancy'],
+    data: strData['2019']['occupancy'],
   },
   {
     name: '2020',
-    data: strdata['2020']['occupancy'],
+    data: strData['2020']['occupancy'],
   },
   {
     name: '2021',
-    data: strdata['2021']['occupancy'],
+    data: strData['2021']['occupancy'],
   },
   {
     name: '2022',
-    data: strdata['2022']['occupancy'],
+    data: strData['2022']['occupancy'],
   },
   {
     name: '2023',
-    data: strdata['2023']['occupancy'],
+    data: strData['2023']['occupancy'],
   },
 ];
 
 const ADRChartData = [
   {
     name: '2019',
-    data: strdata['2019']['ADR'],
+    data: strData['2019']['ADR'],
   },
   {
     name: '2020',
-    data: strdata['2020']['ADR'],
+    data: strData['2020']['ADR'],
   },
   {
     name: '2021',
-    data: strdata['2021']['ADR'],
+    data: strData['2021']['ADR'],
   },
   {
     name: '2022',
-    data: strdata['2022']['ADR'],
+    data: strData['2022']['ADR'],
   },
   {
     name: '2023',
-    data: strdata['2023']['ADR'],
+    data: strData['2023']['ADR'],
   },
 ];
 
 const revPARChartData = [
   {
     name: '2019',
-    data: strdata['2019']['RevPAR'],
+    data: strData['2019']['RevPAR'],
   },
   {
     name: '2020',
-    data: strdata['2020']['RevPAR'],
+    data: strData['2020']['RevPAR'],
   },
   {
     name: '2021',
-    data: strdata['2021']['RevPAR'],
+    data: strData['2021']['RevPAR'],
   },
   {
     name: '2022',
-    data: strdata['2022']['RevPAR'],
+    data: strData['2022']['RevPAR'],
   },
   {
     name: '2023',
-    data: strdata['2023']['RevPAR'],
+    data: strData['2023']['RevPAR'],
   },
 ];
 
