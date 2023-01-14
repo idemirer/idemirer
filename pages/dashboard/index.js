@@ -490,7 +490,8 @@ const tsaChartOptions = {
       seriesName: '2019',
       show: true,
       max: 3000000,
-      min: 0,
+      min: 300000,
+      tickAmount: 9,
       decimalsInFloat: 2,
       labels: {
         formatter: function (val, index) {
@@ -502,8 +503,9 @@ const tsaChartOptions = {
       seriesName: '2022',
       show: false,
       max: 3000000,
-      min: 0,
+      min: 300000,
       decimalsInFloat: 0,
+      tickAmount: 9,
       labels: {
         formatter: function (val, index) {
           return (val / 1000000).toFixed(1) + 'M';
@@ -514,7 +516,8 @@ const tsaChartOptions = {
       seriesName: '2023',
       show: false,
       max: 3000000,
-      min: 0,
+      min: 300000,
+      tickAmount: 9,
       decimalsInFloat: 0,
       labels: {
         formatter: function (val, index) {
