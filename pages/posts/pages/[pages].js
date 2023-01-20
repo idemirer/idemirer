@@ -5,6 +5,7 @@ import utilStyles from '../../../styles/utils.module.css';
 import { getAllPages, getSortedPostsData } from '../../../lib/posts';
 import { getPageNumbers } from '../../../lib/getPageNumbers';
 import PostListing from '../../../components/listposts';
+import { filterPosts } from '../../../lib/filterPosts';
 
 export default function Blog({ allPostsData, previousPage, nextPage, currentPage }) {
   return (
@@ -38,12 +39,7 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
 
 export async function getStaticPaths() {
   const postData = getSortedPostsData();
-  const today = +new Date();
-  const filteredPosts = postData.filter(({ draft, date }) => {
-    const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
-    const postDate = Date.parse(date) + timeZoneOffset;
-    return (draft != true) & (today >= postDate);
-  });
+  const filteredPosts = await filterPosts(postData);
   const paths = await getAllPages(filteredPosts);
   return {
     paths,
@@ -54,13 +50,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const pages = params.pages || 1;
   const postData = getSortedPostsData();
-  const today = +new Date();
-  const filteredPosts = postData.filter(({ draft, date }) => {
-    const timeZoneOffset = new Date(Date.parse(date)).getTimezoneOffset() * 60 * 1001;
-    const postDate = Date.parse(date) + timeZoneOffset;
-    return (draft != true) & (today >= postDate);
-  });
-
+  const filteredPosts = await filterPosts(postData);
   const response = await getPageNumbers(pages);
   const start = response.start;
   const currentPage = pages;
