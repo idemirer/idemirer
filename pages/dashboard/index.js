@@ -342,7 +342,7 @@ const revPARChartData = [
 const occChartOptions = {
   ...mainChartOptions,
   title: {
-    text: 'U.S. Hotel Occupancy',
+    text: 'U.S. Hotel Occupancy (Week Ending)',
     align: 'left',
     margin: 10,
     offsetX: 10,
@@ -356,7 +356,7 @@ const occChartOptions = {
 const ADRChartOptions = {
   ...mainChartOptions,
   title: {
-    text: 'U.S. Hotel ADR (weekly)',
+    text: 'U.S. Hotel ADR (Week Ending)',
     align: 'left',
     margin: 10,
     offsetX: 10,
@@ -370,7 +370,7 @@ const ADRChartOptions = {
 const revPARChartOptions = {
   ...mainChartOptions,
   title: {
-    text: 'U.S. Hotel RevPAR (weekly)',
+    text: 'U.S. Hotel RevPAR (Week Ending)',
     align: 'left',
     margin: 10,
     offsetX: 10,
