@@ -19,7 +19,7 @@ const Home = ({ filteredPosts }) => {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = await filterPosts(allPostsData);
+  const filteredPosts = filterPosts(allPostsData);
   return {
     props: {
       filteredPosts,

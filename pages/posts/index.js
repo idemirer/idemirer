@@ -23,7 +23,7 @@ export default function Blog({ filteredPosts }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = await filterPosts(allPostsData);
+  const filteredPosts = filterPosts(allPostsData);
   // Dates are 2022-12-01 format. They are considered UTC time.
   return {
     props: {

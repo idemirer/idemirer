@@ -39,7 +39,7 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
 
 export async function getStaticPaths() {
   const postData = getSortedPostsData();
-  const filteredPosts = await filterPosts(postData);
+  const filteredPosts = filterPosts(postData);
   const paths = await getAllPages(filteredPosts);
   return {
     paths,
@@ -50,8 +50,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const pages = params.pages || 1;
   const postData = getSortedPostsData();
-  const filteredPosts = await filterPosts(postData);
-  const response = await getPageNumbers(pages);
+  const filteredPosts = filterPosts(postData);
+  const response = getPageNumbers(pages);
   const start = response.start;
   const currentPage = pages;
   let previousPage = +currentPage - 1;

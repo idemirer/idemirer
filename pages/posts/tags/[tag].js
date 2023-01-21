@@ -23,7 +23,7 @@ export default function Blog({ foundPostsData }) {
 
 export async function getStaticPaths() {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = await filterPosts(allPostsData);
+  const filteredPosts = filterPosts(allPostsData);
   const paths = await getAllPostTags(filteredPosts);
   return {
     paths,
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = await filterPosts(allPostsData);
+  const filteredPosts = filterPosts(allPostsData);
   const tag = params.tag;
   let foundPostsData = await searchTags(tag, filteredPosts);
   return {

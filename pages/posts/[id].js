@@ -70,7 +70,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const currentPostID = params.id;
   const allPosts = getSortedPostsData();
-  const filteredPosts = await filterPosts(allPosts);
+  const filteredPosts = filterPosts(allPosts);
   const postData = await getPostData(currentPostID);
   const headers = postData.contentHtml.split('\n').filter((line) => {
     return line.startsWith('<p><strong>');
