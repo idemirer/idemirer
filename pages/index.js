@@ -5,7 +5,9 @@ import LatestPosts from '../components/latestposts';
 import { getSortedPostsData } from '../lib/posts';
 import { filterPosts } from '../lib/filterPosts';
 
-const Home = ({ filteredPosts }) => {
+const Home = ({ allPostsData }) => {
+  const filteredPosts = filterPosts(allPostsData);
+
   return (
     <Layout home>
       <Head>
@@ -19,10 +21,9 @@ const Home = ({ filteredPosts }) => {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = filterPosts(allPostsData);
   return {
     props: {
-      filteredPosts,
+      allPostsData,
     },
   };
 }

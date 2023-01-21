@@ -6,6 +6,8 @@ import PostListing from '../../../components/listposts';
 import { filterPosts } from '../../../lib/filterPosts';
 
 export default function Blog({ foundPostsData }) {
+  const filteredPosts = filterPosts(foundPostsData.posts);
+
   return (
     <Layout>
       <Head>
@@ -14,7 +16,7 @@ export default function Blog({ foundPostsData }) {
       <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <div className={utilStyles.posts}>
-          <PostListing postData={foundPostsData.posts} />
+          <PostListing postData={filteredPosts} />
         </div>
       </section>
     </Layout>
@@ -33,12 +35,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
-  const filteredPosts = filterPosts(allPostsData);
   const tag = params.tag;
-  let foundPostsData = await searchTags(tag, filteredPosts);
+  let foundPostsData = await searchTags(tag, allPostsData);
   return {
     props: {
-      filteredPosts,
+      allPostsData,
       foundPostsData,
     },
   };

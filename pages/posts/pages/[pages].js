@@ -8,6 +8,7 @@ import PostListing from '../../../components/listposts';
 import { filterPosts } from '../../../lib/filterPosts';
 
 export default function Blog({ allPostsData, previousPage, nextPage, currentPage }) {
+  const filteredPosts = filterPosts(allPostsData);
   return (
     <Layout>
       <Head>
@@ -16,7 +17,7 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
       <h2 className={utilStyles.headingLg}>Blog Posts</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <div className={utilStyles.posts}>
-          <PostListing postData={allPostsData} />
+          <PostListing postData={filteredPosts} />
         </div>
       </section>
       <section className={utilStyles.pagination}>
@@ -39,8 +40,7 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
 
 export async function getStaticPaths() {
   const postData = getSortedPostsData();
-  const filteredPosts = filterPosts(postData);
-  const paths = await getAllPages(filteredPosts);
+  const paths = await getAllPages(postData);
   return {
     paths,
     fallback: false,
@@ -50,7 +50,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const pages = params.pages || 1;
   const postData = getSortedPostsData();
-  const filteredPosts = filterPosts(postData);
   const response = getPageNumbers(pages);
   const start = response.start;
   const currentPage = pages;
@@ -66,7 +65,7 @@ export async function getStaticProps({ params }) {
 
   const end = response.end;
 
-  const allPostsData = filteredPosts.slice(start, end);
+  const allPostsData = postData.slice(start, end);
   return {
     props: {
       allPostsData,

@@ -70,7 +70,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const currentPostID = params.id;
   const allPosts = getSortedPostsData();
-  const filteredPosts = filterPosts(allPosts);
   const postData = await getPostData(currentPostID);
   const headers = postData.contentHtml.split('\n').filter((line) => {
     return line.startsWith('<p><strong>');
@@ -81,8 +80,8 @@ export async function getStaticProps({ params }) {
     toc.push(headers[i].replace(/(<([^>]+)>)/gi, ''));
   }
 
-  const currentPost = filteredPosts.map((p) => p.id).indexOf(currentPostID);
-  const maxPost = filteredPosts.length - 1;
+  const currentPost = allPosts.map((p) => p.id).indexOf(currentPostID);
+  const maxPost = allPosts.length - 1;
   let newerPost = currentPost - 1;
   if (currentPost == 0 || currentPost == -1) {
     newerPost = 0;
@@ -91,9 +90,9 @@ export async function getStaticProps({ params }) {
   if (currentPost == maxPost) {
     olderPost = currentPost;
   }
-  const newerPostID = filteredPosts[newerPost].id;
-  const olderPostID = filteredPosts[olderPost].id;
-  const maxPostID = filteredPosts[maxPost].id;
+  const newerPostID = allPosts[newerPost].id;
+  const olderPostID = allPosts[olderPost].id;
+  const maxPostID = allPosts[maxPost].id;
   return {
     props: {
       currentPostID,
