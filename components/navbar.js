@@ -23,7 +23,9 @@ export default function Navbar() {
       <div className={`${navbarStyle.navbar} ${active ? navbarStyle.showNavBar : ''}`}>
         {navbarData.map((item, key) => (
           <div key={key}>
-            <Link href={item.link}>{item.name}</Link>
+            <Link href={item.link} className='navbarItem'>
+              {item.name}
+            </Link>
           </div>
         ))}
         <div className={navbarStyle.twitchWrapper}>{isLive.amILive && <TwitchStatus />}</div>

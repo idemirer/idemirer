@@ -15,7 +15,7 @@ export default function Contact() {
           <i className='fa-solid fa-envelope'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <a href='mailto:idemirer@gmail.com' target='_blank'>
+          <a href='mailto:idemirer@gmail.com' target='_blank' className='notLink'>
             idemirer@gmail.com
           </a>
         </div>
@@ -23,7 +23,7 @@ export default function Contact() {
           <i className='fa-brands fa-linkedin'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <a href='https://www.linkedin.com/in/ilhan-demirer-3230642a/' target='_blank'>
+          <a href='https://www.linkedin.com/in/ilhan-demirer-3230642a/' target='_blank' className='notLink'>
             Ilhan Demirer
           </a>
         </div>
@@ -31,7 +31,7 @@ export default function Contact() {
           <i className='fa-brands fa-twitter'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <a href='https://twitter.com/idemirer' target='_blank'>
+          <a href='https://twitter.com/idemirer' target='_blank' className='notLink'>
             @idemirer
           </a>
         </div>
@@ -39,7 +39,7 @@ export default function Contact() {
           <i className='fa-brands fa-github'></i>
         </div>
         <div className={utilStyles.rowname}>
-          <a href='https://github.com/idemirer' target='_blank'>
+          <a href='https://github.com/idemirer' target='_blank' className='notLink'>
             Ilhan Demirer
           </a>
         </div>

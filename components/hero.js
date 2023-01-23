@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
         <p>
           I’m a Management faculty at{' '}
-          <Link href='https://www.plattsburgh.edu/'>State University of New York College at Plattsburgh.</Link>
+          <Link href='https://www.plattsburgh.edu/'>State University of New York College at Plattsburgh</Link>.
         </p>
         <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p>

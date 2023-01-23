@@ -27,7 +27,7 @@ export default function Post({ postData, toc, currentPostID, newerPostID, olderP
             <h1 className={utilStyles.headingXl}>{postData.title}</h1>
             <div className={`${utilStyles.lightText} ${utilStyles.categories}`}>
               {postData.tags.map((item, key) => (
-                <Link href={`/posts/tags/${item}`} key={key}>
+                <Link href={`/posts/tags/${item}`} key={key} className='notLink'>
                   <span className={utilStyles.tags}>{'#' + item + ' '}</span>
                 </Link>
               ))}
@@ -44,13 +44,13 @@ export default function Post({ postData, toc, currentPostID, newerPostID, olderP
       <div className={utilStyles.pagination}>
         <Link
           href={`/posts/${newerPostID}`}
-          className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''}`}
+          className={`${utilStyles.previousPage} ${newerPostID == currentPostID ? utilStyles.deactive : ''} notLink`}
         >
           <span>&#xab; NEWER POST</span>
         </Link>
         <Link
           href={`/posts/${olderPostID}`}
-          className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''}`}
+          className={`${utilStyles.previousPage} ${currentPostID == maxPostID ? utilStyles.deactive : ''} notLink`}
         >
           <span>OLDER POST &#xbb;</span>
         </Link>

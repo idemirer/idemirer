@@ -16,7 +16,7 @@ export default function ChangeTheme() {
   }, [activeTheme]);
 
   return (
-    <Link href='#'>
+    <Link href='#' className='notLink'>
       <span onClick={() => setActiveTheme(inactiveTheme)}>
         <svg
           xmlns='http://www.w3.org/2000/svg'

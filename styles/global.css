@@ -36,10 +36,27 @@ a {
   color: var(--link);
   text-decoration: none;
 }
+a:not(.navbarItem, .notLink) {
+  transition-property: color, box-shadow;
+  padding-bottom: 2px;
+  transition-duration: 0.3ms;
+  color: var(--link);
+  text-decoration: none;
+  box-shadow: inset 0 -2px var(--link);
+}
+p {
+  line-height: 1.5;
+}
 a:hover {
   text-decoration: none;
   color: var(--hover);
   text-shadow: 1px 1px 1px var(--shadow);
+}
+a:hover:not(.navbarItem, .notLink) {
+  text-decoration: none;
+  color: var(--hover);
+  text-shadow: 1px 1px 1px var(--shadow);
+  box-shadow: inset 0 -2px var(--hover);
 }
 img {
   max-width: 100%;

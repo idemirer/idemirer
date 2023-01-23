@@ -23,13 +23,13 @@ export default function Blog({ allPostsData, previousPage, nextPage, currentPage
       <section className={utilStyles.pagination}>
         <Link
           href={`/posts/pages/${previousPage}`}
-          className={`${utilStyles.previousPage} ${previousPage == currentPage ? utilStyles.deactive : ''}`}
+          className={`${utilStyles.previousPage} ${previousPage == currentPage ? utilStyles.deactive : ''} notLink`}
         >
           <span>&#xab; NEWER POSTS</span>
         </Link>
         <Link
           href={`/posts/pages/${nextPage}`}
-          className={`${utilStyles.nextPage} ${nextPage == currentPage ? utilStyles.deactive : ''}`}
+          className={`${utilStyles.nextPage} ${nextPage == currentPage ? utilStyles.deactive : ''} notLink`}
         >
           <span>OLDER POSTS &#xbb;</span>
         </Link>
