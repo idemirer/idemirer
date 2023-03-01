@@ -84,6 +84,12 @@ const indexChartOptions = {
     align: 'left',
     offsetX: 10,
     offsetY: 30,
+    style: {
+      color: '#9C9C9C',
+      fontSize: '12px',
+      fontFamily: 'Inter, Roboto, sans-serif',
+      fontWeight: 400,
+    },
   },
   chart: {
     background: '#000',
