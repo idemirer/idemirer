@@ -80,7 +80,7 @@ const indexChartOptions = {
     width: 3,
   },
   subtitle: {
-    text: 'Indexed to 2019',
+    text: 'Indexed to 2019, Source: STR, str.com',
     align: 'left',
     offsetX: 10,
     offsetY: 30,
