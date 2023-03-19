@@ -5,7 +5,7 @@ export default function Hamburger() {
   return (
     <div>
       <div className={hamburgerStyle.hamburgerMenu}>
-        <Link href='#'>
+        <Link href='#' className='notLink'>
           <i className='fas fa-bars'></i>
         </Link>
       </div>
