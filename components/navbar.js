@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div className={navbarStyle.hamburgerMenu}>
-        <Link href='#'>
+        <Link href='#' className='notLink'>
           <span onClick={() => setActive(!active)}>
             <i aria-hidden className='fas fa-bars'></i>
           </span>
