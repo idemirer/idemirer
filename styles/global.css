@@ -52,7 +52,7 @@ a:hover {
   color: var(--hover);
   text-shadow: 1px 1px 1px var(--shadow);
 }
-a:hover:not(.navbarItem, .notLink) {
+a:hover:not(.navbarItem, .notLink, .hamburgerMenu) {
   text-decoration: none;
   color: var(--hover);
   text-shadow: 1px 1px 1px var(--shadow);
