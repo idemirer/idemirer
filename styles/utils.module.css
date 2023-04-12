@@ -244,7 +244,7 @@
 .postBody li {
   padding-bottom: 5px;
   display: block;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 0px 10px 10px;
 }
 .postBody > div > ul > li > p:nth-child(1) {
   display: inline-flex;
@@ -274,7 +274,7 @@
   vertical-align: middle;
 }
 .postBody p {
-  margin: 10px 10px 10px 0px;
+  margin: 10px 0px;
 }
 .posts {
   display: flex;
