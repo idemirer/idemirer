@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
-const updateDate = 'May 26, 2023';
+const updateDate = 'June 8, 2023';
 
 let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
   const years = ['2019', '2020', '2021', '2022', '2023', 'date'];
