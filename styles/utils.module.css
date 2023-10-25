@@ -237,14 +237,13 @@
 .postBody strong > a {
   font-size: 1.25rem;
 }
-.postBody ul,
-.toc li {
-  list-style: none;
-}
 .postBody li {
   padding-bottom: 5px;
   display: block;
   margin: 0px 0px 10px 10px;
+}
+.postBody > div > ul > li > ul {
+  margin: 10px 0;
 }
 .postBody > div > ul > li > p:nth-child(1) {
   display: inline-flex;
