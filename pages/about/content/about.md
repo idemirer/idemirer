@@ -1,9 +1,39 @@
 # ILHAN DEMIRER, Ph.D.
 
-**ASSOCIATE PROFESSOR**  
+**CHAIR, ASSOCIATE PROFESSOR**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  
-School of Business and Economics  
-State University of New York College at Plattsburgh
+[School of Business and Economics](https://www.plattsburgh.edu/academics/schools/business-economics/)  
+[State University of New York College at Plattsburgh](https://www.plattsburgh.edu/)
+
+## ACADEMIC EXPERIENCE
+
+|                                                              |                               |
+| ------------------------------------------------------------ | ----------------------------: |
+| **CHAIR**                                                    |       **Fall 2023 – Present** |
+| Department of Management, Information Systems and Analytics  |                               |
+| State University of New York College at Plattsburgh, NY, USA |                               |
+|                                                              |                               |
+| **ASSOCIATE PROFESSOR**                                      |       **Fall 2020 – Present** |
+| Department of Management, Information Systems and Analytics  |                               |
+| State University of New York College at Plattsburgh, NY, USA |                               |
+|                                                              |                               |
+| **ASSISTANT PROFESSOR**                                      |   **Fall 2016 – Spring 2020** |
+| Department of Hospitality Management                         |                               |
+| State University of New York College at Plattsburgh, NY, USA |                               |
+|                                                              |                               |
+| **ASSISTANT PROFESSOR**                                      |    **April 2014 – July 2016** |
+| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
+|                                                              |                               |
+| **SENIOR LECTURER**                                          | **January 2013 – March 2014** |
+| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
+
+## RESEARCH INTERESTS
+
+- Corporate finance; Hospitality Financial management; Hospitality Managerial Accounting; Hospitality Technology Adaptation and Impact.
+
+## TEACHING INTERESTS
+
+- Hospitality Financial Management; Hospitality Managerial Accounting; Lodging Operations Management; Hotel Asset Management; Revenue Management; Business Analytics; Information Technology.
 
 ## EDUCATION
 
@@ -18,32 +48,6 @@ State University of New York College at Plattsburgh
 |                                                                   |                 |
 | **B.S. Tourism and Hotel Management**                             |    **May 2005** |
 | Bilkent University, Ankara, Turkey                                |                 |
-
-## RESEARCH INTERESTS
-
-- Corporate finance; Hospitality Financial management; Hospitality Managerial Accounting; Hospitality Technology Adaptation and Impact.
-
-## TEACHING INTERESTS
-
-- Hospitality Financial Management; Hospitality Managerial Accounting; Lodging Operations Management; Hotel Asset Management; Revenue Management; Business Analytics; Information Technology.
-
-## ACADEMIC EXPERIENCE
-
-|                                                              |                               |
-| ------------------------------------------------------------ | ----------------------------: |
-| **ASSOCIATE PROFESSOR**                                      |       **Fall 2020 – Present** |
-| Department of Management, Information Systems and Analytics  |                               |
-| State University of New York College at Plattsburgh, NY, USA |                               |
-|                                                              |                               |
-| **ASSISTANT PROFESSOR**                                      |   **Fall 2016 – Spring 2020** |
-| Department of Hospitality Management                         |                               |
-| State University of New York College at Plattsburgh, NY, USA |                               |
-|                                                              |                               |
-| **ASSISTANT PROFESSOR**                                      |    **April 2014 – July 2016** |
-| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
-|                                                              |                               |
-| **SENIOR LECTURER**                                          | **January 2013 – March 2014** |
-| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
 
 ## PUBLICATIONS
 
