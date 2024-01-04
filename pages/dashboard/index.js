@@ -5,10 +5,10 @@ import CreateChart from '../../components/apexchartlayout';
 import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
-const updateDate = 'December 29, 2023';
+const updateDate = 'January 5, 2024';
 
 let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
-  const years = ['2019', '2020', '2021', '2022', '2023', 'date'];
+  const years = ['2022', '2023', '2024', 'date'];
   for (let year = 0; year < years.length; year++) {
     if (!obj[years[year]]) {
       obj[years[year]] = [days[years[year]]];
@@ -25,13 +25,13 @@ let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
 
 tsaChartSourceData['gap'] = [];
 
-for (let i = 0; i < tsaChartSourceData['2023'].length; i++) {
+for (let i = 0; i < tsaChartSourceData['2024'].length; i++) {
   let gap = '';
-  if (tsaChartSourceData['2023'][i] == 0) {
-    gap = Math.round((1 - tsaChartSourceData['2022'][i] / tsaChartSourceData['2019'][i]) * 10000) / 100;
+  if (tsaChartSourceData['2024'][i] == 0) {
+    gap = Math.round((1 - tsaChartSourceData['2023'][i] / tsaChartSourceData['2022'][i]) * 10000) / 100;
     tsaChartSourceData['gap'].push(gap);
   } else {
-    gap = Math.round((1 - tsaChartSourceData['2023'][i] / tsaChartSourceData['2019'][i]) * 10000) / 100;
+    gap = Math.round((1 - tsaChartSourceData['2024'][i] / tsaChartSourceData['2023'][i]) * 10000) / 100;
     tsaChartSourceData['gap'].push(gap);
   }
 }
@@ -389,16 +389,12 @@ const revPARChartOptions = {
 
 const tsaChartData = [
   {
-    name: '2019',
-    data: tsaChartSourceData['2019'],
-  },
-  {
-    name: '2022',
-    data: tsaChartSourceData['2022'],
-  },
-  {
     name: '2023',
     data: tsaChartSourceData['2023'],
+  },
+  {
+    name: '2024',
+    data: tsaChartSourceData['2024'],
   },
   {
     name: 'Gap',
@@ -411,7 +407,7 @@ const tsaChartOptions = {
     background: '#000',
     dropShadow: {
       enabled: true,
-      enabledOnSeries: [0, 1, 2, 3],
+      enabledOnSeries: [0, 1, 2],
       top: 1,
       left: 1,
       blur: 0,
@@ -446,10 +442,10 @@ const tsaChartOptions = {
       },
     },
   },
-  colors: ['#d90429', '#404AE0', '#e67e22', '#dddddd'],
+  colors: ['#404AE0', '#e67e22', '#dddddd'],
   fill: {
     type: 'solid',
-    opacity: [0.3, 0.5, 1, 0.2],
+    opacity: [1, 1, 0.2],
   },
   dataLabels: {
     enabled: false,
@@ -493,10 +489,10 @@ const tsaChartOptions = {
   },
   yaxis: [
     {
-      seriesName: '2019',
+      seriesName: '2023',
       show: true,
       max: 3000000,
-      min: 300000,
+      min: 750000,
       tickAmount: 9,
       decimalsInFloat: 2,
       labels: {
@@ -506,23 +502,10 @@ const tsaChartOptions = {
       },
     },
     {
-      seriesName: '2022',
+      seriesName: '2024',
       show: false,
       max: 3000000,
-      min: 300000,
-      decimalsInFloat: 0,
-      tickAmount: 9,
-      labels: {
-        formatter: function (val, index) {
-          return (val / 1000000).toFixed(1) + 'M';
-        },
-      },
-    },
-    {
-      seriesName: '2023',
-      show: false,
-      max: 3000000,
-      min: 300000,
+      min: 750000,
       tickAmount: 9,
       decimalsInFloat: 0,
       labels: {
@@ -555,8 +538,8 @@ const tsaChartOptions = {
     yaxis: [
       {
         y: 0,
-        y2: -50,
-        yAxisIndex: 3,
+        y2: -35,
+        yAxisIndex: 2,
         strokeDashArray: 0,
         borderColor: '#333',
         fillColor: '#ccc',
