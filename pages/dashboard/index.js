@@ -38,19 +38,18 @@ for (let i = 0; i < tsaChartSourceData['2024'].length; i++) {
 
 let strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
 
-const indexedYears = ['2022', '2023'];
+const indexedYears = ['2023', '2024'];
 
 for (let y = 0; y < indexedYears.length; y++) {
-  for (let i = 0; i < 52; i++) {
-    if (strData[indexedYears[y]]['occupancy'][i] != 0) {
-      const occIndex =
-        Math.round((strData[indexedYears[y]]['occupancy'][i] / strData['2019']['occupancy'][i]) * 10000) / 100;
-      strDataIndex['occIndex'].push(occIndex);
-      const ADRIndex = Math.round((strData[indexedYears[y]]['ADR'][i] / strData['2019']['ADR'][i]) * 10000) / 100;
-      strDataIndex['ADRIndex'].push(ADRIndex);
-      strDataIndex['date'].push(strData[indexedYears[y]]['date'][i]);
-    }
-  }
+  strDataIndex['occIndex'].push(
+    ...strData[indexedYears[y]]['occupancy'].map(
+      (o, i) => Math.round((o / strData['2022']['occupancy'][i]) * 10000) / 100
+    )
+  );
+  strDataIndex['ADRIndex'].push(
+    ...strData[indexedYears[y]]['ADR'].map((a, i) => Math.round((a / strData['2022']['ADR'][i]) * 10000) / 100)
+  );
+  strDataIndex['date'].push(...strData[indexedYears[y]]['date']);
 }
 
 const strIndexChartData = [
@@ -66,7 +65,7 @@ const strIndexChartData = [
 
 const indexChartOptions = {
   title: {
-    text: 'U.S. Hotel Occupancy and ADR Recovery Levels',
+    text: 'U.S. Hotel Occupancy and ADR Index',
     align: 'left',
     margin: 10,
     offsetX: 10,
@@ -80,7 +79,7 @@ const indexChartOptions = {
     width: 3,
   },
   subtitle: {
-    text: 'Indexed to 2019, Source: STR, str.com',
+    text: 'Indexed to 2022, Source: STR, str.com',
     align: 'left',
     offsetX: 10,
     offsetY: 30,
@@ -170,7 +169,7 @@ const indexChartOptions = {
     ],
     xaxis: [
       {
-        x: '7-Jan',
+        x: '6-Jan',
         x2: 800,
         strokeDashArray: 0,
         borderColor: '#333',
@@ -179,7 +178,7 @@ const indexChartOptions = {
         offsetX: 0,
         offsetY: 0,
         label: {
-          text: '2023',
+          text: '2024',
           textAnchor: 'middle',
           orientation: 'vertical',
           style: {
@@ -560,7 +559,7 @@ export default function Dashboard() {
       <h2 className={utilStyles.headingLg}>U.S. Hospitality Data Dashboard</h2>
       <section>
         <div>
-          <h3>Recovery Index:</h3>
+          <h3>KPI Index:</h3>
           <CreateChart data={strIndexChartData} options={indexChartOptions} type={'line'} height={500} />
         </div>
         <div>
