@@ -200,7 +200,7 @@ const mainChartOptions = {
     background: '#000',
     dropShadow: {
       enabled: true,
-      enabledOnSeries: [0, 1, 2, 3],
+      enabledOnSeries: [5],
       top: 1,
       left: 1,
       blur: 0,
@@ -240,21 +240,22 @@ const mainChartOptions = {
     decimalsInFloat: 2,
   },
   legend: {
-    height: 35,
+    height: 50,
   },
   xaxis: {
-    categories: strData['2023']['date'],
+    categories: strData['2024']['date'],
     labels: {
       rotate: -45,
       maxHeight: 50,
+      rotateAlways: true,
     },
     tickAmount: 18,
     tickPlacement: 'on',
   },
-  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22'],
+  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF6426'],
   fill: {
     type: 'solid',
-    opacity: [0.3, 0.3, 0.3, 0.5, 1],
+    opacity: [0.25, 0.25, 0.25, 0.25, 0.25, 1],
   },
   dataLabels: {
     enabled: false,
@@ -296,6 +297,10 @@ const occChartData = [
     name: '2023',
     data: strData['2023']['occupancy'],
   },
+  {
+    name: '2024',
+    data: strData['2024']['occupancy'],
+  },
 ];
 
 const ADRChartData = [
@@ -319,6 +324,10 @@ const ADRChartData = [
     name: '2023',
     data: strData['2023']['ADR'],
   },
+  {
+    name: '2024',
+    data: strData['2024']['ADR'],
+  },
 ];
 
 const revPARChartData = [
@@ -341,6 +350,10 @@ const revPARChartData = [
   {
     name: '2023',
     data: strData['2023']['RevPAR'],
+  },
+  {
+    name: '2024',
+    data: strData['2024']['RevPAR'],
   },
 ];
 
