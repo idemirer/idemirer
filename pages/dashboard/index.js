@@ -457,7 +457,7 @@ const tsaChartOptions = {
   colors: ['#404AE0', '#e67e22', '#dddddd'],
   fill: {
     type: 'solid',
-    opacity: [1, 1, 0.2],
+    opacity: [0.5, 1, 0.2],
   },
   dataLabels: {
     enabled: false,
