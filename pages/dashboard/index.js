@@ -252,7 +252,7 @@ const mainChartOptions = {
     tickAmount: 18,
     tickPlacement: 'on',
   },
-  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF6426'],
+  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
   fill: {
     type: 'solid',
     opacity: [0.4, 0.4, 0.4, 0.4, 0.4, 1],
@@ -454,7 +454,7 @@ const tsaChartOptions = {
       },
     },
   },
-  colors: ['#404AE0', '#e67e22', '#dddddd'],
+  colors: ['#FFFFFF', '#FF5733', '#dddddd'],
   fill: {
     type: 'solid',
     opacity: [0.5, 1, 0.2],
