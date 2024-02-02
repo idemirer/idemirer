@@ -255,7 +255,7 @@ const mainChartOptions = {
   colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF6426'],
   fill: {
     type: 'solid',
-    opacity: [0.25, 0.25, 0.25, 0.25, 0.25, 1],
+    opacity: [0.4, 0.4, 0.4, 0.4, 0.4, 1],
   },
   dataLabels: {
     enabled: false,
