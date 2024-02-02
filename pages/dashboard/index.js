@@ -5,7 +5,7 @@ import CreateChart from '../../components/apexchartlayout';
 import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
-const updateDate = 'January 26, 2024';
+const updateDate = 'February 2, 2024';
 
 let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
   const years = ['2022', '2023', '2024', 'date'];
@@ -283,7 +283,7 @@ const occChartData = [
   },
   {
     name: '2020',
-    data: strData['2020']['occupancy'],
+    data: strData['2020']['occupancy'].slice(0, 52),
   },
   {
     name: '2021',
@@ -310,7 +310,7 @@ const ADRChartData = [
   },
   {
     name: '2020',
-    data: strData['2020']['ADR'],
+    data: strData['2020']['ADR'].slice(0, 52),
   },
   {
     name: '2021',
@@ -337,7 +337,7 @@ const revPARChartData = [
   },
   {
     name: '2020',
-    data: strData['2020']['RevPAR'],
+    data: strData['2020']['RevPAR'].slice(0, 52),
   },
   {
     name: '2021',
