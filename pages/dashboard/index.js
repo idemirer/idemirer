@@ -382,8 +382,8 @@ const tsaChartOptions = {
       opposite: true,
       seriesName: 'Gap',
       max: 100,
-      min: -15,
-      tickAmount: 9,
+      min: -20,
+      tickAmount: 8,
       title: {
         text: 'Gap',
         style: {
