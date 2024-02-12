@@ -52,17 +52,7 @@ for (let y = 0; y < indexedYears.length; y++) {
   strDataIndex['date'].push(...strData[indexedYears[y]]['date']);
 }
 
-const strIndexChartData = [
-  {
-    name: 'ADR Index',
-    data: strDataIndex['ADRIndex'],
-  },
-  {
-    name: 'Occ Index',
-    data: strDataIndex['occIndex'],
-  },
-];
-
+// Chart Options
 const indexChartOptions = {
   title: {
     text: 'U.S. Hotel Occupancy and ADR Index',
@@ -255,7 +245,7 @@ const mainChartOptions = {
   colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
   fill: {
     type: 'solid',
-    opacity: [0.4, 0.4, 0.4, 0.4, 0.4, 1],
+    opacity: [0.6, 0.6, 0.6, 0.6, 0.6, 1],
   },
   dataLabels: {
     enabled: false,
@@ -275,144 +265,6 @@ const mainChartOptions = {
     },
   },
 };
-
-const occChartData = [
-  {
-    name: '2019',
-    data: strData['2019']['occupancy'],
-  },
-  {
-    name: '2020',
-    data: strData['2020']['occupancy'].slice(0, 52),
-  },
-  {
-    name: '2021',
-    data: strData['2021']['occupancy'],
-  },
-  {
-    name: '2022',
-    data: strData['2022']['occupancy'],
-  },
-  {
-    name: '2023',
-    data: strData['2023']['occupancy'],
-  },
-  {
-    name: '2024',
-    data: strData['2024']['occupancy'],
-  },
-];
-
-const ADRChartData = [
-  {
-    name: '2019',
-    data: strData['2019']['ADR'],
-  },
-  {
-    name: '2020',
-    data: strData['2020']['ADR'].slice(0, 52),
-  },
-  {
-    name: '2021',
-    data: strData['2021']['ADR'],
-  },
-  {
-    name: '2022',
-    data: strData['2022']['ADR'],
-  },
-  {
-    name: '2023',
-    data: strData['2023']['ADR'],
-  },
-  {
-    name: '2024',
-    data: strData['2024']['ADR'],
-  },
-];
-
-const revPARChartData = [
-  {
-    name: '2019',
-    data: strData['2019']['RevPAR'],
-  },
-  {
-    name: '2020',
-    data: strData['2020']['RevPAR'].slice(0, 52),
-  },
-  {
-    name: '2021',
-    data: strData['2021']['RevPAR'],
-  },
-  {
-    name: '2022',
-    data: strData['2022']['RevPAR'],
-  },
-  {
-    name: '2023',
-    data: strData['2023']['RevPAR'],
-  },
-  {
-    name: '2024',
-    data: strData['2024']['RevPAR'],
-  },
-];
-
-const occChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel Occupancy (Week Ending)',
-    align: 'left',
-    margin: 10,
-    offsetX: 10,
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-const ADRChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel ADR (Week Ending)',
-    align: 'left',
-    margin: 10,
-    offsetX: 10,
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-const revPARChartOptions = {
-  ...mainChartOptions,
-  title: {
-    text: 'U.S. Hotel RevPAR (Week Ending)',
-    align: 'left',
-    margin: 10,
-    offsetX: 10,
-    style: {
-      fontWeight: 600,
-      fontSize: '16px',
-    },
-  },
-};
-
-const tsaChartData = [
-  {
-    name: '2023',
-    data: tsaChartSourceData['2023'],
-  },
-  {
-    name: '2024',
-    data: tsaChartSourceData['2024'],
-  },
-  {
-    name: 'Gap',
-    data: tsaChartSourceData['gap'],
-  },
-];
 
 const tsaChartOptions = {
   chart: {
@@ -562,6 +414,156 @@ const tsaChartOptions = {
     ],
   },
 };
+
+// Chart Data
+const strIndexChartData = [
+  {
+    name: 'ADR Index',
+    data: strDataIndex['ADRIndex'],
+  },
+  {
+    name: 'Occ Index',
+    data: strDataIndex['occIndex'],
+  },
+];
+
+const occChartData = [
+  {
+    name: '2019',
+    data: strData['2019']['occupancy'],
+  },
+  {
+    name: '2020',
+    data: strData['2020']['occupancy'].slice(0, 52),
+  },
+  {
+    name: '2021',
+    data: strData['2021']['occupancy'],
+  },
+  {
+    name: '2022',
+    data: strData['2022']['occupancy'],
+  },
+  {
+    name: '2023',
+    data: strData['2023']['occupancy'],
+  },
+  {
+    name: '2024',
+    data: strData['2024']['occupancy'],
+  },
+];
+
+const ADRChartData = [
+  {
+    name: '2019',
+    data: strData['2019']['ADR'],
+  },
+  {
+    name: '2020',
+    data: strData['2020']['ADR'].slice(0, 52),
+  },
+  {
+    name: '2021',
+    data: strData['2021']['ADR'],
+  },
+  {
+    name: '2022',
+    data: strData['2022']['ADR'],
+  },
+  {
+    name: '2023',
+    data: strData['2023']['ADR'],
+  },
+  {
+    name: '2024',
+    data: strData['2024']['ADR'],
+  },
+];
+
+const revPARChartData = [
+  {
+    name: '2019',
+    data: strData['2019']['RevPAR'],
+  },
+  {
+    name: '2020',
+    data: strData['2020']['RevPAR'].slice(0, 52),
+  },
+  {
+    name: '2021',
+    data: strData['2021']['RevPAR'],
+  },
+  {
+    name: '2022',
+    data: strData['2022']['RevPAR'],
+  },
+  {
+    name: '2023',
+    data: strData['2023']['RevPAR'],
+  },
+  {
+    name: '2024',
+    data: strData['2024']['RevPAR'],
+  },
+];
+
+const occChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel Occupancy (Week Ending)',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
+const ADRChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel ADR (Week Ending)',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
+const revPARChartOptions = {
+  ...mainChartOptions,
+  title: {
+    text: 'U.S. Hotel RevPAR (Week Ending)',
+    align: 'left',
+    margin: 10,
+    offsetX: 10,
+    style: {
+      fontWeight: 600,
+      fontSize: '16px',
+    },
+  },
+};
+
+const tsaChartData = [
+  {
+    name: '2023',
+    data: tsaChartSourceData['2023'],
+  },
+  {
+    name: '2024',
+    data: tsaChartSourceData['2024'],
+  },
+  {
+    name: 'Gap',
+    data: tsaChartSourceData['gap'],
+  },
+];
 
 export default function Dashboard() {
   return (
