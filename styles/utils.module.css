@@ -275,6 +275,12 @@
 .postBody p {
   margin: 10px 0px;
 }
+.postBody table {
+  font-size: 14px;
+}
+.postBody table th {
+  text-align: left;
+}
 .posts {
   display: flex;
   gap: 30px;
