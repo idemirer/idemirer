@@ -288,7 +288,7 @@
     { "date": "4/13/2024", "week": 15, "occupancy": 65.8, "ADR": 160.2, "RevPAR": 105.48 },
     { "date": "4/20/2024", "week": 16, "occupancy": 66.8, "ADR": 158.6, "RevPAR": 105.94 },
     { "date": "4/27/2024", "week": 17, "occupancy": 65.7, "ADR": 154.44, "RevPAR": 101.42 },
-    { "date": "5/4/2024", "week": 18, "occupancy": 0.0, "ADR": 0.0, "RevPAR": 0.0 },
+    { "date": "5/4/2024", "week": 18, "occupancy": 64.4, "ADR": 159.97, "RevPAR": 103.09 },
     { "date": "5/11/2024", "week": 19, "occupancy": 0.0, "ADR": 0.0, "RevPAR": 0.0 },
     { "date": "5/18/2024", "week": 20, "occupancy": 0.0, "ADR": 0.0, "RevPAR": 0.0 },
     { "date": "5/25/2024", "week": 21, "occupancy": 0.0, "ADR": 0.0, "RevPAR": 0.0 },
