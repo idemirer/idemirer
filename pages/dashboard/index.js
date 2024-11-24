@@ -242,10 +242,10 @@ const mainChartOptions = {
     tickAmount: 18,
     tickPlacement: 'on',
   },
-  colors: ['#e8daef', '#a8a8a8', '#6bfbec', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
+  colors: ['#c39bd3', '#a8a8a8', '#6bfbec', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
   fill: {
     type: 'solid',
-    opacity: [0.6, 0.6, 0.6, 0.6, 0.6, 1],
+    opacity: [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 1],
   },
   dataLabels: {
     enabled: false,
