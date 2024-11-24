@@ -242,7 +242,7 @@ const mainChartOptions = {
     tickAmount: 18,
     tickPlacement: 'on',
   },
-  colors: ['#d90429', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
+  colors: ['#e8daef', '#a8a8a8', '#6bfbec', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
   fill: {
     type: 'solid',
     opacity: [0.6, 0.6, 0.6, 0.6, 0.6, 1],
@@ -429,6 +429,14 @@ const strIndexChartData = [
 
 const occChartData = [
   {
+    name: '2017',
+    data: strData['2017']['occupancy'],
+  },
+  {
+    name: '2018',
+    data: strData['2018']['occupancy'],
+  },
+  {
     name: '2019',
     data: strData['2019']['occupancy'],
   },
@@ -455,6 +463,14 @@ const occChartData = [
 ];
 
 const ADRChartData = [
+  {
+    name: '2017',
+    data: strData['2017']['ADR'],
+  },
+  {
+    name: '2018',
+    data: strData['2018']['ADR'],
+  },
   {
     name: '2019',
     data: strData['2019']['ADR'],
