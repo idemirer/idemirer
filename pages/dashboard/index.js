@@ -499,6 +499,14 @@ const ADRChartData = [
 
 const revPARChartData = [
   {
+    name: '2017',
+    data: strData['2017']['RevPAR'],
+  },
+  {
+    name: '2018',
+    data: strData['2018']['RevPAR'],
+  },
+  {
     name: '2019',
     data: strData['2019']['RevPAR'],
   },
