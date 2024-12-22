@@ -356,8 +356,8 @@ export default function Dashboard() {
       {
         seriesName: '2023',
         show: true,
-        max: 3000000,
-        min: 750000,
+        max: 3300000,
+        min: 1000000,
         tickAmount: 9,
         decimalsInFloat: 2,
         labels: {
