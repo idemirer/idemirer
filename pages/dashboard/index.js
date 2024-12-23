@@ -380,8 +380,8 @@ export default function Dashboard() {
       {
         seriesName: '2024',
         show: false,
-        max: 3000000,
-        min: 750000,
+        max: 3300000,
+        min: 1000000,
         tickAmount: 9,
         decimalsInFloat: 0,
         labels: {
