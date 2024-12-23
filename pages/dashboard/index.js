@@ -53,6 +53,17 @@ export default function Dashboard() {
     strDataIndex['date'].push(...strData[indexedYears[y]]['date']);
   }
 
+  let years = [];
+  let opacityVals = [];
+  for (let i in strData) {
+    years.push(i);
+    opacityVals.push(0.4);
+  }
+  opacityVals.pop();
+  opacityVals.push(1);
+
+  const maxYear = Math.max(...years).toString();
+
   // Chart Options
   const indexChartOptions = {
     title: {
@@ -234,7 +245,7 @@ export default function Dashboard() {
       height: 50,
     },
     xaxis: {
-      categories: strData['2024']['date'],
+      categories: strData[maxYear]['date'],
       labels: {
         rotate: -45,
         maxHeight: 50,
@@ -243,10 +254,10 @@ export default function Dashboard() {
       tickAmount: 18,
       tickPlacement: 'on',
     },
-    colors: ['#c39bd3', '#a8a8a8', '#6bfbec', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
+    // colors: ['#c39bd3', '#a8a8a8', '#6bfbec', '#dddddd', '#0EB300', '#404AE0', '#e67e22', '#FF5733'],
     fill: {
       type: 'solid',
-      opacity: [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 1],
+      opacity: [...opacityVals],
     },
     dataLabels: {
       enabled: false,
