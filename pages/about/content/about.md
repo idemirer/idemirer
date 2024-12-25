@@ -51,6 +51,8 @@
 
 ## PUBLICATIONS
 
+- Kizildag, M., Ozdemir, O., Dogru, T., **Demirer, I.**, & Gultek, M. (2024). Macroeconomic conditions, cash holdings, and financial constraints in restaurant firms. _Tourism Economics_, _0_(0). [https://doi.org/10.1177/13548166241306473](https://doi.org/10.1177/13548166241306473)
+
 - Kim, Y. H., **Demirer, I.**, Josiam, B., &amp; Gultek, M. M. (_2023_). Student’s Career Expectations in the Hospitality and Tourism Industry: An Examination of Student’s MACE (Motivation, Attitude, and Career Expectation) Model, _Journal of Hospitality &amp; Tourism Education_. [https://doi.org/10.1080/10963758.2023.2191324](https://doi.org/10.1080/10963758.2023.2191324)
 
 - Kizildag, M., Weinland, J. T. &amp; **Demirer, I.** (2022). Financial sensitivity analysis of small lodging establishments during COVID-19. _Journal of Hospitality and Tourism Insights_. _6_(5), 2257-2272. [https://doi.org/10.1108/JHTI-05-2022-0176](https://doi.org/10.1108/JHTI-05-2022-0176)
