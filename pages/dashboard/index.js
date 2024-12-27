@@ -6,7 +6,7 @@ import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
 export default function Dashboard() {
-  const updateDate = 'Dec 20, 2024';
+  const updateDate = 'Dec 27, 2024';
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
     const years = ['2022', '2023', '2024', 'date'];
@@ -171,7 +171,7 @@ export default function Dashboard() {
       ],
       xaxis: [
         {
-          x: '6-Jan',
+          x: '1/6/24',
           x2: 800,
           strokeDashArray: 0,
           borderColor: '#333',
