@@ -6,10 +6,10 @@ import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
 export default function Dashboard() {
-  const updateDate = 'Dec 27, 2024';
+  const updateDate = 'Jan 3, 2025';
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
-    const years = ['2022', '2023', '2024', 'date'];
+    const years = ['2022', '2023', '2024', '2025', 'date'];
     for (let year = 0; year < years.length; year++) {
       if (!obj[years[year]]) {
         obj[years[year]] = [days[years[year]]];
@@ -26,13 +26,13 @@ export default function Dashboard() {
 
   tsaChartSourceData['gap'] = [];
 
-  for (let i = 0; i < tsaChartSourceData['2024'].length; i++) {
+  for (let i = 0; i < tsaChartSourceData['2025'].length; i++) {
     let gap = '';
-    if (tsaChartSourceData['2024'][i] == 0) {
-      gap = Math.round((tsaChartSourceData['2023'][i] / tsaChartSourceData['2022'][i] - 1) * 10000) / 100;
+    if (tsaChartSourceData['2025'][i] == 0) {
+      gap = Math.round((tsaChartSourceData['2024'][i] / tsaChartSourceData['2023'][i] - 1) * 10000) / 100;
       tsaChartSourceData['gap'].push(gap);
     } else {
-      gap = Math.round((tsaChartSourceData['2024'][i] / tsaChartSourceData['2023'][i] - 1) * 10000) / 100;
+      gap = Math.round((tsaChartSourceData['2025'][i] / tsaChartSourceData['2024'][i] - 1) * 10000) / 100;
       tsaChartSourceData['gap'].push(gap);
     }
   }
