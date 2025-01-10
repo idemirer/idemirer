@@ -6,7 +6,7 @@ import strData from '../../assets/data/strdata.json';
 import tsaRawData from '../../assets/data/passengerData.json';
 
 export default function Dashboard() {
-  const updateDate = 'Jan 3, 2025';
+  const updateDate = 'Jan 10, 2025';
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
     const years = ['2022', '2023', '2024', '2025', 'date'];
@@ -472,6 +472,10 @@ export default function Dashboard() {
       name: '2024',
       data: strData['2024']['occupancy'],
     },
+    {
+      name: '2025',
+      data: strData['2025']['occupancy'],
+    },
   ];
 
   const ADRChartData = [
@@ -507,6 +511,10 @@ export default function Dashboard() {
       name: '2024',
       data: strData['2024']['ADR'],
     },
+    {
+      name: '2025',
+      data: strData['2025']['ADR'],
+    },
   ];
 
   const revPARChartData = [
@@ -541,6 +549,10 @@ export default function Dashboard() {
     {
       name: '2024',
       data: strData['2024']['RevPAR'],
+    },
+    {
+      name: '2025',
+      data: strData['2025']['RevPAR'],
     },
   ];
 
