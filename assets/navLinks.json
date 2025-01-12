@@ -1,0 +1,7 @@
+[
+  { "name": "Home", "link": "/" },
+  { "name": "Blog", "link": "/blog/page/1" },
+  { "name": "Hospitality Data", "link": "/dashboard/" },
+  { "name": "About", "link": "/about/" },
+  { "name": "Contact", "link": "/contact/" }
+]
