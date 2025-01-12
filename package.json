@@ -23,6 +23,7 @@
     "react-apexcharts": "^1.7.0",
     "react-dom": "19.0.0",
     "react-medium-image-zoom": "^5.2.13",
+    "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.1",
     "rehype-img-size": "1.0.1",
     "rehype-parse": "^9.0.1",

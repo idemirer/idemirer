@@ -9,6 +9,8 @@ import { unified } from 'unified';
 import rehypeStringify from 'rehype-stringify';
 import rehypekUnwrapImages from 'rehype-unwrap-images';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 function parseFrontmatter(fileContent) {
   const matterResult = matter(fileContent);
@@ -35,6 +37,8 @@ export async function readContent(content) {
     .use(rehypeImgSize, { dir: 'public' })
     .use(rehypekUnwrapImages)
     .use(rehypeHighlight)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
     .use(rehypeStringify)
     .process(content);
   const contentHtml = processedContent.toString();

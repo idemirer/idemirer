@@ -33,7 +33,8 @@
   --sh-entity: #e25a1c;
 }
 
-.post .anchor {
+.post .icon,
+.about .icon {
   @apply absolute invisible no-underline;
   margin-left: -1em;
   padding-right: 0.5em;
@@ -42,7 +43,7 @@
   cursor: pointer;
 }
 
-.anchor:hover {
+.icon:hover {
   @apply visible;
 }
 
@@ -50,12 +51,14 @@
   @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
 }
 
-.post .anchor:after {
+.post .icon:after,
+.about .icon:after {
   @apply text-neutral-300 dark:text-neutral-700;
   content: '#';
 }
 
-.post *:hover > .anchor {
+.post *:hover > .icon,
+.about *:hover > .icon {
   @apply visible;
 }
 
@@ -133,25 +136,44 @@ a:hover {
   @apply no-underline;
   color: var(--hover);
 }
-.customZoom [data-rmiz-modal-content] {
-  filter: drop-shadow(2px 6px 4px var(--shadow));
+
+.about p,
+.about blockquote {
+  font-size: 16px;
+  margin: 0px 0px;
+  padding: 0;
 }
-.customZoom [data-rmiz-modal-overlay],
-.customZoom [data-rmiz-modal-img] {
-  transition-duration: 0.8s;
-  transition-timing-function: linear;
+.about h1 {
+  color: var(--text);
+  /* text-shadow: 1px 1px 0px var(--shadow), 1px 1px 0px var(--shadow); */
+  margin: 0 0 10px 0;
 }
-.customZoom [data-rmiz-modal-overlay='hidden'] {
-  background-color: rgb(56, 58, 89, 0);
+.about h2 {
+  color: var(--text);
+  /* text-shadow: 1px 1px 0px var(--shadow), 1px 1px 0px var(--shadow); */
+  margin: 15px 0 5px 0;
+  font-size: 22px;
 }
-.customZoom [data-rmiz-modal-overlay='visible'] {
-  background-color: rgb(0, 0, 0);
+.about ul {
+  list-style: square;
+  margin: 5px 0 15px 0;
 }
-.customZoom [data-rmiz-btn-unzoom] {
-  background-color: #ccc;
-  color: #000;
+.about li {
+  margin: 5px 0;
 }
-.customZoom [data-rmiz-btn-unzoom]:focus-visible {
-  outline-offset: 0.4rem;
-  outline: 0.2rem solid #ddd;
+.about .cv {
+  margin-left: 20px;
+}
+.about table {
+  font-size: 16px;
+  width: 100%;
+}
+.about table td {
+  height: 16px;
+}
+.about table td:first-child {
+  width: 70%;
+}
+.about table td:nth-child(2n) {
+  width: 30%;
 }

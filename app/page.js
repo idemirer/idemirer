@@ -35,7 +35,7 @@ export default function Home() {
         </p>
       </section>
       <section className='py-4'>
-        <h2>Latest Blog Posts:</h2>
+        <h2>Latest Blog Post:</h2>
         <BlogPosts posts={allPostsData} page={1} slice={1} />
       </section>
     </div>
