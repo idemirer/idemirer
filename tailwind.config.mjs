@@ -15,4 +15,11 @@ module.exports = {
   //   },
   // },
   plugins: [],
+  theme: {
+    listStyleType: {
+      square: 'square',
+      decimal: 'decimal',
+      disc: 'disc',
+    },
+  },
 };

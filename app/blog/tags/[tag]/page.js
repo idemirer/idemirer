@@ -21,6 +21,7 @@ export default async function TagsPage({ params }) {
   let allPostsData = getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
   let allTags = countedTags(filteredPosts);
+  const slicer = filteredPosts.length;
 
   if (!filteredPosts) {
     notFound();
@@ -31,7 +32,7 @@ export default async function TagsPage({ params }) {
       <h2>Blog Posts with Tag: {tagParams.tag}</h2>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={filteredPosts} />
+        <BlogPosts posts={filteredPosts} page={1} slice={slicer} />
       </section>
     </div>
   );

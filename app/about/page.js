@@ -4,7 +4,7 @@ import { CustomMDX } from '@/app/utils/md.js';
 export default function Page() {
   const mdContent = getBlogPosts('/about/content/');
   return (
-    <section>
+    <section className='about'>
       <CustomMDX source={mdContent[0].content} />
     </section>
   );

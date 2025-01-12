@@ -88,14 +88,6 @@
   @apply font-medium;
 }
 
-.post ul {
-  @apply list-disc pl-6;
-}
-
-.post ol {
-  @apply list-decimal pl-6;
-}
-
 .post > :first-child {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
@@ -128,6 +120,13 @@ body {
   }
   h3 {
     @apply text-lg font-bold mt-4 mb-2;
+  }
+  .post ul,
+  .about ul {
+    @apply list-square pl-6;
+  }
+  .post ol {
+    @apply list-square pl-6;
   }
 }
 

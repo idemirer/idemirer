@@ -2,7 +2,7 @@ export default function Footer() {
   const today = new Date();
   const thisYear = today.getFullYear();
   return (
-    <footer className='w-96 text-center my-6 md:mx-auto'>
+    <footer className='w-96 text-center my-6 md:mx-auto md:w-[500px]'>
       <div className='grid grid-cols-7 gap-2 mx-6 md:flex md:justify-between md:mx-4 md:space-x-4'>
         <div className=''>
           <a href='mailto:idemirer@gmail.com' alt='email' target='_blank'>

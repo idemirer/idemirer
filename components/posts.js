@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/app/utils/utils';
 
-export function BlogPosts({ posts, page }) {
+export function BlogPosts({ posts, page, slice = 6 }) {
   const today = +new Date();
 
-  const endPage = page * 6;
-  const beginPage = page * 6 - 6;
-  const maxPage = Math.ceil(posts.length / 6);
+  const endPage = page * slice;
+  const beginPage = page * slice - slice;
+  const maxPage = Math.ceil(posts.length / slice);
   const nextPage = +page + 1;
   const prevPage = +page - 1 == 0 ? 1 : +page - 1;
 
@@ -58,7 +58,7 @@ export function BlogPosts({ posts, page }) {
             <small className='px-4'>{formatDate(post.metadata.date)}</small>
           </div>
         ))}
-      <div className='flex'>
+      <div className={slice == 1 ? 'hidden' : 'flex'}>
         <Link
           href={`/blog/page/${prevPage}`}
           className={
