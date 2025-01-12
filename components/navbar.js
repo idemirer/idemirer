@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
-import MobileNavBar from './mobileNavbar';
+import MobileNavBar from './mobilenavbar';
 import navLinks from '@/assets/navLinks.json';
 
 export default function Navbar() {
