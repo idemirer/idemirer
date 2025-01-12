@@ -64,7 +64,7 @@
 
 .post img {
   /* Don't apply styles to next/image */
-  @apply m-0;
+  @apply m-0 mt-2;
 }
 
 .post p {
@@ -72,29 +72,23 @@
 }
 
 .post h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-4xl font-bold tracking-tight mt-4 mb-1;
 }
 
 .post h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-bold tracking-tight mt-4 mb-1;
 }
 
 .post h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-bold tracking-tight mt-4 mb-1;
 }
 
 .post h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply text-lg font-bold tracking-tight mt-4 mb-1;
 }
 
 .post strong {
   @apply font-medium;
-}
-
-.post > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
 }
 
 html,
