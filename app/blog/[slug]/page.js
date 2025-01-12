@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { CustomMDX } from '@/app/utils/md.js';
-import { formatDate, getBlogPosts } from '@/app/utils/utils.js';
+import { formatDate, getBlogPosts, readContent } from '@/app/utils/utils.js';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -17,6 +17,7 @@ export default async function Post({ params }) {
   if (!post) {
     notFound();
   }
+  let contentHTML = await readContent(post.content);
 
   return (
     <section>
@@ -32,7 +33,7 @@ export default async function Post({ params }) {
         ))}
       </small>
       <article className='post'>
-        <CustomMDX source={post.content} />
+        <CustomMDX source={contentHTML} />
       </article>
     </section>
   );

@@ -1,6 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeImgSize from 'rehype-img-size';
+import { unified } from 'unified';
+import rehypeStringify from 'rehype-stringify';
+import rehypekUnwrapImages from 'rehype-unwrap-images';
+import rehypeHighlight from 'rehype-highlight';
 
 function parseFrontmatter(fileContent) {
   const matterResult = matter(fileContent);
@@ -19,10 +27,25 @@ function readMDXFile(filePath) {
   return parseFrontmatter(rawContent);
 }
 
+export async function readContent(content) {
+  const processedContent = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeImgSize, { dir: 'public' })
+    .use(rehypekUnwrapImages)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
+    .process(content);
+  const contentHtml = processedContent.toString();
+  return contentHtml;
+}
+
 function getMDXData(dir) {
   let mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file));
+
     let slug = metadata.slug;
 
     return {

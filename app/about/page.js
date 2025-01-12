@@ -1,11 +1,13 @@
-import { getBlogPosts } from '@/app/utils/utils.js';
+import { getBlogPosts, readContent } from '@/app/utils/utils.js';
 import { CustomMDX } from '@/app/utils/md.js';
 
-export default function Page() {
+export default async function Page() {
   const mdContent = getBlogPosts('/about/content/');
+  let contentHTML = await readContent(mdContent[0].content);
+
   return (
     <section className='about'>
-      <CustomMDX source={mdContent[0].content} />
+      <CustomMDX source={contentHTML} />
     </section>
   );
 }
