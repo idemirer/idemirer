@@ -46,7 +46,7 @@ export function BlogPosts({ posts, page, slice = 6 }) {
                   {post.metadata.title}
                 </div>
               </Link>
-              <small className='flex flex-wrap px-4 gap-2'>
+              <small className='flex flex-wrap px-4 gap-1 overflow-hidden max-h-[130px]'>
                 {post.metadata.tags.map((tag) => (
                   <div
                     key={tag}
