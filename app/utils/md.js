@@ -13,9 +13,9 @@ const components = {
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
     if (src.startsWith('http')) {
-      return <img src={src} {...restOfImgProps} />;
+      return <img src={src} className='rounded-xl' {...restOfImgProps} />;
     }
-    return <Image className='' src={src} {...restOfImgProps} />;
+    return <Image className='rounded-xl' src={src} {...restOfImgProps} />;
   },
 };
 
