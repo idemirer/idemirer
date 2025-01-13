@@ -6,7 +6,6 @@ import tsaRawData from '@/assets/data/passengerData.json';
 
 export default function Dashboard() {
   const { theme } = useTheme();
-
   const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
   const updateDate = 'Jan 10, 2025';
