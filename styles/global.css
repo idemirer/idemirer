@@ -82,7 +82,7 @@
   @apply text-sm;
 }
 .post table tr {
-  @apply hover:bg-neutral-400;
+  @apply hover:bg-neutral-200;
 }
 
 html,
