@@ -78,6 +78,12 @@
 .post strong {
   @apply font-medium;
 }
+.post table {
+  @apply text-sm;
+}
+.post table tr {
+  @apply hover:bg-neutral-400;
+}
 
 html,
 body {
