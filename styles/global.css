@@ -76,7 +76,7 @@
 }
 
 .post h2 {
-  @apply text-xl font-bold tracking-tight mt-4 mb-1;
+  @apply text-2xl font-bold tracking-tight mt-4 mb-1;
 }
 
 .post h3 {
