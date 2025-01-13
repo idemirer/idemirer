@@ -4,7 +4,6 @@ import { formatDate } from '@/app/utils/utils';
 
 export function BlogPosts({ posts, page, slice = 6 }) {
   const today = +new Date();
-
   const endPage = page * slice;
   const beginPage = page * slice - slice;
   const maxPage = Math.ceil(posts.length / slice);
@@ -41,7 +40,7 @@ export function BlogPosts({ posts, page, slice = 6 }) {
                 className='object-cover object-left-top	rounded-t-lg pb-4 h-[120px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-auto md:pb-0 hover:grayscale'
               />
             </Link>
-            <div className='md:pt-4 md:max-w-[330px]'>
+            <div className='md:pt-4 md:w-[330px] md:min-w-[330px]'>
               <Link href={`/blog/${post.slug}`} className=''>
                 <div className='font-bold px-4 pb-2 text-white inline-block hover:text-[var(--hover)]'>
                   {post.metadata.title}
