@@ -2,9 +2,9 @@
 title: 'Dedicated Tourism, Hospitality and Events Journals'
 author: 'Ilhan Demirer'
 date: '2024-02-28'
-draft: true
-slug: 'week-09-2024'
-tags: ['academic-journals', 'hospitality', 'tourism', 'events']
+draft: false
+slug: 'academic-journals'
+tags: ['academic-journals', 'hospitality']
 banner: '2024-week-09-Journals.jpg'
 ---
 
