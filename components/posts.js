@@ -29,7 +29,7 @@ export function BlogPosts({ posts, page, slice = 6 }) {
         .map((post) => (
           <div
             key={post.slug}
-            className='w-[300px] rounded-lg bg-gray-900 text-white pb-4 mb-4 md:h-[240px] md:flex md:w-full md:max-w-[770px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+            className='w-full rounded-lg bg-gray-900 text-white pb-4 mb-4 md:h-[240px] md:flex md:w-full md:max-w-[770px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
           >
             <Link href={`/blog/${post.slug}`} className='md:order-last'>
               <Image
@@ -38,7 +38,7 @@ export function BlogPosts({ posts, page, slice = 6 }) {
                 height={120}
                 alt='banner'
                 title={post.title}
-                className='object-fill rounded-t-lg pb-4 h-[120px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-auto md:pb-0 hover:grayscale'
+                className='object-cover object-left-top	rounded-t-lg pb-4 h-[120px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-auto md:pb-0 hover:grayscale'
               />
             </Link>
             <div className='md:pt-4 md:max-w-[330px]'>
