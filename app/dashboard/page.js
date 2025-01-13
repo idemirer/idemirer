@@ -47,16 +47,18 @@ export default function Dashboard() {
 
   let strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
 
-  const indexedYears = ['2023', '2024'];
+  const indexedYears = ['2023', '2024', '2025'];
 
-  for (let y = 0; y < indexedYears.length; y++) {
+  for (let y = 1; y < indexedYears.length; y++) {
     strDataIndex['occIndex'].push(
       ...strData[indexedYears[y]]['occupancy'].map(
-        (o, i) => Math.round((o / strData['2022']['occupancy'][i]) * 10000) / 100
+        (o, i) => Math.round((o / strData[indexedYears[y - 1]]['occupancy'][i]) * 10000) / 100
       )
     );
     strDataIndex['ADRIndex'].push(
-      ...strData[indexedYears[y]]['ADR'].map((a, i) => Math.round((a / strData['2022']['ADR'][i]) * 10000) / 100)
+      ...strData[indexedYears[y]]['ADR'].map(
+        (a, i) => Math.round((a / strData[indexedYears[y - 1]]['ADR'][i]) * 10000) / 100
+      )
     );
     strDataIndex['date'].push(...strData[indexedYears[y]]['date']);
   }
@@ -89,7 +91,7 @@ export default function Dashboard() {
       width: 3,
     },
     subtitle: {
-      text: 'Indexed to 2022, Source: STR, str.com',
+      text: 'Index YOY, Source: STR, str.com',
       align: 'left',
       offsetX: 10,
       offsetY: 30,
@@ -130,6 +132,9 @@ export default function Dashboard() {
     },
     yaxis: {
       decimalsInFloat: 2,
+      min: 85,
+      max: 130,
+      tickAmount: 9,
     },
     legend: {
       height: 35,
@@ -178,8 +183,8 @@ export default function Dashboard() {
       ],
       xaxis: [
         {
-          x: '1/6/24',
-          x2: 800,
+          x: '1/4/25',
+          x2: '12/27/25',
           strokeDashArray: 0,
           borderColor: '#333',
           fillColor: '#ccc',
@@ -187,7 +192,7 @@ export default function Dashboard() {
           offsetX: 0,
           offsetY: 0,
           label: {
-            text: '2024',
+            text: '2025',
             textAnchor: 'middle',
             orientation: 'vertical',
             style: {
@@ -323,7 +328,7 @@ export default function Dashboard() {
         },
       },
     },
-    colors: ['#FFFFFF', '#FF5733', '#dddddd'],
+    colors: ['#888888', '#FF5733', '#cccccc'],
     fill: {
       type: 'solid',
       opacity: [0.5, 1, 0.2],
@@ -573,6 +578,11 @@ export default function Dashboard() {
         fontSize: '16px',
       },
     },
+    yaxis: {
+      min: 20,
+      max: 80,
+      tickAmount: 6,
+    },
   };
 
   const ADRChartOptions = {
@@ -586,6 +596,11 @@ export default function Dashboard() {
         fontWeight: 600,
         fontSize: '16px',
       },
+    },
+    yaxis: {
+      min: 60,
+      max: 180,
+      tickAmount: 6,
     },
   };
 
