@@ -133,8 +133,8 @@ export default function Dashboard() {
     yaxis: {
       decimalsInFloat: 2,
       min: 85,
-      max: 130,
-      tickAmount: 9,
+      max: 125,
+      tickAmount: 8,
     },
     legend: {
       height: 35,
@@ -377,6 +377,7 @@ export default function Dashboard() {
       {
         seriesName: '2023',
         show: true,
+        showAlways: true,
         max: tsaChartMax,
         min: tsaChartMin,
         tickAmount: 9,
