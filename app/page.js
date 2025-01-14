@@ -14,7 +14,7 @@ export default function Home() {
           width={178}
           height={178}
           alt='Ilhan Demirer'
-          className='align-center rounded-full shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          className='align-center rounded-full drop-shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
         />
       </div>
       <h1>Ilhan Demirer, Ph.D.</h1>
