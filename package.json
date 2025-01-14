@@ -1,6 +1,6 @@
 {
   "name": "ilhandemirer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Ilhan Demirer, personal blog website",
   "private": true,
   "scripts": {
@@ -17,24 +17,32 @@
     "dotenv": "^16.4.7",
     "gray-matter": "^4.0.3",
     "inter-ui": "^4.1.0",
-    "next": "^15.1.2",
+    "next": "^15.1.4",
+    "next-mdx-remote": "^5.0.0",
     "react": "19.0.0",
     "react-apexcharts": "^1.7.0",
     "react-dom": "19.0.0",
-    "react-medium-image-zoom": "^5.2.12",
+    "react-medium-image-zoom": "^5.2.13",
+    "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.1",
     "rehype-img-size": "1.0.1",
-    "rehype-parse": "^9.0.0",
+    "rehype-parse": "^9.0.1",
     "rehype-react": "^8.0.0",
-    "rehype-stringify": "^10.0.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
     "rehype-unwrap-images": "^1.0.0",
     "remark-gfm": "^4.0.0",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.0",
-    "unified": "^11.0.4"
+    "remark-rehype": "^11.1.1",
+    "tailwindcss": "^3.4.1",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.1.2",
-    "eslint-config-prettier": "^9.1.0"
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "^15.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }

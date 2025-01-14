@@ -1,13 +1,17 @@
-body,
-body[data-theme='light'] {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme='light'] {
   --text: #000;
   --background: #ddd;
   --link: #000;
-  --hover: #e67e22;
+  --hover: #ce6000;
   --shadow: #333;
   --lightText: #666;
 }
-body[data-theme='dark'] {
+
+[data-theme='dark'] {
   /* Dark Theme */
   --text: #fff;
   --background: #222222;
@@ -15,6 +19,70 @@ body[data-theme='dark'] {
   --hover: #e67e22;
   --shadow: #000;
   --lightText: #ccc;
+}
+
+.post .icon,
+.about .icon {
+  @apply absolute invisible no-underline;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  @apply visible;
+}
+
+.post a {
+  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.post .icon:after,
+.about .icon:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: '#';
+}
+
+.post *:hover > .icon,
+.about *:hover > .icon {
+  @apply visible;
+}
+
+.post img {
+  /* Don't apply styles to next/image */
+  @apply m-0 mt-2;
+}
+
+.post p {
+  @apply my-4;
+}
+
+.post h1 {
+  @apply text-4xl font-bold tracking-tight mt-4 mb-1;
+}
+
+.post h2 {
+  @apply text-2xl font-bold tracking-tight mt-4 mb-1;
+}
+
+.post h3 {
+  @apply text-xl font-bold tracking-tight mt-4 mb-1;
+}
+
+.post h4 {
+  @apply text-lg font-bold tracking-tight mt-4 mb-1;
+}
+
+.post strong {
+  @apply font-medium;
+}
+.post table {
+  @apply text-sm;
+}
+.post table tr {
+  @apply hover:bg-gray-400 dark:bg-slate-800;
 }
 
 html,
@@ -28,46 +96,54 @@ body {
   background-color: var(--background);
   color: var(--text);
 }
-* {
-  /* transition: all 100ms !important; */
-  /* box-sizing: border-box; */
-}
-a {
-  color: var(--link);
-  text-decoration: none;
-}
-a:not(.navbarItem, .notLink) {
-  transition-property: color, box-shadow;
-  padding-bottom: 2px;
-  transition-duration: 0.3ms;
-  color: var(--link);
-  text-decoration: none;
-  box-shadow: inset 0 -2px var(--link);
-}
-p {
-  line-height: 1.5;
-}
-a:hover {
-  text-decoration: none;
-  color: var(--hover);
-  text-shadow: 1px 1px 1px var(--shadow);
-}
-a:hover:not(.navbarItem, .notLink, .hamburgerMenu) {
-  text-decoration: none;
-  color: var(--hover);
-  text-shadow: 1px 1px 1px var(--shadow);
-  box-shadow: inset 0 -2px var(--hover);
-}
-img {
-  max-width: 100%;
-  display: block;
-}
-::selection {
-  background-color: var(--shadow);
-  color: #fff;
-}
 @supports (font-variation-settings: normal) {
   html {
     font-family: 'Inter var', 'system-ui';
   }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold mt-4 mb-2;
+  }
+  h2 {
+    @apply text-2xl font-bold mt-4 mb-2;
+  }
+  h3 {
+    @apply text-lg font-bold mt-4 mb-2;
+  }
+  .post ul,
+  .about ul {
+    @apply list-square pl-6;
+  }
+  .post ol {
+    @apply list-square pl-6;
+  }
+}
+a:hover {
+  @apply no-underline;
+  color: var(--hover);
+}
+.about h1 {
+  @apply text-2xl font-bold mt-2 mb-2;
+}
+.about h2 {
+  @apply text-xl font-bold mt-6 mb-2;
+}
+.about .cv {
+  margin-left: 8px;
+  margin-top: 10px;
+}
+.about table {
+  font-size: 16px;
+  width: 100%;
+}
+.about table td {
+  height: 16px;
+}
+.about table td:first-child {
+  width: 70%;
+}
+.about table td:nth-child(2n) {
+  width: 30%;
 }
