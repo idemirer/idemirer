@@ -29,6 +29,7 @@ export default function Home() {
           </a>
           .
         </p>
+        <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p className='py-1'>
           On this page I post weekly updates on <Link href='/blog/page/1'>news, research,</Link> and{' '}
           <Link href='/dashboard'>hospitality data</Link>.
