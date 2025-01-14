@@ -21,7 +21,7 @@ export default function Navbar() {
         ))}
       </div>
       <div className='ml-auto hidden md:inline'>
-        <Link href='#' onClick={toggleTheme}>
+        <Link href='#' onClick={toggleTheme} aria-label='theme-change'>
           {theme === 'light' ? (
             <svg
               xmlns='http://www.w3.org/2000/svg'

@@ -11,7 +11,7 @@ export default function MobileNavBar() {
   return (
     <div>
       <div className='mx-4 md:hidden flex items-center'>
-        <button onClick={() => setToggleMenu(!toggleMenu)}>
+        <button onClick={() => setToggleMenu(!toggleMenu)} id='mobile-theme-button' aria-label='mobile theme button'>
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className='h-8 w-8'>
             <path
               fillRule='evenodd'
@@ -38,7 +38,7 @@ export default function MobileNavBar() {
         ))}
 
         <div className='pl-2 mx-4' onClick={() => setToggleMenu(!toggleMenu)}>
-          <Link href='#' onClick={toggleTheme}>
+          <Link href='#' onClick={toggleTheme} aria-label='theme-change'>
             {theme === 'light' ? (
               <svg
                 xmlns='http://www.w3.org/2000/svg'

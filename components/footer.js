@@ -3,9 +3,14 @@ export default function Footer() {
   const thisYear = today.getFullYear();
   return (
     <footer className='w-96 text-center my-6 md:mx-auto md:w-[500px]'>
-      <div className='grid grid-cols-7 gap-1 mx-6 md:flex md:justify-between md:mx-4 md:space-x-4'>
+      <div className='grid grid-cols-7 gap-1 mx-6 md:flex md:justify-between md:mx-4 md:space-x-2'>
         <div>
-          <a href='https://www.researchgate.net/profile/Ilhan-Demirer-2' target='_blank' alt='Research Gate'>
+          <a
+            href='https://www.researchgate.net/profile/Ilhan-Demirer-2'
+            target='_blank'
+            alt='Research Gate'
+            aria-label='Research Gate'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 448 512'
@@ -18,7 +23,12 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <a href='https://www.linkedin.com/in/ilhan-demirer-3230642a/' alt='LinkedIn' target='_blank'>
+          <a
+            href='https://www.linkedin.com/in/ilhan-demirer-3230642a/'
+            alt='LinkedIn'
+            target='_blank'
+            aria-label='LinkedIn'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 448 512'
@@ -31,7 +41,7 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <a href='https://www.youtube.com/@IlhanDemirer' alt='YouTube' target='_blank'>
+          <a href='https://www.youtube.com/@IlhanDemirer' alt='YouTube' target='_blank' aria-label='YouTube'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 576 512'
@@ -44,7 +54,7 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <a href='https://x.com/idemirer' alt='twitter' target='_blank'>
+          <a href='https://x.com/idemirer' alt='twitter' target='_blank' aria-label='X.com @idemirer'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 512 512'
@@ -57,7 +67,7 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <a href='https://github.com/idemirer' alt='github' target='_blank'>
+          <a href='https://github.com/idemirer' alt='github' target='_blank' aria-label='Github'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 496 512'
