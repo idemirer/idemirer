@@ -13,9 +13,21 @@ const components = {
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
     if (src.startsWith('http')) {
-      return <img src={src} className='rounded-xl' {...restOfImgProps} />;
+      return (
+        <img
+          src={src}
+          className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          {...restOfImgProps}
+        />
+      );
     }
-    return <Image className='rounded-xl' src={src} {...restOfImgProps} />;
+    return (
+      <Image
+        className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+        src={src}
+        {...restOfImgProps}
+      />
+    );
   },
 };
 
