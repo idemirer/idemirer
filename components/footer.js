@@ -2,8 +2,8 @@ export default function Footer() {
   const today = new Date();
   const thisYear = today.getFullYear();
   return (
-    <footer className='w-96 text-center my-6 md:mx-auto md:w-[500px]'>
-      <div className='grid grid-cols-7 gap-1 mx-6 md:flex md:justify-between md:mx-4 md:space-x-2'>
+    <footer className='text-center my-6 mx-4 md:mx-auto md:w-[400px]'>
+      <div className='flex justify-between gap-1'>
         <div>
           <a
             href='https://www.researchgate.net/profile/Ilhan-Demirer-2'
@@ -82,7 +82,7 @@ export default function Footer() {
             </span>
           </a>
         </div>
-        <div className='text-xs col-span-3'>
+        <div className='text-xs text-gray-500'>
           Copyright &copy; <br />
           Ilhan Demirer {thisYear}
         </div>
