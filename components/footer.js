@@ -3,7 +3,7 @@ export default function Footer() {
   const thisYear = today.getFullYear();
   return (
     <footer className='text-center my-6 mx-4 md:mx-auto md:w-[400px]'>
-      <div className='flex justify-between gap-1'>
+      <div className='flex justify-between mx-4'>
         <div>
           <a
             href='https://www.researchgate.net/profile/Ilhan-Demirer-2'
