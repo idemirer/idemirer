@@ -19,7 +19,7 @@ export default async function Blog({ params }) {
 
   return (
     <section>
-      <h2>Blog Posts</h2>
+      <h1>Blog Posts</h1>
       <section className='flex flex-col md:flex-row'>
         <small className='gap-1 flex flex-row flex-wrap	w-full h-20 mb-5 overflow-scroll md:h-full md:overflow-auto md:flex-none md:flex-col md:gap-0 md:w-48'>
           {allTags.map((tag) => (

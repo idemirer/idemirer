@@ -8,7 +8,7 @@ export default function Blog() {
 
   return (
     <section>
-      <h2>Blog Posts</h2>
+      <h1>Blog Posts</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
         <BlogPosts posts={allPostsData} page={1} slice={6} />

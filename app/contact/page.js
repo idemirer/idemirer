@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section>
-      <h2>Contact Information</h2>
+      <h1>Contact Information</h1>
       <div className='flex space-x-4 font-bold py-2'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

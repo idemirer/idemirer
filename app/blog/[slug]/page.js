@@ -21,7 +21,7 @@ export default async function Post({ params }) {
 
   return (
     <section>
-      <h2>{post.metadata.title}</h2>
+      <h1>{post.metadata.title}</h1>
       <div className='flex justify-between items-center my-2 text-sm'>
         <p className='text-sm'>{formatDate(post.metadata.date)}</p>
       </div>

@@ -29,7 +29,7 @@ export default async function TagsPage({ params }) {
 
   return (
     <div>
-      <h2>Blog Posts with Tag: {tagParams.tag}</h2>
+      <h1>Blog Posts with Tag: {tagParams.tag}</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
         <BlogPosts posts={filteredPosts} page={1} slice={slicer} />

@@ -7,7 +7,7 @@ export default function TagsPage() {
 
   return (
     <section>
-      <h2>Tags</h2>
+      <h1>Tags</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
       </section>

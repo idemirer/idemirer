@@ -8,7 +8,7 @@ export default function Dashboard() {
   const { theme } = useTheme();
   const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-  const updateDate = 'Jan 17, 2025';
+  const updateDate = 'Jan 24, 2025';
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
     const years = ['2022', '2023', '2024', '2025', 'date'];
@@ -640,26 +640,26 @@ export default function Dashboard() {
 
   return (
     <section>
-      <h2>U.S. Hospitality Data Dashboard</h2>
+      <h1>U.S. Hospitality Data Dashboard</h1>
       <div>
         <div>
-          <h3>KPI Index:</h3>
+          <h2>KPI Index:</h2>
           <Chart series={strIndexChartData} options={indexChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>U.S. Hotel Occupancy (Weeks Ending)</h3>
+          <h2>U.S. Hotel Occupancy (Weeks Ending)</h2>
           <Chart series={occChartData} options={occChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>U.S. Hotel ADR (Weeks Ending)</h3>
+          <h2>U.S. Hotel ADR (Weeks Ending)</h2>
           <Chart series={ADRChartData} options={ADRChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>U.S. Hotel RevPAR (Weeks Ending)</h3>
+          <h2>U.S. Hotel RevPAR (Weeks Ending)</h2>
           <Chart series={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
         </div>
         <div>
-          <h3>TSA Checkpoint Travel Numbers (Same Weekday)</h3>
+          <h2>TSA Checkpoint Travel Numbers (Same Weekday)</h2>
           <Chart series={tsaChartData} options={tsaChartOptions} type={'line'} height={500} />
         </div>
       </div>
