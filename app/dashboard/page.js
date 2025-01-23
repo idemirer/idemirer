@@ -644,23 +644,53 @@ export default function Dashboard() {
       <div>
         <div>
           <h2>KPI Index:</h2>
-          <Chart series={strIndexChartData} options={indexChartOptions} type={'line'} height={500} />
+          <Chart
+            series={strIndexChartData}
+            options={indexChartOptions}
+            type={'line'}
+            height={500}
+            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          />
         </div>
         <div>
           <h2>U.S. Hotel Occupancy (Weeks Ending)</h2>
-          <Chart series={occChartData} options={occChartOptions} type={'line'} height={500} />
+          <Chart
+            series={occChartData}
+            options={occChartOptions}
+            type={'line'}
+            height={500}
+            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          />
         </div>
         <div>
           <h2>U.S. Hotel ADR (Weeks Ending)</h2>
-          <Chart series={ADRChartData} options={ADRChartOptions} type={'line'} height={500} />
+          <Chart
+            series={ADRChartData}
+            options={ADRChartOptions}
+            type={'line'}
+            height={500}
+            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          />
         </div>
         <div>
           <h2>U.S. Hotel RevPAR (Weeks Ending)</h2>
-          <Chart series={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
+          <Chart
+            series={revPARChartData}
+            options={revPARChartOptions}
+            type={'line'}
+            height={500}
+            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          />
         </div>
         <div>
           <h2>TSA Checkpoint Travel Numbers (Same Weekday)</h2>
-          <Chart series={tsaChartData} options={tsaChartOptions} type={'line'} height={500} />
+          <Chart
+            series={tsaChartData}
+            options={tsaChartOptions}
+            type={'line'}
+            height={500}
+            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          />
         </div>
       </div>
     </section>
