@@ -3,7 +3,7 @@
 **CHAIR, ASSOCIATE PROFESSOR**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  
 [School of Business and Economics](https://www.plattsburgh.edu/academics/schools/business-economics/)  
-[State University of New York College at Plattsburgh](https://www.plattsburgh.edu/)
+[State University of New York at Plattsburgh](https://www.plattsburgh.edu/)
 
 ## ACADEMIC EXPERIENCE
 
