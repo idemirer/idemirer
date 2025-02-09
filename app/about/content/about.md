@@ -3,29 +3,29 @@
 **CHAIR, ASSOCIATE PROFESSOR**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  
 [School of Business and Economics](https://www.plattsburgh.edu/academics/schools/business-economics/)  
-[State University of New York at Plattsburgh](https://www.plattsburgh.edu/)
+[State University of New York Plattsburgh](https://www.plattsburgh.edu/)
 
 ## ACADEMIC EXPERIENCE
 
-|                                                              |                               |
-| ------------------------------------------------------------ | ----------------------------: |
-| **CHAIR**                                                    |       **Fall 2023 – Present** |
-| Department of Management, Information Systems and Analytics  |                               |
-| State University of New York College at Plattsburgh, NY, USA |                               |
-|                                                              |                               |
-| **ASSOCIATE PROFESSOR**                                      |       **Fall 2020 – Present** |
-| Department of Management, Information Systems and Analytics  |                               |
-| State University of New York College at Plattsburgh, NY, USA |                               |
-|                                                              |                               |
-| **ASSISTANT PROFESSOR**                                      |   **Fall 2016 – Spring 2020** |
-| Department of Hospitality Management                         |                               |
-| State University of New York College at Plattsburgh, NY, USA |                               |
-|                                                              |                               |
-| **ASSISTANT PROFESSOR**                                      |    **April 2014 – July 2016** |
-| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
-|                                                              |                               |
-| **SENIOR LECTURER**                                          | **January 2013 – March 2014** |
-| The Emirates Academy of Hospitality Management, Dubai, UAE   |                               |
+|                                                             |                               |
+| ----------------------------------------------------------- | ----------------------------: |
+| **CHAIR**                                                   |       **Fall 2023 – Present** |
+| Department of Management, Information Systems and Analytics |                               |
+| State University of New York Plattsburgh, NY, USA           |                               |
+|                                                             |                               |
+| **ASSOCIATE PROFESSOR**                                     |       **Fall 2020 – Present** |
+| Department of Management, Information Systems and Analytics |                               |
+| State University of New York Plattsburgh, NY, USA           |                               |
+|                                                             |                               |
+| **ASSISTANT PROFESSOR**                                     |   **Fall 2016 – Spring 2020** |
+| Department of Hospitality Management                        |                               |
+| State University of New York Plattsburgh, NY, USA           |                               |
+|                                                             |                               |
+| **ASSISTANT PROFESSOR**                                     |    **April 2014 – July 2016** |
+| The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
+|                                                             |                               |
+| **SENIOR LECTURER**                                         | **January 2013 – March 2014** |
+| The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
 
 ## RESEARCH INTERESTS
 
