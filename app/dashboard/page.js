@@ -43,7 +43,7 @@ export default function Dashboard() {
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
-  const tsaChartMaxDate = tsaChartSourceData['date'][tsaChartSourceData['date'].length - 1];
+  // const tsaChartMaxDate = tsaChartSourceData['date'][tsaChartSourceData['date'].length - 1];
 
   let strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
 
@@ -435,31 +435,6 @@ export default function Dashboard() {
           offsetY: 0,
         },
       ],
-      // xaxis: [
-      //   {
-      //     x: '1/1/25',
-      //     x2: tsaChartMaxDate,
-      //     strokeDashArray: 0,
-      //     borderColor: '#333',
-      //     fillColor: '#ccc',
-      //     opacity: 0.1,
-      //     offsetX: 0,
-      //     offsetY: 0,
-      //     label: {
-      //       text: '2025',
-      //       textAnchor: 'middle',
-      //       orientation: 'vertical',
-      //       style: {
-      //         background: '#fff',
-      //         color: '#777',
-      //         fontSize: '11px',
-      //         fontWeight: 400,
-      //         fontFamily: undefined,
-      //         cssClass: 'apexcharts-xaxis-annotation-label',
-      //       },
-      //     },
-      //   },
-      // ],
     },
   };
 
