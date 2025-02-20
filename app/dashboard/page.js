@@ -8,7 +8,7 @@ export default function Dashboard() {
   const { theme } = useTheme();
   const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-  const updateDate = 'Feb 14, 2025';
+  const updateDate = 'Feb 21, 2025';
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
     const years = ['2022', '2023', '2024', '2025', 'date'];
@@ -435,31 +435,31 @@ export default function Dashboard() {
           offsetY: 0,
         },
       ],
-      xaxis: [
-        {
-          x: '1/1/25',
-          x2: tsaChartMaxDate,
-          strokeDashArray: 0,
-          borderColor: '#333',
-          fillColor: '#ccc',
-          opacity: 0.1,
-          offsetX: 0,
-          offsetY: 0,
-          label: {
-            text: '2025',
-            textAnchor: 'middle',
-            orientation: 'vertical',
-            style: {
-              background: '#fff',
-              color: '#777',
-              fontSize: '11px',
-              fontWeight: 400,
-              fontFamily: undefined,
-              cssClass: 'apexcharts-xaxis-annotation-label',
-            },
-          },
-        },
-      ],
+      // xaxis: [
+      //   {
+      //     x: '1/1/25',
+      //     x2: tsaChartMaxDate,
+      //     strokeDashArray: 0,
+      //     borderColor: '#333',
+      //     fillColor: '#ccc',
+      //     opacity: 0.1,
+      //     offsetX: 0,
+      //     offsetY: 0,
+      //     label: {
+      //       text: '2025',
+      //       textAnchor: 'middle',
+      //       orientation: 'vertical',
+      //       style: {
+      //         background: '#fff',
+      //         color: '#777',
+      //         fontSize: '11px',
+      //         fontWeight: 400,
+      //         fontFamily: undefined,
+      //         cssClass: 'apexcharts-xaxis-annotation-label',
+      //       },
+      //     },
+      //   },
+      // ],
     },
   };
 
