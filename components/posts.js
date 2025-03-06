@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/app/utils/utils';
 
-export function BlogPosts({ posts, page, slice = 6 }) {
+export function BlogPosts({ posts, page, slice = 5 }) {
   const today = +new Date();
   const endPage = page * slice;
   const beginPage = page * slice - slice;

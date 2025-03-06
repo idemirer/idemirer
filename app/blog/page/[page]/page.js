@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export async function generateStaticParams() {
   let posts = getBlogPosts('blog/posts');
-  const maxPage = Math.ceil(posts.length / 6);
+  const maxPage = Math.ceil(posts.length / 5);
   let pageObj = [];
   for (let i = 0; i <= maxPage; i++) {
     pageObj.push({ page: i.toString() });
