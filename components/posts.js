@@ -11,7 +11,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
   const prevPage = +page - 1 == 0 ? 1 : +page - 1;
 
   return (
-    <div className='md:px-4 w-full'>
+    <div className='w-full justify-items-start'>
       {posts
         .sort((a, b) => {
           if (new Date(a.metadata.date) > new Date(b.metadata.date)) {
@@ -28,7 +28,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
         .map((post) => (
           <div
             key={post.slug}
-            className='w-full rounded-lg bg-gray-900 text-white pb-4 mb-4 md:h-[240px] md:flex md:w-full md:max-w-[770px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+            className='max-w-full rounded-lg bg-gray-900 text-white pb-4 mb-4 md:h-[240px] md:flex md:w-full md:max-w-[770px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
           >
             <Link href={`/blog/${post.slug}`} className='md:order-last'>
               <Image

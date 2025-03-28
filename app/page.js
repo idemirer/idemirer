@@ -6,7 +6,7 @@ import { BlogPosts } from '@/components/posts';
 export default function Home() {
   let allPostsData = getBlogPosts('blog/posts');
   return (
-    <div>
+    <div className='w-screen-lg md:w-full'>
       <div className='flex justify-center'>
         <Image
           src='/images/IlhanDemirer.jpg'
