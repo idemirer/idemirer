@@ -2,6 +2,7 @@ import '@/styles/global.css';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/context/ThemeContext';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function Layout({ children }) {
   return (
@@ -37,6 +38,7 @@ export default function Layout({ children }) {
           </ThemeProvider>
         </div>
       </body>
+      <GoogleAnalytics gaId='G-JP5LKKYL7V' />
     </html>
   );
 }
