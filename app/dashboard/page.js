@@ -661,12 +661,12 @@ export default function Dashboard() {
 
   const tsaChartData = [
     {
-      name: '2023',
-      data: tsaChartSourceData['2023'],
-    },
-    {
       name: '2024',
       data: tsaChartSourceData['2024'],
+    },
+    {
+      name: '2025',
+      data: tsaChartSourceData['2025'],
     },
     {
       name: 'Gap',

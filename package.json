@@ -11,12 +11,13 @@
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir posts"
   },
   "dependencies": {
+    "@next/third-parties": "^15.2.4",
     "apexcharts": "^4.3.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "gray-matter": "^4.0.3",
     "next": "^15.2.4",
-    "react": "19.0.0",
+    "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.1",
@@ -28,17 +29,17 @@
     "rehype-unwrap-images": "^1.0.0",
     "remark-gfm": "^4.0.0",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.1",
+    "remark-rehype": "^11.1.2",
     "unified": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.17",
+    "@tailwindcss/postcss": "^4.1.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "^15.2.4",
     "eslint-config-prettier": "^10.1.1",
     "postcss": "^8",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.1.1"
   }
 }
