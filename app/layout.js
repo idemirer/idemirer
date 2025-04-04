@@ -29,7 +29,7 @@ export default function Layout({ children }) {
         <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
       </head>
       {/* <body className='antialiased w-full mt-1 md:mt-4 md:max-w-screen-lg lg:mx-auto light' data-theme='light'> */}
-      <body className='w-full mt-1 antialiased md:mt-4 md:w-full' data-theme='light'>
+      <body className='w-full antialiased md:w-full' data-theme='light'>
         <div className='w-screen-lg mt-1 md:w-5xl lg:mx-auto'>
           <ThemeProvider>
             <Navbar />
