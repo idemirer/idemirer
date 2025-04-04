@@ -8,7 +8,7 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className='flex justify-start items-center py-4 pb-4 mr-8'>
+    <nav className='flex justify-start items-center py-4 pb-4 mr-3'>
       <div className='lg:flex hidden md:ml-2 md:block'>
         {navLinks.map((path) => (
           <Link

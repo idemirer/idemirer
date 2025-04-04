@@ -5,15 +5,21 @@ import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
   let posts = getBlogPosts('blog/posts');
+  let countTags = countedTags(posts);
 
-  let allTags = [];
-  posts.map((p) =>
-    p.metadata.tags.map((t) => {
-      allTags.push(t);
-    })
-  );
-  const uniqueTags = [...new Set(allTags)];
-  return uniqueTags.map((t) => ({ tag: t }));
+  const params = [];
+
+  countTags.forEach((tag) => {
+    const totalPages = Math.ceil(tag.count / 5);
+    for (let page = 1; page <= totalPages; page++) {
+      params.push({
+        tag: tag.tag,
+        page: page.toString(),
+      });
+    }
+  });
+
+  return params;
 }
 
 export default async function TagsPage({ params }) {
@@ -21,7 +27,6 @@ export default async function TagsPage({ params }) {
   let allPostsData = getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
   let allTags = countedTags(filteredPosts);
-  const slicer = filteredPosts.length;
 
   if (filteredPosts.length === 0) {
     notFound();
@@ -32,7 +37,7 @@ export default async function TagsPage({ params }) {
       <h1>Blog Posts with Tag: {tagParams.tag}</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={filteredPosts} page={1} slice={slicer} />
+        <BlogPosts posts={filteredPosts} page={tagParams.page} />
       </section>
     </div>
   );

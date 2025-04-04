@@ -11,7 +11,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
   const prevPage = +page - 1 == 0 ? 1 : +page - 1;
 
   return (
-    <div className='w-full justify-items-start'>
+    <div className='w-full justify-items-start md:ml-2'>
       {posts
         .sort((a, b) => {
           if (new Date(a.metadata.date) > new Date(b.metadata.date)) {
@@ -28,7 +28,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
         .map((post) => (
           <div
             key={post.slug}
-            className='max-w-full rounded-lg bg-gray-900 text-white pb-4 mb-4 md:h-[240px] md:flex md:w-[800px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+            className='max-w-full rounded-lg bg-gray-900 text-white pb-2 mb-4 md:h-[240px] md:flex md:w-[790px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
           >
             <Link href={`/blog/${post.slug}`} className='md:order-last'>
               <Image
@@ -37,10 +37,10 @@ export function BlogPosts({ posts, page, slice = 5 }) {
                 height={240}
                 alt='banner'
                 title={post.title}
-                className='object-cover object-left-top	rounded-t-lg pb-4 h-[240px] w-[800px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-[450px] md:pb-0 hover:grayscale'
+                className='object-cover object-left-top	rounded-t-lg pb-4 h-[240px] w-[790px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-[450px] md:pb-0 hover:grayscale'
               />
             </Link>
-            <div className='md:pt-4 md:w-[350px] md:min-w-[350px]'>
+            <div className='md:pt-4 md:w-[340px] md:min-w-[340px]'>
               <Link href={`/blog/${post.slug}`} className=''>
                 <div className='font-bold px-4 pb-2 text-white inline-block hover:text-[var(--hover)]'>
                   {post.metadata.title}
@@ -48,11 +48,8 @@ export function BlogPosts({ posts, page, slice = 5 }) {
               </Link>
               <small className='flex flex-wrap px-4 gap-1 overflow-hidden max-h-[130px]'>
                 {post.metadata.tags.map((tag) => (
-                  <div
-                    key={tag}
-                    className='rounded-lg bg-gray-600 text-white px-1 py-1 dark:text-black dark:bg-neutral-200'
-                  >
-                    <Link href={`/blog/tags/${tag}`}>#{tag}</Link>
+                  <div key={tag} className='rounded-lg bg-gray-600 text-white p-1 dark:text-black dark:bg-neutral-200'>
+                    <Link href={`/blog/tags/${tag}/page/1`}>#{tag}</Link>
                   </div>
                 ))}
               </small>

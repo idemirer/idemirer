@@ -1,5 +1,5 @@
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
-import { Tags } from '@/components/tags';
+import { TagList } from '@/components/taglist';
 
 export default function TagsPage() {
   let allPostsData = getBlogPosts('blog/posts');
@@ -8,8 +8,12 @@ export default function TagsPage() {
   return (
     <section>
       <h1>Tags</h1>
-      <section className='flex flex-col md:flex-row'>
-        <Tags allTags={allTags} />
+      <section className=''>
+        <small className='flex flex-row flex-wrap items-center justify-center w-[600px] mx-auto pb-8 gap-1'>
+          {allTags.map((tag) => (
+            <TagList tag={tag} key={tag.tag} />
+          ))}
+        </small>
       </section>
     </section>
   );
