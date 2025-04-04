@@ -1,5 +1,6 @@
 import { BlogPosts } from '@/components/posts';
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
+import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
@@ -16,6 +17,12 @@ export default async function Blog({ params }) {
   let allPostsData = getBlogPosts('blog/posts');
   let allTags = countedTags(allPostsData);
   const pageParams = await params;
+  const maxPage = Math.ceil(allPostsData.length / 5);
+
+  if (allPostsData.length === 0 || pageParams.page > maxPage) {
+    notFound();
+  }
+
   return (
     <section>
       <h1>Blog Posts</h1>
