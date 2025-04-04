@@ -19,6 +19,7 @@ export default async function Blog({ params }) {
   const pageParams = await params;
   const maxPage = Math.ceil(allPostsData.length / 5);
   const currentPage = parseInt(pageParams.page, 10);
+  console.log(currentPage, maxPage);
 
   if (allPostsData.length === 0 || currentPage > maxPage || currentPage < 1) {
     notFound();
