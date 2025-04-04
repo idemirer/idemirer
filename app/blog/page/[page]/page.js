@@ -18,8 +18,9 @@ export default async function Blog({ params }) {
   let allTags = countedTags(allPostsData);
   const pageParams = await params;
   const maxPage = Math.ceil(allPostsData.length / 5);
+  const currentPage = parseInt(pageParams.page, 10);
 
-  if (allPostsData.length === 0 || pageParams.page > maxPage) {
+  if (allPostsData.length === 0 || currentPage > maxPage || currentPage < 1) {
     notFound();
   }
 
