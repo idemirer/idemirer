@@ -49,7 +49,7 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
               <small className='flex flex-wrap px-4 gap-1 overflow-hidden max-h-[130px]'>
                 {post.metadata.tags.map((tag) => (
                   <div key={tag} className='rounded-lg bg-gray-600 text-white p-1 dark:text-black dark:bg-neutral-200'>
-                    <Link href={`/blog/tags/${tag}/page/1`}>#{tag}</Link>
+                    <Link href={`/blog/tags/${tag}/1`}>#{tag}</Link>
                   </div>
                 ))}
               </small>
@@ -59,7 +59,7 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
         ))}
       <div className={slice == 1 ? 'hidden' : 'flex w-full'}>
         <Link
-          href={`${path}/page/${prevPage}`}
+          href={`${path}/${prevPage}`}
           className={
             page - 1 == 0
               ? 'text-sm font-bold rounded-lg p-2 bg-gray-800 text-white mx-auto ml-0 pointer-events-none opacity-30 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
@@ -69,7 +69,7 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
           &#xab; NEWER POSTS
         </Link>
         <Link
-          href={`${path}/page/${nextPage}`}
+          href={`${path}/${nextPage}`}
           className={
             nextPage === maxPage + 1
               ? 'pointer-events-none opacity-30 text-sm font-bold rounded-lg p-2 bg-gray-800 text-white ml-auto mr-0 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'

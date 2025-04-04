@@ -6,7 +6,7 @@ export function TagList({ tag }) {
       key={tag.tag}
       className='text-nowrap p-1 mr-auto rounded-lg bg-gray-600 text-white dark:text-black dark:bg-neutral-200'
     >
-      <Link href={`/blog/tags/${tag.tag}/page/1`}>
+      <Link href={`/blog/tags/${tag.tag}/1`}>
         #{tag.tag} ({tag.count})
       </Link>
     </div>

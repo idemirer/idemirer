@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   const params = [];
 
   countTags.forEach((tag) => {
-    const totalPages = Math.ceil(tag.count / 5);
+    const totalPages = Math.ceil(tag.count / 5) + 1;
     for (let page = 1; page <= totalPages; page++) {
       params.push({
         tag: tag.tag,
@@ -18,7 +18,6 @@ export async function generateStaticParams() {
       });
     }
   });
-  console.log(params);
   return params;
 }
 
