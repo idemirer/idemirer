@@ -37,7 +37,7 @@ export default async function TagsPage({ params }) {
       <h1>Blog Posts with Tag: {tagParams.tag}</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={filteredPosts} page={tagParams.page} />
+        <BlogPosts posts={filteredPosts} page={tagParams.page} path={`/blog/tags/${tagParams.tag}`} />
       </section>
     </div>
   );

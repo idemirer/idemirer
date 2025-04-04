@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/app/utils/utils';
 
-export function BlogPosts({ posts, page, slice = 5 }) {
+export function BlogPosts({ posts, path, page, slice = 5 }) {
   const today = +new Date();
   const endPage = page * slice;
   const beginPage = page * slice - slice;
@@ -59,7 +59,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
         ))}
       <div className={slice == 1 ? 'hidden' : 'flex w-full'}>
         <Link
-          href={`/blog/page/${prevPage}`}
+          href={`${path}/page/${prevPage}`}
           className={
             page - 1 == 0
               ? 'text-sm font-bold rounded-lg p-2 bg-gray-800 text-white mx-auto ml-0 pointer-events-none opacity-30 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
@@ -69,7 +69,7 @@ export function BlogPosts({ posts, page, slice = 5 }) {
           &#xab; NEWER POSTS
         </Link>
         <Link
-          href={`/blog/page/${nextPage}`}
+          href={`${path}/page/${nextPage}`}
           className={
             nextPage === maxPage + 1
               ? 'pointer-events-none opacity-30 text-sm font-bold rounded-lg p-2 bg-gray-800 text-white ml-auto mr-0 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'

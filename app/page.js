@@ -37,7 +37,7 @@ export default function Home() {
       </section>
       <section className='py-4'>
         <h2>Latest Blog Post:</h2>
-        <BlogPosts posts={allPostsData} page={1} slice={1} />
+        <BlogPosts posts={allPostsData} page={1} slice={1} path='/' />
       </section>
     </div>
   );
