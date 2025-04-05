@@ -15,7 +15,7 @@ export default async function Post({ params }) {
   const posts = await getBlogPosts('blog/posts');
   const post = posts.find((post) => post.slug === postParams.slug);
 
-  if (!post) {
+  if (post === undefined) {
     notFound();
   }
   const contentHTML = await readContent(post.content);
