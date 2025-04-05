@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('blog/posts');
 
-  let allTags = [];
+  const allTags = [];
   posts.map((p) =>
     p.metadata.tags.map((t) => {
       allTags.push(t);
@@ -18,9 +18,9 @@ export async function generateStaticParams() {
 
 export default async function TagsPage({ params }) {
   const tagParams = await params;
-  let allPostsData = getBlogPosts('blog/posts');
+  const allPostsData = await getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
-  let allTags = countedTags(filteredPosts);
+  const allTags = countedTags(filteredPosts);
   const slicer = filteredPosts.length;
 
   if (filteredPosts.length === 0) {

@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts('blog/posts');
-  let countTags = countedTags(posts);
+  const posts = await getBlogPosts('blog/posts');
+  const countTags = countedTags(posts);
 
   const params = [];
 
@@ -23,14 +23,13 @@ export async function generateStaticParams() {
 
 export default async function TagsPage({ params }) {
   const tagParams = await params;
-  let allPostsData = getBlogPosts('blog/posts');
+  const allPostsData = await getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
-  let allTags = countedTags(filteredPosts);
+  const allTags = countedTags(filteredPosts);
   const maxPage = Math.ceil(filteredPosts.length / 5);
   const currentPage = parseInt(tagParams.page, 10);
 
   if (filteredPosts.length === 0 || currentPage > maxPage || currentPage < 1) {
-    console.error('Triggering notFound:', { currentPage, maxPage });
     notFound();
   }
 

@@ -3,8 +3,8 @@ import { CustomMDX } from '@/app/utils/md.js';
 import Link from 'next/link';
 
 export default async function Page() {
-  const mdContent = getBlogPosts('/about/content/');
-  let contentHTML = await readContent(mdContent[0].content);
+  const mdContent = await getBlogPosts('/about/content/');
+  const contentHTML = await readContent(mdContent[0].content);
 
   return (
     <section className='about'>

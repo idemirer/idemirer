@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
-  const posts = getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('blog/posts');
   const maxPage = Math.ceil(posts.length / 5);
   const pageObj = [];
   for (let i = 1; i <= maxPage; i++) {
@@ -15,13 +15,12 @@ export async function generateStaticParams() {
 
 export default async function Blog({ params }) {
   const pageParams = await params;
-  const allPostsData = getBlogPosts('blog/posts');
+  const allPostsData = await getBlogPosts('blog/posts');
   const allTags = countedTags(allPostsData);
   const maxPage = Math.ceil(allPostsData.length / 5);
   const currentPage = parseInt(pageParams.page, 10);
 
   if (allPostsData.length === 0 || currentPage > maxPage || currentPage < 1) {
-    console.error('Triggering notFound:', { currentPage, maxPage });
     notFound();
   }
 

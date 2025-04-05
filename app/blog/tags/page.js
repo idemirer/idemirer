@@ -1,9 +1,9 @@
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
 import { TagList } from '@/components/taglist';
 
-export default function TagsPage() {
-  let allPostsData = getBlogPosts('blog/posts');
-  let allTags = countedTags(allPostsData);
+export default async function TagsPage() {
+  const allPostsData = await getBlogPosts('blog/posts');
+  const allTags = countedTags(allPostsData);
 
   return (
     <section>

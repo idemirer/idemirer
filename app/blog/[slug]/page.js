@@ -4,7 +4,7 @@ import { formatDate, getBlogPosts, readContent } from '@/app/utils/utils.js';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('blog/posts');
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -12,12 +12,13 @@ export async function generateStaticParams() {
 
 export default async function Post({ params }) {
   const postParams = await params;
-  let post = getBlogPosts('blog/posts').find((post) => post.slug === postParams.slug);
+  const posts = await getBlogPosts('blog/posts');
+  const post = posts.find((post) => post.slug === postParams.slug);
 
   if (!post) {
     notFound();
   }
-  let contentHTML = await readContent(post.content);
+  const contentHTML = await readContent(post.content);
 
   return (
     <section>

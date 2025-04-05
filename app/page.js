@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { getBlogPosts } from '@/app/utils/utils';
 import { BlogPosts } from '@/components/posts';
 
-export default function Home() {
-  let allPostsData = getBlogPosts('blog/posts');
+export default async function Home() {
+  const allPostsData = await getBlogPosts('blog/posts');
   return (
     <div className='w-screen-lg md:w-full'>
       <div className='flex justify-center'>

@@ -1,4 +1,3 @@
-// import fs from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
@@ -22,7 +21,7 @@ function parseFrontmatter(fileContent) {
 }
 
 async function getMDXFiles(dir) {
-  const files = await fs.readdir(dir, { withFileTypes: false });
+  const files = await fs.readdir(dir);
   return files.filter((file) => path.extname(file) === '.md');
 }
 
@@ -43,6 +42,7 @@ export async function readContent(content) {
     .use(rehypeAutolinkHeadings)
     .use(rehypeStringify)
     .process(content);
+
   return processedContent.toString();
 }
 
@@ -68,15 +68,15 @@ export async function getBlogPosts(secondPath) {
 }
 
 export function formatDate(date, includeRelative = false) {
-  let currentDate = new Date();
+  const currentDate = new Date();
   if (!date.includes('T')) {
     date = `${date}T00:00:00`;
   }
-  let targetDate = new Date(date);
+  const targetDate = new Date(date);
 
-  let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
-  let monthsAgo = currentDate.getMonth() - targetDate.getMonth();
-  let daysAgo = currentDate.getDate() - targetDate.getDate();
+  const yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
+  const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
+  const daysAgo = currentDate.getDate() - targetDate.getDate();
 
   let formattedDate = '';
 
@@ -90,17 +90,13 @@ export function formatDate(date, includeRelative = false) {
     formattedDate = 'Today';
   }
 
-  let fullDate = targetDate.toLocaleString('en-us', {
+  const fullDate = targetDate.toLocaleString('en-us', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   });
 
-  if (!includeRelative) {
-    return fullDate;
-  }
-
-  return `${fullDate} (${formattedDate})`;
+  return includeRelative ? `${fullDate} (${formattedDate})` : fullDate;
 }
 
 export function countedTags(allPostsData) {
@@ -114,53 +110,3 @@ export function countedTags(allPostsData) {
     }))
     .sort((a, b) => b.count - a.count);
 }
-
-// function getMDXFiles(dir) {
-//   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.md');
-// }
-
-// function readMDXFile(filePath) {
-//   let rawContent = fs.readFileSync(filePath, 'utf-8');
-//   return parseFrontmatter(rawContent);
-// }
-
-// function getMDXData(dir) {
-//   let mdxFiles = getMDXFiles(dir);
-//   return mdxFiles.map((file) => {
-//     let { metadata, content } = readMDXFile(path.join(dir, file));
-
-//     let slug = metadata.slug;
-
-//     return {
-//       metadata,
-//       slug,
-//       content,
-//     };
-//   });
-// }
-
-// export function getBlogPosts(secondPath) {
-//   return getMDXData(path.join(process.cwd(), 'app', secondPath));
-// }
-
-// export function countedTags(allPostsData) {
-//   function countOccurrences(arr, item) {
-//     return arr.filter((currentItem) => currentItem === item).length;
-//   }
-
-//   let allTags = [];
-//   allPostsData.map((p) =>
-//     p.metadata.tags.map((t) => {
-//       allTags.push(t);
-//     })
-//   );
-
-//   const uniqueTags = [...new Set(allTags)];
-
-//   const countedTags = uniqueTags.map((tag) => {
-//     return { tag: tag, count: countOccurrences(allTags, tag) };
-//   });
-
-//   const sortedTags = countedTags.sort((a, b) => b.count - a.count);
-//   return sortedTags;
-// }
