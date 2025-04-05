@@ -23,14 +23,14 @@ export async function generateStaticParams() {
 
 export default async function TagsPage({ params }) {
   const tagParams = await params;
-  let allPostsData = await getBlogPosts('blog/posts');
+  let allPostsData = getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
-  let allTags = await countedTags(filteredPosts);
+  let allTags = countedTags(filteredPosts);
   const maxPage = Math.ceil(filteredPosts.length / 5);
   const currentPage = parseInt(tagParams.page, 10);
-  console.log(currentPage, maxPage);
 
   if (filteredPosts.length === 0 || currentPage > maxPage || currentPage < 1) {
+    console.error('Triggering notFound:', { currentPage, maxPage });
     notFound();
   }
 
