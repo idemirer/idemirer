@@ -29,7 +29,7 @@ export default async function Post({ params }) {
       <small className='flex gap-2'>
         {post.metadata.tags.map((tag) => (
           <div key={tag} className='rounded-lg bg-gray-700 text-white px-1 py-1 dark:text-black dark:bg-neutral-300'>
-            <Link href={`/blog/tags/${tag}/page/1`}>#{tag}</Link>
+            <Link href={`/blog/tags/${tag}/1`}>#{tag}</Link>
           </div>
         ))}
       </small>

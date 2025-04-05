@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export default async function Blog({ params }) {
   const pageParams = await params;
   const allPostsData = await getBlogPosts('blog/posts');
-  const allTags = countedTags(allPostsData);
+  const allTags = await countedTags(allPostsData);
   const maxPage = Math.ceil(allPostsData.length / 5);
   const currentPage = parseInt(pageParams.page, 10);
 

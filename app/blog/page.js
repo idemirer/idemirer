@@ -2,9 +2,9 @@ import { BlogPosts } from '@/components/posts';
 import { Tags } from '@/components/tags';
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
 
-export default function Blog() {
-  let allPostsData = getBlogPosts('blog/posts');
-  let allTags = countedTags(allPostsData);
+export default async function Blog() {
+  let allPostsData = await getBlogPosts('blog/posts');
+  let allTags = await countedTags(allPostsData);
 
   return (
     <section>

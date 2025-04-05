@@ -20,7 +20,7 @@ export default async function TagsPage({ params }) {
   const tagParams = await params;
   const allPostsData = await getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
-  const allTags = countedTags(filteredPosts);
+  const allTags = await countedTags(filteredPosts);
   const slicer = filteredPosts.length;
 
   if (filteredPosts.length === 0) {

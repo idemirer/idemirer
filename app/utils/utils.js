@@ -103,16 +103,27 @@ export function formatDate(date, includeRelative = false) {
   return `${fullDate} (${formattedDate})`;
 }
 
-export function countedTags(allPostsData) {
-  const allTags = allPostsData.flatMap((p) => p.metadata.tags);
+export async function countedTags(allPostsData) {
+  const allPostsAwaitedData = await allPostsData;
+  function countOccurrences(arr, item) {
+    return arr.filter((currentItem) => currentItem === item).length;
+  }
+
+  let allTags = [];
+  allPostsAwaitedData.map((p) =>
+    p.metadata.tags.map((t) => {
+      allTags.push(t);
+    })
+  );
+
   const uniqueTags = [...new Set(allTags)];
 
-  return uniqueTags
-    .map((tag) => ({
-      tag,
-      count: allTags.filter((t) => t === tag).length,
-    }))
-    .sort((a, b) => b.count - a.count);
+  const countedTags = uniqueTags.map((tag) => {
+    return { tag: tag, count: countOccurrences(allTags, tag) };
+  });
+
+  const sortedTags = countedTags.sort((a, b) => b.count - a.count);
+  return sortedTags;
 }
 
 // function getMDXFiles(dir) {

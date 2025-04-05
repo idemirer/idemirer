@@ -3,7 +3,7 @@ import { TagList } from '@/components/taglist';
 
 export default async function TagsPage() {
   const allPostsData = await getBlogPosts('blog/posts');
-  const allTags = countedTags(allPostsData);
+  const allTags = await countedTags(allPostsData);
 
   return (
     <section>

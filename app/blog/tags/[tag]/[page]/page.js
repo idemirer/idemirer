@@ -5,7 +5,7 @@ import { Tags } from '@/components/tags';
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts('blog/posts');
-  const countTags = countedTags(posts);
+  const countTags = await countedTags(posts);
 
   const params = [];
 
@@ -25,7 +25,7 @@ export default async function TagsPage({ params }) {
   const tagParams = await params;
   const allPostsData = await getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
-  const allTags = countedTags(filteredPosts);
+  const allTags = await countedTags(filteredPosts);
   const maxPage = Math.ceil(filteredPosts.length / 5);
   const currentPage = parseInt(tagParams.page, 10);
 
