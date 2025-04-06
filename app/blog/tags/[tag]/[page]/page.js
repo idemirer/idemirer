@@ -35,7 +35,7 @@ export default async function TagsPage({ params }) {
 
   return (
     <div>
-      <h1 className='mb-5'>
+      <h1 className='mb-5 leading-12 md:leading-none'>
         Blog Posts with Tag:{' '}
         <span className='text-nowrap p-1 px-4 rounded-lg bg-gray-600 text-white dark:text-black dark:bg-neutral-200'>
           {tag}
