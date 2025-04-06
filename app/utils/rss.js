@@ -14,10 +14,10 @@ export async function generateRSSFeed() {
   const feed = new RSS({
     title: "Ilhan Demirer's Blog",
     description: 'Weekly insights on hospitality, business, and tech.',
-    id: siteUrl,
-    link: siteUrl,
+    id: 'https://ilhandemirer.com',
+    link: 'https://ilhandemirer.com',
     language: 'en',
-    favicon: `${siteUrl}/favicon.ico`,
+    favicon: 'https://ilhandemirer.com/favicon.ico',
     copyright: `All rights reserved ${new Date().getFullYear()}`,
   });
 
