@@ -7,7 +7,7 @@ import { useTheme } from '@/context/ThemeContext';
 export default function Dashboard() {
   const { theme } = useTheme();
 
-  const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+  const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
   const updateDate = 'Apr 4, 2025';
 
