@@ -14,10 +14,10 @@ export async function generateRSSFeed() {
   const feed = new RSS({
     title: "Ilhan Demirer's Blog",
     description: 'Weekly insights on hospitality, business, and tech.',
-    id: 'https://ilhandemirer.com',
-    link: 'https://ilhandemirer.com',
+    site_url: 'https://ilhandemirer.com',
+    feed_url: 'https://ilhandemirer.com/rss.xml',
     language: 'en',
-    favicon: 'https://ilhandemirer.com/favicon.ico',
+    image_url: 'https://ilhandemirer.com/favicon.ico',
     copyright: `All rights reserved ${new Date().getFullYear()}`,
   });
 
@@ -28,6 +28,11 @@ export async function generateRSSFeed() {
       url: `${siteUrl}/blog/${post.slug}`,
       description: post.metadata.description || '',
       date: formatDate(post.metadata.date),
+      categories: post.metadata.tags,
+      enclosure: {
+        url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
+        type: 'image/jpeg',
+      },
     });
   });
 
