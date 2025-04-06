@@ -22,8 +22,13 @@ function parseFrontmatter(fileContent) {
 }
 
 async function getMDXFiles(dir) {
-  const files = await fs.readdir(dir, { withFileTypes: false });
-  return files.filter((file) => path.extname(file) === '.md');
+  try {
+    const files = await fs.readdir(dir, { withFileTypes: false });
+    return files.filter((file) => path.extname(file) === '.md');
+  } catch (err) {
+    console.error(`Error reading directory "${dir}":`, err);
+    return [];
+  }
 }
 
 async function readMDXFile(filePath) {
@@ -47,24 +52,30 @@ export async function readContent(content) {
 }
 
 async function getMDXData(dir) {
-  const mdxFiles = await getMDXFiles(dir);
+  try {
+    const mdxFiles = await getMDXFiles(dir);
 
-  const posts = await Promise.all(
-    mdxFiles.map(async (file) => {
-      const { metadata, content } = await readMDXFile(path.join(dir, file));
-      return {
-        metadata,
-        slug: metadata.slug,
-        content,
-      };
-    })
-  );
+    const posts = await Promise.all(
+      mdxFiles.map(async (file) => {
+        const { metadata, content } = await readMDXFile(path.join(dir, file));
+        return {
+          metadata,
+          slug: metadata.slug,
+          content,
+        };
+      })
+    );
 
-  return posts;
+    return posts;
+  } catch (err) {
+    console.error(`Error loading MDX data from "${dir}":`, err);
+    return [];
+  }
 }
 
 export async function getBlogPosts(secondPath) {
-  return await getMDXData(path.join(process.cwd(), 'app', secondPath));
+  const dir = path.join(process.cwd(), 'app', secondPath);
+  return await getMDXData(dir);
 }
 
 export function formatDate(date, includeRelative = false) {

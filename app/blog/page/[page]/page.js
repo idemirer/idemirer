@@ -14,11 +14,11 @@ export async function generateStaticParams() {
 }
 
 export default async function Blog({ params }) {
-  const pageParams = await params;
+  const { page } = await params;
   const allPostsData = await getBlogPosts('blog/posts');
   const allTags = await countedTags(allPostsData);
   const maxPage = Math.ceil(allPostsData.length / 5);
-  const currentPage = parseInt(pageParams.page, 10);
+  const currentPage = parseInt(page, 10);
 
   if (allPostsData.length === 0 || currentPage > maxPage || currentPage < 1) {
     notFound();
@@ -29,7 +29,7 @@ export default async function Blog({ params }) {
       <h1>Blog Posts</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={allPostsData} page={pageParams.page} path='/blog/page' />
+        <BlogPosts posts={allPostsData} page={page} path='/blog/page' />
       </section>
     </section>
   );
