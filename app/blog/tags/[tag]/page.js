@@ -17,11 +17,10 @@ export async function generateStaticParams() {
 }
 
 export default async function TagsPage({ params }) {
-  const tagParams = await params;
+  const { tag } = await params;
   const allPostsData = await getBlogPosts('blog/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tagParams.tag) !== -1);
   const allTags = await countedTags(filteredPosts);
-  const slicer = filteredPosts.length;
 
   if (filteredPosts.length === 0) {
     notFound();
@@ -32,7 +31,7 @@ export default async function TagsPage({ params }) {
       <h1>Blog Posts with Tag: {tagParams.tag}</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={filteredPosts} page={1} slice={slicer} />
+        <BlogPosts posts={filteredPosts} page={1} slice={5} path={`/blog/tags/${tag}`} />
       </section>
     </div>
   );
