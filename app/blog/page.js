@@ -11,7 +11,7 @@ export default async function Blog() {
       <h1>Blog Posts</h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={allPostsData} page={1} slice={5} />
+        <BlogPosts posts={allPostsData} page={1} slice={5} path='/blog/page' />
       </section>
     </section>
   );
