@@ -21,20 +21,27 @@ export async function generateRSSFeed() {
     copyright: `All rights reserved ${new Date().getFullYear()}`,
   });
 
-  posts.forEach((post) => {
-    feed.item({
-      title: post.metadata.title,
-      guid: `${siteUrl}/blog/${post.slug}`,
-      url: `${siteUrl}/blog/${post.slug}`,
-      description: post.metadata.description || '',
-      date: formatDate(post.metadata.date),
-      categories: post.metadata.tags,
-      enclosure: {
-        url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
-        type: 'image/jpeg',
-      },
+  posts
+    .sort((a, b) => {
+      if (new Date(a.metadata.date) > new Date(b.metadata.date)) {
+        return -1;
+      }
+      return 1;
+    })
+    .forEach((post) => {
+      feed.item({
+        title: post.metadata.title,
+        guid: `${siteUrl}/blog/${post.slug}`,
+        url: `${siteUrl}/blog/${post.slug}`,
+        description: post.metadata.description || '',
+        date: formatDate(post.metadata.date),
+        categories: post.metadata.tags,
+        enclosure: {
+          url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
+          type: 'image/jpeg',
+        },
+      });
     });
-  });
 
   const rss = feed.xml({ indent: true });
   const rssPath = path.join(process.cwd(), 'public', 'rss.xml');
