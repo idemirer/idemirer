@@ -4,12 +4,41 @@ import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { baseUrl } from './sitemap';
+
+export const metadata = {
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: 'Ilhan Demirer, Ph.D.',
+    template: 'Ilhan Demirer | %s',
+  },
+  description: 'Management faculty, share news and data on this site.',
+  image: 'https://www.ilhandemirer.com/images/wide-card.png',
+  openGraph: {
+    title: 'Ilhan Demirer Personal Website',
+    description: 'Management faculty, share news and data on this site.',
+    url: baseUrl,
+    siteName: 'Ilhan Demirer Personal Website',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function Layout({ children }) {
   return (
     <html lang='en'>
       <head>
-        <title>Ilhan Demirer, Ph.D.</title>
         <link rel='apple-touch-icon' sizes='180x180' href='/images/apple-touch-icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
