@@ -2,6 +2,11 @@ import { getBlogPosts, readContent } from '@/app/utils/utils.js';
 import { CustomMDX } from '@/app/utils/md.js';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'About Me',
+  description: 'About me.',
+};
+
 export default async function Page() {
   const mdContent = await getBlogPosts('/about/content/');
   const contentHTML = await readContent(mdContent[0].content);

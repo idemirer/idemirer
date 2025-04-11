@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Contact Information',
+  description: 'Contact information',
+};
+
 export default function Contact() {
   return (
     <section>

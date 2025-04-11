@@ -43,12 +43,12 @@ export default function Layout({ children }) {
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
-        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-        <meta name='description' content='Management faculty, share news and data on this site.' />
         <meta itemProp='name' content='Ilhan Demirer Personal Website' />
         <meta itemProp='description' content='Management faculty, share news and data on this site.' />
         <meta itemProp='image' content='https://www.ilhandemirer.com/images/wide-card.png' />
-        <meta property='og:url' content='https://www.ilhandemirer.com' />
+        {/* <meta property='og:url' content='https://www.ilhandemirer.com' />
+        <meta name='description' content='Management faculty, share news and data on this site.' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Ilhan Demirer Personal Website' />
         <meta property='og:description' content='Management faculty, share news and data on this site.' />
@@ -56,7 +56,7 @@ export default function Layout({ children }) {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
         <meta name='twitter:description' content='Management faculty, share news and data on this site.' />
-        <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
+        <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' /> */}
       </head>
       {/* <body className='antialiased w-full mt-1 md:mt-4 md:max-w-screen-lg lg:mx-auto light' data-theme='light'> */}
       <body className='w-full antialiased md:w-full' data-theme='light'>
