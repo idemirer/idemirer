@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
     return;
   }
 
-  const { title, date, summary: description, banner: image } = post.metadata;
+  const { title, date, author, description, banner: image } = post.metadata;
   const ogImage = image ? `${baseUrl}/images/blogimages/${image}` : `${baseUrl}/images/wide-card.png`;
 
   return {
@@ -29,7 +29,8 @@ export async function generateMetadata({ params }) {
       title,
       description,
       type: 'article',
-      date,
+      publishedTime: new Date(date).toISOString(),
+      authors: [author],
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
         {
