@@ -4,10 +4,10 @@ import strData from '@/assets/data/strdata.json';
 import tsaRawData from '@/assets/data/passengerData.json';
 import { useTheme } from '@/context/ThemeContext';
 
-export const metadata = {
-  title: 'Hospitality Data Dashboard',
-  description: 'Hospitality data dashboard, updated weekly.',
-};
+// export const metadata = {
+//   title: 'Hospitality Data Dashboard',
+//   description: 'Hospitality data dashboard, updated weekly.',
+// };
 
 export default function Dashboard() {
   const { theme } = useTheme();
