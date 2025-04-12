@@ -10,17 +10,20 @@ export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'Ilhan Demirer, Ph.D.',
-    template: 'Ilhan Demirer | %s',
+    template: '%s | Ilhan Demirer',
   },
-  description: 'Management faculty, share news and data on this site.',
-  image: 'https://www.ilhandemirer.com/images/wide-card.png',
+  description: 'SUNY Plattsburgh Management faculty, I share hospitality news and data on this site.',
+  images: [{ url: 'https://www.ilhandemirer.com/images/wide-card.png' }],
+  authors: [{ name: 'Ilhan Demirer', url: 'https://www.ilhandemirer.com/' }],
+  keywords: ['Ilhan Demirer', 'hospitality', 'hospitality data', 'hospitality news', 'hospitality education'],
   openGraph: {
     title: 'Ilhan Demirer Personal Website',
-    description: 'Management faculty, share news and data on this site.',
+    description: 'SUNY Plattsburgh Management faculty, I share hospitality news and data on this site.',
     url: baseUrl,
     siteName: 'Ilhan Demirer Personal Website',
     locale: 'en_US',
     type: 'website',
+    images: [{ url: 'https://www.ilhandemirer.com/images/wide-card.png' }],
   },
   robots: {
     index: true,
@@ -44,21 +47,12 @@ export default function Layout({ children }) {
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
         <meta itemProp='name' content='Ilhan Demirer Personal Website' />
-        <meta itemProp='description' content='Management faculty, share news and data on this site.' />
+        <meta
+          itemProp='description'
+          content='SUNY Plattsburgh Management faculty I  share hospitality news and data on this site.'
+        />
         <meta itemProp='image' content='https://www.ilhandemirer.com/images/wide-card.png' />
-        {/* <meta property='og:url' content='https://www.ilhandemirer.com' />
-        <meta name='description' content='Management faculty, share news and data on this site.' />
-        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content='Ilhan Demirer Personal Website' />
-        <meta property='og:description' content='Management faculty, share news and data on this site.' />
-        <meta property='og:image' content='https://www.ilhandemirer.com/images/wide-card.png' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Ilhan Demirer Personal Website' />
-        <meta name='twitter:description' content='Management faculty, share news and data on this site.' />
-        <meta name='twitter:image' content='https://www.ilhandemirer.com/images/wide-card.png' /> */}
       </head>
-      {/* <body className='antialiased w-full mt-1 md:mt-4 md:max-w-screen-lg lg:mx-auto light' data-theme='light'> */}
       <body className='w-full antialiased md:w-full' data-theme='light'>
         <div className='w-screen-lg mt-1 md:w-5xl lg:mx-auto'>
           <ThemeProvider>

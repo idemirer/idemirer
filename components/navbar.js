@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
-import MobileNavBar from './mobilenavbar';
+import MobileNavBar from './mobileNavbar';
 import navLinks from '@/assets/navLinks.json';
 
 export default function Navbar() {
@@ -11,11 +11,7 @@ export default function Navbar() {
     <nav className='flex justify-start items-center py-4 pb-4 mr-3'>
       <div className='lg:flex hidden md:ml-2 md:block'>
         {navLinks.map((path) => (
-          <Link
-            key={path.name}
-            href={path.link}
-            className='rounded-md text-xl font-bold hover:text-gray-800 hover:bg-gray-300 p-2'
-          >
+          <Link key={path.name} href={path.link} className='rounded-md text-xl font-bold hover:text-(--hover) p-2'>
             {path.name}
           </Link>
         ))}

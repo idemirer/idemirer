@@ -3,6 +3,11 @@ import { getBlogPosts, countedTags } from '@/app/utils/utils';
 import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
+export const metadata = {
+  title: 'Blog Posts',
+  description: 'Hospitality news, updated weekly.',
+};
+
 export async function generateStaticParams() {
   const posts = await getBlogPosts('blog/posts');
 

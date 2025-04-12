@@ -18,21 +18,26 @@ export default async function Home() {
         />
       </div>
       <h1>Ilhan Demirer, Ph.D.</h1>
-      <section>
+      <section className='main-page'>
         <p className='py-1'>
-          Hello, I am <strong>Ilhan</strong>.
-        </p>
-        <p className='py-1'>
-          I am a Management faculty at{' '}
+          I am an Associate Professor and Chair of the{' '}
+          <a href='https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html' target='_blank'>
+            Department of Management, Information Systems, and Analytics
+          </a>{' '}
+          at{' '}
           <a href='https://www.plattsburgh.edu/' target='_blank'>
             State University of New York at Plattsburgh
           </a>
-          .
+          . My teaching and research interest are in the areas of hospitality managerial accounting, hospitality
+          finance, hospitality management, and hospitality technology. I am also interested in the use of data analytics
+          in the hospitality industry.
         </p>
-        <p>My research interest are in Hospitality Finance and Information Technology.</p>
         <p className='py-1'>
-          On this page I post weekly updates on <Link href='/blog/page/1'>news, research,</Link> and{' '}
-          <Link href='/dashboard'>hospitality data</Link>.
+          On this site, I share news and <Link href='/dashboard'>data</Link> related to hospitality industry. I plan to
+          add my research and teaching materials in the future.
+        </p>
+        <p className='py-1'>
+          Feel free to <Link href='/contact'>contact me</Link> if you have any questions or comments.
         </p>
       </section>
       <section className='py-4'>

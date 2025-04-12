@@ -29,7 +29,7 @@
 
 ## RESEARCH INTERESTS
 
-- Corporate finance; Hospitality Financial management; Hospitality Managerial Accounting; Hospitality Technology Adaptation and Impact.
+- Hospitality Financial Management; Hospitality Managerial Accounting; Hospitality Technology Adaptation and Impact.
 
 ## TEACHING INTERESTS
 

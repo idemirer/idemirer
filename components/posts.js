@@ -48,7 +48,10 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
               </Link>
               <small className='flex flex-wrap px-4 gap-1 overflow-hidden max-h-[130px]'>
                 {post.metadata.tags.map((tag) => (
-                  <div key={tag} className='rounded-lg bg-gray-600 text-white p-1 dark:text-black dark:bg-neutral-200'>
+                  <div
+                    key={tag}
+                    className='tags rounded-lg bg-gray-600 text-white p-1 dark:text-black dark:bg-neutral-200'
+                  >
                     <Link href={`/blog/tags/${tag}/1`}>#{tag}</Link>
                   </div>
                 ))}

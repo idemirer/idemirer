@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { TagList } from './taglist';
+import { TagList } from './tagList';
 
 export async function Tags({ allTags }) {
   const sortedTags = await allTags;

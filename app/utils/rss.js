@@ -33,8 +33,9 @@ export async function generateRSSFeed() {
         title: post.metadata.title,
         guid: `${siteUrl}/blog/${post.slug}`,
         url: `${siteUrl}/blog/${post.slug}`,
+        author: 'Ilhan Demirer',
         description: post.metadata.description || '',
-        date: formatDate(post.metadata.date),
+        date: new Date(post.metadata.date).toISOString(),
         categories: post.metadata.tags,
         enclosure: {
           url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,

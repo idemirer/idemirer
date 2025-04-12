@@ -2,6 +2,11 @@ import { BlogPosts } from '@/components/posts';
 import { Tags } from '@/components/tags';
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
 
+export const metadata = {
+  title: 'Blog Posts',
+  description: 'Hospitality news, updated weekly.',
+};
+
 export default async function Blog() {
   let allPostsData = await getBlogPosts('blog/posts');
   let allTags = await countedTags(allPostsData);

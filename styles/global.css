@@ -60,12 +60,17 @@ body {
 }
 
 @layer utilities {
-  a:hover {
+  a {
+    @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-400 decoration-[0.1em] hover:no-underline hover:text-(--hover);
+  }
+  nav a,
+  .tags a {
+    @apply no-underline;
+  }
+  nav a:hover,
+  .tags a:hover {
     @apply no-underline;
     color: var(--hover);
-  }
-  .post a {
-    @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-400 decoration-[0.1em] hover:no-underline;
   }
 }
 

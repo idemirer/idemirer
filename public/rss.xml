@@ -9,7 +9,7 @@
             <link>https://ilhandemirer.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 10 Apr 2025 21:17:03 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Apr 2025 21:47:16 GMT</lastBuildDate>
         <atom:link href="https://ilhandemirer.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <language><![CDATA[en]]></language>
@@ -20,7 +20,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-15-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 11 Apr 2025 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-15-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -30,7 +31,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-14-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 04 Apr 2025 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Apr 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-14-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -40,7 +42,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-13-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Mar 2025 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Mar 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-13-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -50,7 +53,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-12-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Mar 2025 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Mar 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-12-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -60,7 +64,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-11-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Mar 2025 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-11-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -70,7 +75,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-10-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Mar 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Mar 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-10-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -80,7 +86,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-09-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Feb 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-09-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -90,7 +97,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-08-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Feb 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Feb 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-08-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -100,7 +108,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-07-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Feb 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Feb 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-07-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -110,7 +119,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-06-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Feb 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Feb 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-06-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -120,7 +130,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-05-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 31 Jan 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-05-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -130,7 +141,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-04-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 Jan 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Jan 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-04-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -140,7 +152,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-03-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 17 Jan 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 Jan 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-03-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -150,7 +163,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-02-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Jan 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-02-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -160,7 +174,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-01-2025</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 03 Jan 2025 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Jan 2025 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-01-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -169,7 +184,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-52-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 27 Dec 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 27 Dec 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-52-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -178,7 +194,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-51-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 20 Dec 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-51-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -187,7 +204,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-50-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 13 Dec 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-50-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -196,7 +214,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-49-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 06 Dec 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-49-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -205,7 +224,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-48-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Nov 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Nov 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-48-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -214,7 +234,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-47-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Nov 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-47-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -224,7 +245,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[forecast]]></category>
-            <pubDate>Fri, 15 Nov 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-46-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -233,7 +255,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-45-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 08 Nov 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-45-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -242,7 +265,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-44-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Nov 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-44-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -251,7 +275,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-43-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 25 Oct 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 25 Oct 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-43-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -260,7 +285,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-42-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 18 Oct 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-42-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -269,7 +295,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-41-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 11 Oct 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Oct 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-41-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -278,7 +305,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-40-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 04 Oct 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Oct 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-40-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -287,7 +315,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-39-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 27 Sep 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 27 Sep 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-39-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -296,7 +325,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-38-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 20 Sep 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 20 Sep 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-38-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -305,7 +335,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-37-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 13 Sep 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 13 Sep 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-37-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -314,7 +345,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-36-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 06 Sep 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-36-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -323,7 +355,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-35-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 30 Aug 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 30 Aug 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-35-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -332,7 +365,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-34-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 23 Aug 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-34-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -341,7 +375,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-33-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 16 Aug 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 16 Aug 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-33-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -350,7 +385,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-32-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 09 Aug 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 09 Aug 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-32-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -359,7 +395,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-31-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 02 Aug 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 02 Aug 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-31-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -368,7 +405,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-30-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 26 Jul 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 26 Jul 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-30-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -377,7 +415,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-29-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 19 Jul 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 19 Jul 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-29-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -386,7 +425,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-28-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 12 Jul 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-28-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -395,7 +435,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-27-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 05 Jul 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-27-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -404,7 +445,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-26-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Jun 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Jun 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-26-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -413,7 +455,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-25-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Jun 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-25-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -422,7 +465,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-24-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Jun 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-24-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -431,7 +475,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-23-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Jun 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Jun 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-23-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -440,7 +485,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-22-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 31 May 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-22-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -449,7 +495,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-21-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 May 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 May 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-21-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -458,7 +505,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-20-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 17 May 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 May 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-20-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -467,7 +515,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-19-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 May 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-19-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -476,7 +525,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-18-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 03 May 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-18-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -485,7 +535,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-17-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 26 Apr 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 26 Apr 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-17-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -494,7 +545,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-16-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 19 Apr 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-16-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -503,7 +555,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-15-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 12 Apr 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-15-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -512,7 +565,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-14-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 05 Apr 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 05 Apr 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-14-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -521,7 +575,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-13-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Mar 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Mar 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-13-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -530,7 +585,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-12-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Mar 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Mar 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-12-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -539,7 +595,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-11-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 15 Mar 2024 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-11-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -548,7 +605,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-10-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 08 Mar 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Mar 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-10-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -557,7 +615,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-09-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Mar 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-09-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -566,7 +625,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/academic-journals</guid>
             <category><![CDATA[academic-journals]]></category>
             <category><![CDATA[hospitality]]></category>
-            <pubDate>Wed, 28 Feb 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Wed, 28 Feb 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-09-Journals.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -575,7 +635,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-08-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 23 Feb 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-08-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -584,7 +645,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-07-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 16 Feb 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 16 Feb 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-07-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -593,7 +655,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-06-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 09 Feb 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 09 Feb 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-06-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -602,7 +665,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-05-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 02 Feb 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 02 Feb 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-05-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -611,7 +675,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-04-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 26 Jan 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 26 Jan 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-04-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -620,7 +685,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-03-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 19 Jan 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-03-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -629,7 +695,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-02-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 12 Jan 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 12 Jan 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-02-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -638,7 +705,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-01-2024</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 05 Jan 2024 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 05 Jan 2024 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2024-week-01-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -647,7 +715,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-52-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Dec 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Dec 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-52-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -656,7 +725,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-51-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Dec 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Dec 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-51-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -665,7 +735,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-50-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 15 Dec 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Dec 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-50-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -674,7 +745,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-49-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 08 Dec 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-49-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -683,7 +755,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-48-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Dec 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-48-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -692,7 +765,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-47-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 Nov 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Nov 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-47-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -701,7 +775,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-45-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Nov 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-45-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -710,7 +785,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-46-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Nov 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-46-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -722,7 +798,8 @@
             <category><![CDATA[q3]]></category>
             <category><![CDATA[marriott]]></category>
             <category><![CDATA[hyatt]]></category>
-            <pubDate>Fri, 03 Nov 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-44-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -733,7 +810,8 @@
             <category><![CDATA[investment]]></category>
             <category><![CDATA[ESG]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 27 Oct 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-43-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -742,7 +820,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-42-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 20 Oct 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-42-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -751,7 +830,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-41-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 13 Oct 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 13 Oct 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-41-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -762,7 +842,8 @@
             <category><![CDATA[robots]]></category>
             <category><![CDATA[ai]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 06 Oct 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-40-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -772,7 +853,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[labor]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Sep 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-39-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -785,7 +867,8 @@
             <category><![CDATA[forecast]]></category>
             <category><![CDATA[ai]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Sep 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-38-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -800,7 +883,8 @@
             <category><![CDATA[luxury]]></category>
             <category><![CDATA[brands]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 15 Sep 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Sep 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-37-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -814,7 +898,8 @@
             <category><![CDATA[data]]></category>
             <category><![CDATA[construction]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 08 Sep 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Sep 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-35-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -823,7 +908,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-35-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Sep 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-35-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -832,7 +918,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-34-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 25 Aug 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-34-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -841,7 +928,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-33-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 18 Aug 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-33-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -850,7 +938,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-32-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 11 Aug 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-32-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -859,7 +948,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-31-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 04 Aug 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Aug 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-31-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -868,7 +958,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-30-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Jul 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-30-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -877,7 +968,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-29-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Jul 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-29-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -886,7 +978,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-28-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Jul 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-28-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -895,7 +988,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-27-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Jul 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Jul 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-27-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -904,7 +998,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-26-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 30 Jun 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 30 Jun 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-26-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -913,7 +1008,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-25-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 23 Jun 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 23 Jun 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-25-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -922,7 +1018,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-24-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 16 Jun 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-24-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -931,7 +1028,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-23-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 09 Jun 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-23-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -940,7 +1038,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-22-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 02 Jun 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-22-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -949,7 +1048,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-21-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 26 May 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 26 May 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-21-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -958,7 +1058,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-20-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 19 May 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 19 May 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-20-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -968,7 +1069,8 @@
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 12 May 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 12 May 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-19-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -977,7 +1079,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-18-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 05 May 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 05 May 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-18-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -987,7 +1090,8 @@
             <category><![CDATA[construction]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Apr 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Apr 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-17-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -997,7 +1101,8 @@
             <category><![CDATA[construction]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Apr 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Apr 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-16-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1008,7 +1113,8 @@
             <category><![CDATA[business-travel]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Apr 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Apr 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-15-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1019,7 +1125,8 @@
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Apr 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Apr 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-14-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1028,7 +1135,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-13-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 31 Mar 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-13-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1038,7 +1146,8 @@
             <category><![CDATA[restaurants]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 Mar 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-12-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1048,7 +1157,8 @@
             <category><![CDATA[forecast]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 17 Mar 2023 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 Mar 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-11-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1058,7 +1168,8 @@
             <category><![CDATA[employment]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Mar 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Mar 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-10-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1067,7 +1178,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-09-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 03 Mar 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Mar 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-09-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1076,7 +1188,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-08-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 Feb 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-08-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1085,7 +1198,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-07-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 17 Feb 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 Feb 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-07-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1094,7 +1208,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-06-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Feb 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Feb 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-06-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1104,7 +1219,8 @@
             <category><![CDATA[cbre]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 03 Feb 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Feb 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-05-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1115,7 +1231,8 @@
             <category><![CDATA[hvs]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 27 Jan 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 27 Jan 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-04-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1125,7 +1242,8 @@
             <category><![CDATA[construction]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 20 Jan 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-03-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1135,7 +1253,8 @@
             <category><![CDATA[transactions]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 13 Jan 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-02-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1144,7 +1263,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-01-2023</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 06 Jan 2023 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2023-week-01-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1153,7 +1273,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-52-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 30 Dec 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 30 Dec 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-52-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1164,7 +1285,8 @@
             <category><![CDATA[metaverse]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 23 Dec 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 23 Dec 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-51-occupancy.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1173,7 +1295,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-50-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 16 Dec 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 16 Dec 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-50-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1185,7 +1308,8 @@
             <category><![CDATA[events]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 09 Dec 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 09 Dec 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-49-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1196,7 +1320,8 @@
             <category><![CDATA[covid-relief]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 02 Dec 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 02 Dec 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-48-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1206,7 +1331,8 @@
             <category><![CDATA[restaurant-satisfaction]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 25 Nov 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 25 Nov 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-47-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1217,7 +1343,8 @@
             <category><![CDATA[short-term-rentals]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 18 Nov 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-46-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1228,7 +1355,8 @@
             <category><![CDATA[travel-trends]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 11 Nov 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-45-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1239,7 +1367,8 @@
             <category><![CDATA[leisure-travel]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 04 Nov 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Nov 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-44-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1250,7 +1379,8 @@
             <category><![CDATA[google]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 28 Oct 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Oct 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-43-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1262,7 +1392,8 @@
             <category><![CDATA[discount-rate]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 21 Oct 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-42-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1273,7 +1404,8 @@
             <category><![CDATA[business-travel]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 14 Oct 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-41-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1283,7 +1415,8 @@
             <category><![CDATA[staffing]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 07 Oct 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Oct 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-40-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1293,7 +1426,8 @@
             <category><![CDATA[travel]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 30 Sep 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-39-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1303,7 +1437,8 @@
             <category><![CDATA[construction]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 23 Sep 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-38-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1314,7 +1449,8 @@
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 16 Sep 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-37-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1324,7 +1460,8 @@
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 09 Sep 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 09 Sep 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-36-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1336,7 +1473,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[construction]]></category>
-            <pubDate>Fri, 02 Sep 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-35-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1346,7 +1484,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[business-travel]]></category>
-            <pubDate>Fri, 26 Aug 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-34-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1355,7 +1494,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-33-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 19 Aug 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 19 Aug 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-33-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1364,7 +1504,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-32-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 12 Aug 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 12 Aug 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-32-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1373,7 +1514,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-31-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 05 Aug 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 05 Aug 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-31-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1382,7 +1524,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-30-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Jul 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-30-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1391,7 +1534,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-29-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Jul 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Jul 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-29-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1400,7 +1544,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-28-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 15 Jul 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Jul 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-28-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1409,7 +1554,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-27-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 08 Jul 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Jul 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-27-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1418,7 +1564,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-26-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Jul 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Jul 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-26-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1429,7 +1576,8 @@
             <category><![CDATA[travel]]></category>
             <category><![CDATA[forecast]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 24 Jun 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Jun 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-25-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1438,7 +1586,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-24-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 17 Jun 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-24-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1447,7 +1596,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-23-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Jun 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Jun 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-23-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1456,7 +1606,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-22-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 03 Jun 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Jun 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-22-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1465,7 +1616,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-21-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 27 May 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 27 May 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-21-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1476,7 +1628,8 @@
             <category><![CDATA[forecast]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 20 May 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 20 May 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-20-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1490,7 +1643,8 @@
             <category><![CDATA[restaurants]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 13 May 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-19-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1500,7 +1654,8 @@
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 06 May 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-18-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1509,7 +1664,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-17-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 29 Apr 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 29 Apr 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-17-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1518,7 +1674,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-16-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 22 Apr 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 22 Apr 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-16-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1529,7 +1686,8 @@
             <category><![CDATA[str]]></category>
             <category><![CDATA[profitability]]></category>
             <category><![CDATA[franchising]]></category>
-            <pubDate>Fri, 15 Apr 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 15 Apr 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-15-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1541,7 +1699,8 @@
             <category><![CDATA[deals]]></category>
             <category><![CDATA[business-travel]]></category>
             <category><![CDATA[trends]]></category>
-            <pubDate>Fri, 08 Apr 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 08 Apr 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-14-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1550,7 +1709,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-13-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 01 Apr 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-13-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1561,7 +1721,8 @@
             <category><![CDATA[str]]></category>
             <category><![CDATA[restaurants]]></category>
             <category><![CDATA[inflation]]></category>
-            <pubDate>Fri, 25 Mar 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 25 Mar 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-12-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1571,7 +1732,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[choice-hotels]]></category>
-            <pubDate>Fri, 18 Mar 2022 04:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-11-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1582,7 +1744,8 @@
             <category><![CDATA[str]]></category>
             <category><![CDATA[restaurants]]></category>
             <category><![CDATA[google]]></category>
-            <pubDate>Fri, 11 Mar 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Mar 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-10-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1592,7 +1755,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[google]]></category>
-            <pubDate>Fri, 04 Mar 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Mar 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-09-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1601,7 +1765,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-08-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 25 Feb 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 25 Feb 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-08-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1610,7 +1775,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-07-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 18 Feb 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 18 Feb 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-07-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1620,7 +1786,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[transactions]]></category>
-            <pubDate>Fri, 11 Feb 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 11 Feb 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-06-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1629,7 +1796,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-05-2022</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 04 Feb 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 04 Feb 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-05-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1641,7 +1809,8 @@
             <category><![CDATA[construction]]></category>
             <category><![CDATA[renovation]]></category>
             <category><![CDATA[supply-chain]]></category>
-            <pubDate>Fri, 28 Jan 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 28 Jan 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-04-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1651,7 +1820,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[asset-management]]></category>
-            <pubDate>Fri, 21 Jan 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 21 Jan 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-03-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1662,7 +1832,8 @@
             <category><![CDATA[str]]></category>
             <category><![CDATA[events]]></category>
             <category><![CDATA[recovery]]></category>
-            <pubDate>Fri, 14 Jan 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-02-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1672,7 +1843,8 @@
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <category><![CDATA[employment]]></category>
-            <pubDate>Fri, 07 Jan 2022 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2022-week-01-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1681,7 +1853,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-52-2021</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 31 Dec 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 31 Dec 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-52-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1693,7 +1866,8 @@
             <category><![CDATA[jobs]]></category>
             <category><![CDATA[finance]]></category>
             <category><![CDATA[real-estate]]></category>
-            <pubDate>Fri, 24 Dec 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 24 Dec 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-51-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1704,7 +1878,8 @@
             <category><![CDATA[str]]></category>
             <category><![CDATA[amadeus]]></category>
             <category><![CDATA[events]]></category>
-            <pubDate>Fri, 17 Dec 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 17 Dec 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-50-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1713,7 +1888,8 @@
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-49-2021</guid>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Fri, 10 Dec 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 10 Dec 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-49-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1725,7 +1901,8 @@
             <category><![CDATA[robots]]></category>
             <category><![CDATA[automation]]></category>
             <category><![CDATA[forecast]]></category>
-            <pubDate>Fri, 03 Dec 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Fri, 03 Dec 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-48-occupancy.png" length="0" type="image/jpeg"/>
         </item>
         <item>
@@ -1738,7 +1915,8 @@
             <category><![CDATA[jll-report]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
-            <pubDate>Sat, 27 Nov 2021 05:00:00 GMT</pubDate>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Sat, 27 Nov 2021 00:00:00 GMT</pubDate>
             <enclosure url="https://ilhandemirer.com/images/blogimages/2021-week-47-jll-profitability-data.jpg" length="0" type="image/jpeg"/>
         </item>
     </channel>

@@ -1,5 +1,10 @@
 import { getBlogPosts, countedTags } from '@/app/utils/utils';
-import { TagList } from '@/components/taglist';
+import { TagList } from '@/components/tagList';
+
+export const metadata = {
+  title: 'Blog Posts',
+  description: 'Hospitality news, updated weekly.',
+};
 
 export default async function TagsPage() {
   const allPostsData = await getBlogPosts('blog/posts');
