@@ -75,6 +75,9 @@ body {
     @apply no-underline;
     color: var(--hover);
   }
+  .about hr {
+    @apply mb-2;
+  }
 }
 
 .post .icon,

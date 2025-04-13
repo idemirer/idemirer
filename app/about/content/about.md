@@ -1,41 +1,49 @@
 # Ilhan Demirer, Ph.D.
 
-**CHAIR, ASSOCIATE PROFESSOR**  
+**Chair, Associate Professor**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  
 [School of Business and Economics](https://www.plattsburgh.edu/academics/schools/business-economics/)  
 [State University of New York Plattsburgh](https://www.plattsburgh.edu/)
 
-## ACADEMIC EXPERIENCE
+## Academic Experience
+
+---
 
 |                                                             |                               |
 | ----------------------------------------------------------- | ----------------------------: |
-| **CHAIR**                                                   |       **Fall 2023 – Present** |
+| **Chair**                                                   |       **Fall 2023 – Present** |
 | Department of Management, Information Systems and Analytics |                               |
 | State University of New York Plattsburgh, NY, USA           |                               |
 |                                                             |                               |
-| **ASSOCIATE PROFESSOR**                                     |       **Fall 2020 – Present** |
+| **Associate Professor**                                     |       **Fall 2020 – Present** |
 | Department of Management, Information Systems and Analytics |                               |
 | State University of New York Plattsburgh, NY, USA           |                               |
 |                                                             |                               |
-| **ASSISTANT PROFESSOR**                                     |   **Fall 2016 – Spring 2020** |
+| **Assistant Professor**                                     |   **Fall 2016 – Spring 2020** |
 | Department of Hospitality Management                        |                               |
 | State University of New York Plattsburgh, NY, USA           |                               |
 |                                                             |                               |
-| **ASSISTANT PROFESSOR**                                     |    **April 2014 – July 2016** |
+| **Assistant Professor**                                     |    **April 2014 – July 2016** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
 |                                                             |                               |
 | **SENIOR LECTURER**                                         | **January 2013 – March 2014** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
 
-## RESEARCH INTERESTS
+## Research Interests
+
+---
 
 - Hospitality Financial Management; Hospitality Managerial Accounting; Hospitality Technology Adaptation and Impact.
 
-## TEACHING INTERESTS
+## Teaching Interests
+
+---
 
 - Hospitality Financial Management; Hospitality Managerial Accounting; Lodging Operations Management; Hotel Asset Management; Revenue Management; Business Analytics; Information Technology.
 
-## EDUCATION
+## Education
+
+---
 
 |                                                                   |                 |
 | ----------------------------------------------------------------- | --------------: |
@@ -49,7 +57,9 @@
 | **B.S. Tourism and Hotel Management**                             |    **May 2005** |
 | Bilkent University, Ankara, Turkey                                |                 |
 
-## PUBLICATIONS
+## Publications
+
+---
 
 - Kizildag, M., Ozdemir, O., Dogru, T., **Demirer, I.**, & Gultek, M. (2024). Macroeconomic conditions, cash holdings, and financial constraints in restaurant firms. _Tourism Economics_, _0_(0). [https://doi.org/10.1177/13548166241306473](https://doi.org/10.1177/13548166241306473)
 
