@@ -49,7 +49,7 @@ export default function Layout({ children }) {
         <meta itemProp='name' content='Ilhan Demirer Personal Website' />
         <meta
           itemProp='description'
-          content='SUNY Plattsburgh Management faculty I  share hospitality news and data on this site.'
+          content='SUNY Plattsburgh Management faculty. I  share hospitality news and data on this site.'
         />
         <meta itemProp='image' content='https://www.ilhandemirer.com/images/wide-card.png' />
       </head>
