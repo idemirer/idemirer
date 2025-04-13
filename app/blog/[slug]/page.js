@@ -3,6 +3,7 @@ import { CustomMDX } from '@/app/utils/md.js';
 import { formatDate, getBlogPosts, readContent } from '@/app/utils/utils.js';
 import { notFound } from 'next/navigation';
 import { baseUrl } from '@/app/sitemap';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts('blog/posts');
@@ -58,7 +59,7 @@ export default async function Post({ params }) {
   const contentHTML = await readContent(post.content);
 
   return (
-    <section>
+    <section className='mb-8'>
       <h1>{post.metadata.title}</h1>
       <div className='flex justify-between items-center my-2 text-sm'>
         <p className='text-sm'>{formatDate(post.metadata.date)}</p>

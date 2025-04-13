@@ -60,13 +60,13 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
             </div>
           </div>
         ))}
-      <div className={slice == 1 ? 'hidden' : 'flex w-full'}>
+      <div className={slice == 1 ? 'hidden' : 'tags flex w-full'}>
         <Link
           href={`${path}/${prevPage}`}
           className={
             page - 1 == 0
-              ? 'tags text-sm font-bold rounded-lg p-2 bg-gray-800 text-white mx-auto ml-0 pointer-events-none opacity-30 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
-              : 'tags text-sm font-bold rounded-lg p-2 bg-gray-800 text-white mx-auto ml-0 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              ? 'text-sm font-bold rounded-lg p-2 mx-auto ml-0 bg-gray-800 text-white pointer-events-none opacity-30 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              : 'text-sm font-bold rounded-lg p-2 mx-auto ml-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
           }
         >
           &#xab; NEWER POSTS
@@ -75,8 +75,8 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
           href={`${path}/${nextPage}`}
           className={
             nextPage === maxPage + 1
-              ? 'tags pointer-events-none opacity-30 text-sm font-bold rounded-lg p-2 bg-gray-800 text-white ml-auto mr-0 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
-              : 'tags text-sm font-bold rounded-lg p-2 bg-gray-800 text-white ml-auto mr-0 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              ? 'pointer-events-none opacity-30 text-sm font-bold rounded-lg p-2 ml-auto mr-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              : 'text-sm font-bold rounded-lg p-2 ml-auto mr-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
           }
         >
           OLDER POSTS &#xbb;

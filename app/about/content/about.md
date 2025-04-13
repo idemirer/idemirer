@@ -1,4 +1,4 @@
-# ILHAN DEMIRER, Ph.D.
+# Ilhan Demirer, Ph.D.
 
 **CHAIR, ASSOCIATE PROFESSOR**  
 [Department of Management, Information Systems and Analytics](https://www.plattsburgh.edu/academics/schools/business-economics/misa/index.html)  

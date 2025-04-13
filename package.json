@@ -21,6 +21,7 @@
     "next": "^15.2.4",
     "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",
+    "react-medium-image-zoom": "^5.2.14",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.1",
     "rehype-img-size": "1.0.1",

@@ -2,7 +2,7 @@ export default function Footer() {
   const today = new Date();
   const thisYear = today.getFullYear();
   return (
-    <footer className='text-center my-6 mx-4 md:mx-auto md:w-[400px]'>
+    <footer className='text-center my-10 mx-4 md:mx-auto md:w-[400px]'>
       <div className='flex justify-between mx-4'>
         <div>
           <a
