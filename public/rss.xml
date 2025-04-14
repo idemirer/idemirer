@@ -9,10 +9,22 @@
             <link>https://ilhandemirer.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 13 Apr 2025 22:41:52 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Apr 2025 01:17:50 GMT</lastBuildDate>
         <atom:link href="https://ilhandemirer.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[This week in Hospitality & Tourism #16 2025]]></title>
+            <description><![CDATA[The U.S. hotel industry reported mixed year-over-year comparisons, according to CoStar’s latest data through 12 April.]]></description>
+            <link>https://ilhandemirer.com/blog/week-16-2025</link>
+            <guid isPermaLink="false">https://ilhandemirer.com/blog/week-16-2025</guid>
+            <category><![CDATA[cbre]]></category>
+            <category><![CDATA[news]]></category>
+            <category><![CDATA[str]]></category>
+            <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
+            <pubDate>Sun, 13 Apr 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-15-occupancy.svg" length="0" type="image/jpeg"/>
+        </item>
         <item>
             <title><![CDATA[This week in Hospitality & Tourism #15 2025]]></title>
             <description><![CDATA[The U.S. hotel industry reported mixed year-over-year comparisons, according to CoStar’s latest data through 5 April.]]></description>
