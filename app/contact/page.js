@@ -7,6 +7,18 @@ export default function Contact() {
   return (
     <section>
       <h1>Contact Information</h1>
+      <div className='my-4'>
+        <h3>SUNY Plattsburgh Office:</h3>
+        <p>
+          Department of Management, Information Systems and Analytics <br />
+          231 Au Sable Hall <br />
+          101 Broad Street <br />
+          Plattsburgh, NY 12901
+        </p>
+        <p>
+          📞<a href='tel:518-564-4202'>518-564-4202</a>
+        </p>
+      </div>
       <div className='flex space-x-4 font-bold py-2'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
