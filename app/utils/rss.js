@@ -2,7 +2,6 @@ import { getBlogPosts } from './utils.js';
 import path from 'path';
 import fs from 'fs/promises';
 import { createRequire } from 'module';
-import { formatDate } from './utils.js';
 
 const require = createRequire(import.meta.url);
 const RSS = require('rss');
