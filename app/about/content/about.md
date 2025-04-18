@@ -26,7 +26,7 @@
 | **Assistant Professor**                                     |    **April 2014 – July 2016** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
 |                                                             |                               |
-| **SENIOR LECTURER**                                         | **January 2013 – March 2014** |
+| **Senior Lecturer**                                         | **January 2013 – March 2014** |
 | The Emirates Academy of Hospitality Management, Dubai, UAE  |                               |
 
 ## Research Interests

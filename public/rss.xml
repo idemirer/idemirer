@@ -9,7 +9,7 @@
             <link>https://ilhandemirer.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 14 Apr 2025 01:17:50 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Apr 2025 21:17:50 GMT</lastBuildDate>
         <atom:link href="https://ilhandemirer.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <language><![CDATA[en]]></language>
@@ -19,11 +19,12 @@
             <link>https://ilhandemirer.com/blog/week-16-2025</link>
             <guid isPermaLink="false">https://ilhandemirer.com/blog/week-16-2025</guid>
             <category><![CDATA[cbre]]></category>
+            <category><![CDATA[travel]]></category>
             <category><![CDATA[news]]></category>
             <category><![CDATA[str]]></category>
             <dc:creator><![CDATA[Ilhan Demirer]]></dc:creator>
-            <pubDate>Sun, 13 Apr 2025 12:00:00 GMT</pubDate>
-            <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-15-occupancy.svg" length="0" type="image/jpeg"/>
+            <pubDate>Fri, 18 Apr 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://ilhandemirer.com/images/blogimages/2025-week-16-occupancy.svg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[This week in Hospitality & Tourism #15 2025]]></title>
