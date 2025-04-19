@@ -46,12 +46,6 @@ export default function Layout({ children }) {
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
-        <meta itemProp='name' content='Ilhan Demirer Personal Website' />
-        <meta
-          itemProp='description'
-          content='SUNY Plattsburgh Management faculty. I  share hospitality news and data on this site.'
-        />
-        <meta itemProp='image' content='https://www.ilhandemirer.com/images/wide-card.png' />
       </head>
       <body className='w-full antialiased md:w-full' data-theme='light'>
         <div className='w-screen-lg mt-1 md:w-5xl lg:mx-auto'>
