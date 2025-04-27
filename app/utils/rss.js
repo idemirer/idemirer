@@ -33,6 +33,7 @@ export async function generateRSSFeed() {
         guid: `${siteUrl}/blog/${post.slug}`,
         url: `${siteUrl}/blog/${post.slug}`,
         author: 'Ilhan Demirer',
+        image_url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
         description: post.metadata.description || '',
         date: new Date(post.metadata.date + ' 08:00').toISOString(),
         categories: post.metadata.tags,
@@ -40,6 +41,9 @@ export async function generateRSSFeed() {
           url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
           type: 'image/jpeg',
         },
+        custom_elements: [
+          { 'media:thumbnail': { _attr: { href: `${siteUrl}/images/blogimages/${post.metadata.banner}` } } },
+        ],
       });
     });
 

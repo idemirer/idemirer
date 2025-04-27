@@ -44,26 +44,33 @@ export default function ChartComponent({ updateDate }) {
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
   const tsaChartMaxDate = tsaChartSourceData['date'][tsaChartSourceData['date'].length - 1];
 
-  let strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
+  // KPI Index Data
+  const strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
+  const strDataOcc = [];
+  const strDataADR = [];
+  const strDataDate = [];
 
   const indexedYears = ['2023', '2024', '2025'];
-
-  for (let y = 1; y < indexedYears.length; y++) {
-    strDataIndex['occIndex'].push(
-      ...strData[indexedYears[y]]['occupancy'].map(
-        (o, i) => Math.round((o / strData[indexedYears[y - 1]]['occupancy'][i]) * 10000) / 100
-      )
-    );
-    strDataIndex['ADRIndex'].push(
-      ...strData[indexedYears[y]]['ADR'].map(
-        (a, i) => Math.round((a / strData[indexedYears[y - 1]]['ADR'][i]) * 10000) / 100
-      )
-    );
-    strDataIndex['date'].push(...strData[indexedYears[y]]['date']);
+  for (let y = 0; y < indexedYears.length; y++) {
+    strDataOcc.push(...strData[indexedYears[y]]['occupancy']);
+    strDataADR.push(...strData[indexedYears[y]]['ADR']);
+    strDataDate.push(...strData[indexedYears[y]]['date']);
   }
 
-  let years = [];
-  let opacityVals = [];
+  strDataIndex['occIndex'].push(
+    ...strDataOcc.slice(52).map((o, i) => {
+      return Math.round((o / strDataOcc[i]) * 10000) / 100;
+    })
+  );
+  strDataIndex['ADRIndex'].push(
+    ...strDataADR.slice(52).map((o, i) => {
+      return Math.round((o / strDataADR[i]) * 10000) / 100;
+    })
+  );
+  strDataIndex['date'].push(...strDataDate.slice(52));
+
+  const years = [];
+  const opacityVals = [];
   for (let i in strData) {
     years.push(i);
     opacityVals.push(0.4);
@@ -112,7 +119,7 @@ export default function ChartComponent({ updateDate }) {
         opacity: 1,
       },
       toolbar: {
-        show: true,
+        show: false,
       },
       fontFamily: 'Inter, Roboto, Arial, sans-serif',
       type: 'line',
@@ -144,7 +151,7 @@ export default function ChartComponent({ updateDate }) {
         rotate: -45,
         maxHeight: 50,
       },
-      tickAmount: 21,
+      tickAmount: 25,
       tickPlacement: 'on',
     },
     colors: ['#0EB300', '#404AE0'],
@@ -183,7 +190,7 @@ export default function ChartComponent({ updateDate }) {
       xaxis: [
         {
           x: '1/4/25',
-          x2: '12/27/25',
+          x2: '1/3/26',
           strokeDashArray: 0,
           borderColor: '#333',
           fillColor: '#ccc',
@@ -220,14 +227,14 @@ export default function ChartComponent({ updateDate }) {
         opacity: 1,
       },
       toolbar: {
-        show: true,
+        show: false,
         tools: {
-          download: false,
-          selection: true,
-          zoom: true,
-          zoomin: true,
-          zoomout: true,
-          pan: true,
+          download: true,
+          selection: false,
+          zoom: false,
+          zoomin: false,
+          zoomout: false,
+          pan: false,
         },
       },
       fontFamily: 'Inter, Roboto, Arial, sans-serif',
@@ -308,7 +315,7 @@ export default function ChartComponent({ updateDate }) {
         opacity: 1,
       },
       toolbar: {
-        show: true,
+        show: false,
       },
       fontFamily: 'Inter, Roboto, Arial, sans-serif',
       type: 'line',
@@ -335,7 +342,7 @@ export default function ChartComponent({ updateDate }) {
         },
       },
     },
-    colors: ['#888888', '#FF5733', '#cccccc'],
+    colors: ['#ea3546', '#662e9b', '#cccccc'],
     fill: {
       type: 'solid',
       opacity: [0.5, 1, 0.2],
@@ -415,7 +422,7 @@ export default function ChartComponent({ updateDate }) {
         min: tsaChartMinGap,
         tickAmount: tsaChartTickAmount,
         title: {
-          text: 'Gap',
+          text: 'Gap (Positive is better)',
           style: {
             fontWeight: 600,
           },
@@ -518,7 +525,7 @@ export default function ChartComponent({ updateDate }) {
     },
     {
       name: '2025',
-      data: strData['2025']['occupancy'],
+      data: strData['2025']['occupancy'].slice(0, 52),
     },
   ];
 
@@ -557,7 +564,7 @@ export default function ChartComponent({ updateDate }) {
     },
     {
       name: '2025',
-      data: strData['2025']['ADR'],
+      data: strData['2025']['ADR'].slice(0, 52),
     },
   ];
 
@@ -596,7 +603,7 @@ export default function ChartComponent({ updateDate }) {
     },
     {
       name: '2025',
-      data: strData['2025']['RevPAR'],
+      data: strData['2025']['RevPAR'].slice(0, 52),
     },
   ];
 
