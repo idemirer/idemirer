@@ -11,6 +11,21 @@ const components = {
   html: ({ children }) => <>{children}</>,
   body: ({ children }) => <>{children}</>,
   head: ({ children }) => <>{children}</>,
+  a: ({ children, href, ...rest }) => {
+    if (href.startsWith('http')) {
+      return (
+        <a href={href} {...rest} target='_blank'>
+          {children}
+        </a>
+      );
+    } else {
+      return (
+        <a href={href} {...rest}>
+          {children}
+        </a>
+      );
+    }
+  },
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
     if (src.startsWith('http')) {
