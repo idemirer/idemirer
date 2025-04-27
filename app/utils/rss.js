@@ -41,9 +41,6 @@ export async function generateRSSFeed() {
           url: `${siteUrl}/images/blogimages/${post.metadata.banner}`,
           type: 'image/jpeg',
         },
-        custom_elements: [
-          { 'media:thumbnail': { _attr: { href: `${siteUrl}/images/blogimages/${post.metadata.banner}` } } },
-        ],
       });
     });
 
