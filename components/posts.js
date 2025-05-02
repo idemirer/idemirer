@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/app/utils/utils';
 
-export function BlogPosts({ posts, path, page, slice = 5 }) {
+export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
   const today = +new Date();
   const endPage = page * slice;
   const beginPage = page * slice - slice;
@@ -11,7 +11,7 @@ export function BlogPosts({ posts, path, page, slice = 5 }) {
   const prevPage = +page - 1 == 0 ? 1 : +page - 1;
 
   return (
-    <div className='w-full justify-items-start md:ml-2'>
+    <div className={`w-full justify-items-start ${addMargin ? 'md:ml-2' : ''}`}>
       {posts
         .sort((a, b) => {
           if (new Date(a.metadata.date) > new Date(b.metadata.date)) {

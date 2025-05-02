@@ -42,7 +42,7 @@ export default async function Home() {
       </section>
       <section className='py-4'>
         <h2>Latest Blog Post:</h2>
-        <BlogPosts posts={allPostsData} page={1} slice={1} path='/' />
+        <BlogPosts posts={allPostsData} page={1} slice={1} addMargin={false} path='/' />
       </section>
     </div>
   );
