@@ -21,7 +21,7 @@ export default function Contact() {
       </div>
       <div className='my-4'>
         <h3>Fall 2025 Office Hours:</h3>
-        <p>Mondays and Wednesdays: 10:00 - 11:00</p>
+        <p>Tuesdays and Thursdays: 10:30 - 11:30</p>
       </div>
       <div>
         <h3>Social:</h3>
