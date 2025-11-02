@@ -474,6 +474,7 @@
     { "date": "9/27/2025", "week": 39, "occupancy": 65.6, "ADR": 166.48, "RevPAR": 109.15 },
     { "date": "10/4/2025", "week": 40, "occupancy": 63.7, "ADR": 160.62, "RevPAR": 102.37 },
     { "date": "10/11/2025", "week": 41, "occupancy": 69.1, "ADR": 171.88, "RevPAR": 118.75 },
-    { "date": "10/18/2025", "week": 42, "occupancy": 68.5, "ADR": 173.14, "RevPAR": 118.65 }
+    { "date": "10/18/2025", "week": 42, "occupancy": 68.5, "ADR": 173.14, "RevPAR": 118.65 },
+    { "date": "10/25/2025", "week": 43, "occupancy": 66.6, "ADR": 166.36, "RevPAR": 110.78 }
   ]
 }
