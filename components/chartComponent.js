@@ -10,7 +10,7 @@ export default function ChartComponent({ updateDate }) {
   const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
-    const years = ['2022', '2023', '2024', '2025', 'date'];
+    const years = ['2022', '2023', '2024', '2025', '2026', 'date'];
     for (let year = 0; year < years.length; year++) {
       if (!obj[years[year]]) {
         obj[years[year]] = [days[years[year]]];
