@@ -20,8 +20,8 @@ export default function Contact() {
         </p>
       </div>
       <div className='my-4'>
-        <h3>Fall 2025 Office Hours:</h3>
-        <p>Tuesdays and Thursdays: 10:30 - 11:30</p>
+        <h3>Spring 2026 Office Hours (by appointment only):</h3>
+        <p>Mondays 11:00 - 12:00 and Tuesdays 1:00 - 2:00 pm</p>
       </div>
       <div>
         <h3>Social:</h3>
