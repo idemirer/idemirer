@@ -29,7 +29,7 @@ export default function ChartComponent({ updateDate }) {
 
   for (let i = 0; i < tsaChartSourceData['2026'].length; i++) {
     let gap = '';
-    if (tsaChartSourceData['2025'][i] == 0) {
+    if (tsaChartSourceData['2026'][i] == 0) {
       gap = Math.round((tsaChartSourceData['2025'][i] / tsaChartSourceData['2024'][i] - 1) * 10000) / 100;
       tsaChartSourceData['gap'].push(gap);
     } else {
@@ -37,8 +37,9 @@ export default function ChartComponent({ updateDate }) {
       tsaChartSourceData['gap'].push(gap);
     }
   }
-  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2025']) + 100000) / 10) * 10;
-  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2025']) - 100000) / 10) * 10;
+
+  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2026']) + 100000) / 10) * 10;
+  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2026']) - 100000) / 10) * 10;
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
@@ -451,7 +452,7 @@ export default function ChartComponent({ updateDate }) {
       ],
       xaxis: [
         {
-          x: '1/1/2025',
+          x: '1/1/2026',
           x2: tsaChartMaxDate,
           yAxisIndex: 2,
           strokeDashArray: 0,
@@ -461,7 +462,7 @@ export default function ChartComponent({ updateDate }) {
           offsetX: 0,
           offsetY: 0,
           label: {
-            text: '2025',
+            text: '2026',
             textAnchor: 'middle',
             orientation: 'vertical',
             style: {
@@ -677,10 +678,6 @@ export default function ChartComponent({ updateDate }) {
   };
 
   const tsaChartData = [
-    {
-      name: '2024',
-      data: tsaChartSourceData['2024'],
-    },
     {
       name: '2025',
       data: tsaChartSourceData['2025'],
