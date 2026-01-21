@@ -27,7 +27,7 @@ export default function ChartComponent({ updateDate }) {
 
   tsaChartSourceData['gap'] = [];
 
-  for (let i = 0; i < tsaChartSourceData['2025'].length; i++) {
+  for (let i = 0; i < tsaChartSourceData['2026'].length; i++) {
     let gap = '';
     if (tsaChartSourceData['2025'][i] == 0) {
       gap = Math.round((tsaChartSourceData['2024'][i] / tsaChartSourceData['2023'][i] - 1) * 10000) / 100;
@@ -37,8 +37,8 @@ export default function ChartComponent({ updateDate }) {
       tsaChartSourceData['gap'].push(gap);
     }
   }
-  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2024']) + 100000) / 10) * 10;
-  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2024']) - 100000) / 10) * 10;
+  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2025']) + 100000) / 10) * 10;
+  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2025']) - 100000) / 10) * 10;
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
@@ -50,7 +50,7 @@ export default function ChartComponent({ updateDate }) {
   const strDataADR = [];
   const strDataDate = [];
 
-  const indexedYears = ['2023', '2024', '2025'];
+  const indexedYears = ['2024', '2025', '2026'];
   for (let y = 0; y < indexedYears.length; y++) {
     strDataOcc.push(...strData[indexedYears[y]]['occupancy']);
     strDataADR.push(...strData[indexedYears[y]]['ADR']);
@@ -60,12 +60,12 @@ export default function ChartComponent({ updateDate }) {
   strDataIndex['occIndex'].push(
     ...strDataOcc.slice(52).map((o, i) => {
       return Math.round((o / strDataOcc[i]) * 10000) / 100;
-    })
+    }),
   );
   strDataIndex['ADRIndex'].push(
     ...strDataADR.slice(52).map((o, i) => {
       return Math.round((o / strDataADR[i]) * 10000) / 100;
-    })
+    }),
   );
   strDataIndex['date'].push(...strDataDate.slice(52));
 
@@ -189,8 +189,8 @@ export default function ChartComponent({ updateDate }) {
       ],
       xaxis: [
         {
-          x: '1/4/25',
-          x2: '1/3/26',
+          x: '1/10/26',
+          x2: '1/2/27',
           strokeDashArray: 0,
           borderColor: '#333',
           fillColor: '#ccc',
@@ -198,7 +198,7 @@ export default function ChartComponent({ updateDate }) {
           offsetX: 0,
           offsetY: 0,
           label: {
-            text: '2025',
+            text: '2026',
             textAnchor: 'middle',
             orientation: 'vertical',
             style: {
@@ -389,7 +389,7 @@ export default function ChartComponent({ updateDate }) {
     },
     yaxis: [
       {
-        seriesName: '2024',
+        seriesName: '2025',
         show: false,
         max: tsaChartMax,
         min: tsaChartMin,
@@ -402,7 +402,7 @@ export default function ChartComponent({ updateDate }) {
         },
       },
       {
-        seriesName: '2025',
+        seriesName: '2026',
         show: true,
         showAlways: true,
         max: tsaChartMax,
@@ -527,6 +527,10 @@ export default function ChartComponent({ updateDate }) {
       name: '2025',
       data: strData['2025']['occupancy'].slice(0, 52),
     },
+    {
+      name: '2026',
+      data: strData['2026']['occupancy'],
+    },
   ];
 
   const ADRChartData = [
@@ -566,6 +570,10 @@ export default function ChartComponent({ updateDate }) {
       name: '2025',
       data: strData['2025']['ADR'].slice(0, 52),
     },
+    {
+      name: '2026',
+      data: strData['2026']['ADR'],
+    },
   ];
 
   const revPARChartData = [
@@ -604,6 +612,10 @@ export default function ChartComponent({ updateDate }) {
     {
       name: '2025',
       data: strData['2025']['RevPAR'].slice(0, 52),
+    },
+    {
+      name: '2026',
+      data: strData['2026']['RevPAR'],
     },
   ];
 
@@ -672,6 +684,10 @@ export default function ChartComponent({ updateDate }) {
     {
       name: '2025',
       data: tsaChartSourceData['2025'],
+    },
+    {
+      name: '2026',
+      data: tsaChartSourceData['2026'],
     },
     {
       name: 'Gap',
