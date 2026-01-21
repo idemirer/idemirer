@@ -30,10 +30,10 @@ export default function ChartComponent({ updateDate }) {
   for (let i = 0; i < tsaChartSourceData['2026'].length; i++) {
     let gap = '';
     if (tsaChartSourceData['2025'][i] == 0) {
-      gap = Math.round((tsaChartSourceData['2024'][i] / tsaChartSourceData['2023'][i] - 1) * 10000) / 100;
+      gap = Math.round((tsaChartSourceData['2025'][i] / tsaChartSourceData['2024'][i] - 1) * 10000) / 100;
       tsaChartSourceData['gap'].push(gap);
     } else {
-      gap = Math.round((tsaChartSourceData['2025'][i] / tsaChartSourceData['2024'][i] - 1) * 10000) / 100;
+      gap = Math.round((tsaChartSourceData['2026'][i] / tsaChartSourceData['2025'][i] - 1) * 10000) / 100;
       tsaChartSourceData['gap'].push(gap);
     }
   }
