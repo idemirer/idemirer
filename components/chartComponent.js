@@ -38,8 +38,8 @@ export default function ChartComponent({ updateDate }) {
     }
   }
 
-  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2026']) + 100000) / 10) * 10;
-  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2026']) - 100000) / 10) * 10;
+  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2025']) + 100000) / 10) * 10;
+  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2025']) - 100000) / 10) * 10;
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
