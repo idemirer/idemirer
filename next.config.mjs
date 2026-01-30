@@ -1,18 +1,20 @@
 /** @type {import('next').NextConfig} */
 import { generateRSSFeed } from './app/utils/rss.js';
-const nextConfig = {};
+import { PHASE_PRODUCTION_BUILD } from 'next/constants.js';
 
-export default {
+const nextConfig = {
   async redirects() {
     return [];
   },
   async headers() {
     return [];
   },
-  webpack(config, options) {
-    if (options.isServer) {
-      generateRSSFeed();
-    }
-    return config;
-  },
+  turbopack: {},
+};
+
+export default async (phase) => {
+  if (phase === PHASE_PRODUCTION_BUILD) {
+    await generateRSSFeed();
+  }
+  return nextConfig;
 };

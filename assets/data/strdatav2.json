@@ -489,6 +489,7 @@
   ],
   "2026": [
     { "date": "1/10/2026", "week": 1, "occupancy": 48.1, "ADR": 142.85, "RevPAR": 68.69 },
-    { "date": "1/17/2026", "week": 2, "occupancy": 56.1, "ADR": 157.21, "RevPAR": 88.19 }
+    { "date": "1/17/2026", "week": 2, "occupancy": 56.1, "ADR": 157.21, "RevPAR": 88.19 },
+    { "date": "1/24/2026", "week": 3, "occupancy": 53.9, "ADR": 152.64, "RevPAR": 82.24 }
   ]
 }

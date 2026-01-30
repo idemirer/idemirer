@@ -12,13 +12,13 @@
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir posts"
   },
   "dependencies": {
-    "@next/third-parties": "^15.2.4",
+    "@next/third-parties": "^16.1.6",
     "@vercel/analytics": "^1.5.0",
-    "apexcharts": "^4.3.0",
+    "apexcharts": "^5.3.6",
     "axios": "^1.12.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.2.3",
     "gray-matter": "^4.0.3",
-    "next": "^15.5.9",
+    "next": "^16.1.6",
     "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",
     "react-medium-image-zoom": "^5.2.14",
@@ -41,7 +41,7 @@
     "@tailwindcss/postcss": "^4.1.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "^15.2.4",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.1",
     "postcss": "^8",
     "tailwindcss": "^4.1.1"
