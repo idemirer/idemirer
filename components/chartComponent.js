@@ -9,8 +9,13 @@ export default function ChartComponent({ updateDate }) {
 
   const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
-  let tsaChartSourceData = tsaRawData['data'].slice(0, 90).reduce((obj, days) => {
-    const years = ['2022', '2023', '2024', '2025', '2026', 'date'];
+  const today = new Date();
+  const beginning = new Date('2026-01-01');
+  const diffMs = today - beginning;
+  const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24)) - 1;
+
+  let tsaChartSourceData = tsaRawData['data'].slice(0, diffDays).reduce((obj, days) => {
+    const years = ['2024', '2025', '2026', 'date'];
     for (let year = 0; year < years.length; year++) {
       if (!obj[years[year]]) {
         obj[years[year]] = [days[years[year]]];
@@ -38,8 +43,8 @@ export default function ChartComponent({ updateDate }) {
     }
   }
 
-  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2025']) + 100000) / 10) * 10;
-  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2025']) - 100000) / 10) * 10;
+  const tsaChartMax = Math.ceil((Math.max(...tsaChartSourceData['2026']) + 100000) / 10) * 10;
+  const tsaChartMin = Math.floor((Math.min(...tsaChartSourceData['2026']) - 100000) / 10) * 10;
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
@@ -220,7 +225,7 @@ export default function ChartComponent({ updateDate }) {
     chart: {
       dropShadow: {
         enabled: true,
-        enabledOnSeries: [8],
+        enabledOnSeries: [9],
         top: 1,
         left: 1,
         blur: 0,
@@ -260,7 +265,7 @@ export default function ChartComponent({ updateDate }) {
       opacity: 0.1,
       yaxis: {
         lines: {
-          show: true,
+          show: false,
         },
       },
     },
@@ -308,12 +313,12 @@ export default function ChartComponent({ updateDate }) {
     chart: {
       dropShadow: {
         enabled: true,
-        enabledOnSeries: [1],
+        enabledOnSeries: [0, 1],
         top: 1,
         left: 1,
         blur: 0,
         color: '#000',
-        opacity: 1,
+        opacity: 0.5,
       },
       toolbar: {
         show: false,
@@ -335,18 +340,18 @@ export default function ChartComponent({ updateDate }) {
       },
     },
     grid: {
-      borderColor: '#ccc',
+      borderColor: '#ececec',
       opacity: 0.1,
       yaxis: {
         lines: {
-          show: true,
+          show: false,
         },
       },
     },
-    colors: ['#ea3546', '#662e9b', '#cccccc'],
+    colors: ['#4580ff', '#d25b00', '#b8b8b8'],
     fill: {
       type: 'solid',
-      opacity: [0.5, 1, 0.2],
+      opacity: [0.5, 1, 0.7],
     },
     dataLabels: {
       enabled: false,
@@ -436,46 +441,46 @@ export default function ChartComponent({ updateDate }) {
       },
     ],
     annotations: {
-      position: 'back',
-      yaxis: [
-        {
-          y: 0,
-          y2: tsaChartMinGap,
-          yAxisIndex: 2,
-          strokeDashArray: 0,
-          borderColor: '#333',
-          fillColor: '#ccc',
-          opacity: 0.2,
-          offsetX: 0,
-          offsetY: 0,
-        },
-      ],
-      xaxis: [
-        {
-          x: '1/1/2026',
-          x2: tsaChartMaxDate,
-          yAxisIndex: 2,
-          strokeDashArray: 0,
-          borderColor: '#333',
-          fillColor: '#ccc',
-          opacity: 0.2,
-          offsetX: 0,
-          offsetY: 0,
-          label: {
-            text: '2026',
-            textAnchor: 'middle',
-            orientation: 'vertical',
-            style: {
-              background: '#fff',
-              color: '#777',
-              fontSize: '11px',
-              fontWeight: 400,
-              fontFamily: undefined,
-              cssClass: 'apexcharts-xaxis-annotation-label',
-            },
-          },
-        },
-      ],
+      // position: 'back',
+      // yaxis: [
+      //   {
+      //     y: 0,
+      //     y2: tsaChartMinGap,
+      //     yAxisIndex: 2,
+      //     strokeDashArray: [5, 5],
+      //     borderColor: '#000',
+      //     // fillColor: '#eee',
+      //     opacity: 0.05,
+      //     offsetX: 0,
+      //     offsetY: 0,
+      //   },
+      // ],
+      //   xaxis: [
+      //     {
+      //       x: '1/1/2026',
+      //       x2: tsaChartMaxDate,
+      //       yAxisIndex: 2,
+      //       strokeDashArray: 0,
+      //       borderColor: '#333',
+      //       fillColor: '#ccc',
+      //       opacity: 0.2,
+      //       offsetX: 0,
+      //       offsetY: 0,
+      //       label: {
+      //         text: '2026',
+      //         textAnchor: 'middle',
+      //         orientation: 'vertical',
+      //         style: {
+      //           background: '#fff',
+      //           color: '#777',
+      //           fontSize: '11px',
+      //           fontWeight: 400,
+      //           fontFamily: undefined,
+      //           cssClass: 'apexcharts-xaxis-annotation-label',
+      //         },
+      //       },
+      //     },
+      //   ],
     },
   };
 
