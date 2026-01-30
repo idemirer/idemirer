@@ -6,7 +6,6 @@ import tsaRawData from '@/assets/data/passengerData.json';
 
 export default function ChartComponent({ updateDate }) {
   const { theme } = useTheme();
-
   const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
   const today = new Date();
@@ -48,7 +47,6 @@ export default function ChartComponent({ updateDate }) {
   const tsaChartMaxGap = Math.ceil((Math.max(...tsaChartSourceData['gap']) + 5) / 10) * 10;
   const tsaChartMinGap = Math.floor((Math.min(...tsaChartSourceData['gap']) - 5) / 10) * 10;
   const tsaChartTickAmount = -(tsaChartMinGap - tsaChartMaxGap) / 10;
-  const tsaChartMaxDate = tsaChartSourceData['date'][tsaChartSourceData['date'].length - 1];
 
   // KPI Index Data
   const strDataIndex = { occIndex: [], ADRIndex: [], date: [] };
@@ -195,7 +193,7 @@ export default function ChartComponent({ updateDate }) {
       ],
       xaxis: [
         {
-          x: '1/10/26',
+          x: '1/3/26',
           x2: '1/2/27',
           strokeDashArray: 0,
           borderColor: '#333',
@@ -212,7 +210,7 @@ export default function ChartComponent({ updateDate }) {
               color: '#777',
               fontSize: '11px',
               fontWeight: 400,
-              fontFamily: undefined,
+              fontFamily: 'sans-serif',
               cssClass: 'apexcharts-xaxis-annotation-label',
             },
           },
@@ -484,6 +482,63 @@ export default function ChartComponent({ updateDate }) {
     },
   };
 
+  const occChartOptions = {
+    ...mainChartOptions,
+    title: {
+      text: 'U.S. Hotel Occupancy (Week Ending)',
+      align: 'left',
+      margin: 10,
+      offsetX: 10,
+      style: {
+        fontWeight: 600,
+        fontSize: '16px',
+      },
+    },
+    yaxis: {
+      min: 20,
+      max: 80,
+      tickAmount: 6,
+    },
+  };
+
+  const ADRChartOptions = {
+    ...mainChartOptions,
+    title: {
+      text: 'U.S. Hotel ADR (Week Ending)',
+      align: 'left',
+      margin: 10,
+      offsetX: 10,
+      style: {
+        fontWeight: 600,
+        fontSize: '16px',
+      },
+    },
+    yaxis: {
+      min: 60,
+      max: 180,
+      tickAmount: 6,
+    },
+  };
+
+  const revPARChartOptions = {
+    ...mainChartOptions,
+    title: {
+      text: 'U.S. Hotel RevPAR (Week Ending)',
+      align: 'left',
+      margin: 10,
+      offsetX: 10,
+      style: {
+        fontWeight: 600,
+        fontSize: '16px',
+      },
+    },
+    yaxis: {
+      max: 130,
+      min: 0,
+      tickAmount: 5,
+    },
+  };
+
   // Chart Data
   const strIndexChartData = [
     {
@@ -625,63 +680,6 @@ export default function ChartComponent({ updateDate }) {
     },
   ];
 
-  const occChartOptions = {
-    ...mainChartOptions,
-    title: {
-      text: 'U.S. Hotel Occupancy (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
-    },
-    yaxis: {
-      min: 20,
-      max: 80,
-      tickAmount: 6,
-    },
-  };
-
-  const ADRChartOptions = {
-    ...mainChartOptions,
-    title: {
-      text: 'U.S. Hotel ADR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
-    },
-    yaxis: {
-      min: 60,
-      max: 180,
-      tickAmount: 6,
-    },
-  };
-
-  const revPARChartOptions = {
-    ...mainChartOptions,
-    title: {
-      text: 'U.S. Hotel RevPAR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
-    },
-    yaxis: {
-      max: 130,
-      min: 0,
-      tickAmount: 5,
-    },
-  };
-
   const tsaChartData = [
     {
       name: '2025',
@@ -703,23 +701,53 @@ export default function ChartComponent({ updateDate }) {
       <div>
         <div>
           <h2>KPI Index:</h2>
-          <Chart series={strIndexChartData} options={indexChartOptions} type={'line'} height={500} />
+          <Chart
+            series={strIndexChartData}
+            options={indexChartOptions}
+            type={'line'}
+            height={500}
+            className='drop-shadow-lg'
+          />
         </div>
         <div>
           <h2>U.S. Hotel Occupancy (Weeks Ending)</h2>
-          <Chart series={occChartData} options={occChartOptions} type={'line'} height={500} />
+          <Chart
+            series={occChartData}
+            options={occChartOptions}
+            type={'line'}
+            height={500}
+            className='drop-shadow-lg'
+          />
         </div>
         <div>
           <h2>U.S. Hotel ADR (Weeks Ending)</h2>
-          <Chart series={ADRChartData} options={ADRChartOptions} type={'line'} height={500} />
+          <Chart
+            series={ADRChartData}
+            options={ADRChartOptions}
+            type={'line'}
+            height={500}
+            className='drop-shadow-lg'
+          />
         </div>
         <div>
           <h2>U.S. Hotel RevPAR (Weeks Ending)</h2>
-          <Chart series={revPARChartData} options={revPARChartOptions} type={'line'} height={500} />
+          <Chart
+            series={revPARChartData}
+            options={revPARChartOptions}
+            type={'line'}
+            height={500}
+            className='drop-shadow-lg'
+          />
         </div>
         <div>
           <h2>TSA Checkpoint Travel Numbers (Same Weekday)</h2>
-          <Chart series={tsaChartData} options={tsaChartOptions} type={'line'} height={500} />
+          <Chart
+            series={tsaChartData}
+            options={tsaChartOptions}
+            type={'line'}
+            height={500}
+            className='drop-shadow-lg'
+          />
         </div>
       </div>
     </section>
