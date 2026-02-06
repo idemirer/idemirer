@@ -1,0 +1,19 @@
+name: Weekly Vercel Deploy
+
+on:
+  schedule:
+    # Every Friday at 8:00 AM Eastern
+    # GitHub Actions uses UTC
+    # 8 AM ET = 13:00 UTC (standard time)
+    - cron: '0 13 * * 5'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        run: |
+          curl -X POST "$VERCEL_DEPLOY_HOOK_URL"
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
