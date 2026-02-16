@@ -75,12 +75,16 @@ export default function ChartComponent({ updateDate }) {
 
   const years = [];
   const opacityVals = [];
+  const lineWidth = [];
   for (let i in strData) {
     years.push(i);
     opacityVals.push(0.4);
+    lineWidth.push(1);
   }
   opacityVals.pop();
+  lineWidth.pop();
   opacityVals.push(1);
+  lineWidth.push(3);
 
   const maxYear = Math.max(...years).toString();
 
@@ -293,7 +297,7 @@ export default function ChartComponent({ updateDate }) {
     },
     stroke: {
       curve: 'smooth',
-      width: 3,
+      width: [...lineWidth],
     },
     theme: {
       mode: theme,
@@ -356,7 +360,7 @@ export default function ChartComponent({ updateDate }) {
     },
     stroke: {
       curve: 'smooth',
-      width: 3,
+      width: [1, 3, 1],
     },
     title: {
       text: 'TSA Passenger Data',
