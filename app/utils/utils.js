@@ -63,7 +63,7 @@ async function getMDXData(dir) {
           slug: metadata.slug,
           content,
         };
-      })
+      }),
     );
 
     return posts;
@@ -124,7 +124,7 @@ export async function countedTags(allPostsData) {
   allPostsAwaitedData.map((p) =>
     p.metadata.tags.map((t) => {
       allTags.push(t);
-    })
+    }),
   );
 
   const uniqueTags = [...new Set(allTags)];

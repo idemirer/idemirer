@@ -1,12 +1,11 @@
-import axios from 'axios';
-
 async function GetLaborStats() {
   const url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/';
   const currentYear = new Date().getFullYear();
   const startYear = currentYear - 9;
-  const laborStats = await axios.post(
-    url,
-    {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
       seriesid: [
         'CUUR0000SA0', // Consumer Price Index for All Urban Consumers: All Items in U.S. City Average, Not Seasonally Adjusted
         'PCU721110721110', // Producer Price Index by Industry: Hotels and Motels, Not Seasonally Adjusted
@@ -35,10 +34,14 @@ async function GetLaborStats() {
       startyear: startYear,
       endyear: currentYear,
       registrationkey: process.env.BLS_KEY,
-    },
-    { headers: { 'content-type': 'application/json' } }
-  );
-  return laborStats.data;
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`BLS request failed with status ${response.status}`);
+  }
+
+  return response.json();
 }
 
 export default async function handler(req, res) {
