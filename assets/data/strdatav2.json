@@ -499,6 +499,7 @@
     { "date": "3/7/2026", "week": 9, "occupancy": 63, "ADR": 166.47, "RevPAR": 104.92 },
     { "date": "3/14/2026", "week": 10, "occupancy": 65.7, "ADR": 167.97, "RevPAR": 110.29 },
     { "date": "3/21/2026", "week": 11, "occupancy": 67.7, "ADR": 169.02, "RevPAR": 114.44 },
-    { "date": "3/28/2026", "week": 12, "occupancy": 66.8, "ADR": 170.3, "RevPAR": 113.81 }
+    { "date": "3/28/2026", "week": 12, "occupancy": 66.8, "ADR": 170.3, "RevPAR": 113.81 },
+    { "date": "4/4/2026", "week": 13, "occupancy": 60.6, "ADR": 160.21, "RevPAR": 97.02 }
   ]
 }
