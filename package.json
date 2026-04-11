@@ -17,7 +17,7 @@
     "apexcharts": "^5.3.6",
     "dotenv": "^17.2.3",
     "gray-matter": "^4.0.3",
-    "next": "^16.1.7",
+    "next": "^16.2.3",
     "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",
     "react-medium-image-zoom": "^5.2.14",
