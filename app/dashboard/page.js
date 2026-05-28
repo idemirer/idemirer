@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default function Dashboard() {
-  const updateDate = 'May 15, 2026';
+  const updateDate = 'May 22, 2026';
 
   return (
     <div>
