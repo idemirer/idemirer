@@ -6,8 +6,13 @@ import { unified } from 'unified';
 import reactRehyped from 'rehype-react';
 import rehypeParse from 'rehype-parse';
 import Zoom from 'react-medium-image-zoom';
+import BlogChart from '@/components/blogChart';
 
 const components = {
+  div: ({ 'data-blogchart': chartType, 'data-height': chartHeight, children, ...rest }) => {
+    if (chartType) return <BlogChart type={chartType} height={chartHeight} />;
+    return <div {...rest}>{children}</div>;
+  },
   html: ({ children }) => <>{children}</>,
   body: ({ children }) => <>{children}</>,
   head: ({ children }) => <>{children}</>,
@@ -33,7 +38,7 @@ const components = {
         <Zoom>
           <Image
             src={src}
-            className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+            className='rounded-xl shadow-[0_2px_12px_var(--shadow)]'
             {...restOfImgProps}
           />
         </Zoom>
@@ -42,7 +47,7 @@ const components = {
     return (
       <Zoom>
         <Image
-          className='rounded-xl shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+          className='rounded-xl shadow-[0_2px_12px_var(--shadow)]'
           src={src}
           {...restOfImgProps}
         />

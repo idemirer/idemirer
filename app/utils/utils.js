@@ -40,13 +40,13 @@ export async function readContent(content) {
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeImgSize, { dir: 'public' })
     .use(rehypekUnwrapImages)
     .use(rehypeHighlight)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings)
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
   return processedContent.toString();
 }
