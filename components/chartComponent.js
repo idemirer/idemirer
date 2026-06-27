@@ -117,6 +117,7 @@ export default function ChartComponent({ updateDate }) {
       },
     },
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [0, 1],
@@ -225,6 +226,7 @@ export default function ChartComponent({ updateDate }) {
 
   const mainChartOptions = {
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [9],
@@ -313,6 +315,7 @@ export default function ChartComponent({ updateDate }) {
 
   const tsaChartOptions = {
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [0, 1],
@@ -700,58 +703,26 @@ export default function ChartComponent({ updateDate }) {
   ];
 
   return (
-    <section>
-      <h1>U.S. Hospitality Data Dashboard</h1>
-      <div>
-        <div>
-          <h2>KPI Index:</h2>
-          <Chart
-            series={strIndexChartData}
-            options={indexChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+    <section className='py-6'>
+      <div className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between pb-4 mb-6 border-b border-[var(--border)]'>
+        <h1 className='mt-0 mb-1'>U.S. Hospitality Data Dashboard</h1>
+        <p className='text-sm mt-0 mb-0' style={{ color: 'var(--lightText)' }}>Updated: {updateDate}</p>
+      </div>
+      <div className='flex flex-col gap-6'>
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={strIndexChartData} options={indexChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel Occupancy (Weeks Ending)</h2>
-          <Chart
-            series={occChartData}
-            options={occChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={occChartData} options={occChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel ADR (Weeks Ending)</h2>
-          <Chart
-            series={ADRChartData}
-            options={ADRChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={ADRChartData} options={ADRChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel RevPAR (Weeks Ending)</h2>
-          <Chart
-            series={revPARChartData}
-            options={revPARChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={revPARChartData} options={revPARChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>TSA Checkpoint Travel Numbers (Same Weekday)</h2>
-          <Chart
-            series={tsaChartData}
-            options={tsaChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={tsaChartData} options={tsaChartOptions} type='line' height={480} />
         </div>
       </div>
     </section>

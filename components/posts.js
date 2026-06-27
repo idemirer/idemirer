@@ -28,58 +28,57 @@ export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
         .map((post) => (
           <div
             key={post.slug}
-            className='max-w-full rounded-lg bg-gray-900 text-white pb-2 mb-4 md:h-[240px] md:flex md:w-[790px] shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+            className='max-w-full rounded-xl card overflow-hidden pb-2 mb-5 md:h-[240px] md:flex md:w-[790px]'
           >
-            <Link href={`/blog/${post.slug}`} className='md:order-last'>
+            <Link href={`/blog/${post.slug}`} className='md:order-last shrink-0'>
               <Image
                 src={`/images/blogimages/${post.metadata.banner}`}
                 width={450}
                 height={240}
                 alt='banner'
                 title={post.title}
-                className='object-cover object-left-top	rounded-t-lg pb-4 h-[240px] w-[790px] md:rounded-t-none md:rounded-tr-lg md:rounded-br-lg md:h-[240px] md:w-[450px] md:pb-0 hover:grayscale'
+                className='object-cover object-left-top rounded-t-xl h-[200px] w-full md:rounded-t-none md:rounded-tr-xl md:rounded-br-xl md:h-[240px] md:w-[340px] hover:opacity-90 transition-opacity'
               />
             </Link>
-            <div className='md:pt-4 md:w-[340px] md:min-w-[340px]'>
-              <Link href={`/blog/${post.slug}`} className=''>
-                <div className='font-bold px-4 pb-2 text-white inline-block hover:text-[var(--hover)]'>
-                  {post.metadata.title}
-                </div>
-              </Link>
-              <small className='flex flex-wrap px-4 gap-1 overflow-hidden max-h-[130px]'>
-                {post.metadata.tags.map((tag) => (
-                  <div
-                    key={tag}
-                    className='tags rounded-lg bg-gray-600 text-white p-1 dark:text-black dark:bg-neutral-200'
-                  >
-                    <Link href={`/blog/tags/${tag}/1`}>#{tag}</Link>
+            <div className='flex flex-col justify-between md:pt-5 md:pb-4 px-4 py-3 flex-1 min-w-0'>
+              <div>
+                <Link href={`/blog/${post.slug}`}>
+                  <div className='font-bold text-(--text) mb-3 leading-snug hover:text-(--hover) transition-colors'>
+                    {post.metadata.title}
                   </div>
-                ))}
-              </small>
-              <small className='px-4'>{formatDate(post.metadata.date)}</small>
+                </Link>
+                <div className='tags flex flex-wrap gap-1.5'>
+                  {post.metadata.tags.map((tag) => (
+                    <Link key={tag} href={`/blog/tags/${tag}/1`} className='tag-pill'>
+                      #{tag}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <small className='text-(--lightText) mt-3 block'>{formatDate(post.metadata.date)}</small>
             </div>
           </div>
         ))}
-      <div className={slice == 1 ? 'hidden' : 'tags flex w-full'}>
+      <div className={slice == 1 ? 'hidden' : 'tags flex w-full mt-2'}>
         <Link
           href={`${path}/${prevPage}`}
           className={
             page - 1 == 0
-              ? 'text-sm font-bold rounded-lg p-2 mx-auto ml-0 bg-gray-800 text-white pointer-events-none opacity-30 shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
-              : 'text-sm font-bold rounded-lg p-2 mx-auto ml-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              ? 'text-sm font-medium rounded-lg px-4 py-2 ml-0 card text-(--text) pointer-events-none opacity-30'
+              : 'text-sm font-medium rounded-lg px-4 py-2 ml-0 card text-(--text) hover:text-(--hover) transition-colors'
           }
         >
-          &#xab; NEWER POSTS
+          &#xab; Newer Posts
         </Link>
         <Link
           href={`${path}/${nextPage}`}
           className={
             nextPage === maxPage + 1
-              ? 'pointer-events-none opacity-30 text-sm font-bold rounded-lg p-2 ml-auto mr-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
-              : 'text-sm font-bold rounded-lg p-2 ml-auto mr-0 bg-gray-800 text-white shadow-[3px_3px_10px_rgba(51,51,51,1)] dark:text-black dark:bg-neutral-200 dark:shadow-[3px_3px_10px_rgba(0,0,0,.6)]'
+              ? 'pointer-events-none opacity-30 text-sm font-medium rounded-lg px-4 py-2 ml-auto mr-0 card text-(--text)'
+              : 'text-sm font-medium rounded-lg px-4 py-2 ml-auto mr-0 card text-(--text) hover:text-(--hover) transition-colors'
           }
         >
-          OLDER POSTS &#xbb;
+          Older Posts &#xbb;
         </Link>
       </div>
     </div>

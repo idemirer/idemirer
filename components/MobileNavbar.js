@@ -23,9 +23,10 @@ export default function MobileNavBar() {
         </button>
       </div>
       <nav
-        className={`fixed z-40 w-full bg-gray-100 dark:bg-gray-800 overflow-hidden flex flex-col lg:hidden gap-2 origin-top duration-700 ${
+        className={`fixed z-40 w-full overflow-hidden flex flex-col lg:hidden gap-2 origin-top duration-700 ${
           !toggleMenu ? 'h-0' : 'h-full'
         }`}
+        style={{ backgroundColor: 'var(--background)', borderRight: '1px solid var(--border)' }}
       >
         {navLinks.map((path) => (
           <Link

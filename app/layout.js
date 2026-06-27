@@ -47,8 +47,8 @@ export default function Layout({ children }) {
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
       </head>
-      <body className='w-full antialiased md:w-full' data-theme='light'>
-        <div className='w-screen-lg mt-1 md:w-5xl lg:mx-auto'>
+      <body className='antialiased' data-theme='light'>
+        <div className='max-w-5xl mx-auto'>
           <ThemeProvider>
             <Navbar />
             <main className='min-h-96 mx-4'>{children}</main>
