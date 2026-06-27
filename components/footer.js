@@ -3,7 +3,7 @@ export default function Footer() {
   const thisYear = today.getFullYear();
   return (
     <footer className='border-t border-[var(--border)] mt-12 py-8 px-4'>
-      <div className='flex items-center justify-between max-w-sm'>
+      <div className='flex items-center'>
         <div className='flex items-center gap-4'>
           <a href='https://www.researchgate.net/profile/Ilhan-Demirer-2' target='_blank' aria-label='Research Gate'>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width={20} height={20} className='fill-[#00ccbb] opacity-80 hover:opacity-100 transition-opacity'>
@@ -31,7 +31,7 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <p className='text-xs' style={{ color: 'var(--lightText)' }}>
+        <p className='text-xs ml-auto' style={{ color: 'var(--lightText)' }}>
           &copy; Ilhan Demirer {thisYear}
         </p>
       </div>
