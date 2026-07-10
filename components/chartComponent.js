@@ -8,9 +8,9 @@ export default function ChartComponent({ updateDate }) {
   const { theme } = useTheme();
   const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
-  const today = new Date();
-  const beginning = new Date('2026-01-01');
-  const diffMs = today - beginning;
+  const mostRecentDate = new Date(tsaRawData['data'][0]['date']);
+  const beginning = new Date('2025-12-31');
+  const diffMs = mostRecentDate - beginning;
   const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24)) - 1;
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, diffDays).reduce((obj, days) => {
@@ -152,11 +152,17 @@ export default function ChartComponent({ updateDate }) {
       tickAmount: 8,
     },
     legend: {
-      height: 35,
+      height: 20,
+      offsetY: 20,
     },
     xaxis: {
       categories: strDataIndex['date'],
       labels: {
+        formatter: function (value) {
+          // Force UTC display regardless of browser timezone
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 50,
       },
@@ -277,11 +283,17 @@ export default function ChartComponent({ updateDate }) {
       decimalsInFloat: 2,
     },
     legend: {
-      height: 50,
+      height: 20,
+      offsetY: 20,
     },
     xaxis: {
       categories: strData[maxYear]['date'],
       labels: {
+        formatter: function (value) {
+          // Force UTC display regardless of browser timezone
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 50,
         rotateAlways: true,
@@ -389,6 +401,11 @@ export default function ChartComponent({ updateDate }) {
     xaxis: {
       categories: tsaChartSourceData['date'],
       labels: {
+        formatter: function (value) {
+          // Force UTC display regardless of browser timezone
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 45,
       },
@@ -396,7 +413,9 @@ export default function ChartComponent({ updateDate }) {
       tickPlacement: 'on',
     },
     legend: {
-      height: 35,
+      height: 25,
+      position: 'bottom',
+      offsetY: 25,
     },
     yaxis: [
       {
@@ -428,12 +447,12 @@ export default function ChartComponent({ updateDate }) {
       },
       {
         opposite: true,
-        seriesName: 'Gap',
+        seriesName: 'YOY % Change',
         max: tsaChartMaxGap,
         min: tsaChartMinGap,
         tickAmount: tsaChartTickAmount,
         title: {
-          text: 'Gap (Positive is better)',
+          text: 'YOY % Change (Positive is better)',
           style: {
             fontWeight: 600,
           },
@@ -697,7 +716,7 @@ export default function ChartComponent({ updateDate }) {
       data: tsaChartSourceData['2026'],
     },
     {
-      name: 'Gap',
+      name: 'YOY % Change',
       data: tsaChartSourceData['gap'],
     },
   ];
@@ -706,7 +725,9 @@ export default function ChartComponent({ updateDate }) {
     <section className='py-6'>
       <div className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between pb-4 mb-6 border-b border-[var(--border)]'>
         <h1 className='mt-0 mb-1'>U.S. Hospitality Data Dashboard</h1>
-        <p className='text-sm mt-0 mb-0' style={{ color: 'var(--lightText)' }}>Updated: {updateDate}</p>
+        <p className='text-sm mt-0 mb-0' style={{ color: 'var(--lightText)' }}>
+          Updated: {updateDate}
+        </p>
       </div>
       <div className='flex flex-col gap-6'>
         <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
