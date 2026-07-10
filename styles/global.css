@@ -1,79 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 @import 'tailwindcss';
 
 [data-theme='light'] {
-  --text: #000;
-  --background: #ddd;
-  --link: #000;
-  --hover: #ce6000;
-  --shadow: #333;
-  --lightText: #666;
+  --text: #1c1917;
+  --background: #fafaf9;
+  --surface: #ffffff;
+  --link: #1c1917;
+  --hover: #b45309;
+  --shadow: rgba(0, 0, 0, 0.07);
+  --lightText: #78716c;
+  --border: #e7e5e4;
+  --tag-bg: #f5f5f4;
+  --tag-text: #57534e;
+  --tag-border: #d6d3d1;
 }
 
 [data-theme='dark'] {
-  /* Dark Theme */
-  --text: #fff;
-  --background: #222222;
-  --link: #fff;
-  --hover: #e67e22;
-  --shadow: #000;
-  --lightText: #ccc;
+  --text: #e7e5e4;
+  --background: #111110;
+  --surface: #1c1b1a;
+  --link: #e7e5e4;
+  --hover: #fbbf24;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --lightText: #a8a29e;
+  --border: #292524;
+  --tag-bg: #27241f;
+  --tag-text: #a8a29e;
+  --tag-border: #44403c;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
-  line-height: 1.6;
-  font-size: 1rem;
+  font-family: var(--font-body);
+  line-height: 1.7;
+  font-size: 1.0625rem;
   background-color: var(--background);
   color: var(--text);
 }
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', 'system-ui';
-  }
+
+/* Card surface — white/dark with subtle border and shadow */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 8px var(--shadow);
+}
+
+/* Tag pill — grayscale at rest, amber accent on hover */
+.tag-pill {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--tag-border);
+  border-radius: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.tag-pill:hover {
+  color: var(--hover);
+  border-color: var(--hover);
 }
 
 @layer base {
   h1 {
-    @apply text-3xl font-bold mt-4 mb-2;
-    font-family: Merriweather, serif;
+    @apply text-3xl font-bold mt-6 mb-3 tracking-tight;
+    font-family: var(--font-display);
+    line-height: 1.3;
   }
   h2 {
-    @apply text-2xl font-bold mt-4 mb-2;
-    font-family: Merriweather, serif;
+    @apply text-2xl font-bold mt-6 mb-2;
+    font-family: var(--font-display);
+    line-height: 1.4;
   }
   h3 {
-    @apply text-lg font-bold mt-4 mb-2;
+    @apply text-lg font-semibold mt-5 mb-2;
   }
   .post ul,
   .about ul {
-    list-style-type: square;
-    padding-left: 24px;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    @apply my-3;
   }
   .post ol {
-    list-style-type: square;
-    padding-left: 24px;
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    @apply my-3;
   }
 }
 
 @layer utilities {
   a {
-    @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-400 decoration-[0.1em] hover:no-underline hover:text-(--hover);
+    @apply underline transition-colors decoration-[var(--border)] decoration-[0.08em] underline-offset-2 hover:no-underline hover:text-(--hover);
   }
   nav a,
   .tags a {
@@ -85,7 +108,8 @@ body {
     color: var(--hover);
   }
   .about hr {
-    @apply mb-2;
+    @apply mb-4;
+    border-color: var(--border);
   }
 }
 
@@ -115,49 +139,77 @@ body {
 }
 
 .post img {
-  /* Don't apply styles to next/image */
   @apply mx-0 my-6;
 }
 
 .post p {
   @apply my-4;
+  max-width: 72ch;
+}
+
+.post li {
+  max-width: 72ch;
 }
 
 .post h1 {
-  @apply text-3xl font-bold tracking-tight mt-4 mb-1;
-  font-family: Merriweather, serif;
+  @apply text-3xl font-bold tracking-tight mt-6 mb-2;
+  font-family: var(--font-display);
 }
 
 .post h2 {
-  @apply text-2xl font-bold tracking-tight mt-4 mb-1;
-  font-family: Merriweather, serif;
+  @apply text-2xl font-bold tracking-tight mt-6 mb-2;
+  font-family: var(--font-display);
 }
 
 .post h3 {
-  @apply text-xl font-bold tracking-tight mt-4 mb-1;
+  @apply text-xl font-semibold tracking-tight mt-5 mb-2;
 }
 
 .post h4 {
-  @apply text-lg font-bold tracking-tight mt-4 mb-1;
+  @apply text-lg font-semibold tracking-tight mt-4 mb-1;
 }
 
 .post strong {
-  @apply font-medium;
+  @apply font-semibold;
 }
+
 .post table {
-  @apply text-sm;
+  @apply text-sm w-full border-collapse my-4;
 }
-.post table tr {
-  @apply hover:bg-gray-400 dark:bg-slate-800;
+
+.post table th {
+  @apply text-left font-semibold py-2 px-3 border-b-2;
+  border-color: var(--border);
+}
+
+.post table td {
+  @apply py-2 px-3 border-b;
+  border-color: var(--border);
+}
+
+.post table tr:hover td {
+  background-color: color-mix(in oklch, var(--hover) 5%, var(--surface));
+}
+
+.post blockquote {
+  @apply pl-4 my-6 italic;
+  border-left: 3px solid var(--border);
+  color: var(--lightText);
+}
+
+.post pre {
+  @apply my-4 p-4 rounded-lg overflow-x-auto text-sm;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
 }
 
 .about h1 {
   @apply text-3xl font-bold mt-4 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 .about h2 {
   @apply text-2xl font-bold mt-6 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 .about .cv {
   margin-left: 8px;
@@ -169,6 +221,7 @@ body {
 }
 .about table td {
   height: 16px;
+  padding: 4px 0;
 }
 .about table td:first-child {
   width: 70%;

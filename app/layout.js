@@ -4,7 +4,25 @@ import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Playfair_Display, Public_Sans } from 'next/font/google';
 import { baseUrl } from './sitemap';
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+  fallback: ['Georgia', 'serif'],
+  display: 'swap',
+});
+
+const publicSans = Public_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-body',
+  fallback: ['system-ui', 'sans-serif'],
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -40,15 +58,15 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={`${playfairDisplay.variable} ${publicSans.variable}`}>
       <head>
         <link rel='apple-touch-icon' sizes='180x180' href='/images/apple-touch-icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/images/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/images/favicon-16x16.png' />
         <link rel='manifest' href='/images/site.webmanifest' />
       </head>
-      <body className='w-full antialiased md:w-full' data-theme='light'>
-        <div className='w-screen-lg mt-1 md:w-5xl lg:mx-auto'>
+      <body className='antialiased' data-theme='light'>
+        <div className='max-w-5xl mx-auto'>
           <ThemeProvider>
             <Navbar />
             <main className='min-h-96 mx-4'>{children}</main>

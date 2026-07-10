@@ -6,7 +6,7 @@ import { baseUrl } from '@/app/sitemap';
 import 'react-medium-image-zoom/dist/styles.css';
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('publications/posts');
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const posts = await getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('publications/posts');
   const post = posts.find((post) => post.slug === slug);
   if (!post) {
     return;
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
       publishedTime: new Date(date).toISOString(),
       authors: [author],
       tags: [...tags],
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/publications/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Post({ params }) {
   const { slug } = await params;
-  const posts = await getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('publications/posts');
   const post = posts.find((post) => post.slug === slug);
 
   if (post === undefined) {
@@ -62,19 +62,16 @@ export default async function Post({ params }) {
   return (
     <section className='mb-8'>
       <h1>{post.metadata.title}</h1>
-      <div className='flex justify-between items-center my-2 text-sm'>
-        <p className='text-sm'>{formatDate(post.metadata.date)}</p>
-      </div>
-      <small className='flex gap-2'>
+      <p className='text-sm mt-1 mb-0' style={{ color: 'var(--lightText)' }}>
+        {formatDate(post.metadata.date)}
+      </p>
+      <div className='tags flex flex-wrap gap-1.5 my-3'>
         {post.metadata.tags.map((tag) => (
-          <div
-            key={tag}
-            className='tags rounded-lg bg-gray-700 text-white px-1 py-1 dark:text-black dark:bg-neutral-300'
-          >
-            <Link href={`/blog/tags/${tag}/1`}>#{tag}</Link>
-          </div>
+          <Link key={tag} href={`/publications/tags/${tag}/1`} className='tag-pill'>
+            #{tag}
+          </Link>
         ))}
-      </small>
+      </div>
       <article className='post'>
         <CustomMDX source={contentHTML} />
       </article>

@@ -8,9 +8,9 @@ export default function ChartComponent({ updateDate }) {
   const { theme } = useTheme();
   const Chart = dynamic(() => import('react-apexcharts').then((mod) => mod.default), { ssr: false });
 
-  const today = new Date();
-  const beginning = new Date('2026-01-01');
-  const diffMs = today - beginning;
+  const mostRecentDate = new Date(tsaRawData['data'][0]['date']);
+  const beginning = new Date('2025-12-31');
+  const diffMs = mostRecentDate - beginning;
   const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24)) - 1;
 
   let tsaChartSourceData = tsaRawData['data'].slice(0, diffDays).reduce((obj, days) => {
@@ -54,6 +54,17 @@ export default function ChartComponent({ updateDate }) {
   const strDataADR = [];
   const strDataDate = [];
 
+  const indexStart = new Date('01/03/2026').toLocaleDateString('en-US', {
+    timeZone: 'America/New_York',
+    month: 'short',
+    day: 'numeric',
+  });
+  const indexEnd = new Date('01/02/2027').toLocaleDateString('en-US', {
+    timeZone: 'America/New_York',
+    month: 'short',
+    day: 'numeric',
+  });
+
   const indexedYears = ['2024', '2025', '2026'];
   for (let y = 0; y < indexedYears.length; y++) {
     strDataOcc.push(...strData[indexedYears[y]]['occupancy']);
@@ -96,8 +107,9 @@ export default function ChartComponent({ updateDate }) {
       margin: 10,
       offsetX: 10,
       style: {
+        fontFamily: 'var(--font-display)',
         fontWeight: 600,
-        fontSize: '16px',
+        fontSize: '20px',
       },
     },
     stroke: {
@@ -112,11 +124,12 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '12px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [0, 1],
@@ -129,7 +142,7 @@ export default function ChartComponent({ updateDate }) {
       toolbar: {
         show: false,
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -151,11 +164,16 @@ export default function ChartComponent({ updateDate }) {
       tickAmount: 8,
     },
     legend: {
-      height: 35,
+      height: 30,
+      offsetY: 20,
     },
     xaxis: {
       categories: strDataIndex['date'],
       labels: {
+        formatter: function (value) {
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 50,
       },
@@ -197,8 +215,8 @@ export default function ChartComponent({ updateDate }) {
       ],
       xaxis: [
         {
-          x: '1/3/26',
-          x2: '1/2/27',
+          x: indexStart,
+          x2: indexEnd,
           strokeDashArray: 0,
           borderColor: '#333',
           fillColor: '#ccc',
@@ -214,7 +232,7 @@ export default function ChartComponent({ updateDate }) {
               color: '#777',
               fontSize: '11px',
               fontWeight: 400,
-              fontFamily: 'sans-serif',
+              fontFamily: 'var(--font-body)',
               cssClass: 'apexcharts-xaxis-annotation-label',
             },
           },
@@ -224,7 +242,18 @@ export default function ChartComponent({ updateDate }) {
   };
 
   const mainChartOptions = {
+    title: {
+      align: 'left',
+      margin: 10,
+      offsetX: 10,
+      style: {
+        fontWeight: 600,
+        fontFamily: 'var(--font-display)',
+        fontSize: '20px',
+      },
+    },
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [9],
@@ -245,7 +274,7 @@ export default function ChartComponent({ updateDate }) {
           pan: false,
         },
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -258,7 +287,7 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '11px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
@@ -275,11 +304,16 @@ export default function ChartComponent({ updateDate }) {
       decimalsInFloat: 2,
     },
     legend: {
-      height: 50,
+      height: 30,
+      offsetY: 20,
     },
     xaxis: {
       categories: strData[maxYear]['date'],
       labels: {
+        formatter: function (value) {
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 50,
         rotateAlways: true,
@@ -313,6 +347,7 @@ export default function ChartComponent({ updateDate }) {
 
   const tsaChartOptions = {
     chart: {
+      background: 'transparent',
       dropShadow: {
         enabled: true,
         enabledOnSeries: [0, 1],
@@ -325,7 +360,7 @@ export default function ChartComponent({ updateDate }) {
       toolbar: {
         show: false,
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -369,7 +404,8 @@ export default function ChartComponent({ updateDate }) {
       offsetX: 10,
       style: {
         fontWeight: 600,
-        fontSize: '16px',
+        fontFamily: 'var(--font-display)',
+        fontSize: '20px',
       },
     },
     subtitle: {
@@ -379,13 +415,18 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '11px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
     xaxis: {
       categories: tsaChartSourceData['date'],
       labels: {
+        formatter: function (value) {
+          // Force UTC display regardless of browser timezone
+          const d = new Date(value);
+          return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+        },
         rotate: -45,
         maxHeight: 45,
       },
@@ -393,7 +434,9 @@ export default function ChartComponent({ updateDate }) {
       tickPlacement: 'on',
     },
     legend: {
-      height: 35,
+      height: 25,
+      position: 'bottom',
+      offsetY: 25,
     },
     yaxis: [
       {
@@ -425,12 +468,12 @@ export default function ChartComponent({ updateDate }) {
       },
       {
         opposite: true,
-        seriesName: 'Gap',
+        seriesName: 'YOY % Change',
         max: tsaChartMaxGap,
         min: tsaChartMinGap,
         tickAmount: tsaChartTickAmount,
         title: {
-          text: 'Gap (Positive is better)',
+          text: 'YOY % Change (Positive is better)',
           style: {
             fontWeight: 600,
           },
@@ -489,14 +532,8 @@ export default function ChartComponent({ updateDate }) {
   const occChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel Occupancy (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       min: 20,
@@ -508,14 +545,8 @@ export default function ChartComponent({ updateDate }) {
   const ADRChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel ADR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       min: 60,
@@ -527,14 +558,8 @@ export default function ChartComponent({ updateDate }) {
   const revPARChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel RevPAR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       max: 130,
@@ -694,64 +719,34 @@ export default function ChartComponent({ updateDate }) {
       data: tsaChartSourceData['2026'],
     },
     {
-      name: 'Gap',
+      name: 'YOY % Change',
       data: tsaChartSourceData['gap'],
     },
   ];
 
   return (
-    <section>
-      <h1>U.S. Hospitality Data Dashboard</h1>
-      <div>
-        <div>
-          <h2>KPI Index:</h2>
-          <Chart
-            series={strIndexChartData}
-            options={indexChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+    <section className='py-6'>
+      <div className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between pb-4 mb-6 border-b border-[var(--border)]'>
+        <h1 className='mt-0 mb-1'>U.S. Hospitality Data Dashboard</h1>
+        <p className='text-sm mt-0 mb-0' style={{ color: 'var(--lightText)' }}>
+          Updated: {updateDate}
+        </p>
+      </div>
+      <div className='flex flex-col gap-6'>
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={strIndexChartData} options={indexChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel Occupancy (Weeks Ending)</h2>
-          <Chart
-            series={occChartData}
-            options={occChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={occChartData} options={occChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel ADR (Weeks Ending)</h2>
-          <Chart
-            series={ADRChartData}
-            options={ADRChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={ADRChartData} options={ADRChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>U.S. Hotel RevPAR (Weeks Ending)</h2>
-          <Chart
-            series={revPARChartData}
-            options={revPARChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={revPARChartData} options={revPARChartOptions} type='line' height={480} />
         </div>
-        <div>
-          <h2>TSA Checkpoint Travel Numbers (Same Weekday)</h2>
-          <Chart
-            series={tsaChartData}
-            options={tsaChartOptions}
-            type={'line'}
-            height={500}
-            className='drop-shadow-lg'
-          />
+        <div className='card rounded-xl p-4 md:p-5 overflow-hidden'>
+          <Chart series={tsaChartData} options={tsaChartOptions} type='line' height={480} />
         </div>
       </div>
     </section>

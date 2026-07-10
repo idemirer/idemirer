@@ -8,7 +8,7 @@ const RSS = require('rss');
 
 export async function generateRSSFeed() {
   const siteUrl = 'https://ilhandemirer.com';
-  const posts = await getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('publications/posts');
 
   const feed = new RSS({
     title: "Ilhan Demirer's Blog",
@@ -30,8 +30,8 @@ export async function generateRSSFeed() {
     .forEach((post) => {
       feed.item({
         title: post.metadata.title,
-        guid: `${siteUrl}/blog/${post.slug}`,
-        url: `${siteUrl}/blog/${post.slug}`,
+        guid: `${siteUrl}/publications/${post.slug}`,
+        url: `${siteUrl}/publications/${post.slug}`,
         author: 'Ilhan Demirer',
         description: post.metadata.description || '',
         date: new Date(post.metadata.date + ' 08:00').toISOString(),
