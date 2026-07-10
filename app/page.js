@@ -4,7 +4,7 @@ import { getBlogPosts } from '@/app/utils/utils';
 import { BlogPosts } from '@/components/posts';
 
 export default async function Home() {
-  const allPostsData = await getBlogPosts('blog/posts');
+  const allPostsData = await getBlogPosts('publications/posts');
   return (
     <div className='py-6'>
       {/* Profile hero */}
@@ -21,12 +21,15 @@ export default async function Home() {
           <h1 className='mt-0 mb-2'>Ilhan Demirer, Ph.D.</h1>
           <p className='mt-0 mb-3 text-sm font-medium' style={{ color: 'var(--lightText)' }}>
             Associate Professor &amp; Chair · Management, Information Systems, and Analytics ·{' '}
-            <a href='https://www.plattsburgh.edu/' target='_blank'>SUNY Plattsburgh</a>
+            <a href='https://www.plattsburgh.edu/' target='_blank'>
+              SUNY Plattsburgh
+            </a>
           </p>
           <p className='my-2'>
-            My teaching and research interests are in hospitality managerial accounting, finance, management,
-            and the use of data analytics in the hospitality industry. On this site I share weekly{' '}
-            <Link href='/blog/page/1'>news</Link> and <Link href='/dashboard'>data</Link> related to the U.S. hotel industry.
+            My teaching and research interests are in hospitality managerial accounting, finance, management, and the
+            use of data analytics in the hospitality industry. On this site I share weekly{' '}
+            <Link href='/publications/page/1'>news</Link> and <Link href='/dashboard'>data</Link> related to the U.S.
+            hotel industry.
           </p>
           <p className='my-2'>
             <Link href='/contact'>Contact me</Link> if you have any questions or comments.

@@ -54,6 +54,17 @@ export default function ChartComponent({ updateDate }) {
   const strDataADR = [];
   const strDataDate = [];
 
+  const indexStart = new Date('01/03/2026').toLocaleDateString('en-US', {
+    timeZone: 'America/New_York',
+    month: 'short',
+    day: 'numeric',
+  });
+  const indexEnd = new Date('01/02/2027').toLocaleDateString('en-US', {
+    timeZone: 'America/New_York',
+    month: 'short',
+    day: 'numeric',
+  });
+
   const indexedYears = ['2024', '2025', '2026'];
   for (let y = 0; y < indexedYears.length; y++) {
     strDataOcc.push(...strData[indexedYears[y]]['occupancy']);
@@ -96,8 +107,9 @@ export default function ChartComponent({ updateDate }) {
       margin: 10,
       offsetX: 10,
       style: {
+        fontFamily: 'var(--font-display)',
         fontWeight: 600,
-        fontSize: '16px',
+        fontSize: '20px',
       },
     },
     stroke: {
@@ -112,7 +124,7 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '12px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
@@ -130,7 +142,7 @@ export default function ChartComponent({ updateDate }) {
       toolbar: {
         show: false,
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -152,14 +164,13 @@ export default function ChartComponent({ updateDate }) {
       tickAmount: 8,
     },
     legend: {
-      height: 20,
+      height: 30,
       offsetY: 20,
     },
     xaxis: {
       categories: strDataIndex['date'],
       labels: {
         formatter: function (value) {
-          // Force UTC display regardless of browser timezone
           const d = new Date(value);
           return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
         },
@@ -204,8 +215,8 @@ export default function ChartComponent({ updateDate }) {
       ],
       xaxis: [
         {
-          x: '1/3/26',
-          x2: '1/2/27',
+          x: indexStart,
+          x2: indexEnd,
           strokeDashArray: 0,
           borderColor: '#333',
           fillColor: '#ccc',
@@ -221,7 +232,7 @@ export default function ChartComponent({ updateDate }) {
               color: '#777',
               fontSize: '11px',
               fontWeight: 400,
-              fontFamily: 'sans-serif',
+              fontFamily: 'var(--font-body)',
               cssClass: 'apexcharts-xaxis-annotation-label',
             },
           },
@@ -231,6 +242,16 @@ export default function ChartComponent({ updateDate }) {
   };
 
   const mainChartOptions = {
+    title: {
+      align: 'left',
+      margin: 10,
+      offsetX: 10,
+      style: {
+        fontWeight: 600,
+        fontFamily: 'var(--font-display)',
+        fontSize: '20px',
+      },
+    },
     chart: {
       background: 'transparent',
       dropShadow: {
@@ -253,7 +274,7 @@ export default function ChartComponent({ updateDate }) {
           pan: false,
         },
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -266,7 +287,7 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '11px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
@@ -283,14 +304,13 @@ export default function ChartComponent({ updateDate }) {
       decimalsInFloat: 2,
     },
     legend: {
-      height: 20,
+      height: 30,
       offsetY: 20,
     },
     xaxis: {
       categories: strData[maxYear]['date'],
       labels: {
         formatter: function (value) {
-          // Force UTC display regardless of browser timezone
           const d = new Date(value);
           return d.toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
         },
@@ -340,7 +360,7 @@ export default function ChartComponent({ updateDate }) {
       toolbar: {
         show: false,
       },
-      fontFamily: 'Inter, Roboto, Arial, sans-serif',
+      fontFamily: 'var(--font-body)',
       type: 'line',
       zoom: {
         enabled: true,
@@ -384,7 +404,8 @@ export default function ChartComponent({ updateDate }) {
       offsetX: 10,
       style: {
         fontWeight: 600,
-        fontSize: '16px',
+        fontFamily: 'var(--font-display)',
+        fontSize: '20px',
       },
     },
     subtitle: {
@@ -394,7 +415,7 @@ export default function ChartComponent({ updateDate }) {
       style: {
         color: '#9C9C9C',
         fontSize: '11px',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'var(--font-body)',
         fontWeight: 400,
       },
     },
@@ -511,14 +532,8 @@ export default function ChartComponent({ updateDate }) {
   const occChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel Occupancy (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       min: 20,
@@ -530,14 +545,8 @@ export default function ChartComponent({ updateDate }) {
   const ADRChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel ADR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       min: 60,
@@ -549,14 +558,8 @@ export default function ChartComponent({ updateDate }) {
   const revPARChartOptions = {
     ...mainChartOptions,
     title: {
+      ...mainChartOptions.title,
       text: 'U.S. Hotel RevPAR (Week Ending)',
-      align: 'left',
-      margin: 10,
-      offsetX: 10,
-      style: {
-        fontWeight: 600,
-        fontSize: '16px',
-      },
     },
     yaxis: {
       max: 130,

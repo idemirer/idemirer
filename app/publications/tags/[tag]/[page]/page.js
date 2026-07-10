@@ -4,12 +4,12 @@ import { notFound } from 'next/navigation';
 import { Tags } from '@/components/tags';
 
 export const metadata = {
-  title: 'Blog Posts',
+  title: 'Publications',
   description: 'Hospitality news, updated weekly.',
 };
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts('blog/posts');
+  const posts = await getBlogPosts('publications/posts');
   const countTags = await countedTags(posts);
 
   const params = [];
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 
 export default async function TagsPage({ params }) {
   const { tag, page } = await params;
-  const allPostsData = await getBlogPosts('blog/posts');
+  const allPostsData = await getBlogPosts('publications/posts');
   const filteredPosts = allPostsData.filter((post) => post.metadata.tags.indexOf(tag) !== -1);
   const allTags = await countedTags(filteredPosts);
   const maxPage = Math.ceil(filteredPosts.length / 5);
@@ -41,11 +41,11 @@ export default async function TagsPage({ params }) {
   return (
     <div>
       <h1 className='mb-5 leading-12 md:leading-none'>
-        Blog Posts tagged <span className='tag-pill'>{tag}</span>
+        Publications with Tag: <span className='tag-pill'>{tag}</span>
       </h1>
       <section className='flex flex-col md:flex-row'>
         <Tags allTags={allTags} />
-        <BlogPosts posts={filteredPosts} page={page} path={`/blog/tags/${tag}`} />
+        <BlogPosts posts={filteredPosts} page={page} path={`/publications/tags/${tag}`} />
       </section>
     </div>
   );

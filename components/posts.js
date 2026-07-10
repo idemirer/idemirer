@@ -30,7 +30,7 @@ export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
             key={post.slug}
             className='max-w-full rounded-xl card overflow-hidden pb-2 mb-5 md:h-[240px] md:flex md:w-[790px]'
           >
-            <Link href={`/blog/${post.slug}`} className='md:order-last shrink-0'>
+            <Link href={`/publications/${post.slug}`} className='md:order-last shrink-0'>
               <Image
                 src={`/images/blogimages/${post.metadata.banner}`}
                 width={450}
@@ -42,14 +42,14 @@ export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
             </Link>
             <div className='flex flex-col justify-between md:pt-5 md:pb-4 px-4 py-3 flex-1 min-w-0'>
               <div>
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/publications/${post.slug}`}>
                   <div className='font-bold text-(--text) mb-3 leading-snug hover:text-(--hover) transition-colors'>
                     {post.metadata.title}
                   </div>
                 </Link>
                 <div className='tags flex flex-wrap gap-1.5'>
                   {post.metadata.tags.map((tag) => (
-                    <Link key={tag} href={`/blog/tags/${tag}/1`} className='tag-pill'>
+                    <Link key={tag} href={`/publications/tags/${tag}/1`} className='tag-pill'>
                       #{tag}
                     </Link>
                   ))}
@@ -68,7 +68,7 @@ export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
               : 'text-sm font-medium rounded-lg px-4 py-2 ml-0 card text-(--text) hover:text-(--hover) transition-colors'
           }
         >
-          &#xab; Newer Posts
+          &#xab;
         </Link>
         <Link
           href={`${path}/${nextPage}`}
@@ -78,7 +78,7 @@ export function BlogPosts({ posts, path, page, addMargin = true, slice = 5 }) {
               : 'text-sm font-medium rounded-lg px-4 py-2 ml-auto mr-0 card text-(--text) hover:text-(--hover) transition-colors'
           }
         >
-          Older Posts &#xbb;
+          &#xbb;
         </Link>
       </div>
     </div>

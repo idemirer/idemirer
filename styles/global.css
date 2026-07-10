@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 @import 'tailwindcss';
 
 [data-theme='light'] {
@@ -33,28 +32,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   font-size: 1.0625rem;
   background-color: var(--background);
   color: var(--text);
-}
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', 'system-ui';
-  }
 }
 
 /* Card surface — white/dark with subtle border and shadow */
@@ -88,12 +70,12 @@ body {
 @layer base {
   h1 {
     @apply text-3xl font-bold mt-6 mb-3 tracking-tight;
-    font-family: Merriweather, serif;
+    font-family: var(--font-display);
     line-height: 1.3;
   }
   h2 {
     @apply text-2xl font-bold mt-6 mb-2;
-    font-family: Merriweather, serif;
+    font-family: var(--font-display);
     line-height: 1.4;
   }
   h3 {
@@ -171,12 +153,12 @@ body {
 
 .post h1 {
   @apply text-3xl font-bold tracking-tight mt-6 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 
 .post h2 {
   @apply text-2xl font-bold tracking-tight mt-6 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 
 .post h3 {
@@ -223,11 +205,11 @@ body {
 
 .about h1 {
   @apply text-3xl font-bold mt-4 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 .about h2 {
   @apply text-2xl font-bold mt-6 mb-2;
-  font-family: Merriweather, serif;
+  font-family: var(--font-display);
 }
 .about .cv {
   margin-left: 8px;

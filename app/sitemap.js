@@ -3,7 +3,7 @@ import { getBlogPosts } from '@/app/utils/utils';
 export const baseUrl = 'https://www.ilhandemirer.com';
 
 export default async function sitemap() {
-  const blogs = await getBlogPosts('blog/posts');
+  const blogs = await getBlogPosts('publications/posts');
   const blogPosts = blogs
     .sort((a, b) => {
       if (new Date(a.metadata.date) > new Date(b.metadata.date)) {
@@ -12,7 +12,7 @@ export default async function sitemap() {
       return 1;
     })
     .map((post) => ({
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/publications/${post.slug}`,
       lastModified: post.metadata.date,
     }));
 
@@ -25,7 +25,7 @@ export default async function sitemap() {
       priority: '1.0',
     },
     {
-      path: '/blog',
+      path: '/publications',
       lastmod: '2025-04-11',
       changefreq: 'weekly',
       priority: '1.0',
