@@ -33,12 +33,16 @@ const components = {
   },
   img: (imgProps) => {
     const { src, ...restOfImgProps } = imgProps;
-    if (src.startsWith('http')) {
+    // External images have no known size and no remotePatterns entry, so skip next/image
+    if (/^(?:[a-z]+:)?\/\//i.test(src)) {
       return (
         <Zoom>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={src}
             className='rounded-xl shadow-[0_2px_12px_var(--shadow)]'
+            loading='lazy'
+            width='80%'
             {...restOfImgProps}
           />
         </Zoom>
@@ -46,11 +50,7 @@ const components = {
     }
     return (
       <Zoom>
-        <Image
-          className='rounded-xl shadow-[0_2px_12px_var(--shadow)]'
-          src={src}
-          {...restOfImgProps}
-        />
+        <Image className='rounded-xl shadow-[0_2px_12px_var(--shadow)]' src={src} {...restOfImgProps} />
       </Zoom>
     );
   },

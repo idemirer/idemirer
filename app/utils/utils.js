@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import rehypeImgSize from 'rehype-img-size';
+import { imageSizeFromFile } from 'image-size/fromFile';
 import { unified } from 'unified';
 import rehypeStringify from 'rehype-stringify';
 import rehypekUnwrapImages from 'rehype-unwrap-images';
@@ -34,6 +34,31 @@ async function getMDXFiles(dir) {
 async function readMDXFile(filePath) {
   const rawContent = await fs.readFile(filePath, 'utf-8');
   return parseFrontmatter(rawContent);
+}
+
+// Sets width/height on local <img> tags (replaces rehype-img-size, which is incompatible with image-size v2)
+function rehypeImgSize({ dir }) {
+  return async (tree) => {
+    const images = [];
+    (function collect(node) {
+      if (node.type === 'element' && node.tagName === 'img') images.push(node);
+      node.children?.forEach(collect);
+    })(tree);
+
+    await Promise.all(
+      images.map(async (node) => {
+        const src = node.properties.src;
+        if (!src || /^(?:[a-z]+:)?\/\//i.test(src) || src.startsWith('data:')) return;
+        try {
+          const { width, height } = await imageSizeFromFile(path.join(dir, src));
+          node.properties.width = width;
+          node.properties.height = height;
+        } catch (err) {
+          console.error(`Error reading image size for "${src}":`, err);
+        }
+      }),
+    );
+  };
 }
 
 export async function readContent(content) {
