@@ -5,7 +5,7 @@ on:
     # Every Friday at 8:00 AM Eastern
     # GitHub Actions uses UTC
     # 8 AM ET = 13:00 UTC (standard time)
-    - cron: '0 13 * * 5'
+    - cron: '0 8 * * 5'
   workflow_dispatch:
 
 jobs:
